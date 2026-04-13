@@ -19,7 +19,7 @@ from pathlib import Path
 
 from openai import OpenAI
 
-from collectors.arxiv_collector import fetch_papers
+from collectors.arxiv_collector import fetch_papers, enrich_papers_with_figures
 from collectors.github_trending_collector import fetch_github_trending
 from collectors.hn_collector import fetch_stories
 from collectors.jobs_collector import fetch_jobs
@@ -71,6 +71,9 @@ def run_daily(kw: dict, sources: dict, supervisors: list) -> None:
     scored_papers = score_papers(raw_papers, client, scoring_model, kw["arxiv"]["llm_score_threshold"])
     print(f"  After LLM filter: {len(scored_papers)}")
     papers = summarize_papers(scored_papers, client, summary_model)
+    if papers:
+        print("Fetching arXiv figure previews...")
+        papers = enrich_papers_with_figures(papers)
 
     # --- HN ---
     print("Fetching Hacker News...")

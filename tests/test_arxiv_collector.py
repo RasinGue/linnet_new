@@ -1,4 +1,4 @@
-from collectors.arxiv_collector import keyword_match, fetch_papers
+from collectors.arxiv_collector import keyword_match, fetch_papers, _parse_first_figure
 
 
 def test_keyword_match_positive():
@@ -23,3 +23,21 @@ def test_fetch_papers_returns_list():
     """fetch_papers with zero max_results returns empty list without hitting network."""
     results = fetch_papers(categories=["cs.CV"], must_include=["medical"], max_results=0)
     assert isinstance(results, list)
+
+
+def test_parse_first_figure_extracts_url_and_caption():
+        html = """
+        <section>
+            <figure id="S3.F1" class="ltx_figure">
+                <img src="2604.12345v1/Figures/figure1.png" alt="Refer to caption">
+                <figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>A test architecture overview.</figcaption>
+            </figure>
+        </section>
+        """
+
+        figure = _parse_first_figure(html, "https://arxiv.org/html/2604.12345")
+
+        assert figure == {
+                "figure_url": "https://arxiv.org/html/2604.12345v1/Figures/figure1.png",
+                "figure_caption": "A test architecture overview.",
+        }

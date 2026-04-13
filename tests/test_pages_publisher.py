@@ -33,6 +33,29 @@ def test_render_daily_page_shows_paper(tmp_path, sample_paper):
     content = Path(out_path).read_text(encoding="utf-8")
     assert "FoundationSeg" in content
     assert "医学分割测试" in content
+    assert "| 评分 | 论文 | 方向 |" not in content
+
+
+def test_render_daily_page_shows_paper_figure(tmp_path, sample_paper):
+    sample_paper.update({
+        "score": 8.5,
+        "abstract_zh": "医学分割测试。",
+        "figure_url": "https://arxiv.org/html/2604.12345v1/Figures/figure1.png",
+        "figure_caption": "Figure one caption.",
+    })
+    payload = {
+        "date": "2026-04-13",
+        "generated_at": "2026-04-13T00:03:00Z",
+        "papers": [sample_paper],
+        "hacker_news": [],
+        "jobs": [],
+        "supervisor_updates": [],
+        "meta": {"llm_model": "deepseek", "cost_usd": 0.02},
+    }
+    out_path = render_daily_page(payload, docs_dir=str(tmp_path))
+    content = Path(out_path).read_text(encoding="utf-8")
+    assert "![Figure one caption.](https://arxiv.org/html/2604.12345v1/Figures/figure1.png)" in content
+    assert "*Figure 1.* Figure one caption." in content
 
 
 def test_render_daily_page_shows_distinct_models_and_arxiv_warning(tmp_path):
@@ -83,3 +106,26 @@ def test_render_daily_page_shows_github_trending_bullets(tmp_path):
     assert "⭐ +99 今日" in content
     assert "测试摘要。" in content
     assert "| 仓库 | 语言 | Stars | 简介 |" not in content
+
+
+def test_render_daily_page_shows_job_location_and_salary(tmp_path, sample_job):
+    sample_job.update({
+        "requirements_zh": "需要深度学习经验。",
+        "relevance_score": 8.0,
+        "institution": "Example University",
+        "location": "London, UK",
+        "salary": "GBP40000-GBP50000 YEAR",
+    })
+    payload = {
+        "date": "2026-04-13",
+        "generated_at": "2026-04-13T00:03:00Z",
+        "papers": [],
+        "hacker_news": [],
+        "jobs": [sample_job],
+        "supervisor_updates": [],
+        "meta": {"llm_model": "deepseek", "cost_usd": 0.02},
+    }
+    out_path = render_daily_page(payload, docs_dir=str(tmp_path))
+    content = Path(out_path).read_text(encoding="utf-8")
+    assert "**地点：** London, UK" in content
+    assert "**薪资：** GBP40000-GBP50000 YEAR" in content

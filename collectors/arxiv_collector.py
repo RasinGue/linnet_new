@@ -1,11 +1,68 @@
-import arxiv
+import re
+from html import unescape
 from typing import Any
+from urllib.parse import urljoin
+
+import arxiv
+import httpx
 
 
 def keyword_match(text: str, keywords: list[str]) -> bool:
     """Return True if text contains at least one keyword (case-insensitive)."""
     lower = text.lower()
     return any(kw.lower() in lower for kw in keywords)
+
+
+def _clean_html_text(fragment: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", fragment)
+    text = unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _parse_first_figure(html: str, base_url: str) -> dict[str, str] | None:
+    figures = re.findall(r"<figure\b[^>]*>(.*?)</figure>", html, re.DOTALL | re.IGNORECASE)
+    for figure_html in figures:
+        caption_match = re.search(r"<figcaption\b[^>]*>(.*?)</figcaption>", figure_html, re.DOTALL | re.IGNORECASE)
+        if not caption_match:
+            continue
+
+        raw_caption = _clean_html_text(caption_match.group(1))
+        if not re.search(r"\bFigure\s*1\b", raw_caption, re.IGNORECASE):
+            continue
+
+        image_match = re.search(r'<img\b[^>]*src="([^"]+)"', figure_html, re.IGNORECASE)
+        if not image_match:
+            continue
+
+        caption = re.sub(r"^Figure\s*1\s*:\s*", "", raw_caption, flags=re.IGNORECASE).strip()
+        return {
+            "figure_url": urljoin(base_url, image_match.group(1)),
+            "figure_caption": caption or raw_caption,
+        }
+    return None
+
+
+def enrich_paper_with_figure(paper: dict[str, Any]) -> dict[str, Any]:
+    """Best-effort fetch of Figure 1 from the arXiv HTML page."""
+    paper_id = paper.get("id", "")
+    if not paper_id:
+        return paper
+
+    html_url = f"https://arxiv.org/html/{paper_id}"
+    try:
+        response = httpx.get(html_url, timeout=20, headers={"User-Agent": "MyDailyUpdater/1.0"})
+        response.raise_for_status()
+    except Exception:
+        return paper
+
+    figure = _parse_first_figure(response.text, html_url)
+    if figure:
+        paper.update(figure)
+    return paper
+
+
+def enrich_papers_with_figures(papers: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [enrich_paper_with_figure(paper) for paper in papers]
 
 
 def fetch_papers(

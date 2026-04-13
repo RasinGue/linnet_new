@@ -1,4 +1,4 @@
-from collectors.jobs_collector import parse_feed_entry, filter_job
+from collectors.jobs_collector import parse_feed_entry, filter_job, _extract_job_posting_schema, enrich_job_details
 
 
 def test_filter_job_passes_relevant():
@@ -49,3 +49,63 @@ def test_parse_feed_entry_extracts_fields():
     assert job["url"] == "https://jobs.ac.uk/job/XYZ"
     assert job["source"] == "jobs.ac.uk"
     assert "description" in job
+
+
+def test_extract_job_posting_schema():
+        html = '''
+        <html><head>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "JobPosting",
+            "title": "Research Associate in AI",
+            "description": "<p>Great role.</p>",
+            "validThrough": "2026-05-01",
+            "hiringOrganization": {"name": "Example University"},
+            "jobLocation": {"address": {"addressLocality": "London", "addressCountry": "UK"}},
+            "baseSalary": {"currency": "GBP", "value": {"minValue": 40000, "maxValue": 50000, "unitText": "YEAR"}}
+        }
+        </script>
+        </head></html>
+        '''
+        posting = _extract_job_posting_schema(html)
+        assert posting is not None
+        assert posting["@type"] == "JobPosting"
+        assert posting["title"] == "Research Associate in AI"
+
+
+def test_enrich_job_details_from_job_posting(httpx_mock):
+        httpx_mock.add_response(
+                url="https://jobs.ac.uk/job/XYZ",
+                text='''
+                <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "JobPosting",
+                    "description": "<p>Needs deep learning and MRI experience.</p>",
+                    "validThrough": "2026-05-01",
+                    "hiringOrganization": {"name": "Example University"},
+                    "jobLocation": {"address": {"addressLocality": "London", "addressCountry": "UK"}},
+                    "baseSalary": {"currency": "GBP", "value": {"minValue": 40000, "maxValue": 50000, "unitText": "YEAR"}}
+                }
+                </script>
+                ''',
+        )
+        job = {
+                "title": "Research Associate in AI",
+                "url": "https://jobs.ac.uk/job/XYZ",
+                "description": "Short summary",
+                "source": "jobs.ac.uk",
+                "deadline": "",
+                "requirements_zh": "",
+                "relevance_score": 0.0,
+                "institution": "",
+                "location": "",
+                "salary": "",
+        }
+        enriched = enrich_job_details(job)
+        assert enriched["institution"] == "Example University"
+        assert enriched["deadline"] == "2026-05-01"
+        assert enriched["location"] == "London, UK"
+        assert enriched["salary"] == "GBP40000-GBP50000 YEAR"
+        assert "deep learning" in enriched["description"]
