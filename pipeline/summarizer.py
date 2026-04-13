@@ -32,7 +32,7 @@ def summarize_papers(papers: list[dict], client: Any, model: str) -> list[dict]:
     if not papers:
         return []
     results = [None] * len(papers)
-    with ThreadPoolExecutor(max_workers=min(10, len(papers))) as executor:
+    with ThreadPoolExecutor(max_workers=min(5, len(papers))) as executor:
         futures = {executor.submit(_summarize_one_paper, p, client, model): i
                    for i, p in enumerate(papers)}
         for future in as_completed(futures):
@@ -93,7 +93,7 @@ def summarize_jobs(jobs: list[dict], client: Any, model: str) -> list[dict]:
     if not jobs:
         return []
     results = [None] * len(jobs)
-    with ThreadPoolExecutor(max_workers=min(8, len(jobs))) as executor:
+    with ThreadPoolExecutor(max_workers=min(5, len(jobs))) as executor:
         futures = {executor.submit(summarize_job, j, client, model): i
                    for i, j in enumerate(jobs)}
         for future in as_completed(futures):

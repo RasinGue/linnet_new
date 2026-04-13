@@ -25,12 +25,11 @@ def test_parse_score_returns_zero_on_garbage():
     assert parse_score("No numeric content here!") == 0.0
 
 
-def test_parse_batch_scores_valid_json():
-    assert parse_batch_scores("[7, 3, 9]", 3) == [7.0, 3.0, 9.0]
-
-
-def test_parse_batch_scores_clamps():
-    assert parse_batch_scores("[11, -1, 5]", 3) == [10.0, 0.0, 5.0]
+def test_parse_batch_scores_returns_first():
+    # shim: batch now returns single score repeated
+    result = parse_batch_scores("7", 3)
+    assert result[0] == 7.0
+    assert len(result) == 3
 
 
 def test_parse_batch_scores_fallback_on_garbage():

@@ -115,7 +115,9 @@ def run_daily(kw: dict, sources: dict, supervisors: list) -> None:
         "jobs_after_filter": len(jobs),
         "supervisor_pages_checked": len(supervisors),
         "supervisor_updates_found": len(supervisor_updates),
-        "llm_model": scoring_model,
+        "llm_model": summary_model if scoring_model == summary_model else f"score={scoring_model}; summary={summary_model}",
+        "scoring_model": scoring_model,
+        "summarization_model": summary_model,
         "cost_usd": 0.0,
         "duration_seconds": round(time.time() - start),
     }

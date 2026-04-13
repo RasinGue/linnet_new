@@ -16,10 +16,8 @@ github_trending:
   max_repos: 15
 
 llm:
-  # Fast cheap model for scoring (just needs to output 0-10)
-  scoring_model: "google/gemini-1.5-flash"
-  # Quality model for Chinese summarization
-  summarization_model: "deepseek/deepseek-chat"
+  scoring_model: "google/gemma-4-31b-it:free"
+  summarization_model: "google/gemma-4-31b-it:free"
   base_url: "https://openrouter.ai/api/v1"
 
 pages:

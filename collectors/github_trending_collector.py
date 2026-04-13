@@ -11,6 +11,7 @@ We use a GITHUB_TOKEN env var if available (5000 req/hr with auth).
 
 import os
 import re
+from html import unescape
 import httpx
 from typing import Any
 
@@ -50,6 +51,50 @@ def _is_ai_related(name: str, description: str, topics: list[str]) -> bool:
     if any(t in _AI_TOPICS for t in topics):
         return True
     return False
+
+
+def _clean_html_text(fragment: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", fragment)
+    text = unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _extract_repo_count(article: str, suffix: str) -> int:
+    match = re.search(
+        rf'href="/[^"]+/{suffix}"[^>]*>.*?</svg>\s*([\d,]+)\s*</a>',
+        article,
+        re.DOTALL,
+    )
+    return int(match.group(1).replace(",", "")) if match else 0
+
+
+def _parse_trending_article(article: str) -> dict[str, Any] | None:
+    hrefs = re.findall(r'href="(/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)"', article)
+    if not hrefs:
+        return None
+    full_name = hrefs[0].lstrip("/")
+
+    desc_match = re.search(r"<p\b[^>]*>(.*?)</p>", article, re.DOTALL)
+    description = _clean_html_text(desc_match.group(1)) if desc_match else ""
+
+    stars_match = re.search(r"([\d,]+)\s*stars?\s*today", article, re.IGNORECASE)
+    stars_today = int(stars_match.group(1).replace(",", "")) if stars_match else 0
+
+    total_stars = _extract_repo_count(article, "stargazers")
+
+    lang_match = re.search(r'itemprop="programmingLanguage"[^>]*>\s*(.*?)\s*</span>', article)
+    language_tag = _clean_html_text(lang_match.group(1)) if lang_match else ""
+
+    return {
+        "full_name": full_name,
+        "url": f"https://github.com/{full_name}",
+        "description": description,
+        "stars_today": stars_today,
+        "total_stars": total_stars,
+        "language": language_tag,
+        "topics": [],
+        "summary_zh": "",
+    }
 
 
 def fetch_trending_via_search(max_repos: int = 20, days_back: int = 1) -> list[dict[str, Any]]:
@@ -112,38 +157,10 @@ def fetch_trending_via_scrape(language: str = "", since: str = "daily") -> list[
     articles = re.findall(r'<article[^>]*class="[^"]*Box-row[^"]*"[^>]*>(.*?)</article>',
                           html, re.DOTALL)
     for article in articles:
-        # repo name: first href of form /owner/repo (two path segments, no query)
-        hrefs = re.findall(r'href="(/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)"', article)
-        if not hrefs:
+        repo = _parse_trending_article(article)
+        if not repo:
             continue
-        full_name = hrefs[0].lstrip("/")
-
-        # description: text immediately after </h2> before next block element
-        desc_match = re.search(r'</h2>\s*(.*?)(?=\s*<(?:div|ul|ol|table))', article, re.DOTALL)
-        description = re.sub(r'<[^>]+>', '', desc_match.group(1)).strip() if desc_match else ""
-
-        # stars today
-        stars_match = re.search(r'([\d,]+)\s*stars?\s*today', article, re.IGNORECASE)
-        stars_today = int(stars_match.group(1).replace(",", "")) if stars_match else 0
-
-        # total stars: numbers that appear near stargazers href
-        total_match = re.search(r'stargazers.*?([\d,]+)', article, re.DOTALL)
-        total_stars = int(total_match.group(1).replace(",", "")) if total_match else 0
-
-        # language
-        lang_match = re.search(r'itemprop="programmingLanguage"[^>]*>\s*(.*?)\s*</span>', article)
-        language_tag = lang_match.group(1).strip() if lang_match else ""
-
-        repos.append({
-            "full_name": full_name,
-            "url": f"https://github.com/{full_name}",
-            "description": description,
-            "stars_today": stars_today,
-            "total_stars": total_stars,
-            "language": language_tag,
-            "topics": [],
-            "summary_zh": "",
-        })
+        repos.append(repo)
 
     return repos
 
