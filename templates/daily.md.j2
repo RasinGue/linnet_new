@@ -1,0 +1,70 @@
+---
+layout: default
+title: "{{ date }} 科研日报"
+date: {{ date }}
+---
+
+# {{ date }} 科研日报
+
+> 自动生成于 {{ generated_at[:10] }} | 模型：{{ meta.llm_model }} | 本次花费：${{ "%.4f"|format(meta.cost_usd) }}
+
+---
+
+## 📄 今日 arXiv 精选（{{ papers|length }} 篇）
+
+{% if papers %}
+| 评分 | 论文 | 方向 |
+|------|------|------|
+{% for p in papers | sort(attribute='score', reverse=True) %}
+| {{ "%.1f"|format(p.score) }} | [{{ p.title }}]({{ p.url }}) | {{ p.categories[0] }} |
+{% endfor %}
+
+{% for p in papers | sort(attribute='score', reverse=True) %}
+### {{ loop.index }}. [{{ p.title }}]({{ p.url }})
+
+**作者：** {{ p.authors | join(', ') }} | **分类：** {{ p.categories | join(', ') }} | **评分：** {{ "%.1f"|format(p.score) }}/10
+
+{{ p.abstract_zh }}
+
+---
+{% endfor %}
+{% else %}
+*今日无符合条件的论文。*
+{% endif %}
+
+## 🔥 Hacker News 科技热点（{{ hacker_news|length }} 条）
+
+{% if hacker_news %}
+{% for s in hacker_news %}
+- **[{{ s.title }}]({{ s.url }})** ({{ s.score }}pts) — {{ s.summary_zh }} [[评论]({{ s.comments_url }})]
+{% endfor %}
+{% else %}
+*今日无符合条件的热点。*
+{% endif %}
+
+## 💼 最新博士后 / 研究职位（{{ jobs|length }} 个）
+
+{% if jobs %}
+{% for j in jobs %}
+### [{{ j.title }}]({{ j.url }})
+
+**机构：** {{ j.institution or '未知' }} | **来源：** {{ j.source }} | **截止：** {{ j.deadline or '未注明' }} | **相关度：** {{ "%.1f"|format(j.relevance_score) }}/10
+
+{{ j.requirements_zh }}
+
+---
+{% endfor %}
+{% else %}
+*今日无新职位更新。*
+{% endif %}
+
+{% if supervisor_updates %}
+## 👨‍🏫 导师主页更新
+
+{% for u in supervisor_updates %}
+- **{{ u.name }}**（{{ u.institution }}）— {{ u.change_summary_zh }} [[主页]({{ u.url }})]
+{% endfor %}
+{% endif %}
+
+---
+*[返回首页](/) | [周报](/weekly/) | [月报](/monthly/)*
