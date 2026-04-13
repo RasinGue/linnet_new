@@ -1,17 +1,12 @@
 ---
 layout: home
-title: Home
-nav_order: 1
+title: Research Daily Digest
 ---
 
 # Research Daily Digest
 
-Daily AI / Computer Vision / Medical Imaging research updates, auto-generated every day at UK midnight via GitHub Actions + OpenRouter LLM.
+Daily AI/CV/Medical Imaging research updates, auto-generated at UK midnight.
 
----
+**Latest:** [2026-04-13 日报](/daily/2026-04-13/)
 
-**Browse by section:**
-
-- [日报 (Daily)]({{ "/daily/" | relative_url }}) — arXiv papers, HN highlights, postdoc jobs
-- [周报 (Weekly)]({{ "/weekly/" | relative_url }}) — weekly trend rollup
-- [月报 (Monthly)]({{ "/monthly/" | relative_url }}) — monthly landscape overview
+Browse: [Daily](/daily/) | [Weekly](/weekly/) | [Monthly](/monthly/)
