@@ -44,7 +44,14 @@ def get_openrouter_client(sources_cfg: dict) -> OpenAI:
     api_key = os.environ.get("OPENROUTER_API_KEY", "")
     if not api_key:
         print("WARNING: OPENROUTER_API_KEY not set", file=sys.stderr)
-    return OpenAI(api_key=api_key, base_url=sources_cfg["llm"]["base_url"])
+    return OpenAI(
+        api_key=api_key,
+        base_url=sources_cfg["llm"]["base_url"],
+        default_headers={
+            "HTTP-Referer": "https://github.com/YuyangXueEd/MyDailyUpdater",
+            "X-OpenRouter-Title": "MyDailyUpdater",
+        },
+    )
 
 
 def run_daily(kw: dict, sources: dict, supervisors: list) -> None:
