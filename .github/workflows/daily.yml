@@ -24,9 +24,20 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run daily pipeline
-        run: python main.py --mode daily
+        run: |
+          set -euxo pipefail
+          python -u main.py --mode daily 2>&1 | tee daily-pipeline.log
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          PYTHONUNBUFFERED: "1"
+
+      - name: Upload daily pipeline log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-pipeline-log-${{ github.run_id }}
+          path: daily-pipeline.log
+          if-no-files-found: warn
 
       - name: Commit and push outputs
         run: |
