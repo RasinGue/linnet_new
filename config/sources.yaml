@@ -12,7 +12,9 @@ supervisor_monitoring:
   enabled: true
 
 llm:
-  scoring_model: "deepseek/deepseek-chat"
+  # Fast cheap model for scoring (just needs to output 0-10)
+  scoring_model: "google/gemini-flash-1.5"
+  # Quality model for Chinese summarization
   summarization_model: "deepseek/deepseek-chat"
   base_url: "https://openrouter.ai/api/v1"
 

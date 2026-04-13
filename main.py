@@ -26,8 +26,8 @@ from collectors.supervisor_watcher import fetch_supervisor_updates
 from pipeline.config_loader import load_keywords, load_sources, load_supervisors
 from pipeline.scorer import score_papers, score_jobs
 from pipeline.summarizer import (
-    summarize_paper, summarize_hn_story,
-    summarize_job, summarize_supervisor_update,
+    summarize_papers, summarize_hn_stories,
+    summarize_jobs, summarize_supervisor_update,
 )
 from pipeline.aggregator import build_weekly_payload, build_monthly_payload, load_daily_jsons
 from publishers.data_publisher import (
@@ -61,7 +61,7 @@ def run_daily(kw: dict, sources: dict, supervisors: list) -> None:
     print(f"  After keyword filter: {len(raw_papers)}")
     scored_papers = score_papers(raw_papers, client, scoring_model, kw["arxiv"]["llm_score_threshold"])
     print(f"  After LLM filter: {len(scored_papers)}")
-    papers = [summarize_paper(p, client, summary_model) for p in scored_papers]
+    papers = summarize_papers(scored_papers, client, summary_model)
 
     # --- HN ---
     print("Fetching Hacker News...")
@@ -72,7 +72,7 @@ def run_daily(kw: dict, sources: dict, supervisors: list) -> None:
             min_score=kw["hacker_news"]["min_score"],
             max_items=kw["hacker_news"]["max_items"],
         )
-        hn_stories = [summarize_hn_story(s, client, summary_model) for s in raw_hn]
+        hn_stories = summarize_hn_stories(raw_hn, client, summary_model)
     print(f"  HN stories: {len(hn_stories)}")
 
     # --- Jobs ---
@@ -85,7 +85,7 @@ def run_daily(kw: dict, sources: dict, supervisors: list) -> None:
             exclude_keywords=kw["jobs"]["exclude_keywords"],
         )
         scored_jobs = score_jobs(raw_jobs, client, scoring_model, kw["jobs"]["llm_score_threshold"])
-        jobs = [summarize_job(j, client, summary_model) for j in scored_jobs]
+        jobs = summarize_jobs(scored_jobs, client, summary_model)
     print(f"  Jobs: {len(jobs)}")
 
     # --- Supervisors ---
