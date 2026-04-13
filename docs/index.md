@@ -3,7 +3,10 @@ layout: home
 title: Research Daily Digest
 ---
 
-Daily digest of AI, Computer Vision, Medical Imaging, and LLM research updates.
-Updated automatically at UK midnight via GitHub Actions.
+# Research Daily Digest
+
+Daily AI/CV/Medical Imaging research updates, auto-generated at UK midnight.
+
+**Latest:** [2026-04-13 日报](/daily/2026-04-13/)
 
 Browse: [Daily](/daily/) | [Weekly](/weekly/) | [Monthly](/monthly/)
