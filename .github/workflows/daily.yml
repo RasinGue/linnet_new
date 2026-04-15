@@ -29,8 +29,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Sync latest main
-        run: git pull --rebase origin main
+      - name: Sync latest branch
+        run: git pull --rebase origin ${{ github.ref_name }}
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -61,5 +61,5 @@ jobs:
         run: |
           git add docs/
           git diff --staged --quiet || git commit -m "digest: $(date -u +%Y-%m-%d)"
-          git pull --rebase -X ours origin main
+          git pull --rebase -X ours origin ${{ github.ref_name }}
           git push
