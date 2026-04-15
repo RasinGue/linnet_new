@@ -24,9 +24,10 @@ class JobsExtension(BaseExtension):
         scoring_model = self.config["llm_scoring_model"]
         summary_model = self.config["llm_summarization_model"]
         threshold = self.config.get("llm_score_threshold", 7)
+        lang = self.config.get("language", "en")
 
         scored = score_jobs(items, self.llm, scoring_model, threshold)
-        summarised = summarize_jobs(scored, self.llm, summary_model)
+        summarised = summarize_jobs(scored, self.llm, summary_model, lang)
         print(f"  Jobs: {len(summarised)}")
         return summarised
 

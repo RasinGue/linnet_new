@@ -18,7 +18,8 @@ class SupervisorExtension(BaseExtension):
 
     def process(self, items: list[dict]) -> list[dict]:
         summary_model = self.config["llm_summarization_model"]
-        return [summarize_supervisor_update(u, self.llm, summary_model) for u in items]
+        lang = self.config.get("language", "en")
+        return [summarize_supervisor_update(u, self.llm, summary_model, lang) for u in items]
 
     def render(self, items: list[dict]) -> FeedSection:
         return FeedSection(

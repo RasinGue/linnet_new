@@ -22,6 +22,7 @@ from openai import OpenAI
 
 from extensions import REGISTRY, FeedSection
 from pipeline.config_loader import load_keywords, load_sources, load_supervisors
+from pipeline.summarizer import lang_instruction
 from pipeline.aggregator import build_weekly_payload, build_monthly_payload, load_daily_jsons
 from publishers.data_publisher import (
     write_daily_json, write_weekly_json, write_monthly_json, build_daily_payload,
@@ -59,6 +60,7 @@ def _build_extension_configs(
     llm = {
         "llm_scoring_model": sources["llm"]["scoring_model"],
         "llm_summarization_model": sources["llm"]["summarization_model"],
+        "language": sources.get("language", "en"),
     }
     return {
         "arxiv": {**sources.get("arxiv", {}), **keywords.get("arxiv", {}), **llm},
@@ -146,12 +148,14 @@ def run_weekly() -> None:
     client = get_openrouter_client(sources)
     data_dir = str(Path(__file__).parent / "docs" / "data" / "daily")
 
+    lang = sources.get("language", "en")
     dailies = load_daily_jsons(dates, data_dir)
     all_papers = [p for d in dailies for p in d.get("papers", [])]
 
     prompt = (
-        f"请用中文（300字以内）总结以下{len(all_papers)}篇论文本周的整体趋势，"
-        "包括热门方向、值得关注的进展、以及任何显著变化：\n\n"
+        f"Summarize the overall weekly trends of the following {len(all_papers)} papers "
+        f"{lang_instruction(lang)}, in ≤300 words. Cover popular directions, "
+        f"notable advances, and any significant shifts:\n\n"
         + "\n".join(f"- {p['title']}: {p.get('abstract_zh','')}" for p in all_papers[:30])
     )
     resp = client.chat.completions.create(
@@ -177,12 +181,14 @@ def run_monthly() -> None:
     client = get_openrouter_client(sources)
     data_dir = str(Path(__file__).parent / "docs" / "data" / "daily")
 
+    lang = sources.get("language", "en")
     dailies = load_daily_jsons(dates, data_dir)
     all_papers = [p for d in dailies for p in d.get("papers", [])]
 
     prompt = (
-        f"请用中文（500字以内）总结过去30天共{len(all_papers)}篇论文的月度趋势，"
-        "包括方向热度变化、值得关注的团队、以及下月值得关注的趋势：\n\n"
+        f"Summarize the monthly trends of the following {len(all_papers)} papers from the past 30 days "
+        f"{lang_instruction(lang)}, in ≤500 words. Cover shifts in research direction popularity, "
+        f"notable groups or labs, and trends to watch next month:\n\n"
         + "\n".join(f"- {p['title']}: {p.get('abstract_zh','')}" for p in all_papers[:50])
     )
     resp = client.chat.completions.create(

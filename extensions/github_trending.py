@@ -18,7 +18,8 @@ class GitHubTrendingExtension(BaseExtension):
 
     def process(self, items: list[dict]) -> list[dict]:
         summary_model = self.config["llm_summarization_model"]
-        return summarize_github_repos(items, self.llm, summary_model)
+        lang = self.config.get("language", "en")
+        return summarize_github_repos(items, self.llm, summary_model, lang)
 
     def render(self, items: list[dict]) -> FeedSection:
         return FeedSection(
