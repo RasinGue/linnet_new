@@ -1,3 +1,11 @@
+# sources.yaml — enable/disable extensions and set source-level options.
+#
+# Each top-level key corresponds to an extension registered in extensions/__init__.py.
+# To add a new extension:
+#   1. Create extensions/my_source.py subclassing BaseExtension (key = "my_source")
+#   2. Add it to REGISTRY in extensions/__init__.py
+#   3. Add a config block here (and keyword filters in keywords.yaml if needed)
+
 arxiv:
   enabled: true
   max_papers_per_run: 300
@@ -14,6 +22,12 @@ supervisor_monitoring:
 github_trending:
   enabled: true
   max_repos: 15
+
+# Output language for all summaries.
+# Default: "en" (English, no translation needed).
+# Set to "zh", "fr", "de", "ja", "ko", "es", "pt" for other languages.
+# Any language code works — the LLM will respond in that language.
+language: "en"
 
 llm:
   scoring_model: "google/gemini-2.5-flash-lite-preview-09-2025"
