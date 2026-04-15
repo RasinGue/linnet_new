@@ -17,6 +17,9 @@ class GitHubTrendingExtension(BaseExtension):
         return repos
 
     def process(self, items: list[dict]) -> list[dict]:
+        if self.config.get("dry_run"):
+            print(f"  [dry-run] skipping LLM summarisation for {len(items)} repos")
+            return items
         summary_model = self.config["llm_summarization_model"]
         lang = self.config.get("language", "en")
         return summarize_github_repos(items, self.llm, summary_model, lang)

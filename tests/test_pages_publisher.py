@@ -15,7 +15,7 @@ def test_render_daily_page_contains_date(tmp_path):
     out_path = render_daily_page(payload, docs_dir=str(tmp_path))
     content = Path(out_path).read_text(encoding="utf-8")
     assert "2026-04-13" in content
-    assert "科研日报" in content
+    assert "Daily Digest" in content
 
 
 def test_render_daily_page_shows_paper(tmp_path, sample_paper):
@@ -33,9 +33,8 @@ def test_render_daily_page_shows_paper(tmp_path, sample_paper):
     content = Path(out_path).read_text(encoding="utf-8")
     assert "FoundationSeg" in content
     assert "医学分割测试" in content
-    assert "| 评分 | 论文 | 方向 |" not in content
-    assert "快速导航" in content
-    assert '<a href="#arxiv">arXiv 精选</a>' in content
+    assert "Quick Nav" in content
+    assert '<a href="#arxiv">arXiv Papers</a>' in content
     assert '<a href="#cat-cs-cv">cs.CV</a>' in content
     assert '<h3 id="cat-cs-cv">cs.CV</h3>' in content
     assert '<h4>1. <a href="https://arxiv.org/abs/2604.12345">FoundationSeg: Universal Medical Image Segmentation</a></h4>' in content
@@ -81,9 +80,9 @@ def test_render_daily_page_shows_distinct_models_and_arxiv_warning(tmp_path):
     }
     out_path = render_daily_page(payload, docs_dir=str(tmp_path))
     content = Path(out_path).read_text(encoding="utf-8")
-    assert "评分模型：google/gemma-4-31b-it:free" in content
-    assert "总结模型：deepseek/deepseek-chat" in content
-    assert "关键词预筛后共有 12 篇候选" in content
+    assert "Scoring model: google/gemma-4-31b-it:free" in content
+    assert "Summary model: deepseek/deepseek-chat" in content
+    assert "12 candidates passed keyword filtering" in content
 
 
 def test_render_daily_page_shows_github_trending_bullets(tmp_path):
@@ -108,14 +107,13 @@ def test_render_daily_page_shows_github_trending_bullets(tmp_path):
     out_path = render_daily_page(payload, docs_dir=str(tmp_path))
     content = Path(out_path).read_text(encoding="utf-8")
     assert "**[example/repo](https://github.com/example/repo)**" in content
-    assert "⭐ +99 今日" in content
+    assert "⭐ +99 today" in content
     assert "测试摘要。" in content
-    assert "| 仓库 | 语言 | Stars | 简介 |" not in content
 
 
 def test_render_daily_page_shows_job_location_and_salary(tmp_path, sample_job):
     sample_job.update({
-        "requirements_zh": "需要深度学习经验。",
+        "requirements_zh": "Deep learning experience required.",
         "relevance_score": 8.0,
         "institution": "Example University",
         "location": "London, UK",
@@ -132,5 +130,5 @@ def test_render_daily_page_shows_job_location_and_salary(tmp_path, sample_job):
     }
     out_path = render_daily_page(payload, docs_dir=str(tmp_path))
     content = Path(out_path).read_text(encoding="utf-8")
-    assert "**地点：** London, UK" in content
-    assert "**薪资：** GBP40000-GBP50000 YEAR" in content
+    assert "**Location:** London, UK" in content
+    assert "**Salary:** GBP40000-GBP50000 YEAR" in content

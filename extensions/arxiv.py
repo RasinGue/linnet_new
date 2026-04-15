@@ -69,6 +69,11 @@ class ArxivExtension(BaseExtension):
         return papers
 
     def process(self, items: list[dict]) -> list[dict]:
+        if self.config.get("dry_run"):
+            print(f"  [dry-run] skipping LLM scoring/summarisation for {len(items)} papers")
+            self._scored_count = len(items)
+            return items
+
         scoring_model = self.config["llm_scoring_model"]
         summary_model = self.config["llm_summarization_model"]
         threshold = self.config.get("llm_score_threshold", 7)

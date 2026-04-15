@@ -7,6 +7,7 @@ Usage:
     python main.py --mode weekly      # weekly rollup
     python main.py --mode monthly     # monthly rollup
     python main.py --check-today      # compact summary for SessionStart hook
+    python main.py --dry-run          # fetch only, skip all LLM calls
 """
 
 import argparse
@@ -22,7 +23,7 @@ from openai import OpenAI
 
 from extensions import REGISTRY, FeedSection
 from sinks import SINK_REGISTRY
-from pipeline.config_loader import load_keywords, load_sources, load_supervisors
+from pipeline.config_loader import load_keywords, load_sources, load_supervisors, validate_sources, validate_keywords
 from pipeline.summarizer import lang_instruction
 from pipeline.aggregator import build_weekly_payload, build_monthly_payload, load_daily_jsons
 from publishers.data_publisher import (
@@ -91,10 +92,15 @@ def _instantiate_extensions(
     return extensions
 
 
-def run_daily(kw: dict, sources: dict, supervisors: list) -> None:
+def run_daily(kw: dict, sources: dict, supervisors: list, dry_run: bool = False) -> None:
+    if dry_run:
+        print("DRY RUN — fetching data only, skipping all LLM calls.")
     start = time.time()
     client = get_openrouter_client(sources)
     configs = _build_extension_configs(sources, kw, supervisors)
+    if dry_run:
+        for cfg in configs.values():
+            cfg["dry_run"] = True
     extensions = _instantiate_extensions(configs, client)
 
     sections: dict[str, FeedSection] = {}
@@ -250,13 +256,24 @@ if __name__ == "__main__":
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--mode", choices=["daily", "weekly", "monthly"])
     group.add_argument("--check-today", action="store_true")
+    group.add_argument("--dry-run", action="store_true",
+                       help="Fetch data only — skip all LLM calls (no API cost)")
     args = parser.parse_args()
 
     if args.check_today:
         check_today()
+    elif args.dry_run:
+        kw = load_keywords()
+        sources = load_sources()
+        validate_sources(sources)
+        validate_keywords(kw)
+        supervisors = load_supervisors()
+        run_daily(kw, sources, supervisors, dry_run=True)
     else:
         kw = load_keywords()
         sources = load_sources()
+        validate_sources(sources)
+        validate_keywords(kw)
         supervisors = load_supervisors()
         if args.mode == "daily":
             run_daily(kw, sources, supervisors)

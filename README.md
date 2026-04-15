@@ -1,10 +1,15 @@
 # MyDailyUpdater
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Daily Digest](https://github.com/YuyangXueEd/MyDailyUpdater/actions/workflows/daily.yml/badge.svg)](https://github.com/YuyangXueEd/MyDailyUpdater/actions/workflows/daily.yml)
+
 [中文文档](README_zh.md)
 
-A self-hosted, extensible daily digest pipeline. Every day it fetches papers, news, jobs, and trending repos from multiple sources, scores and summarises them with an LLM, and publishes a searchable static site via GitHub Pages.
+**Your personal research feed, delivered daily.** Fork this repo, add one API key, and get a searchable static site + Slack digest every morning — automatically.
 
 **[Live demo →](https://yuyangxueed.github.io/MyDailyUpdater)**
+
+> **Cost:** ~$0.01–$0.05 per day using `gemini-2.5-flash-lite` via OpenRouter (free tier available).
 
 ---
 
@@ -14,9 +19,8 @@ A self-hosted, extensible daily digest pipeline. Every day it fetches papers, ne
 |---|---|
 | **arXiv** | Papers filtered by category and keyword, LLM-scored for relevance, summarised with figure previews |
 | **Hacker News** | Top AI/ML stories above a configurable score threshold |
-| **Academic Jobs** | Postdoc and research positions from jobs.ac.uk, FindAPostDoc, EURAXESS, and more |
 | **GitHub Trending** | Daily trending AI/ML repositories |
-| **Supervisor Watcher** | Change-detection on advisor / lab pages you care about |
+
 
 Runs automatically at midnight UTC via GitHub Actions. Output is committed back to the repo and served as a Jekyll site (Just the Docs theme).
 
@@ -102,6 +106,20 @@ supervisors:
     institution: "University of Example"
     url: "https://example.ac.uk/~lovelace"
 ```
+
+---
+
+## Extension gallery
+
+| Extension | Source | Status |
+|---|---|---|
+| `arxiv` | arXiv daily feed | ✅ built-in |
+| `hacker_news` | Hacker News | ✅ built-in |
+| `github_trending` | GitHub Trending | ✅ built-in |
+| `jobs` | jobs.ac.uk · FindAPostDoc · EURAXESS | 🔌 opt-in |
+| `supervisor_monitoring` | Custom lab/advisor pages | 🔌 opt-in |
+
+Built a new extension? Open a PR or share it in [Issues](https://github.com/YuyangXueEd/MyDailyUpdater/issues) — it can be listed here.
 
 ---
 
@@ -219,6 +237,9 @@ export OPENROUTER_API_KEY=sk-or-...
 
 # Run the daily pipeline
 python main.py --mode daily
+
+# Dry run — fetch only, no LLM calls (zero cost, good for testing)
+python main.py --dry-run
 
 # Weekly / monthly rollup
 python main.py --mode weekly

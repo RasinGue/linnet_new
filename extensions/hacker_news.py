@@ -20,6 +20,9 @@ class HackerNewsExtension(BaseExtension):
         return stories
 
     def process(self, items: list[dict]) -> list[dict]:
+        if self.config.get("dry_run"):
+            print(f"  [dry-run] skipping LLM summarisation for {len(items)} HN stories")
+            return items
         summary_model = self.config["llm_summarization_model"]
         lang = self.config.get("language", "en")
         return summarize_hn_stories(items, self.llm, summary_model, lang)
