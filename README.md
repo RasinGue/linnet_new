@@ -116,8 +116,6 @@ supervisors:
 | `arxiv` | arXiv daily feed | ✅ built-in |
 | `hacker_news` | Hacker News | ✅ built-in |
 | `github_trending` | GitHub Trending | ✅ built-in |
-| `jobs` | jobs.ac.uk · FindAPostDoc · EURAXESS | 🔌 opt-in |
-| `supervisor_monitoring` | Custom lab/advisor pages | 🔌 opt-in |
 
 Built a new extension? Open a PR or share it in [Issues](https://github.com/YuyangXueEd/MyDailyUpdater/issues) — it can be listed here.
 
@@ -126,6 +124,8 @@ Built a new extension? Open a PR or share it in [Issues](https://github.com/Yuya
 ## Extension system
 
 Every data source is a self-contained **extension** (`extensions/`). An extension owns its full pipeline: fetch → process (score + summarise) → render a `FeedSection`.
+
+> Full guide, template file, and testing instructions: **[extensions/README.md](extensions/README.md)**
 
 ### Adding a new source
 
