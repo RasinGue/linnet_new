@@ -22,14 +22,14 @@ nav_exclude: true
 ## 🏆 Top Papers This Week
 
 {% for p in top_papers[:10] %}
-{{ loop.index }}. **[{{ p.title }}]({{ p.url }})** ({{ "%.1f"|format(p.score) }}/10) — {{ p.abstract_zh }}
+{{ loop.index }}. **[{{ p.title }}]({{ p.url }})** ({{ "%.1f"|format(p.score) }}/10) — {{ p.abstract }}
 {% endfor %}
 
 ---
 
 ## 📈 Weekly Trend Analysis
 
-{{ summary_zh }}
+{{ summary }}
 
 ---
 

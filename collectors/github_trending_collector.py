@@ -93,7 +93,7 @@ def _parse_trending_article(article: str) -> dict[str, Any] | None:
         "total_stars": total_stars,
         "language": language_tag,
         "topics": [],
-        "summary_zh": "",
+        "summary": "",
     }
 
 
@@ -174,7 +174,7 @@ def _parse_repo(item: dict) -> dict[str, Any]:
         "total_stars": item.get("stargazers_count", 0),
         "language": item.get("language") or "",
         "topics": item.get("topics", []),
-        "summary_zh": "",
+        "summary": "",
     }
 
 

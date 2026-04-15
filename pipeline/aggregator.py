@@ -28,7 +28,7 @@ def compute_keyword_frequency(papers: list[dict]) -> dict[str, int]:
 def build_weekly_payload(
     dates: list[str],
     period: str,
-    summary_zh: str,
+    summary: str,
     data_dir: str = _DEFAULT_DATA_DIR,
 ) -> dict[str, Any]:
     dailies = load_daily_jsons(dates, data_dir)
@@ -39,7 +39,7 @@ def build_weekly_payload(
 
     return {
         "period": period,
-        "summary_zh": summary_zh,
+        "summary": summary,
         "top_papers": top_papers,
         "new_jobs": all_jobs,
         "trending_keywords": list(freq.keys())[:10],
@@ -51,8 +51,8 @@ def build_weekly_payload(
 def build_monthly_payload(
     dates: list[str],
     period: str,
-    summary_zh: str,
+    summary: str,
     data_dir: str = _DEFAULT_DATA_DIR,
 ) -> dict[str, Any]:
-    payload = build_weekly_payload(dates, period, summary_zh, data_dir)
+    payload = build_weekly_payload(dates, period, summary, data_dir)
     return payload  # same structure, more dates

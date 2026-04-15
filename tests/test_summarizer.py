@@ -16,20 +16,20 @@ def _mock_client(response_text: str) -> MagicMock:
 def test_summarize_paper_returns_chinese(sample_paper):
     client = _mock_client("这是一篇关于医学图像分割的论文。")
     result = summarize_paper(sample_paper, client=client, model="test-model")
-    assert result["abstract_zh"] == "这是一篇关于医学图像分割的论文。"
+    assert result["abstract"] == "这是一篇关于医学图像分割的论文。"
 
 
 def test_summarize_hn_story_returns_chinese(sample_hn_story):
     client = _mock_client("Meta开源了新的视觉模型。")
     result = summarize_hn_story(sample_hn_story, client=client, model="test-model")
-    assert result["summary_zh"] == "Meta开源了新的视觉模型。"
+    assert result["summary"] == "Meta开源了新的视觉模型。"
 
 
 def test_summarize_job_extracts_fields(sample_job):
     client = _mock_client("截止日期：2026年5月15日。要求：深度学习，医学图像。")
     result = summarize_job(sample_job, client=client, model="test-model")
-    assert "requirements_zh" in result
-    assert len(result["requirements_zh"]) > 0
+    assert "requirements" in result
+    assert len(result["requirements"]) > 0
 
 
 def test_summarize_supervisor_update():
@@ -38,8 +38,8 @@ def test_summarize_supervisor_update():
         "institution": "Oxford",
         "url": "https://smith.ox.ac.uk",
         "page_text": "We are hiring a postdoc in cardiac imaging. Deadline June 2026.",
-        "change_summary_zh": "",
+        "change_summary": "",
     }
     client = _mock_client("新增心脏影像方向博士后职位，截止2026年6月。")
     result = summarize_supervisor_update(update, client=client, model="test-model")
-    assert result["change_summary_zh"] == "新增心脏影像方向博士后职位，截止2026年6月。"
+    assert result["change_summary"] == "新增心脏影像方向博士后职位，截止2026年6月。"

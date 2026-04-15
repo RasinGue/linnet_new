@@ -70,7 +70,7 @@ class SlackSink(BaseSink):
             blocks.append(_header_section("📄 Top arXiv Papers"))
             for p in papers[:max_papers]:
                 title = p.get("title", "Untitled")
-                summary = p.get("abstract_zh", "")
+                summary = p.get("abstract", "")
                 url = p.get("url", "")
                 score = p.get("score", "")
                 cat = p.get("primary_category", "")
@@ -87,7 +87,7 @@ class SlackSink(BaseSink):
             for s in hn[:max_hn]:
                 title = _truncate(s.get("title", ""), 80)
                 url = s.get("url", "") or s.get("comments_url", "")
-                summary = _truncate(s.get("summary_zh", ""), 200)
+                summary = _truncate(s.get("summary", ""), 200)
                 score = s.get("score", "")
                 link = f"<{url}|{_escape(title)}>" if url else _escape(title)
                 lines.append(f"• {link}  `{score} pts`\n  {_escape(summary)}")
@@ -104,7 +104,7 @@ class SlackSink(BaseSink):
             for r in github[:max_github]:
                 name = r.get("full_name", "")
                 url = r.get("url", "")
-                summary = _truncate(r.get("summary_zh", ""), 200)
+                summary = _truncate(r.get("summary", ""), 200)
                 stars_today = r.get("stars_today", 0)
                 lang = r.get("language", "")
                 meta_str = "  ".join(filter(None, [

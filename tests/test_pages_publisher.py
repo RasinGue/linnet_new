@@ -19,7 +19,7 @@ def test_render_daily_page_contains_date(tmp_path):
 
 
 def test_render_daily_page_shows_paper(tmp_path, sample_paper):
-    sample_paper.update({"score": 8.5, "abstract_zh": "医学分割测试。", "keywords_matched": []})
+    sample_paper.update({"score": 8.5, "abstract": "医学分割测试。", "keywords_matched": []})
     payload = {
         "date": "2026-04-13",
         "generated_at": "2026-04-13T00:03:00Z",
@@ -43,7 +43,7 @@ def test_render_daily_page_shows_paper(tmp_path, sample_paper):
 def test_render_daily_page_shows_paper_figure(tmp_path, sample_paper):
     sample_paper.update({
         "score": 8.5,
-        "abstract_zh": "医学分割测试。",
+        "abstract": "医学分割测试。",
         "figure_url": "https://arxiv.org/html/2604.12345v1/Figures/figure1.png",
         "figure_caption": "Figure one caption.",
     })
@@ -100,7 +100,7 @@ def test_render_daily_page_shows_github_trending_bullets(tmp_path):
             "stars_today": 99,
             "total_stars": 1234,
             "description": "Example repo for testing markdown rendering.",
-            "summary_zh": "测试摘要。",
+            "summary": "测试摘要。",
         }],
         "meta": {"llm_model": "deepseek", "cost_usd": 0.02},
     }
@@ -113,7 +113,7 @@ def test_render_daily_page_shows_github_trending_bullets(tmp_path):
 
 def test_render_daily_page_shows_job_location_and_salary(tmp_path, sample_job):
     sample_job.update({
-        "requirements_zh": "Deep learning experience required.",
+        "requirements": "Deep learning experience required.",
         "relevance_score": 8.0,
         "institution": "Example University",
         "location": "London, UK",

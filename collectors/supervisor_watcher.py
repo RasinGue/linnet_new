@@ -59,6 +59,6 @@ def fetch_supervisor_updates(
                 "institution": sup.get("institution", ""),
                 "url": url,
                 "page_text": text[:3000],  # cap for LLM context
-                "change_summary_zh": "",    # filled by summarizer
+                "change_summary": "",    # filled by summarizer
             })
     return updates

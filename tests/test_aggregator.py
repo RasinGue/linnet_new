@@ -39,18 +39,18 @@ def test_compute_keyword_frequency():
 
 
 def test_build_weekly_payload(tmp_path):
-    p = {"id": "1", "title": "Test", "score": 9.0, "abstract_zh": "test",
+    p = {"id": "1", "title": "Test", "score": 9.0, "abstract": "test",
          "authors": [], "categories": ["cs.CV"], "url": "", "pdf_url": "",
          "keywords_matched": ["medical imaging"]}
     j = {"title": "Postdoc AI", "institution": "Oxford", "deadline": "",
-         "url": "", "requirements_zh": "", "source": "", "relevance_score": 8.0,
+         "url": "", "requirements": "", "source": "", "relevance_score": 8.0,
          "posted_date": ""}
     make_daily_json(tmp_path, "2026-04-07", [p], [j])
     dates = ["2026-04-07"]
     payload = build_weekly_payload(
         dates=dates,
         period="2026-W15",
-        summary_zh="本周趋势分析。",
+        summary="本周趋势分析。",
         data_dir=str(tmp_path / "data" / "daily"),
     )
     assert payload["period"] == "2026-W15"

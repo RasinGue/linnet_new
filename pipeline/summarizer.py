@@ -50,7 +50,7 @@ def _summarize_one_paper(paper: dict, client: Any, model: str, lang: str = "zh")
         f"{lang_instruction(lang)}, in 2-3 sentences (≤100 words):\n\n"
         f"Title: {paper['title']}\nAbstract: {paper['abstract'][:1000]}"
     )
-    paper["abstract_zh"] = _call(client, model, prompt)
+    paper["abstract"] = _call(client, model, prompt)
     return paper
 
 
@@ -69,7 +69,7 @@ def summarize_papers(
         try:
             results.append(_summarize_one_paper(p, client, model, lang))
         except Exception as e:
-            p["abstract_zh"] = _fallback_text("Paper", lang)
+            p["abstract"] = _fallback_text("Paper", lang)
             results.append(p)
             print(f"  Paper summarize error: {e}")
     return results
@@ -81,7 +81,7 @@ def _summarize_one_hn(story: dict, client: Any, model: str, lang: str = "zh") ->
         f"{lang_instruction(lang)}, in one sentence (≤50 words):\n\n"
         f"Title: {story['title']}\nURL: {story.get('url', '')}"
     )
-    story["summary_zh"] = _call(client, model, prompt, max_tokens=100)
+    story["summary"] = _call(client, model, prompt, max_tokens=100)
     return story
 
 
@@ -100,7 +100,7 @@ def summarize_hn_stories(
         try:
             results.append(_summarize_one_hn(s, client, model, lang))
         except Exception as e:
-            s["summary_zh"] = _fallback_text("Story", lang)
+            s["summary"] = _fallback_text("Story", lang)
             results.append(s)
     return results
 
@@ -135,7 +135,7 @@ def summarize_job(job: dict, client: Any, model: str, lang: str = "zh") -> dict:
     )
 
     try:
-        job["requirements_zh"] = _call(client, model, prompt)
+        job["requirements"] = _call(client, model, prompt)
     except Exception:
         fallback_lines = [
             f"Research Area: auto-extraction failed — see original posting.",
@@ -144,7 +144,7 @@ def summarize_job(job: dict, client: Any, model: str, lang: str = "zh") -> dict:
             f"Position Details: {location}; {contract_type}; {hours}; {salary}.",
             f"One-line Advice: if your area matches the job title closely, apply promptly.",
         ]
-        job["requirements_zh"] = "\n".join(fallback_lines)
+        job["requirements"] = "\n".join(fallback_lines)
     return job
 
 
@@ -159,7 +159,7 @@ def summarize_jobs(
         try:
             results.append(summarize_job(j, client, model, lang))
         except Exception as e:
-            j["requirements_zh"] = _fallback_text("Job", lang)
+            j["requirements"] = _fallback_text("Job", lang)
             results.append(j)
     return results
 
@@ -172,7 +172,7 @@ def _summarize_one_github_repo(
         f"{lang_instruction(lang)}, in one sentence (≤60 words):\n\n"
         f"Repo: {repo['full_name']}\nDescription: {repo['description']}"
     )
-    repo["summary_zh"] = _call(client, model, prompt, max_tokens=120)
+    repo["summary"] = _call(client, model, prompt, max_tokens=120)
     return repo
 
 
@@ -187,7 +187,7 @@ def summarize_github_repos(
         try:
             results.append(_summarize_one_github_repo(r, client, model, lang))
         except Exception as e:
-            r["summary_zh"] = _fallback_text("Repo", lang)
+            r["summary"] = _fallback_text("Repo", lang)
             results.append(r)
     return results
 
@@ -202,5 +202,5 @@ def summarize_supervisor_update(
         f"Supervisor: {update['name']} ({update['institution']})\n"
         f"Page content: {update['page_text'][:2000]}"
     )
-    update["change_summary_zh"] = _call(client, model, prompt)
+    update["change_summary"] = _call(client, model, prompt)
     return update

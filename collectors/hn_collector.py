@@ -32,7 +32,7 @@ def parse_story(raw: dict) -> dict[str, Any]:
         "score": raw.get("points", 0),
         "created_at": raw.get("created_at", ""),
         "comments_url": _HN_ITEM_URL.format(raw["objectID"]),
-        "summary_zh": "",  # filled by summarizer
+        "summary": "",  # filled by summarizer
     }
 
 

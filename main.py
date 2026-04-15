@@ -172,16 +172,16 @@ def run_weekly() -> None:
         f"Summarize the overall weekly trends of the following {len(all_papers)} papers "
         f"{lang_instruction(lang)}, in ≤300 words. Cover popular directions, "
         f"notable advances, and any significant shifts:\n\n"
-        + "\n".join(f"- {p['title']}: {p.get('abstract_zh','')}" for p in all_papers[:30])
+        + "\n".join(f"- {p['title']}: {p.get('abstract','')}" for p in all_papers[:30])
     )
     resp = client.chat.completions.create(
         model=sources["llm"]["summarization_model"],
         messages=[{"role": "user", "content": prompt}],
         max_tokens=600,
     )
-    summary_zh = resp.choices[0].message.content.strip()
+    summary = resp.choices[0].message.content.strip()
 
-    payload = build_weekly_payload(dates, period, summary_zh, data_dir)
+    payload = build_weekly_payload(dates, period, summary, data_dir)
     json_path = write_weekly_json(payload)
     md_path = render_weekly_page(payload)
     print(f"Written: {json_path}")
@@ -205,16 +205,16 @@ def run_monthly() -> None:
         f"Summarize the monthly trends of the following {len(all_papers)} papers from the past 30 days "
         f"{lang_instruction(lang)}, in ≤500 words. Cover shifts in research direction popularity, "
         f"notable groups or labs, and trends to watch next month:\n\n"
-        + "\n".join(f"- {p['title']}: {p.get('abstract_zh','')}" for p in all_papers[:50])
+        + "\n".join(f"- {p['title']}: {p.get('abstract','')}" for p in all_papers[:50])
     )
     resp = client.chat.completions.create(
         model=sources["llm"]["summarization_model"],
         messages=[{"role": "user", "content": prompt}],
         max_tokens=1000,
     )
-    summary_zh = resp.choices[0].message.content.strip()
+    summary = resp.choices[0].message.content.strip()
 
-    payload = build_monthly_payload(dates, period, summary_zh, data_dir)
+    payload = build_monthly_payload(dates, period, summary, data_dir)
     json_path = write_monthly_json(payload)
     md_path = render_monthly_page(payload)
     print(f"Written: {json_path}")

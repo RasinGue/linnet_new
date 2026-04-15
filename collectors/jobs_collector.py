@@ -219,7 +219,7 @@ def parse_feed_entry(entry: Any, source_name: str) -> dict[str, Any]:
         "posted_date": getattr(entry, "published", ""),
         "source": source_name,
         "deadline": "",          # extracted later by summarizer
-        "requirements_zh": "",   # filled by summarizer
+        "requirements": "",   # filled by summarizer
         "relevance_score": 0.0,
         "institution": "",
         "location": "",
@@ -271,7 +271,7 @@ def _parse_findapostdoc_markdown(md: str, source_name: str) -> list[dict[str, An
             "posted_date": posted_date,
             "deadline": deadline,
             "source": source_name,
-            "requirements_zh": "",
+            "requirements": "",
             "relevance_score": 0.0,
             "location": "",
             "salary": "",
@@ -337,7 +337,7 @@ def _parse_euraxess_markdown(md: str, source_name: str) -> list[dict[str, Any]]:
             "posted_date": posted_date,
             "deadline": deadline,
             "source": source_name,
-            "requirements_zh": "",
+            "requirements": "",
             "relevance_score": 0.0,
             "location": "",
             "salary": "",
@@ -395,7 +395,7 @@ def _parse_academicpositions_markdown(md: str, source_name: str) -> list[dict[st
             "posted_date": posted_date,
             "deadline": "",
             "source": source_name,
-            "requirements_zh": "",
+            "requirements": "",
             "relevance_score": 0.0,
             "location": location,
             "salary": "",

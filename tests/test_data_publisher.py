@@ -5,10 +5,10 @@ from publishers.data_publisher import build_daily_payload, write_daily_json
 
 def test_build_daily_payload_structure(sample_paper, sample_hn_story, sample_job):
     sample_paper["score"] = 8.5
-    sample_paper["abstract_zh"] = "医学图像分割基础模型。"
+    sample_paper["abstract"] = "医学图像分割基础模型。"
     sample_paper["keywords_matched"] = ["medical imaging"]
-    sample_hn_story["summary_zh"] = "Meta开源视觉模型。"
-    sample_job["requirements_zh"] = "需要深度学习经验。"
+    sample_hn_story["summary"] = "Meta开源视觉模型。"
+    sample_job["requirements"] = "需要深度学习经验。"
     sample_job["relevance_score"] = 9.0
 
     payload = build_daily_payload(
@@ -27,9 +27,9 @@ def test_build_daily_payload_structure(sample_paper, sample_hn_story, sample_job
 
 
 def test_write_daily_json_creates_file(tmp_path, sample_paper, sample_hn_story, sample_job):
-    sample_paper.update({"score": 8.5, "abstract_zh": "test", "keywords_matched": []})
-    sample_hn_story.update({"summary_zh": "test"})
-    sample_job.update({"requirements_zh": "test", "relevance_score": 8.0})
+    sample_paper.update({"score": 8.5, "abstract": "test", "keywords_matched": []})
+    sample_hn_story.update({"summary": "test"})
+    sample_job.update({"requirements": "test", "relevance_score": 8.0})
 
     payload = build_daily_payload("2026-04-13", [sample_paper], [sample_hn_story], [sample_job], [], {})
     out_path = write_daily_json(payload, base_dir=str(tmp_path))

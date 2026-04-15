@@ -13,14 +13,14 @@ nav_exclude: true
 
 ## 📊 This Month
 
-{{ summary_zh }}
+{{ summary }}
 
 ---
 
 ## 🏆 Top 20 Papers This Month
 
 {% for p in top_papers[:20] %}
-{{ loop.index }}. **[{{ p.title }}]({{ p.url }})** ({{ "%.1f"|format(p.score) }}/10) — {{ p.abstract_zh }}
+{{ loop.index }}. **[{{ p.title }}]({{ p.url }})** ({{ "%.1f"|format(p.score) }}/10) — {{ p.abstract }}
 {% endfor %}
 
 ---
