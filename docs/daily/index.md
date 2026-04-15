@@ -5,7 +5,7 @@ nav_order: 2
 has_children: false
 ---
 
-# 日报存档
+# Daily Archive
 
 {% assign daily_pages = site.pages | where_exp: "p", "p.dir == '/daily/'" | sort: "name" | reverse %}
 {% for page in daily_pages %}
