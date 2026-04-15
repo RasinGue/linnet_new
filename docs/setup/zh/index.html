@@ -357,6 +357,78 @@
       letter-spacing: 0.01em;
     }
 
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .section-header p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.93rem;
+      max-width: 62ch;
+    }
+
+    .filter-toolbar {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .filter-input {
+      width: 100%;
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .filter-chip {
+      border-radius: 999px;
+      border: 1px solid var(--chip-border);
+      background: var(--panel);
+      color: var(--text);
+      padding: 9px 12px;
+      cursor: pointer;
+    }
+
+    .filter-chip.is-active {
+      background: var(--chip);
+      color: var(--chip-text);
+      border-color: rgba(21, 101, 192, 0.28);
+    }
+
+    .results-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .label-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .label-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -974,6 +1046,7 @@
         title: "天气",
         desc: "把天气放在摘要开头，先看今天的城市情况。",
         category: "日常信息",
+        labels: ["天气", "weather", "forecast", "城市", "daily", "local"],
         output: "sources.yaml",
       },
       arxiv: {
@@ -981,6 +1054,7 @@
         title: "arXiv",
         desc: "按你的研究兴趣筛选 arXiv 新论文，并自动生成摘要。",
         category: "研究",
+        labels: ["论文", "papers", "research", "arxiv", "AI", "ML", "LLM"],
         output: "sources.yaml + config/extensions/arxiv.yaml",
       },
       github_trending: {
@@ -988,6 +1062,7 @@
         title: "GitHub Trending",
         desc: "把今天最受关注的 GitHub 仓库整理成一页。",
         category: "开发者",
+        labels: ["github", "仓库", "repos", "开源", "trending", "coding"],
         output: "sources.yaml",
       },
       hacker_news: {
@@ -995,6 +1070,7 @@
         title: "Hacker News",
         desc: "按分数筛选更值得看的 AI / 工程类 Hacker News 文章。",
         category: "资讯",
+        labels: ["hn", "hacker news", "资讯", "新闻", "engineering", "stories"],
         output: "sources.yaml + config/extensions/hacker_news.yaml",
       },
       postdoc_jobs: {
@@ -1002,6 +1078,7 @@
         title: "博士后职位",
         desc: "把多个学术职位来源拼在一起，方便集中浏览。",
         category: "求职",
+        labels: ["职位", "jobs", "career", "postdoc", "academic", "research"],
         output: "sources.yaml + config/extensions/postdoc_jobs.yaml",
       },
       supervisor_updates: {
@@ -1009,6 +1086,7 @@
         title: "导师主页更新",
         desc: "监控导师或实验室主页，一旦有变化就整理出来。",
         category: "监控",
+        labels: ["导师", "supervisor", "实验室", "lab", "monitoring", "updates"],
         output: "sources.yaml + config/extensions/supervisor_updates.yaml",
       },
     };
@@ -1137,6 +1215,10 @@
         key,
         enabled: DEFAULT_ENABLED.has(key),
       })),
+      sourcePicker: {
+        search: "",
+        category: "all",
+      },
       global: {
         language: "zh",
       },
@@ -1269,6 +1351,28 @@
 
     function getSourceDef(key) {
       return SOURCE_DEFS[key];
+    }
+
+    function sourceCategories() {
+      return unique(state.sources.map(({ key }) => getSourceDef(key).category));
+    }
+
+    function sourceSearchText(def) {
+      return [def.key, def.title, def.desc, def.category, ...(def.labels || [])]
+        .join(" ")
+        .toLowerCase();
+    }
+
+    function getVisibleSources() {
+      const query = state.sourcePicker.search.trim().toLowerCase();
+      const activeCategory = state.sourcePicker.category;
+
+      return state.sources.filter(({ key }) => {
+        const def = getSourceDef(key);
+        const matchesCategory = activeCategory === "all" || def.category === activeCategory;
+        const matchesQuery = !query || sourceSearchText(def).includes(query);
+        return matchesCategory && matchesQuery;
+      });
     }
 
     function unique(values) {
@@ -1760,12 +1864,42 @@
 
     function renderStep1() {
       const selected = new Set(selectedSourceKeys());
+      const categories = sourceCategories();
+      const visibleSources = getVisibleSources();
       stepPanelEl.innerHTML = `
         <div class="stack">
           <div>
-            <h3 class="section-title">选择要放进摘要的信息源</h3>
+            <div class="section-header">
+              <div>
+                <h3 class="section-title">选择要放进摘要的信息源</h3>
+                <p>
+                  如果你已经大概知道自己想找什么，可以直接按名称、分类或标签来搜，后面 extension 多了会更省事。
+                </p>
+              </div>
+              <div class="results-note">当前显示 ${visibleSources.length} 个 · 已选择 ${selected.size} 个</div>
+            </div>
+
+            <div class="filter-toolbar">
+              <input
+                class="filter-input"
+                id="source-search"
+                type="text"
+                value="${escapeAttribute(state.sourcePicker.search)}"
+                placeholder="搜索信息源、标签或关键词"
+              />
+              <div class="filter-row" role="group" aria-label="按分类筛选信息源">
+                <button class="filter-chip ${state.sourcePicker.category === "all" ? "is-active" : ""}" type="button" data-source-category="all">全部</button>
+                ${categories.map((category) => `
+                  <button class="filter-chip ${state.sourcePicker.category === category ? "is-active" : ""}" type="button" data-source-category="${category}">
+                    ${category}
+                  </button>
+                `).join("")}
+              </div>
+            </div>
+
+            ${visibleSources.length ? `
             <div class="card-grid">
-              ${state.sources.map(({ key, enabled }) => {
+              ${visibleSources.map(({ key, enabled }) => {
                 const def = getSourceDef(key);
                 return `
                   <button class="source-card ${enabled ? "is-selected" : ""}" type="button" data-toggle-source="${key}">
@@ -1779,10 +1913,18 @@
                       <span class="pill">${enabled ? "已选择" : "可选"}</span>
                       <span class="pill">${def.output}</span>
                     </div>
+                    <div class="label-row">
+                      ${(def.labels || []).slice(0, 4).map((label) => `<span class="label-chip">${label}</span>`).join("")}
+                    </div>
                   </button>
                 `;
               }).join("")}
             </div>
+            ` : `
+              <div class="placeholder">
+                目前没有匹配到结果。可以换一个更宽一点的关键词，或者切回“全部”再看看。
+              </div>
+            `}
           </div>
 
           <div class="info-card">
@@ -1818,6 +1960,21 @@
 
       stepPanelEl.querySelectorAll("[data-toggle-source]").forEach((button) => {
         button.addEventListener("click", () => toggleSource(button.dataset.toggleSource));
+      });
+
+      const sourceSearchEl = stepPanelEl.querySelector("#source-search");
+      if (sourceSearchEl) {
+        sourceSearchEl.addEventListener("input", () => {
+          state.sourcePicker.search = sourceSearchEl.value;
+          renderStep1();
+        });
+      }
+
+      stepPanelEl.querySelectorAll("[data-source-category]").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.sourcePicker.category = button.dataset.sourceCategory;
+          renderStep1();
+        });
       });
 
       stepPanelEl.querySelectorAll("[data-move-up]").forEach((button) => {
@@ -2426,6 +2583,14 @@
     function escapeHtml(text) {
       return text
         .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;");
+    }
+
+    function escapeAttribute(text) {
+      return String(text)
+        .replaceAll("&", "&amp;")
+        .replaceAll('"', "&quot;")
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;");
     }

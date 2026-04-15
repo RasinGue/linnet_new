@@ -357,6 +357,78 @@
       letter-spacing: 0.01em;
     }
 
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .section-header p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.93rem;
+      max-width: 62ch;
+    }
+
+    .filter-toolbar {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .filter-input {
+      width: 100%;
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .filter-chip {
+      border-radius: 999px;
+      border: 1px solid var(--chip-border);
+      background: var(--panel);
+      color: var(--text);
+      padding: 9px 12px;
+      cursor: pointer;
+    }
+
+    .filter-chip.is-active {
+      background: var(--chip);
+      color: var(--chip-text);
+      border-color: rgba(21, 101, 192, 0.28);
+    }
+
+    .results-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .label-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .label-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -978,6 +1050,7 @@
         title: "Weather",
         desc: "A one-glance local forecast at the top of your digest.",
         category: "Daily context",
+        labels: ["weather", "forecast", "city", "daily", "local"],
         output: "sources.yaml",
       },
       arxiv: {
@@ -985,6 +1058,7 @@
         title: "arXiv",
         desc: "Fresh papers filtered by your own research interests and summarized by AI.",
         category: "Research",
+        labels: ["arxiv", "papers", "research", "ai", "ml", "llm"],
         output: "sources.yaml + config/extensions/arxiv.yaml",
       },
       github_trending: {
@@ -992,6 +1066,7 @@
         title: "GitHub Trending",
         desc: "The repos attracting the most stars today, condensed into one list.",
         category: "Builders",
+        labels: ["github", "repos", "opensource", "coding", "trending"],
         output: "sources.yaml",
       },
       hacker_news: {
@@ -999,6 +1074,7 @@
         title: "Hacker News",
         desc: "High-signal AI and engineering stories filtered by score.",
         category: "News",
+        labels: ["hn", "hacker news", "news", "engineering", "ai", "stories"],
         output: "sources.yaml + config/extensions/hacker_news.yaml",
       },
       postdoc_jobs: {
@@ -1006,6 +1082,7 @@
         title: "Postdoc Jobs",
         desc: "Research vacancies stitched together from jobs boards and search pages.",
         category: "Career",
+        labels: ["jobs", "career", "postdoc", "positions", "academic", "research"],
         output: "sources.yaml + config/extensions/postdoc_jobs.yaml",
       },
       supervisor_updates: {
@@ -1013,6 +1090,7 @@
         title: "Supervisor Updates",
         desc: "Watch professor or lab pages and summarize what changed.",
         category: "Monitoring",
+        labels: ["supervisor", "lab", "professor", "monitoring", "updates", "watch"],
         output: "sources.yaml + config/extensions/supervisor_updates.yaml",
       },
     };
@@ -1141,6 +1219,10 @@
         key,
         enabled: DEFAULT_ENABLED.has(key),
       })),
+      sourcePicker: {
+        search: "",
+        category: "all",
+      },
       global: {
         language: "en",
       },
@@ -1273,6 +1355,28 @@
 
     function getSourceDef(key) {
       return SOURCE_DEFS[key];
+    }
+
+    function sourceCategories() {
+      return unique(state.sources.map(({ key }) => getSourceDef(key).category));
+    }
+
+    function sourceSearchText(def) {
+      return [def.key, def.title, def.desc, def.category, ...(def.labels || [])]
+        .join(" ")
+        .toLowerCase();
+    }
+
+    function getVisibleSources() {
+      const query = state.sourcePicker.search.trim().toLowerCase();
+      const activeCategory = state.sourcePicker.category;
+
+      return state.sources.filter(({ key }) => {
+        const def = getSourceDef(key);
+        const matchesCategory = activeCategory === "all" || def.category === activeCategory;
+        const matchesQuery = !query || sourceSearchText(def).includes(query);
+        return matchesCategory && matchesQuery;
+      });
     }
 
     function unique(values) {
@@ -1764,12 +1868,43 @@
 
     function renderStep1() {
       const selected = new Set(selectedSourceKeys());
+      const categories = sourceCategories();
+      const visibleSources = getVisibleSources();
       stepPanelEl.innerHTML = `
         <div class="stack">
           <div>
-            <h3 class="section-title">Pick the sources to include</h3>
+            <div class="section-header">
+              <div>
+                <h3 class="section-title">Pick the sources to include</h3>
+                <p>
+                  Search by name, category, or labels if you already know roughly what you want.
+                  This scales better once the extension list grows.
+                </p>
+              </div>
+              <div class="results-note">${visibleSources.length} shown · ${selected.size} selected</div>
+            </div>
+
+            <div class="filter-toolbar">
+              <input
+                class="filter-input"
+                id="source-search"
+                type="text"
+                value="${escapeAttribute(state.sourcePicker.search)}"
+                placeholder="Search sources, labels, or keywords"
+              />
+              <div class="filter-row" role="group" aria-label="Filter sources by category">
+                <button class="filter-chip ${state.sourcePicker.category === "all" ? "is-active" : ""}" type="button" data-source-category="all">All</button>
+                ${categories.map((category) => `
+                  <button class="filter-chip ${state.sourcePicker.category === category ? "is-active" : ""}" type="button" data-source-category="${category}">
+                    ${category}
+                  </button>
+                `).join("")}
+              </div>
+            </div>
+
+            ${visibleSources.length ? `
             <div class="card-grid">
-              ${state.sources.map(({ key, enabled }) => {
+              ${visibleSources.map(({ key, enabled }) => {
                 const def = getSourceDef(key);
                 return `
                   <button class="source-card ${enabled ? "is-selected" : ""}" type="button" data-toggle-source="${key}">
@@ -1783,10 +1918,18 @@
                       <span class="pill">${enabled ? "Selected" : "Optional"}</span>
                       <span class="pill">${def.output}</span>
                     </div>
+                    <div class="label-row">
+                      ${(def.labels || []).slice(0, 4).map((label) => `<span class="label-chip">${label}</span>`).join("")}
+                    </div>
                   </button>
                 `;
               }).join("")}
             </div>
+            ` : `
+              <div class="placeholder">
+                No sources match this search yet. Try a broader keyword or switch back to <strong>All</strong>.
+              </div>
+            `}
           </div>
 
           <div class="info-card">
@@ -1824,6 +1967,21 @@
 
       stepPanelEl.querySelectorAll("[data-toggle-source]").forEach((button) => {
         button.addEventListener("click", () => toggleSource(button.dataset.toggleSource));
+      });
+
+      const sourceSearchEl = stepPanelEl.querySelector("#source-search");
+      if (sourceSearchEl) {
+        sourceSearchEl.addEventListener("input", () => {
+          state.sourcePicker.search = sourceSearchEl.value;
+          renderStep1();
+        });
+      }
+
+      stepPanelEl.querySelectorAll("[data-source-category]").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.sourcePicker.category = button.dataset.sourceCategory;
+          renderStep1();
+        });
       });
 
       stepPanelEl.querySelectorAll("[data-move-up]").forEach((button) => {
@@ -2436,6 +2594,14 @@
     function escapeHtml(text) {
       return text
         .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;");
+    }
+
+    function escapeAttribute(text) {
+      return String(text)
+        .replaceAll("&", "&amp;")
+        .replaceAll('"', "&quot;")
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;");
     }
