@@ -80,12 +80,19 @@ class ArxivExtension(BaseExtension):
         summary_model = self.config["llm_summarization_model"]
         threshold = self.config.get("llm_score_threshold", 7)
         lang = self.config.get("language", "en")
+        prompts = self.config.get("prompts", {})
 
-        scored = score_papers(items, self.llm, scoring_model, threshold)
+        scored = score_papers(
+            items, self.llm, scoring_model, threshold,
+            prompt_template=prompts.get("arxiv_score"),
+        )
         self._scored_count = len(scored)
         print(f"  After LLM filter: {self._scored_count}")
 
-        summarised = summarize_papers(scored, self.llm, summary_model, lang)
+        summarised = summarize_papers(
+            scored, self.llm, summary_model, lang,
+            prompt_template=prompts.get("arxiv_summary"),
+        )
 
         if summarised:
             print("Fetching arXiv figure previews...")

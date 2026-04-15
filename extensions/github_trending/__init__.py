@@ -23,7 +23,11 @@ class GitHubTrendingExtension(BaseExtension):
             return items
         summary_model = self.config["llm_summarization_model"]
         lang = self.config.get("language", "en")
-        return summarize_github_repos(items, self.llm, summary_model, lang)
+        prompts = self.config.get("prompts", {})
+        return summarize_github_repos(
+            items, self.llm, summary_model, lang,
+            prompt_template=prompts.get("github_summary"),
+        )
 
     def render(self, items: list[dict]) -> FeedSection:
         return self.build_section(

@@ -49,6 +49,50 @@ llm:
   summarization_model: "google/gemini-2.5-flash-lite-preview-09-2025"
   base_url: "https://openrouter.ai/api/v1"
 
+  # ── Custom prompts (optional) ─────────────────────────────────────────────
+  # Uncomment and edit any prompt below to override the built-in default.
+  # Leave a prompt commented out to keep the default behaviour.
+  #
+  # Placeholders are filled at runtime — use exactly the names shown.
+  # Do not add new placeholder names; unknown keys will cause a KeyError.
+  #
+  # prompts:
+  #
+  #   # arXiv relevance scoring (0-10). Placeholders: {title}, {abstract}
+  #   arxiv_score: |
+  #     Rate this arxiv paper's relevance to: Computer Vision, Medical Imaging
+  #     (MRI/CT/ultrasound/pathology/fundus), LLMs, Vision-Language Models,
+  #     Diffusion Models, Foundation Models.
+  #
+  #     Title: {title}
+  #     Abstract: {abstract}
+  #
+  #     Reply with ONLY a single integer 0-10. No explanation.
+  #
+  #   # arXiv paper summary. Placeholders: {title}, {abstract}, {lang}
+  #   arxiv_summary: |
+  #     Summarize the core method and contribution of the following paper
+  #     {lang}, in 2-3 sentences (≤100 words):
+  #
+  #     Title: {title}
+  #     Abstract: {abstract}
+  #
+  #   # Hacker News story summary. Placeholders: {title}, {url}, {lang}
+  #   hacker_news_summary: |
+  #     Summarize the core content of the following tech news story
+  #     {lang}, in one sentence (≤50 words):
+  #
+  #     Title: {title}
+  #     URL: {url}
+  #
+  #   # GitHub trending repo summary. Placeholders: {full_name}, {description}, {lang}
+  #   github_summary: |
+  #     Summarize the core function and key features of the following GitHub
+  #     repository {lang}, in one sentence (≤60 words):
+  #
+  #     Repo: {full_name}
+  #     Description: {description}
+
 pages:
   base_url: ""
 

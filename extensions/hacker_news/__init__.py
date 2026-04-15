@@ -26,7 +26,11 @@ class HackerNewsExtension(BaseExtension):
             return items
         summary_model = self.config["llm_summarization_model"]
         lang = self.config.get("language", "en")
-        return summarize_hn_stories(items, self.llm, summary_model, lang)
+        prompts = self.config.get("prompts", {})
+        return summarize_hn_stories(
+            items, self.llm, summary_model, lang,
+            prompt_template=prompts.get("hacker_news_summary"),
+        )
 
     def render(self, items: list[dict]) -> FeedSection:
         return self.build_section(
