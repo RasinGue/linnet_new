@@ -69,7 +69,7 @@ def validate_arxiv_config(arxiv_cfg: dict) -> None:
         errors.append("  • must_include is empty — all fetched papers will pass keyword filter")
 
     threshold = arxiv_cfg.get("llm_score_threshold", 7)
-    if not isinstance(threshold, (int, float)) or not (0 <= threshold <= 10):
+    if not isinstance(threshold, int | float) or not (0 <= threshold <= 10):
         errors.append(f"  • llm_score_threshold must be between 0 and 10, got: {threshold!r}")
 
     if errors:
