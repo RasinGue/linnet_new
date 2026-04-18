@@ -200,17 +200,50 @@ PYTHONPATH=. pytest tests/ -q
 
 ---
 
+## Architecture
+
+```text
+GitHub Actions (schedule)
+    │
+    ▼
+main.py  ──────────────────────────────────────────────────────────────
+    │
+    ├─► pipeline/config_loader.py   (loads sources.yaml + extension configs)
+    │
+    ├─► extensions/*/               (one per enabled source)
+    │       collector.py            fetch raw items  (no LLM)
+    │       summarizer.py           LLM summarisation
+    │       __init__.py             fetch → process → render → FeedSection
+    │
+    ├─► publishers/data_publisher.py
+    │       writes docs/data/daily/<date>.json
+    │              docs/data/weekly/<week>.json
+    │              docs/data/monthly/<month>.json
+    │
+    ├─► astro/  (Astro v5 static site, built by pages.yml)
+    │       src/pages/daily/[date].astro    reads JSON → HTML
+    │       src/pages/weekly/[week].astro
+    │       src/pages/monthly/[month].astro
+    │       src/components/                 PaperCard, HNCard, RepoCard, …
+    │       dist/                           deployed to GitHub Pages
+    │
+    └─► sinks/*/  (optional delivery channels, run after publish)
+            slack/__init__.py
+            serverchan/__init__.py
+```
+
 ## Project layout
 
 ```text
 Linnet/
-├── extensions/   # data-source plugins
+├── extensions/   # data-source plugins (collector + summarizer + __init__)
 ├── sinks/        # optional delivery channels
-├── config/       # sources.yaml + per-extension config
-├── publishers/   # writes JSON outputs to docs/data/
-├── docs/data/    # JSON data written by pipeline (NOT the served site)
-├── astro/        # Astro v5 static site → deployed to GitHub Pages
-├── skills/       # public prompt/skill files for contributors and users
+├── config/       # sources.yaml + per-extension config examples
+├── pipeline/     # aggregator, config_loader, utils
+├── publishers/   # writes JSON to docs/data/
+├── docs/data/    # JSON written by pipeline (not the served site)
+├── astro/        # Astro v5 static site → GitHub Pages
+├── skills/       # packaged AI-assistant skills for contributors and users
 ├── dev_docs/     # maintainer-focused docs
 └── main.py       # CLI entry point
 ```
@@ -225,11 +258,6 @@ Packaged skill folders now live in [`skills/`](skills/):
 
 - [`skills/dailyreport-contributor/SKILL.md`](skills/dailyreport-contributor/SKILL.md)
 - [`skills/dailyreport-config-customization/SKILL.md`](skills/dailyreport-config-customization/SKILL.md)
-
-Lightweight prompt versions are also available:
-
-- [`skills/dailyreport-contributor.md`](skills/dailyreport-contributor.md)
-- [`skills/dailyreport-config-customization.md`](skills/dailyreport-config-customization.md)
 
 Before asking an AI agent to make changes, point it at the repo guidance first:
 

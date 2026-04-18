@@ -215,11 +215,6 @@ Linnet/
 - [`skills/dailyreport-contributor/SKILL.md`](skills/dailyreport-contributor/SKILL.md)
 - [`skills/dailyreport-config-customization/SKILL.md`](skills/dailyreport-config-customization/SKILL.md)
 
-同时也保留了轻量 prompt 版本：
-
-- [`skills/dailyreport-contributor.md`](skills/dailyreport-contributor.md)
-- [`skills/dailyreport-config-customization.md`](skills/dailyreport-config-customization.md)
-
 在让 AI agent 动手之前，建议先让它读这些仓库说明：
 
 - [`llms.txt`](llms.txt)
