@@ -1,6 +1,6 @@
 {
   "date": "2026-04-18",
-  "generated_at": "2026-04-18T10:59:41.107514+00:00",
+  "generated_at": "2026-04-18T11:04:30.442837+00:00",
   "sections_ordered": [
     {
       "key": "weather",
@@ -18,14 +18,14 @@
           "longitude": -3.19648,
           "timezone": "Europe/London",
           "forecast_date": "2026-04-18",
-          "condition": "Slight rain",
-          "weather_code": 61,
-          "temperature_c": 10.5,
-          "apparent_temperature_c": 6.9,
+          "condition": "Overcast",
+          "weather_code": 3,
+          "temperature_c": 10.8,
+          "apparent_temperature_c": 7.0,
           "temp_max_c": 12.0,
           "temp_min_c": 6.9,
-          "humidity_pct": 80,
-          "wind_speed_kmh": 19.1,
+          "humidity_pct": 77,
+          "wind_speed_kmh": 20.9,
           "precipitation_probability_pct": 92,
           "is_day": true,
           "sunrise": "2026-04-18T05:59",
@@ -59,7 +59,7 @@
             "cs.CV",
             "cs.LG"
           ],
-          "abstract": "This paper introduces the Latent Attention Masked Autoencoder (LAMAE), a foundation model designed to overcome the limitations of frame-independent processing in multi-view echocardiography. LAMAE incorporates a latent attention module to facilitate information exchange across different frames and views directly in the latent space. This enables the model to learn a holistic representation of cardiac function by effectively aggregating variable-length, heterogeneous multi-view data.",
+          "abstract": "This paper introduces the Latent Attention Masked Autoencoder (LAMAE), a foundation model designed to overcome the limitations of standard Masked Autoencoders in processing multi-view echocardiography. LAMAE incorporates a latent attention module to facilitate information exchange across different frames and views directly in the latent space. This enables the model to learn holistic cardiac representations by effectively aggregating variable-length, heterogeneous observational data.",
           "url": "http://arxiv.org/abs/2604.15096v1",
           "pdf_url": "https://arxiv.org/pdf/2604.15096v1",
           "score": 9.0,
@@ -82,7 +82,7 @@
             "cs.CV",
             "cs.CR"
           ],
-          "abstract": "This paper presents the first systematic study on the robustness of vision foundation models to common image perturbations like JPEG compression and brightness changes. The authors introduce three robustness metrics, analyze their mathematical properties, and evaluate six industry models, finding them generally non-robust. Crucially, they demonstrate that these perturbations degrade downstream task performance and propose a fine-tuning method to improve robustness without sacrificing utility.",
+          "abstract": "This paper systematically studies the robustness of vision foundation models to common image perturbations like JPEG compression and brightness changes, finding that these models are generally non-robust. The authors introduce three new robustness metrics, analyze their mathematical properties, and demonstrate that low robustness correlates with degraded downstream task performance. They conclude by proposing a fine-tuning method to enhance robustness without sacrificing utility.",
           "url": "http://arxiv.org/abs/2604.14973v1",
           "pdf_url": "https://arxiv.org/pdf/2604.14973v1",
           "score": 9.0,
@@ -104,7 +104,7 @@
             "cs.CV",
             "cs.LG"
           ],
-          "abstract": "This paper analyzes the trade-off between regularization methods and the Fokker-Planck (FP) equation residuals in diffusion models for image generation. The authors empirically investigate lightweight regularizers as alternatives to direct FP penalty terms, showing that simpler penalties can achieve similar benefits in reducing FP residuals and improving sample quality at a substantially lower computational cost.",
+          "abstract": "This paper analyzes the trade-off between regularization techniques and the Fokker-Planck (FP) equation residuals in diffusion models for image generation. The authors empirically investigate lightweight regularizers as alternatives to directly penalizing FP deviations, which is computationally expensive. They demonstrate that simpler regularization methods can achieve similar benefits in reducing FP residuals and improving sample quality at a significantly lower computational cost.",
           "url": "http://arxiv.org/abs/2604.15171v1",
           "pdf_url": "https://arxiv.org/pdf/2604.15171v1",
           "score": 8.0,
@@ -126,7 +126,7 @@
           "categories": [
             "cs.CV"
           ],
-          "abstract": "This paper introduces **OmniLight**, a generalized model designed to handle diverse adverse lighting conditions like shadows and irregular illumination. It achieves this by extending a specialized baseline (DINOLight) with a novel **Wavelet Domain Mixture-of-Experts (WD-MoE)** architecture. The core contribution is creating a single, robust model capable of performing both shadow removal and adaptive lighting normalization across multiple, varied datasets.",
+          "abstract": "OmniLight is a generalized model designed to handle diverse adverse lighting conditions, including shadows and irregular illumination, by unifying multiple restoration tasks. Its core method involves extending the specialized DINOLight framework with a novel **Wavelet Domain Mixture-of-Experts (WD-MoE)** layer. This contribution enables OmniLight to be trained across all datasets simultaneously, achieving robust performance across various lighting domains rather than specializing in just one.",
           "url": "http://arxiv.org/abs/2604.15170v1",
           "pdf_url": "https://arxiv.org/pdf/2604.15170v1",
           "score": 8.0,
@@ -148,7 +148,7 @@
             "cs.CV",
             "cs.AI"
           ],
-          "abstract": "UniDoc-RL proposes a unified reinforcement learning framework for visual RAG, enabling a Large Vision-Language Model agent to sequentially acquire visual evidence through coarse-to-fine actions like document retrieval, image selection, and region cropping. This hierarchical approach allows the model to suppress irrelevant content and focus on information-dense regions. The core contribution is the integration of these steps with a dense multi-reward scheme for effective end-to-end training, leading to superior visual reasoning.",
+          "abstract": "UniDoc-RL proposes a unified reinforcement learning framework for visual RAG, enabling a Large Vision-Language Model agent to sequentially acquire visual evidence. The core method uses a hierarchical action space to move from coarse document retrieval to fine-grained image selection and region cropping, effectively suppressing irrelevant information. This approach is trained end-to-end using a dense multi-reward scheme, contributing a more precise and context-aware visual information gathering process for complex reasoning.",
           "url": "http://arxiv.org/abs/2604.14967v1",
           "pdf_url": "https://arxiv.org/pdf/2604.14967v1",
           "score": 8.0,
@@ -171,7 +171,7 @@
             "cs.CV",
             "cs.AI"
           ],
-          "abstract": "This paper investigates why Vision-Language Models (VLMs) struggle with dynamic facial emotion recognition (DFER). The core finding is that VLM pre-training exacerbates the long-tailed nature of emotion datasets, causing them to misclassify rare emotions as common ones. The contribution involves proposing alternative sampling strategies to mitigate this head-class bias and improve VLM performance on subtle, under-represented emotional states.",
+          "abstract": "This paper investigates why Vision-Language Models (VLMs) struggle with dynamic facial emotion recognition (DFER). The authors find two key vulnerabilities: VLM pre-training exacerbates the long-tail distribution of emotion datasets, causing rare emotions to be misclassified as common ones. Their contribution is proposing alternative sampling strategies to mitigate this head-class bias.",
           "url": "http://arxiv.org/abs/2604.15280v1",
           "pdf_url": "https://arxiv.org/pdf/2604.15280v1",
           "score": 8.0,
@@ -194,7 +194,7 @@
           "categories": [
             "cs.AI"
           ],
-          "abstract": "RadAgent is a tool-using AI agent designed to generate Chest CT reports through a stepwise and interpretable reasoning process. Its core contribution is providing clinicians with a fully inspectable trace of intermediate decisions and tool interactions, moving beyond passive final outputs. This approach significantly improves clinical accuracy and robustness compared to existing 3D Vision-Language Model counterparts.",
+          "abstract": "RadAgent is a tool-using AI agent designed to generate Chest CT reports through a stepwise, interpretable process. Its core contribution is providing a fully inspectable trace of intermediate decisions and tool interactions, allowing clinicians to validate the reasoning behind the final output. This approach significantly improves clinical accuracy and robustness compared to existing 3D Vision-Language Model counterparts.",
           "url": "http://arxiv.org/abs/2604.15231v1",
           "pdf_url": "https://arxiv.org/pdf/2604.15231v1",
           "score": 10.0,
@@ -223,40 +223,40 @@
           "url": "https://github.com/sponsors/thunderbird",
           "description": "AI You Control: Choose your models. Own your data. Eliminate vendor lock-in.",
           "stars_today": 458,
-          "total_stars": 1159,
+          "total_stars": 1162,
           "language": "TypeScript",
           "topics": [],
-          "summary": "This repository, \"sponsors/thunderbird,\" promotes an AI platform focused on user control, data ownership, and eliminating vendor lock-in by allowing users to select their preferred AI models."
+          "summary": "This repository, \"sponsors/thunderbird,\" focuses on providing an AI platform where users maintain control over their models and data, ensuring data ownership and eliminating vendor lock-in."
         },
         {
           "full_name": "sponsors/BasedHardware",
           "url": "https://github.com/sponsors/BasedHardware",
           "description": "AI that sees your screen, listens to your conversations and tells you what to do",
           "stars_today": 824,
-          "total_stars": 10074,
+          "total_stars": 10079,
           "language": "Dart",
           "topics": [],
-          "summary": "BasedHardware is an AI system that monitors your screen and conversations to provide real-time guidance and instructions on what actions to take next."
+          "summary": "This repository, \"sponsors/BasedHardware,\" describes an AI system designed to actively monitor a user's screen and conversations to provide real-time guidance or instructions."
         },
         {
           "full_name": "openai/openai-agents-python",
           "url": "https://github.com/openai/openai-agents-python",
           "description": "A lightweight, powerful framework for multi-agent workflows",
           "stars_today": 625,
-          "total_stars": 22013,
+          "total_stars": 22014,
           "language": "Python",
           "topics": [],
-          "summary": "The `openai-agents-python` repository provides a lightweight, powerful framework for orchestrating complex multi-agent workflows using the OpenAI platform."
+          "summary": "The `openai-agents-python` repository provides a lightweight, powerful framework for building and managing complex multi-agent workflows using Python."
         },
         {
           "full_name": "EvoMap/evolver",
           "url": "https://github.com/EvoMap/evolver",
           "description": "The GEP-Powered Self-Evolution Engine for AI Agents. Genome Evolution Protocol. | evomap.ai",
           "stars_today": 737,
-          "total_stars": 4694,
+          "total_stars": 4695,
           "language": "JavaScript",
           "topics": [],
-          "summary": "EvoMap/evolver is a GEP-powered self-evolution engine designed for AI agents, utilizing a Genome Evolution Protocol to drive continuous improvement and adaptation."
+          "summary": "EvoMap/evolver is a self-evolution engine for AI agents, utilizing the Genome Evolution Protocol (GEP) to power its adaptive and evolving capabilities."
         },
         {
           "full_name": "deepseek-ai/DeepGEMM",
@@ -273,7 +273,7 @@
           "url": "https://github.com/Lordog/dive-into-llms",
           "description": "《动手学大模型Dive into LLMs》系列编程实践教程",
           "stars_today": 944,
-          "total_stars": 31795,
+          "total_stars": 31796,
           "language": "Jupyter Notebook",
           "topics": [],
           "summary": "This repository provides hands-on programming tutorials accompanying the \"Dive into LLMs\" series, focusing on practical implementation of large language models."
@@ -286,37 +286,37 @@
           "total_stars": 3363,
           "language": "Shell",
           "topics": [],
-          "summary": "This GitHub repository provides a desktop application for interacting with Claude, specifically packaged for Debian-based Linux distributions."
+          "summary": "This repository provides a desktop application for interacting with Claude AI, specifically packaged for Debian-based Linux distributions."
         },
         {
           "full_name": "sponsors/rustdesk",
           "url": "https://github.com/sponsors/rustdesk",
           "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
           "stars_today": 211,
-          "total_stars": 111791,
+          "total_stars": 111794,
           "language": "Rust",
           "topics": [],
-          "summary": "RustDesk is an open-source, self-hostable remote desktop application providing a secure alternative to commercial solutions like TeamViewer."
+          "summary": "RustDesk is an open-source, self-hostable remote desktop application providing a secure alternative to proprietary solutions like TeamViewer."
         },
         {
           "full_name": "SimoneAvogadro/android-reverse-engineering-skill",
           "url": "https://github.com/SimoneAvogadro/android-reverse-engineering-skill",
           "description": "Claude Code skill to support Android app's reverse engineering",
           "stars_today": 538,
-          "total_stars": 2926,
+          "total_stars": 2927,
           "language": "Shell",
           "topics": [],
-          "summary": "This GitHub repository provides a Claude Code skill designed to assist users with the technical process of Android application reverse engineering."
+          "summary": "This GitHub repository provides a Claude Code skill designed to assist users with the process of reverse engineering Android applications."
         },
         {
           "full_name": "tractorjuice/arc-kit",
           "url": "https://github.com/tractorjuice/arc-kit",
           "description": "Enterprise Architecture Governance & Vendor Procurement Toolkit",
           "stars_today": 143,
-          "total_stars": 574,
+          "total_stars": 576,
           "language": "HTML",
           "topics": [],
-          "summary": "Arc-Kit is an enterprise architecture governance and vendor procurement toolkit designed to streamline and manage architectural decision-making and technology acquisition processes."
+          "summary": "Arc-Kit is an enterprise architecture governance and vendor procurement toolkit designed to streamline and manage architectural decision-making and the acquisition of necessary technologies."
         }
       ],
       "meta": {
@@ -336,7 +336,7 @@
           "score": 105,
           "created_at": "2026-04-17T13:55:25Z",
           "comments_url": "https://news.ycombinator.com/item?id=47805998",
-          "summary": "The website \"isitagentready.com\" offers a tool to scan your website and assess its readiness for interaction with AI agents."
+          "summary": "The website **isitagentready.com** offers a tool to scan your website and assess its readiness for interaction with AI agents."
         }
       ],
       "meta": {
@@ -367,7 +367,7 @@
     "llm_model": "google/gemini-2.5-flash-lite-preview-09-2025",
     "scoring_model": "google/gemini-2.5-flash-lite-preview-09-2025",
     "summarization_model": "google/gemini-2.5-flash-lite-preview-09-2025",
-    "duration_seconds": 26
+    "duration_seconds": 30
   },
   "arxiv": [
     {
@@ -384,7 +384,7 @@
         "cs.CV",
         "cs.LG"
       ],
-      "abstract": "This paper introduces the Latent Attention Masked Autoencoder (LAMAE), a foundation model designed to overcome the limitations of frame-independent processing in multi-view echocardiography. LAMAE incorporates a latent attention module to facilitate information exchange across different frames and views directly in the latent space. This enables the model to learn a holistic representation of cardiac function by effectively aggregating variable-length, heterogeneous multi-view data.",
+      "abstract": "This paper introduces the Latent Attention Masked Autoencoder (LAMAE), a foundation model designed to overcome the limitations of standard Masked Autoencoders in processing multi-view echocardiography. LAMAE incorporates a latent attention module to facilitate information exchange across different frames and views directly in the latent space. This enables the model to learn holistic cardiac representations by effectively aggregating variable-length, heterogeneous observational data.",
       "url": "http://arxiv.org/abs/2604.15096v1",
       "pdf_url": "https://arxiv.org/pdf/2604.15096v1",
       "score": 9.0,
@@ -407,7 +407,7 @@
         "cs.CV",
         "cs.CR"
       ],
-      "abstract": "This paper presents the first systematic study on the robustness of vision foundation models to common image perturbations like JPEG compression and brightness changes. The authors introduce three robustness metrics, analyze their mathematical properties, and evaluate six industry models, finding them generally non-robust. Crucially, they demonstrate that these perturbations degrade downstream task performance and propose a fine-tuning method to improve robustness without sacrificing utility.",
+      "abstract": "This paper systematically studies the robustness of vision foundation models to common image perturbations like JPEG compression and brightness changes, finding that these models are generally non-robust. The authors introduce three new robustness metrics, analyze their mathematical properties, and demonstrate that low robustness correlates with degraded downstream task performance. They conclude by proposing a fine-tuning method to enhance robustness without sacrificing utility.",
       "url": "http://arxiv.org/abs/2604.14973v1",
       "pdf_url": "https://arxiv.org/pdf/2604.14973v1",
       "score": 9.0,
@@ -429,7 +429,7 @@
         "cs.CV",
         "cs.LG"
       ],
-      "abstract": "This paper analyzes the trade-off between regularization methods and the Fokker-Planck (FP) equation residuals in diffusion models for image generation. The authors empirically investigate lightweight regularizers as alternatives to direct FP penalty terms, showing that simpler penalties can achieve similar benefits in reducing FP residuals and improving sample quality at a substantially lower computational cost.",
+      "abstract": "This paper analyzes the trade-off between regularization techniques and the Fokker-Planck (FP) equation residuals in diffusion models for image generation. The authors empirically investigate lightweight regularizers as alternatives to directly penalizing FP deviations, which is computationally expensive. They demonstrate that simpler regularization methods can achieve similar benefits in reducing FP residuals and improving sample quality at a significantly lower computational cost.",
       "url": "http://arxiv.org/abs/2604.15171v1",
       "pdf_url": "https://arxiv.org/pdf/2604.15171v1",
       "score": 8.0,
@@ -451,7 +451,7 @@
       "categories": [
         "cs.CV"
       ],
-      "abstract": "This paper introduces **OmniLight**, a generalized model designed to handle diverse adverse lighting conditions like shadows and irregular illumination. It achieves this by extending a specialized baseline (DINOLight) with a novel **Wavelet Domain Mixture-of-Experts (WD-MoE)** architecture. The core contribution is creating a single, robust model capable of performing both shadow removal and adaptive lighting normalization across multiple, varied datasets.",
+      "abstract": "OmniLight is a generalized model designed to handle diverse adverse lighting conditions, including shadows and irregular illumination, by unifying multiple restoration tasks. Its core method involves extending the specialized DINOLight framework with a novel **Wavelet Domain Mixture-of-Experts (WD-MoE)** layer. This contribution enables OmniLight to be trained across all datasets simultaneously, achieving robust performance across various lighting domains rather than specializing in just one.",
       "url": "http://arxiv.org/abs/2604.15170v1",
       "pdf_url": "https://arxiv.org/pdf/2604.15170v1",
       "score": 8.0,
@@ -473,7 +473,7 @@
         "cs.CV",
         "cs.AI"
       ],
-      "abstract": "UniDoc-RL proposes a unified reinforcement learning framework for visual RAG, enabling a Large Vision-Language Model agent to sequentially acquire visual evidence through coarse-to-fine actions like document retrieval, image selection, and region cropping. This hierarchical approach allows the model to suppress irrelevant content and focus on information-dense regions. The core contribution is the integration of these steps with a dense multi-reward scheme for effective end-to-end training, leading to superior visual reasoning.",
+      "abstract": "UniDoc-RL proposes a unified reinforcement learning framework for visual RAG, enabling a Large Vision-Language Model agent to sequentially acquire visual evidence. The core method uses a hierarchical action space to move from coarse document retrieval to fine-grained image selection and region cropping, effectively suppressing irrelevant information. This approach is trained end-to-end using a dense multi-reward scheme, contributing a more precise and context-aware visual information gathering process for complex reasoning.",
       "url": "http://arxiv.org/abs/2604.14967v1",
       "pdf_url": "https://arxiv.org/pdf/2604.14967v1",
       "score": 8.0,
@@ -496,7 +496,7 @@
         "cs.CV",
         "cs.AI"
       ],
-      "abstract": "This paper investigates why Vision-Language Models (VLMs) struggle with dynamic facial emotion recognition (DFER). The core finding is that VLM pre-training exacerbates the long-tailed nature of emotion datasets, causing them to misclassify rare emotions as common ones. The contribution involves proposing alternative sampling strategies to mitigate this head-class bias and improve VLM performance on subtle, under-represented emotional states.",
+      "abstract": "This paper investigates why Vision-Language Models (VLMs) struggle with dynamic facial emotion recognition (DFER). The authors find two key vulnerabilities: VLM pre-training exacerbates the long-tail distribution of emotion datasets, causing rare emotions to be misclassified as common ones. Their contribution is proposing alternative sampling strategies to mitigate this head-class bias.",
       "url": "http://arxiv.org/abs/2604.15280v1",
       "pdf_url": "https://arxiv.org/pdf/2604.15280v1",
       "score": 8.0,
@@ -519,7 +519,7 @@
       "categories": [
         "cs.AI"
       ],
-      "abstract": "RadAgent is a tool-using AI agent designed to generate Chest CT reports through a stepwise and interpretable reasoning process. Its core contribution is providing clinicians with a fully inspectable trace of intermediate decisions and tool interactions, moving beyond passive final outputs. This approach significantly improves clinical accuracy and robustness compared to existing 3D Vision-Language Model counterparts.",
+      "abstract": "RadAgent is a tool-using AI agent designed to generate Chest CT reports through a stepwise, interpretable process. Its core contribution is providing a fully inspectable trace of intermediate decisions and tool interactions, allowing clinicians to validate the reasoning behind the final output. This approach significantly improves clinical accuracy and robustness compared to existing 3D Vision-Language Model counterparts.",
       "url": "http://arxiv.org/abs/2604.15231v1",
       "pdf_url": "https://arxiv.org/pdf/2604.15231v1",
       "score": 10.0,
@@ -545,7 +545,7 @@
         "cs.CV",
         "cs.LG"
       ],
-      "abstract": "This paper introduces the Latent Attention Masked Autoencoder (LAMAE), a foundation model designed to overcome the limitations of frame-independent processing in multi-view echocardiography. LAMAE incorporates a latent attention module to facilitate information exchange across different frames and views directly in the latent space. This enables the model to learn a holistic representation of cardiac function by effectively aggregating variable-length, heterogeneous multi-view data.",
+      "abstract": "This paper introduces the Latent Attention Masked Autoencoder (LAMAE), a foundation model designed to overcome the limitations of standard Masked Autoencoders in processing multi-view echocardiography. LAMAE incorporates a latent attention module to facilitate information exchange across different frames and views directly in the latent space. This enables the model to learn holistic cardiac representations by effectively aggregating variable-length, heterogeneous observational data.",
       "url": "http://arxiv.org/abs/2604.15096v1",
       "pdf_url": "https://arxiv.org/pdf/2604.15096v1",
       "score": 9.0,
@@ -568,7 +568,7 @@
         "cs.CV",
         "cs.CR"
       ],
-      "abstract": "This paper presents the first systematic study on the robustness of vision foundation models to common image perturbations like JPEG compression and brightness changes. The authors introduce three robustness metrics, analyze their mathematical properties, and evaluate six industry models, finding them generally non-robust. Crucially, they demonstrate that these perturbations degrade downstream task performance and propose a fine-tuning method to improve robustness without sacrificing utility.",
+      "abstract": "This paper systematically studies the robustness of vision foundation models to common image perturbations like JPEG compression and brightness changes, finding that these models are generally non-robust. The authors introduce three new robustness metrics, analyze their mathematical properties, and demonstrate that low robustness correlates with degraded downstream task performance. They conclude by proposing a fine-tuning method to enhance robustness without sacrificing utility.",
       "url": "http://arxiv.org/abs/2604.14973v1",
       "pdf_url": "https://arxiv.org/pdf/2604.14973v1",
       "score": 9.0,
@@ -590,7 +590,7 @@
         "cs.CV",
         "cs.LG"
       ],
-      "abstract": "This paper analyzes the trade-off between regularization methods and the Fokker-Planck (FP) equation residuals in diffusion models for image generation. The authors empirically investigate lightweight regularizers as alternatives to direct FP penalty terms, showing that simpler penalties can achieve similar benefits in reducing FP residuals and improving sample quality at a substantially lower computational cost.",
+      "abstract": "This paper analyzes the trade-off between regularization techniques and the Fokker-Planck (FP) equation residuals in diffusion models for image generation. The authors empirically investigate lightweight regularizers as alternatives to directly penalizing FP deviations, which is computationally expensive. They demonstrate that simpler regularization methods can achieve similar benefits in reducing FP residuals and improving sample quality at a significantly lower computational cost.",
       "url": "http://arxiv.org/abs/2604.15171v1",
       "pdf_url": "https://arxiv.org/pdf/2604.15171v1",
       "score": 8.0,
@@ -612,7 +612,7 @@
       "categories": [
         "cs.CV"
       ],
-      "abstract": "This paper introduces **OmniLight**, a generalized model designed to handle diverse adverse lighting conditions like shadows and irregular illumination. It achieves this by extending a specialized baseline (DINOLight) with a novel **Wavelet Domain Mixture-of-Experts (WD-MoE)** architecture. The core contribution is creating a single, robust model capable of performing both shadow removal and adaptive lighting normalization across multiple, varied datasets.",
+      "abstract": "OmniLight is a generalized model designed to handle diverse adverse lighting conditions, including shadows and irregular illumination, by unifying multiple restoration tasks. Its core method involves extending the specialized DINOLight framework with a novel **Wavelet Domain Mixture-of-Experts (WD-MoE)** layer. This contribution enables OmniLight to be trained across all datasets simultaneously, achieving robust performance across various lighting domains rather than specializing in just one.",
       "url": "http://arxiv.org/abs/2604.15170v1",
       "pdf_url": "https://arxiv.org/pdf/2604.15170v1",
       "score": 8.0,
@@ -634,7 +634,7 @@
         "cs.CV",
         "cs.AI"
       ],
-      "abstract": "UniDoc-RL proposes a unified reinforcement learning framework for visual RAG, enabling a Large Vision-Language Model agent to sequentially acquire visual evidence through coarse-to-fine actions like document retrieval, image selection, and region cropping. This hierarchical approach allows the model to suppress irrelevant content and focus on information-dense regions. The core contribution is the integration of these steps with a dense multi-reward scheme for effective end-to-end training, leading to superior visual reasoning.",
+      "abstract": "UniDoc-RL proposes a unified reinforcement learning framework for visual RAG, enabling a Large Vision-Language Model agent to sequentially acquire visual evidence. The core method uses a hierarchical action space to move from coarse document retrieval to fine-grained image selection and region cropping, effectively suppressing irrelevant information. This approach is trained end-to-end using a dense multi-reward scheme, contributing a more precise and context-aware visual information gathering process for complex reasoning.",
       "url": "http://arxiv.org/abs/2604.14967v1",
       "pdf_url": "https://arxiv.org/pdf/2604.14967v1",
       "score": 8.0,
@@ -657,7 +657,7 @@
         "cs.CV",
         "cs.AI"
       ],
-      "abstract": "This paper investigates why Vision-Language Models (VLMs) struggle with dynamic facial emotion recognition (DFER). The core finding is that VLM pre-training exacerbates the long-tailed nature of emotion datasets, causing them to misclassify rare emotions as common ones. The contribution involves proposing alternative sampling strategies to mitigate this head-class bias and improve VLM performance on subtle, under-represented emotional states.",
+      "abstract": "This paper investigates why Vision-Language Models (VLMs) struggle with dynamic facial emotion recognition (DFER). The authors find two key vulnerabilities: VLM pre-training exacerbates the long-tail distribution of emotion datasets, causing rare emotions to be misclassified as common ones. Their contribution is proposing alternative sampling strategies to mitigate this head-class bias.",
       "url": "http://arxiv.org/abs/2604.15280v1",
       "pdf_url": "https://arxiv.org/pdf/2604.15280v1",
       "score": 8.0,
@@ -680,7 +680,7 @@
       "categories": [
         "cs.AI"
       ],
-      "abstract": "RadAgent is a tool-using AI agent designed to generate Chest CT reports through a stepwise and interpretable reasoning process. Its core contribution is providing clinicians with a fully inspectable trace of intermediate decisions and tool interactions, moving beyond passive final outputs. This approach significantly improves clinical accuracy and robustness compared to existing 3D Vision-Language Model counterparts.",
+      "abstract": "RadAgent is a tool-using AI agent designed to generate Chest CT reports through a stepwise, interpretable process. Its core contribution is providing a fully inspectable trace of intermediate decisions and tool interactions, allowing clinicians to validate the reasoning behind the final output. This approach significantly improves clinical accuracy and robustness compared to existing 3D Vision-Language Model counterparts.",
       "url": "http://arxiv.org/abs/2604.15231v1",
       "pdf_url": "https://arxiv.org/pdf/2604.15231v1",
       "score": 10.0,
@@ -699,7 +699,7 @@
       "score": 105,
       "created_at": "2026-04-17T13:55:25Z",
       "comments_url": "https://news.ycombinator.com/item?id=47805998",
-      "summary": "The website \"isitagentready.com\" offers a tool to scan your website and assess its readiness for interaction with AI agents."
+      "summary": "The website **isitagentready.com** offers a tool to scan your website and assess its readiness for interaction with AI agents."
     }
   ],
   "github_trending": [
@@ -708,40 +708,40 @@
       "url": "https://github.com/sponsors/thunderbird",
       "description": "AI You Control: Choose your models. Own your data. Eliminate vendor lock-in.",
       "stars_today": 458,
-      "total_stars": 1159,
+      "total_stars": 1162,
       "language": "TypeScript",
       "topics": [],
-      "summary": "This repository, \"sponsors/thunderbird,\" promotes an AI platform focused on user control, data ownership, and eliminating vendor lock-in by allowing users to select their preferred AI models."
+      "summary": "This repository, \"sponsors/thunderbird,\" focuses on providing an AI platform where users maintain control over their models and data, ensuring data ownership and eliminating vendor lock-in."
     },
     {
       "full_name": "sponsors/BasedHardware",
       "url": "https://github.com/sponsors/BasedHardware",
       "description": "AI that sees your screen, listens to your conversations and tells you what to do",
       "stars_today": 824,
-      "total_stars": 10074,
+      "total_stars": 10079,
       "language": "Dart",
       "topics": [],
-      "summary": "BasedHardware is an AI system that monitors your screen and conversations to provide real-time guidance and instructions on what actions to take next."
+      "summary": "This repository, \"sponsors/BasedHardware,\" describes an AI system designed to actively monitor a user's screen and conversations to provide real-time guidance or instructions."
     },
     {
       "full_name": "openai/openai-agents-python",
       "url": "https://github.com/openai/openai-agents-python",
       "description": "A lightweight, powerful framework for multi-agent workflows",
       "stars_today": 625,
-      "total_stars": 22013,
+      "total_stars": 22014,
       "language": "Python",
       "topics": [],
-      "summary": "The `openai-agents-python` repository provides a lightweight, powerful framework for orchestrating complex multi-agent workflows using the OpenAI platform."
+      "summary": "The `openai-agents-python` repository provides a lightweight, powerful framework for building and managing complex multi-agent workflows using Python."
     },
     {
       "full_name": "EvoMap/evolver",
       "url": "https://github.com/EvoMap/evolver",
       "description": "The GEP-Powered Self-Evolution Engine for AI Agents. Genome Evolution Protocol. | evomap.ai",
       "stars_today": 737,
-      "total_stars": 4694,
+      "total_stars": 4695,
       "language": "JavaScript",
       "topics": [],
-      "summary": "EvoMap/evolver is a GEP-powered self-evolution engine designed for AI agents, utilizing a Genome Evolution Protocol to drive continuous improvement and adaptation."
+      "summary": "EvoMap/evolver is a self-evolution engine for AI agents, utilizing the Genome Evolution Protocol (GEP) to power its adaptive and evolving capabilities."
     },
     {
       "full_name": "deepseek-ai/DeepGEMM",
@@ -758,7 +758,7 @@
       "url": "https://github.com/Lordog/dive-into-llms",
       "description": "《动手学大模型Dive into LLMs》系列编程实践教程",
       "stars_today": 944,
-      "total_stars": 31795,
+      "total_stars": 31796,
       "language": "Jupyter Notebook",
       "topics": [],
       "summary": "This repository provides hands-on programming tutorials accompanying the \"Dive into LLMs\" series, focusing on practical implementation of large language models."
@@ -771,37 +771,37 @@
       "total_stars": 3363,
       "language": "Shell",
       "topics": [],
-      "summary": "This GitHub repository provides a desktop application for interacting with Claude, specifically packaged for Debian-based Linux distributions."
+      "summary": "This repository provides a desktop application for interacting with Claude AI, specifically packaged for Debian-based Linux distributions."
     },
     {
       "full_name": "sponsors/rustdesk",
       "url": "https://github.com/sponsors/rustdesk",
       "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
       "stars_today": 211,
-      "total_stars": 111791,
+      "total_stars": 111794,
       "language": "Rust",
       "topics": [],
-      "summary": "RustDesk is an open-source, self-hostable remote desktop application providing a secure alternative to commercial solutions like TeamViewer."
+      "summary": "RustDesk is an open-source, self-hostable remote desktop application providing a secure alternative to proprietary solutions like TeamViewer."
     },
     {
       "full_name": "SimoneAvogadro/android-reverse-engineering-skill",
       "url": "https://github.com/SimoneAvogadro/android-reverse-engineering-skill",
       "description": "Claude Code skill to support Android app's reverse engineering",
       "stars_today": 538,
-      "total_stars": 2926,
+      "total_stars": 2927,
       "language": "Shell",
       "topics": [],
-      "summary": "This GitHub repository provides a Claude Code skill designed to assist users with the technical process of Android application reverse engineering."
+      "summary": "This GitHub repository provides a Claude Code skill designed to assist users with the process of reverse engineering Android applications."
     },
     {
       "full_name": "tractorjuice/arc-kit",
       "url": "https://github.com/tractorjuice/arc-kit",
       "description": "Enterprise Architecture Governance & Vendor Procurement Toolkit",
       "stars_today": 143,
-      "total_stars": 574,
+      "total_stars": 576,
       "language": "HTML",
       "topics": [],
-      "summary": "Arc-Kit is an enterprise architecture governance and vendor procurement toolkit designed to streamline and manage architectural decision-making and technology acquisition processes."
+      "summary": "Arc-Kit is an enterprise architecture governance and vendor procurement toolkit designed to streamline and manage architectural decision-making and the acquisition of necessary technologies."
     }
   ],
   "postdoc_jobs": [],
@@ -818,14 +818,14 @@
       "longitude": -3.19648,
       "timezone": "Europe/London",
       "forecast_date": "2026-04-18",
-      "condition": "Slight rain",
-      "weather_code": 61,
-      "temperature_c": 10.5,
-      "apparent_temperature_c": 6.9,
+      "condition": "Overcast",
+      "weather_code": 3,
+      "temperature_c": 10.8,
+      "apparent_temperature_c": 7.0,
       "temp_max_c": 12.0,
       "temp_min_c": 6.9,
-      "humidity_pct": 80,
-      "wind_speed_kmh": 19.1,
+      "humidity_pct": 77,
+      "wind_speed_kmh": 20.9,
       "precipitation_probability_pct": 92,
       "is_day": true,
       "sunrise": "2026-04-18T05:59",
