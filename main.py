@@ -41,10 +41,10 @@ from sinks import SINK_REGISTRY
 
 def get_llm_client(sources_cfg: dict) -> OpenAI:
     llm_cfg = sources_cfg.get("llm", {})
-    api_key_env = llm_cfg.get("api_key_env", "OPENROUTER_API_KEY")
-    api_key = os.environ.get(api_key_env, "")
+    env_var_name = llm_cfg.get("api_key_env", "OPENROUTER_API_KEY")
+    api_key = os.environ.get(env_var_name, "")
     if not api_key:
-        print(f"WARNING: Environment variable {api_key_env} is not set", file=sys.stderr)
+        print(f"WARNING: Environment variable {env_var_name} is not set", file=sys.stderr)
 
     base_url = llm_cfg["base_url"]
     provider = llm_cfg.get("provider", "")
