@@ -29,6 +29,9 @@ export type ExtensionCategory =
   | 'local'      // location/personal context
   | 'custom';    // user-defined extensions
 
+// 'general' = shown in all setup locales; 'en'/'zh' = shown only in that locale's wizard
+export type ExtensionLocale = 'general' | 'en' | 'zh';
+
 export type FieldType =
   | 'text'
   | 'number'
@@ -85,6 +88,8 @@ export interface ExtensionMeta {
   descriptionZh?: string;
   category: ExtensionCategory;
   tags: string[];             // full-text search terms for the Step 1 search box
+  // Which setup wizard locale shows this extension. Omit (or 'general') for all locales.
+  locale?: ExtensionLocale;
 
   // Setup wizard — Step 2 per-extension config form
   setupFields: SetupField[];
@@ -356,6 +361,7 @@ export const REGISTRY: Record<string, ExtensionMeta> = {
     description: 'A daily quote from API Ninjas — replaces the default tagline. Requires API_NINJAS_KEY secret.',
     descriptionZh: '来自 API Ninjas 的每日名言，替换默认 tagline。需要配置 API_NINJAS_KEY。',
     category: 'custom',
+    locale: 'en',
     tags: ['quote', 'inspiration', 'tagline', '名言', '每日'],
     setupFields: [
       {
@@ -384,6 +390,7 @@ export const REGISTRY: Record<string, ExtensionMeta> = {
     description: '来自 hitokoto.cn 的每日一言，替换默认 tagline。无需 API key。',
     descriptionZh: '来自 hitokoto.cn 的每日一言，替换默认 tagline。无需 API key。',
     category: 'custom',
+    locale: 'zh',
     tags: ['hitokoto', '一言', 'quote', 'chinese', '中文', '名言'],
     setupFields: [
       {
@@ -448,6 +455,11 @@ export const EXTENSION_LIST: ExtensionMeta[] = Object.values(REGISTRY).sort(
 /** Look up extension metadata by key. Returns undefined for unregistered extensions. */
 export function getExtension(key: string): ExtensionMeta | undefined {
   return REGISTRY[key];
+}
+
+/** Extensions visible in a given setup wizard locale ('en' | 'zh'). */
+export function getExtensionsForLocale(locale: 'en' | 'zh'): ExtensionMeta[] {
+  return EXTENSION_LIST.filter(e => !e.locale || e.locale === 'general' || e.locale === locale);
 }
 
 /** Extensions grouped by category — useful for Step 1 filter chips in Setup. */

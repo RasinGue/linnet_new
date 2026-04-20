@@ -15,7 +15,7 @@
 
 Fork this repo, drop in one API key, and get your own searchable digest site running in under 5 minutes. No server, no subscription, no manual reading.
 
-**[See a live example →](https://yuyangxueed.github.io/Linnet)** · **[Setup Wizard →](https://yuyangxueed.github.io/Linnet/setup/)** · **[Manual config guide →](astro/public/setup/manual-config.md)**
+**[See a live example →](https://yuyangxueed.github.io/Linnet)** · **[Setup Wizard (EN) →](https://yuyangxueed.github.io/Linnet/setup/)** · **[设置向导 (中文) →](https://yuyangxueed.github.io/Linnet/setup/zh/)** · **[Manual config guide →](astro/public/setup/manual-config.md)**
 
 > **Important:** the public wizard is a generator for your own fork. It does **not** modify this demo site or this repository. Today it generates config for copy-paste; browser-side one-click deploy is not enabled yet.
 >
@@ -33,6 +33,8 @@ Fork this repo, drop in one API key, and get your own searchable digest site run
 | **Weather** | Today's forecast for your city |
 
 Optional sources such as postdoc jobs and supervisor-page monitoring are available through the extension system, but they are not required for most users.
+
+The setup wizard also offers locale-specific tagline extensions: **一言** (hitokoto.cn, Chinese briefings, no key) and **Quote of the Day** (API Ninjas, English briefings, requires `API_NINJAS_KEY`). The wizard shows only the one that matches your language.
 
 Everything runs on GitHub Actions and publishes to GitHub Pages as your own searchable site.
 

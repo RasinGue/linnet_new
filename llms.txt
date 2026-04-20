@@ -36,6 +36,9 @@ extensions/          Pluggable data source extensions (one package = one source)
   arxiv/             arXiv papers: fetch → score → summarise → enrich figures
   hacker_news/       HN stories above score threshold
   github_trending/   GitHub trending repos
+  weather/           Local weather via open-meteo
+  hitokoto/          Chinese daily quote from hitokoto.cn (locale: zh, no key needed)
+  quote_of_day/      English daily quote from API Ninjas (locale: en, requires API_NINJAS_KEY)
   _template/         Starter template for new extensions
   Each package contains __init__.py (extension class) + README.md (docs)
 
@@ -72,6 +75,8 @@ config/
   extensions/
     arxiv.yaml             arXiv categories/keywords/threshold
     hacker_news.yaml       HN keywords and score thresholds
+    hitokoto.yaml          Hitokoto sentence type (locale: zh)
+    quote_of_day.yaml      API Ninjas quote category (locale: en)
     postdoc_jobs.yaml      Job search routes and filters
     supervisor_updates.yaml URLs to monitor
 
@@ -81,12 +86,13 @@ docs/                Data store (NOT the served site)
   data/monthly/      Monthly JSON payloads
 
 astro/               Astro v5 static site (served via GitHub Pages)
-  src/pages/         Route pages (index, daily/[date], weekly/[week], monthly/[month])
-  src/pages/setup/   Setup wizard routes (English + Chinese)
-  src/components/    Astro components (PaperCard, HNCard, RepoCard, WeatherBlock, …)
+  src/pages/         Route pages (index, daily/[date]/index, daily/[date]/arxiv, weekly, monthly)
+  src/pages/setup/   Setup wizard routes — index.astro (en), zh/index.astro (zh)
+  src/components/    Astro components (PaperCard, HNCard, RepoCard, WeatherBlock, Icon, …)
   src/layouts/       Base layout with NavBar and theme toggle
-  src/styles/        global.css with design tokens (CSS variables)
-  public/            Static assets (favicon, manual setup guide)
+  src/styles/        global.css with design tokens (Fraunces/Source Serif/Inter, warm tan palette)
+  src/lib/registry.ts  Extension registry — metadata, setup fields, locale, layout per extension
+  public/            Static assets (favicon, logo, manual setup guide)
   astro.config.mjs   Astro config — base: /Linnet, __DATA_ROOT__ vite define
   dist/              Build output → deployed to GitHub Pages (git-ignored)
 
@@ -223,6 +229,8 @@ Sink exceptions are caught by orchestrator — they do not abort the pipeline.
 | `llm.base_url` | str | Default: https://openrouter.ai/api/v1 |
 | `sinks.slack.enabled` | bool | Requires `SLACK_WEBHOOK_URL` env var |
 | `sinks.serverchan.enabled` | bool | Requires `SERVERCHAN_SENDKEY` env var |
+| `hitokoto.enabled` | bool | Chinese daily quote; locale: zh; no key required |
+| `quote_of_day.enabled` | bool | English daily quote; locale: en; requires `API_NINJAS_KEY` env var |
 
 ### keywords.yaml top-level keys
 | Key | Notes |
@@ -251,7 +259,7 @@ Summarisation is per-item.
 ## Testing
 
 ```bash
-PYTHONPATH=. pytest tests/ -q          # 53 tests, ~1s, no network/LLM
+PYTHONPATH=. pytest tests/ -q          # 54 tests, ~1s, no network/LLM
 python main.py --dry-run               # live fetch, zero LLM cost
 ```
 
