@@ -29,12 +29,14 @@ class HitokotoExtension(BaseExtension):
             )
             resp.raise_for_status()
             data = resp.json()
-            return [{
-                "quote": data.get("hitokoto", ""),
-                "author": data.get("from_who") or data.get("from", ""),
-                "source": data.get("from", ""),
-                "category": data.get("type", ""),
-            }]
+            return [
+                {
+                    "quote": data.get("hitokoto", ""),
+                    "author": data.get("from_who") or data.get("from", ""),
+                    "source": data.get("from", ""),
+                    "category": data.get("type", ""),
+                }
+            ]
         except Exception as exc:
             print(f"  {self.title}: fetch failed — {exc}")
         return []

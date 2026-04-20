@@ -53,9 +53,9 @@ const isSectionEnabled = (key: string) => {
 };
 
 // Feed sections exclude quote extensions AND disabled extensions AND empty sections
-const sections = allSections.filter(s => 
-  !QUOTE_KEYS.has(s.key) && 
-  isSectionEnabled(s.key) && 
+const sections = allSections.filter(s =>
+  !QUOTE_KEYS.has(s.key) &&
+  isSectionEnabled(s.key) &&
   (s.items && s.items.length > 0)
 );
 

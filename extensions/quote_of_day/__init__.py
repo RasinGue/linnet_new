@@ -38,11 +38,13 @@ class QuoteOfDayExtension(BaseExtension):
             data = resp.json()
             if isinstance(data, list) and data:
                 q = data[0]
-                return [{
-                    "quote": q.get("quote", ""),
-                    "author": q.get("author", ""),
-                    "category": q.get("category", ""),
-                }]
+                return [
+                    {
+                        "quote": q.get("quote", ""),
+                        "author": q.get("author", ""),
+                        "category": q.get("category", ""),
+                    }
+                ]
         except Exception as exc:
             print(f"  {self.title}: fetch failed — {exc}")
         return []
