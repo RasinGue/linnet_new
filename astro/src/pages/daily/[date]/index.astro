@@ -31,35 +31,24 @@ interface Section {
 const allSections: Section[] = data.sections_ordered ?? [];
 const meta: Record<string, unknown> = data.meta ?? {};
 
-// Extract quote from quote_of_day or hitokoto sections (don't display as feed sections)
-const QUOTE_KEYS = new Set(['quote_of_day', 'hitokoto']);
-const quoteSection = allSections.find(s => QUOTE_KEYS.has(s.key) && s.items?.length);
+// Sections that go into the header/tagline
+const HEADER_KEYS = new Set(['quote_of_day', 'hitokoto']);
+
+// Extract weather to always show at the top of the body
+const weatherSection = allSections.find(s => s.key === 'weather' && s.items?.length > 0);
+
+// Extract quote for tagline
+const quoteSection = allSections.find(s => HEADER_KEYS.has(s.key) && s.items?.length);
 const quoteItem = quoteSection?.items?.[0] as { quote?: string; author?: string; source?: string } | undefined;
 const taglineText = quoteItem?.quote ?? 'A private morning briefing, compiled while you slept.';
 const taglineAttr = quoteItem?.author || quoteItem?.source
   ? `— ${quoteItem.author || quoteItem.source}`
   : null;
 
-// Read sources.yaml to check enabled config
-let sourcesYaml = '';
-try {
-  sourcesYaml = await readFile(resolve(__DATA_ROOT__, '../../config/sources.yaml'), 'utf-8');
-} catch (e) {}
-
-const isSectionEnabled = (key: string) => {
-  if (!sourcesYaml) return true;
-  // Match key: at the start of a line, then look for enabled: true/false within that block
-  const blockRegex = new RegExp(`^${key}:\\s*\\n(?:[ \\t]+.*\\n?)*`, 'm');
-  const blockMatch = sourcesYaml.match(blockRegex);
-  if (!blockMatch) return true;
-  const enabledMatch = blockMatch[0].match(/enabled:\\s*(true|false)/);
-  return enabledMatch ? enabledMatch[1] === 'true' : true;
-};
-
-// Feed sections exclude quote extensions AND disabled extensions AND empty sections
+// Feed sections exclude header extensions AND weather (handled separately) AND empty sections
 const sections = allSections.filter(s =>
-  !QUOTE_KEYS.has(s.key) &&
-  isSectionEnabled(s.key) &&
+  !HEADER_KEYS.has(s.key) &&
+  s.key !== 'weather' &&
   (s.items && s.items.length > 0)
 );
 
@@ -155,6 +144,12 @@ const totalSections = navSections.length;
         </svg>
       </a>
       <div class="section-strip__items">
+        {weatherSection && (
+          <a href="#section-weather" class="section-strip__item" data-section="weather">
+            <span class="section-strip__roman">§0</span>
+            <span class="section-strip__name">Weather</span>
+          </a>
+        )}
         {navSections.map(s => (
           <a href={`#${s.anchorId}`} class="section-strip__item" data-section={s.anchorId}>
             <span class="section-strip__roman">§{s.roman}</span>
@@ -170,8 +165,19 @@ const totalSections = navSections.length;
 
     <!-- ── Content ───────────────────────────────────────────── -->
     <div class="digest-body">
+      {weatherSection && (
+        <div id="section-weather" class="digest-section digest-section--weather">
+          <SectionBlock
+            section={weatherSection}
+            roman="0"
+            sectionIndex={-1}
+            totalSections={totalSections}
+          />
+        </div>
+      )}
+
       {sections.map((section, i) => (
-        <div class:list={['digest-section', { 'digest-section--ruled': i > 0 }]}>
+        <div id={navSections[i]?.anchorId} class:list={['digest-section', { 'digest-section--ruled': i > 0 || weatherSection }]}>
           <SectionBlock
             section={section}
             roman={ROMAN[i]}
