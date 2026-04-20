@@ -8,6 +8,8 @@ Use this reference when helping with setup or customization.
 - `astro/public/setup/manual-config.md` — step-by-step manual setup flow
 - `config/sources.yaml` — source toggles, display order, language, models, prompt overrides, pages, sinks
 - `config/extensions/arxiv.yaml` — topic filters for arXiv
+- `config/extensions/hitokoto.yaml` — sentence type for Chinese daily quote (locale: zh)
+- `config/extensions/quote_of_day.yaml` — category for English daily quote (locale: en, requires API_NINJAS_KEY)
 - `sinks/README.md` — sink conventions and extension points
 - `.github/workflows/daily.yml` — daily run schedule (UTC)
 - `.github/workflows/weekly.yml` — weekly run schedule (UTC)
@@ -19,7 +21,9 @@ Use this reference when helping with setup or customization.
 
 - `display_order` — final page section order
 - `<source>.enabled` — source on/off switch
-- `language` — output language
+- `language` — output language (`en`, `zh`, etc. — also controls which locale the setup wizard shows)
+- `hitokoto.enabled` — locale: zh; no key required
+- `quote_of_day.enabled` — locale: en; requires `API_NINJAS_KEY` secret
 - `llm.scoring_model` / `llm.summarization_model` — model selection
 - `llm.base_url` — OpenAI-compatible provider endpoint
 - `llm.prompts.*` — prompt overrides with documented placeholders only

@@ -1,11 +1,12 @@
 ---
 import Base from '@/layouts/Base.astro';
 import { loadSetupWizard } from '@/utils/setupWizard';
-import { EXTENSION_LIST } from '@/lib/registry';
+import { getExtensionsForLocale } from '@/lib/registry';
 
 const { bodyHtml, css, script } = loadSetupWizard('zh');
 
-const totalExtensions = EXTENSION_LIST.length;
+const extensions = getExtensionsForLocale('zh');
+const totalExtensions = extensions.length;
 ---
 
 <Base
