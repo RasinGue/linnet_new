@@ -1,7 +1,7 @@
 import { EXTENSION_LIST, REGISTRY, type SetupField } from '@/lib/registry';
 import { ARXIV_PROFILES } from '@/lib/arxivProfiles';
 import { createInitialState, DEFAULT_TOP_N, type WizardState } from './wizardState';
-import { buildGitHubCallPreview, deployGeneratedConfig, parseRepoInput } from './githubDeploy.js';
+import { buildGitHubCallPreview, deployGeneratedConfig, parseRepoInput, triggerWorkflowDispatch } from './githubDeploy.js';
 import {
   listAccessibleRepositories,
   getCurrentUser,
@@ -1626,9 +1626,18 @@ export function initWizard(): void {
       setDeployStatus(
         'success',
         locale === 'zh'
-          ? `已写入 ${result.committedPaths.length} 个文件，并更新 ${result.writtenSecrets.length} 个 secret。目标分支：${result.defaultBranch}`
-          : `Wrote ${result.committedPaths.length} files and updated ${result.writtenSecrets.length} secrets on ${result.defaultBranch}.`,
+          ? `已写入 ${result.committedPaths.length} 个文件，并更新 ${result.writtenSecrets.length} 个 secret。已为您触发 Daily Feed 工作流测试（生效通常需要 3-5 分钟）。`
+          : `Wrote ${result.committedPaths.length} files and updated ${result.writtenSecrets.length} secrets. A Daily Feed workflow run has been triggered for you (may take 3-5 mins to take effect).`,
       );
+
+      // Trigger daily feed test
+      try {
+        await triggerWorkflowDispatch(token, repo.owner, repo.repo, 'daily.yml', result.defaultBranch);
+      } catch (triggerError) {
+        console.warn('Failed to trigger workflow dispatch:', triggerError);
+        // We don't fail the whole deploy if just the trigger fails, as the files are already written.
+      }
+
       if (connectNextStepsEl) connectNextStepsEl.hidden = false;
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);

@@ -54,6 +54,8 @@ export function buildGitHubCallPreview(plan) {
     }
   }
 
+  lines.push(`POST /repos/${plan.owner}/${plan.repo}/actions/workflows/daily.yml/dispatches`);
+
   return lines;
 }
 
@@ -257,4 +259,24 @@ export async function deployGeneratedConfig(plan) {
     committedPaths,
     writtenSecrets,
   };
+}
+
+/**
+ * @param {string} token
+ * @param {string} owner
+ * @param {string} repo
+ * @param {string} workflowId
+ * @param {string} [ref]
+ * @param {typeof fetch} [fetchImpl]
+ */
+export async function triggerWorkflowDispatch(token, owner, repo, workflowId, ref = 'main', fetchImpl = fetch) {
+  return githubRequest(
+    token,
+    `/repos/${owner}/${repo}/actions/workflows/${workflowId}/dispatches`,
+    {
+      method: 'POST',
+      body: JSON.stringify({ ref }),
+    },
+    fetchImpl,
+  );
 }
