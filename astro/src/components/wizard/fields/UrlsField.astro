@@ -30,5 +30,5 @@ const id = `${extKey}-${field.key}`;
       <button type="button" class="wz-urls__add" data-urls-add>{addLabel}</button>
     </div>
   </div>
-  {hint && <div class="wz-field__hint">{hint}</div>}
+  {hint && <div class="wz-field__hint" set:html={hint}></div>}
 </div>

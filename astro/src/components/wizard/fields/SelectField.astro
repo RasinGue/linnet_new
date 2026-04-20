@@ -25,5 +25,5 @@ const def     = (field.default as string | undefined) ?? '';
       <option value={opt.value} selected={opt.value === def}>{opt.label}</option>
     ))}
   </select>
-  {hint && <div class="wz-field__hint">{hint}</div>}
+  {hint && <div class="wz-field__hint" set:html={hint}></div>}
 </div>

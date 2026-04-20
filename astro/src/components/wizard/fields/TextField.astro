@@ -28,5 +28,5 @@ const defaultValue = field.default as string | number | undefined;
     data-config-for={extKey}
     data-field={field.key}
   />
-  {hint && <div class="wz-field__hint">{hint}</div>}
+  {hint && <div class="wz-field__hint" set:html={hint}></div>}
 </div>

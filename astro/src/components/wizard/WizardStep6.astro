@@ -69,8 +69,12 @@ const t = {
     </div>
 
     <div class="wz-deploy-preview" style="margin-top:20px">
-      <div class="wz-field__label">{t.previewHead}</div>
-      <pre data-deploy-preview></pre>
+      <details>
+        <summary class="wz-field__label" style="cursor:pointer; display:list-item; outline:none;">
+          {t.previewHead} <span style="font-size:0.8em; font-weight:normal; opacity:0.7; margin-left:8px;">({locale === 'zh' ? '点击展开' : 'click to expand'})</span>
+        </summary>
+        <pre data-deploy-preview style="margin-top:8px"></pre>
+      </details>
     </div>
 
     <div class="wz-deploy-actions" style="margin-top:20px">

@@ -138,7 +138,8 @@ async function githubRequest(token, path, init = {}, fetchImpl = fetch) {
  */
 async function loadSodium() {
   if (!sodiumPromise) sodiumPromise = import(SODIUM_ESM_URL);
-  const sodium = await sodiumPromise;
+  const mod = await sodiumPromise;
+  const sodium = mod.default || mod;
   await sodium.ready;
   return sodium;
 }

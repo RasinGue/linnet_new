@@ -29,5 +29,5 @@ const defaults = Array.isArray(field.default) ? field.default as string[] : [];
       </label>
     ))}
   </div>
-  {hint && <div class="wz-field__hint">{hint}</div>}
+  {hint && <div class="wz-field__hint" set:html={hint}></div>}
 </div>

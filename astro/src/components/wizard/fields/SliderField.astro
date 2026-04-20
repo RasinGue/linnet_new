@@ -31,5 +31,5 @@ const def     = (field.default as number | undefined) ?? min;
     />
     <span class="wz-slider-val" data-slider-val={id}>{def}</span>
   </div>
-  {hint && <div class="wz-field__hint">{hint}</div>}
+  {hint && <div class="wz-field__hint" set:html={hint}></div>}
 </div>

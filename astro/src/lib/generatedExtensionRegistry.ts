@@ -100,8 +100,8 @@ export const GENERATED_EXTENSION_REGISTRY = {
         "labelZh": "名言类别",
         "type": "text",
         "placeholder": "morning, inspiration, life ...",
-        "hint": "Leave blank for a random category. See API Ninjas docs for all options.",
-        "hintZh": "留空则随机选取类别。"
+        "hint": "Leave blank for a random category. See <a href=\"https://api-ninjas.com/api/quotes\" target=\"_blank\" rel=\"noopener\">API Ninjas docs</a> for all options.",
+        "hintZh": "留空则随机选取类别。详情请参考 <a href=\"https://api-ninjas.com/api/quotes\" target=\"_blank\" rel=\"noopener\">API Ninjas 文档</a>。"
       }
     ],
     "weeklyDefault": false,
