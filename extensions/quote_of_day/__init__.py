@@ -6,6 +6,7 @@ Falls back gracefully (empty items) when key is not set.
 """
 
 import os
+
 import httpx
 
 from extensions.base import BaseExtension, FeedSection
