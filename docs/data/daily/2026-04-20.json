@@ -1,6 +1,6 @@
 {
   "date": "2026-04-20",
-  "generated_at": "2026-04-20T08:24:23.062275+00:00",
+  "generated_at": "2026-04-20T15:04:28.465298+00:00",
   "sections_ordered": [
     {
       "key": "weather",
@@ -18,15 +18,15 @@
           "longitude": -3.19648,
           "timezone": "Europe/London",
           "forecast_date": "2026-04-20",
-          "condition": "Clear sky",
-          "weather_code": 0,
-          "temperature_c": 7.9,
-          "apparent_temperature_c": 5.7,
-          "temp_max_c": 11.4,
+          "condition": "Overcast",
+          "weather_code": 3,
+          "temperature_c": 11.0,
+          "apparent_temperature_c": 7.1,
+          "temp_max_c": 11.0,
           "temp_min_c": 6.4,
-          "humidity_pct": 63,
-          "wind_speed_kmh": 1.4,
-          "precipitation_probability_pct": 52,
+          "humidity_pct": 51,
+          "wind_speed_kmh": 13.3,
+          "precipitation_probability_pct": 66,
           "is_day": true,
           "sunrise": "2026-04-20T05:54",
           "sunset": "2026-04-20T20:29",
@@ -58,7 +58,7 @@
             "cs.CV",
             "cs.AI"
           ],
-          "abstract": "This paper demonstrates that using Chain-of-Thought (CoT) prompting significantly degrades the visual spatial reasoning performance of Multimodal Large Language Models (MRMs) across numerous benchmarks. The authors reveal this degradation is linked to shortcut learning, where models hallucinate visual details from textual priors even without an image present. This challenges the reliance on text-only CoT for spatial tasks, advocating for vision-centric reasoning methods instead.",
+          "abstract": "This paper demonstrates that employing Chain-of-Thought (CoT) prompting significantly degrades the visual spatial reasoning capabilities of Multimodal Large Language Models (MRMs) across numerous benchmarks. The authors reveal that MRMs and CoT-prompted models exhibit severe shortcut learning, often hallucinating visual details from textual priors even without an image present. This suggests CoT is ineffective for spatial tasks and necessitates the development of vision-centric reasoning paradigms.",
           "url": "http://arxiv.org/abs/2604.16060v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16060v1",
           "score": 9.0,
@@ -82,7 +82,7 @@
             "cs.CV",
             "cs.CL"
           ],
-          "abstract": "This paper rigorously investigates whether Vision-Language Models (VLMs) perform genuine vision-grounded reasoning or rely on their textual components. The core method introduces **CrossMath**, a novel benchmark where problems are presented in text-only, image-only, and combined formats with strictly identical information across modalities. The contribution is the demonstration of a **substantial performance gap**, showing VLMs significantly excel at text-only reasoning compared to image-based reasoning, suggesting a weakness in true vision grounding.",
+          "abstract": "This paper rigorously investigates whether Vision-Language Models (VLMs) perform genuine vision-grounded reasoning or rely on their textual components. The authors introduce **CrossMath**, a novel benchmark where problems are presented in text-only, image-only, and combined formats with strictly identical information content. Their core finding is a consistent and substantial performance gap, indicating that VLMs significantly underperform when relying solely on visual input compared to text-only input.",
           "url": "http://arxiv.org/abs/2604.16256v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16256v1",
           "score": 9.0,
@@ -102,7 +102,7 @@
             "cs.AI",
             "eess.IV"
           ],
-          "abstract": "This paper introduces a dual-modal AI framework that fuses features extracted from lung CT scans and H\\&E histopathology, augmented with clinical data, for lung cancer diagnosis and subtype classification. The core method uses CNNs for feature extraction and a weighted decision-level fusion mechanism to improve diagnostic robustness. The contribution lies in creating a more comprehensive and interpretable AI system by integrating radiology and microscopy for better lung cancer characterization.",
+          "abstract": "This paper introduces a dual-modal AI framework that fuses features extracted from CT radiology and H\\&E histopathology, enhanced with clinical metadata, for lung cancer diagnosis and subtype classification. The core contribution is this integrated approach, which leverages both imaging modalities to improve diagnostic robustness and employs various Explainable AI techniques to provide interpretable insights into the predictions.",
           "url": "http://arxiv.org/abs/2604.16104v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16104v1",
           "score": 9.0,
@@ -125,7 +125,7 @@
             "cs.CV",
             "cs.AI"
           ],
-          "abstract": "MARCH is a multi-agent framework that mimics the hierarchical structure of radiology departments to improve CT report generation. It assigns specialized roles—Resident for drafting, Fellows for retrieval-augmented revision, and an Attending for orchestrating consensus discourse—to iteratively verify findings and reduce clinical hallucinations. This approach significantly enhances both the clinical fidelity and linguistic accuracy of the generated reports compared to monolithic models.",
+          "abstract": "MARCH is a multi-agent framework for CT report generation that mimics the hierarchical structure of radiology departments. It employs specialized agents (Resident, Fellows, Attending) to perform initial drafting, retrieval-augmented revision, and iterative, consensus-driven verification. This approach significantly improves clinical fidelity and linguistic accuracy compared to monolithic models by incorporating collaborative oversight.",
           "url": "http://arxiv.org/abs/2604.16175v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16175v1",
           "score": 9.0,
@@ -147,7 +147,7 @@
           "categories": [
             "cs.CV"
           ],
-          "abstract": "This paper introduces DINOv3 adapted with LoRA and a lightweight decoder as a simple yet powerful foundation model baseline for image forensics, specifically for manipulation localization. The core method leverages the frozen DINOv3 backbone's rich pre-trained representations, fine-tuned efficiently via LoRA, which consistently outperforms full fine-tuning. This approach significantly surpasses specialized detectors, achieving substantial F1 score improvements across multiple benchmarks with far fewer trainable parameters.",
+          "abstract": "This paper introduces DINOv3 adapted with LoRA and a lightweight decoder as a simple yet powerful foundation model baseline for image forensics, specifically for manipulation localization. The core method leverages the frozen DINOv3 backbone, fine-tuning only a small fraction of parameters via LoRA, which proves more stable and effective than full fine-tuning. This approach significantly outperforms specialized detectors, achieving substantial F1 score improvements across multiple benchmarks with far fewer trainable parameters.",
           "url": "http://arxiv.org/abs/2604.16083v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16083v1",
           "score": 8.0,
@@ -170,7 +170,7 @@
           "categories": [
             "cs.CV"
           ],
-          "abstract": "This paper identifies and analyzes the **SNR-t bias** in Diffusion Probabilistic Models, where the Signal-to-Noise Ratio of the denoised sample misaligns with its timestep during inference, degrading generation quality. The authors provide theoretical and empirical evidence for this issue. They propose a simple, effective **differential correction method** that leverages the frequency-dependent nature of the denoising process to mitigate this bias.",
+          "abstract": "This paper identifies and analyzes the Signal-to-Noise Ratio-timestep (SNR-t) bias in Diffusion Probabilistic Models, where the SNR of the denoised sample misaligns with its timestep during inference, degrading generation quality. The authors provide theoretical and empirical evidence for this issue. They propose a simple, effective differential correction method that leverages frequency decomposition to mitigate this bias by better aligning the denoising process with the expected SNR at each timestep.",
           "url": "http://arxiv.org/abs/2604.16044v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16044v1",
           "score": 8.0,
@@ -191,7 +191,7 @@
           "categories": [
             "cs.CV"
           ],
-          "abstract": "This paper introduces **IA-CLAHE**, an adaptive method for Contrast Limited Adaptive Histogram Equalization (CLAHE). It addresses the issue of fixed clip limits causing over-enhancement by adaptively estimating tile-wise clip limits directly from the input image. This is achieved by training a lightweight estimator using a differentiable version of CLAHE, allowing for end-to-end optimization without needing pre-searched ground-truth limits.",
+          "abstract": "This paper introduces IA-CLAHE, an image-adaptive method for Contrast Limited Adaptive Histogram Equalization. The core method adaptively estimates the tile-wise contrast limiting parameter (clip limit) based on the local histogram distribution, overcoming the over-enhancement issue of fixed-parameter CLAHE. This is achieved by training a lightweight estimator using a differentiable extension of CLAHE, allowing end-to-end optimization without requiring pre-searched ground-truth limits.",
           "url": "http://arxiv.org/abs/2604.16010v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16010v1",
           "score": 8.0,
@@ -213,7 +213,7 @@
             "cs.CV",
             "cs.LG"
           ],
-          "abstract": "This paper introduces the **Multi-modal Information Router ($\\text{MoIR}$)** to combat modality dominance in Vision-Language Models (VLMs) by addressing information disparity *before* fusion. $\\text{MoIR}$ explicitly identifies tokens from weaker modalities and routes complementary, informative signals from stronger modalities to them. This information-level routing mechanism ensures a more balanced contribution from both vision and language inputs, leading to more robust predictions than attention-based methods alone.",
+          "abstract": "This paper introduces the **Multi-modal Information Router ($\\text{MoIR}$)** to combat modality dominance in Vision-Language Models (VLMs). $\\text{MoIR}$ addresses the limitation of attention-based methods by employing an **information-level fusion** strategy that explicitly reduces information disparity *before* fusion. It achieves this by identifying less informative tokens and routing complementary information from a stronger modality, thereby ensuring a more balanced and robust multimodal representation.",
           "url": "http://arxiv.org/abs/2604.16264v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16264v1",
           "score": 8.0,
@@ -235,7 +235,7 @@
             "cs.CV",
             "cs.AI"
           ],
-          "abstract": "This paper introduces \"Mind's Eye,\" a novel benchmark designed to assess the visual cognitive and visuospatial reasoning capabilities of Multimodal Large Language Models (MLLMs) using eight tasks categorized by Abstraction, Relation, and Transformation. The benchmark reveals that top MLLMs significantly underperform humans (below 50% vs. 80% accuracy), highlighting critical limitations in their visual attention, internal perceptual manipulation, and abstraction of visual concepts.",
+          "abstract": "This paper introduces \"Mind's Eye,\" a novel benchmark designed to assess the visual cognitive and visuospatial reasoning capabilities of Multimodal Large Language Models (MLLMs) across tasks categorized by Abstraction, Relation, and Transformation. The core contribution is demonstrating a significant gap, where top MLLMs score below 50% accuracy compared to 80% for humans, highlighting limitations in their visual attention, perceptual manipulation, and concept abstraction.",
           "url": "http://arxiv.org/abs/2604.16054v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16054v1",
           "score": 8.0,
@@ -258,7 +258,7 @@
             "cs.CV",
             "physics.data-an"
           ],
-          "abstract": "This paper comprehensively evaluates and ranks 13 Explainable AI (XAI) methods for predicting Head and Neck Cancer outcomes using PET/CT data, addressing the critical clinical barrier of AI interpretability. The evaluation uses 24 metrics across faithfulness, robustness, complexity, and plausibility, finding significant performance variations among methods. Integrated Gradients (IG) and DeepLIFT (DL) consistently ranked highly across key aspects, highlighting the necessity of thorough XAI assessment.",
+          "abstract": "This paper comprehensively evaluates and ranks 13 Explainable AI (XAI) methods for predicting Head and Neck Cancer outcomes using PET/CT data, addressing the critical clinical barrier of AI interpretability. The evaluation uses 24 diverse metrics covering faithfulness, robustness, complexity, and plausibility, unlike previous empirical selections. The core contribution is demonstrating significant variation across methods, highlighting Integrated Gradients (IG) and DeepLIFT (DL) as top performers across key interpretability aspects.",
           "url": "http://arxiv.org/abs/2604.16034v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16034v1",
           "score": 8.0,
@@ -278,7 +278,7 @@
           "categories": [
             "cs.CV"
           ],
-          "abstract": "This paper systematically evaluates state-of-the-art Vision-Language Models (VLMs) for zero-shot, prompt-based country-level image geolocalization using only ground-view imagery. The core contribution is a world-scale analysis revealing significant performance variation across models. This highlights the potential of VLMs for coarse geographic inference while exposing their current limitations in capturing fine-grained spatial details.",
+          "abstract": "This paper systematically evaluates state-of-the-art Vision-Language Models (VLMs) for zero-shot, country-level image geolocalization using only ground-view imagery and prompt-based prediction. The core contribution is a world-scale analysis revealing significant performance variation across models, demonstrating the potential of VLM semantic reasoning for coarse localization while highlighting their current limitations in capturing fine-grained geographic details.",
           "url": "http://arxiv.org/abs/2604.16248v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16248v1",
           "score": 8.0,
@@ -298,7 +298,7 @@
           "categories": [
             "cs.CV"
           ],
-          "abstract": "This paper introduces **AnimalHaze3k**, a synthetic dataset of 3,477 hazy wildlife images created using a physics-based pipeline. The authors propose **IncepDehazeGan**, a novel GAN architecture utilizing inception blocks and residual connections, which achieves state-of-the-art dehazing performance. This method significantly improves downstream animal detection tasks, offering ecologists robust tools for wildlife monitoring.",
+          "abstract": "This paper introduces **AnimalHaze3k**, a synthetic dataset of 3,477 hazy wildlife images created using a physics-based pipeline. The core method is the novel **IncepDehazeGan** architecture, which uses inception blocks and residual connections within a GAN framework to achieve state-of-the-art image dehazing performance. This significantly improves downstream animal detection tasks, offering ecologists a robust tool for monitoring in hazy conditions.",
           "url": "http://arxiv.org/abs/2604.16284v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16284v1",
           "score": 7.0,
@@ -320,7 +320,7 @@
             "cs.CV",
             "cs.RO"
           ],
-          "abstract": "FineCog-Nav introduces a novel framework for zero-shot UAV navigation by integrating distinct, fine-grained cognitive modules (e.g., perception, memory, reasoning) inspired by human cognition. Each module, driven by a moderate foundation model with specific prompting, communicates via structured protocols to collaboratively execute complex, multi-step instructions. This approach enhances interpretability and performance over existing methods, supported by the creation of the AerialVLN-Fine benchmark for fine-grained evaluation.",
+          "abstract": "FineCog-Nav introduces a cognitive-inspired framework for zero-shot UAV navigation by integrating several fine-grained, specialized modules (e.g., perception, memory, reasoning) driven by moderate foundation models. This modular approach, featuring structured communication protocols, aims to overcome the limitations of generic large model reliance in existing methods, leading to improved performance and interpretability. The authors also release AerialVLN-Fine, a benchmark designed for fine-grained evaluation of these navigation capabilities.",
           "url": "http://arxiv.org/abs/2604.16298v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16298v1",
           "score": 7.0,
@@ -342,7 +342,7 @@
             "cs.CV",
             "cs.AI"
           ],
-          "abstract": "SWNet is a cross-spectral network designed to detect camouflaged weeds by fusing Visible and Near-Infrared (NIR) imagery. It employs a Pyramid Vision Transformer backbone and a Bimodal Gated Fusion Module to dynamically integrate spectral information, exploiting physiological differences invisible in the visible spectrum. This approach significantly improves discrimination accuracy for homochromatic weeds, further enhanced by an Edge-Aware Refinement module for sharper boundaries.",
+          "abstract": "SWNet is a cross-spectral network designed to detect camouflaged weeds by integrating Visible and Near-Infrared (NIR) data. It uses a Pyramid Vision Transformer backbone and a Bimodal Gated Fusion Module to dynamically combine spectral information, exploiting NIR differences in chlorophyll reflectance to distinguish targets invisible in the visible spectrum. The core contribution is an effective architecture that overcomes homochromatic camouflage challenges in dense agricultural settings.",
           "url": "http://arxiv.org/abs/2604.16147v1",
           "pdf_url": "https://arxiv.org/pdf/2604.16147v1",
           "score": 7.0,
@@ -370,101 +370,101 @@
           "full_name": "Fincept-Corporation/FinceptTerminal",
           "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
           "description": "FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making in a user-friendly environment.",
-          "stars_today": 1254,
-          "total_stars": 7732,
+          "stars_today": 3129,
+          "total_stars": 8722,
           "language": "Python",
           "topics": [],
           "summary": "FinceptTerminal is a modern finance application providing advanced market analytics, investment research, and economic data tools for interactive exploration and data-driven decision-making."
         },
         {
-          "full_name": "thunderbird/thunderbolt",
-          "url": "https://github.com/thunderbird/thunderbolt",
-          "description": "AI You Control: Choose your models. Own your data. Eliminate vendor lock-in.",
-          "stars_today": 695,
-          "total_stars": 2458,
-          "language": "TypeScript",
-          "topics": [],
-          "summary": "Thunderbolt is an AI platform enabling users to control their models, own their data, and avoid vendor lock-in by offering model choice."
-        },
-        {
-          "full_name": "tractorjuice/arc-kit",
-          "url": "https://github.com/tractorjuice/arc-kit",
-          "description": "Enterprise Architecture Governance & Vendor Procurement Toolkit",
-          "stars_today": 263,
-          "total_stars": 1115,
-          "language": "HTML",
-          "topics": [],
-          "summary": "Arc-Kit is an enterprise architecture governance and vendor procurement toolkit providing structured processes and resources for managing architectural standards and acquiring necessary technologies."
-        },
-        {
-          "full_name": "openai/openai-agents-python",
-          "url": "https://github.com/openai/openai-agents-python",
-          "description": "A lightweight, powerful framework for multi-agent workflows",
-          "stars_today": 752,
-          "total_stars": 23548,
-          "language": "Python",
-          "topics": [],
-          "summary": "The `openai-agents-python` repository provides a lightweight, powerful Python framework designed to facilitate the creation and management of complex, multi-agent workflows powered by OpenAI models."
-        },
-        {
-          "full_name": "pingdotgg/t3code",
-          "url": "https://github.com/pingdotgg/t3code",
-          "description": "",
-          "stars_today": 109,
-          "total_stars": 10041,
-          "language": "TypeScript",
-          "topics": [],
-          "summary": "The `t3code` repository provides a comprehensive, opinionated starter kit for building full-stack web applications using the T3 Stack (Next.js, TypeScript, tRPC, Tailwind CSS) with integrated authentication and database setup."
-        },
-        {
-          "full_name": "paperless-ngx/paperless-ngx",
-          "url": "https://github.com/paperless-ngx/paperless-ngx",
-          "description": "A community-supported supercharged document management system: scan, index and archive all your documents",
-          "stars_today": 393,
-          "total_stars": 39098,
-          "language": "Python",
-          "topics": [],
-          "summary": "Paperless-ngx is a community-supported document management system that allows users to scan, index, and archive all their documents efficiently."
-        },
-        {
           "full_name": "ruvnet/RuView",
           "url": "https://github.com/ruvnet/RuView",
           "description": "π RuView: WiFi DensePose turns commodity WiFi signals into real-time human pose estimation, vital sign monitoring, and presence detection — all without a single pixel of video.",
-          "stars_today": 149,
-          "total_stars": 47732,
+          "stars_today": 716,
+          "total_stars": 47963,
           "language": "Rust",
           "topics": [],
           "summary": "RuView is a WiFi-based system that transforms commodity WiFi signals into real-time human pose estimation, vital sign monitoring, and presence detection without using any video."
         },
         {
-          "full_name": "EvoMap/evolver",
-          "url": "https://github.com/EvoMap/evolver",
-          "description": "The GEP-Powered Self-Evolution Engine for AI Agents. Genome Evolution Protocol. | evomap.ai",
-          "stars_today": 527,
-          "total_stars": 5782,
-          "language": "JavaScript",
+          "full_name": "thunderbird/thunderbolt",
+          "url": "https://github.com/thunderbird/thunderbolt",
+          "description": "AI You Control: Choose your models. Own your data. Eliminate vendor lock-in.",
+          "stars_today": 667,
+          "total_stars": 2621,
+          "language": "TypeScript",
           "topics": [],
-          "summary": "EvoMap/evolver is a GEP-powered self-evolution engine designed for AI agents, utilizing a Genome Evolution Protocol to drive continuous improvement and adaptation."
+          "summary": "Thunderbolt is an AI platform enabling users to control their models, own their data, and avoid vendor lock-in by offering model choice and data sovereignty."
         },
         {
-          "full_name": "BasedHardware/omi",
-          "url": "https://github.com/BasedHardware/omi",
-          "description": "AI that sees your screen, listens to your conversations and tells you what to do",
-          "stars_today": 685,
-          "total_stars": 11435,
-          "language": "Dart",
+          "full_name": "paperless-ngx/paperless-ngx",
+          "url": "https://github.com/paperless-ngx/paperless-ngx",
+          "description": "A community-supported supercharged document management system: scan, index and archive all your documents",
+          "stars_today": 611,
+          "total_stars": 39238,
+          "language": "Python",
           "topics": [],
-          "summary": "BasedHardware/omi is an AI system designed to actively observe a user's screen and listen to conversations to provide real-time guidance and instructions."
+          "summary": "Paperless-ngx is a community-supported document management system that allows users to scan, index, and archive all their documents efficiently."
         },
         {
-          "full_name": "Donchitos/Claude-Code-Game-Studios",
-          "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
-          "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
-          "stars_today": 704,
-          "total_stars": 14004,
+          "full_name": "tractorjuice/arc-kit",
+          "url": "https://github.com/tractorjuice/arc-kit",
+          "description": "Enterprise Architecture Governance & Vendor Procurement Toolkit",
+          "stars_today": 334,
+          "total_stars": 1221,
+          "language": "HTML",
+          "topics": [],
+          "summary": "Arc-Kit is an enterprise architecture governance and vendor procurement toolkit designed to streamline and manage organizational technology strategy and purchasing processes."
+        },
+        {
+          "full_name": "koala73/worldmonitor",
+          "url": "https://github.com/koala73/worldmonitor",
+          "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+          "stars_today": 343,
+          "total_stars": 49642,
+          "language": "TypeScript",
+          "topics": [],
+          "summary": "WorldMonitor is a real-time global intelligence dashboard that uses AI to aggregate news, monitor geopolitics, and track infrastructure within a unified situational awareness interface."
+        },
+        {
+          "full_name": "openai/openai-agents-python",
+          "url": "https://github.com/openai/openai-agents-python",
+          "description": "A lightweight, powerful framework for multi-agent workflows",
+          "stars_today": 909,
+          "total_stars": 23751,
+          "language": "Python",
+          "topics": [],
+          "summary": "The `openai-agents-python` repository provides a lightweight, powerful Python framework for orchestrating and managing complex multi-agent workflows powered by OpenAI models."
+        },
+        {
+          "full_name": "deepseek-ai/DeepGEMM",
+          "url": "https://github.com/deepseek-ai/DeepGEMM",
+          "description": "DeepGEMM: clean and efficient FP8 GEMM kernels with fine-grained scaling",
+          "stars_today": 155,
+          "total_stars": 6766,
+          "language": "Cuda",
+          "topics": [],
+          "summary": "DeepGEMM provides clean and efficient FP8 General Matrix Multiplication (GEMM) kernels featuring fine-grained scaling for optimized performance."
+        },
+        {
+          "full_name": "pi-hole/pi-hole",
+          "url": "https://github.com/pi-hole/pi-hole",
+          "description": "A black hole for Internet advertisements",
+          "stars_today": 154,
+          "total_stars": 56899,
           "language": "Shell",
           "topics": [],
-          "summary": "This repository transforms Claude AI into a comprehensive game development studio, featuring 49 specialized AI agents, 72 workflow skills, and a complete coordination system mirroring real industry hierarchy."
+          "summary": "Pi-hole functions as a DNS sinkhole, blocking internet advertisements and trackers across your entire network for improved performance and privacy."
+        },
+        {
+          "full_name": "XTLS/Xray-core",
+          "url": "https://github.com/XTLS/Xray-core",
+          "description": "Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.",
+          "stars_today": 52,
+          "total_stars": 37345,
+          "language": "Go",
+          "topics": [],
+          "summary": "XTLS/Xray-core is a versatile, high-performance proxy platform, functioning as an advanced v2ray-core replacement designed for robust network penetration across various use cases."
         }
       ],
       "meta": {
@@ -478,44 +478,53 @@
       "icon": "🔥",
       "items": [
         {
-          "id": 47824068,
-          "title": "Airline worker arrested after sharing photos of bomb damage in WhatsApp group",
-          "url": "https://www.lbc.co.uk/article/dubai-police-spied-private-whatsapp-5HjdXwr_2/",
-          "score": 268,
-          "created_at": "2026-04-19T13:13:09Z",
-          "comments_url": "https://news.ycombinator.com/item?id=47824068",
-          "summary": "An airline worker was arrested in Dubai after sharing photos of bomb damage in a private WhatsApp group."
+          "id": 47833247,
+          "title": "Atlassian Enables Default Data Collection to Train AI",
+          "url": "https://letsdatascience.com/news/atlassian-enables-default-data-collection-to-train-ai-f71343d8",
+          "score": 94,
+          "created_at": "2026-04-20T12:23:39Z",
+          "comments_url": "https://news.ycombinator.com/item?id=47833247",
+          "summary": "Atlassian has enabled the default collection of customer data to train its artificial intelligence models."
         },
         {
           "id": 47826328,
           "title": "Uber’s Anthropic AI push hits a wall",
           "url": "https://finance.yahoo.com/sectors/technology/articles/ubers-anthropic-ai-push-hits-223109852.html",
-          "score": 91,
+          "score": 93,
           "created_at": "2026-04-19T18:13:32Z",
           "comments_url": "https://news.ycombinator.com/item?id=47826328",
-          "summary": "Uber's efforts to integrate Anthropic's AI technology have reportedly stalled due to internal disagreements and challenges in aligning the technology with the company's needs."
+          "summary": "Uber's strategic push to integrate Anthropic's AI technology has reportedly stalled due to internal disagreements and challenges in aligning the partnership with the company's core business strategy."
         },
         {
           "id": 47827985,
           "title": "CEOs admit AI had no impact on employment or productivity",
           "url": "https://fortune.com/article/why-do-thousands-of-ceos-believe-ai-not-having-impact-productivity-employment-study/",
-          "score": 80,
+          "score": 85,
           "created_at": "2026-04-19T21:56:22Z",
           "comments_url": "https://news.ycombinator.com/item?id=47827985",
-          "summary": "A recent study reveals that thousands of CEOs report that artificial intelligence has had no measurable impact on either their company's employment levels or overall productivity."
+          "summary": "A recent study reveals that thousands of CEOs acknowledge that artificial intelligence has not yet significantly impacted their companies' employment levels or overall productivity."
         },
         {
           "id": 47828444,
           "title": "Swiss AI Initiative (2023)",
           "url": "https://www.swiss-ai.org",
-          "score": 64,
+          "score": 85,
           "created_at": "2026-04-19T22:58:35Z",
           "comments_url": "https://news.ycombinator.com/item?id=47828444",
-          "summary": "The Swiss AI Initiative 2023 is a national effort focused on advancing artificial intelligence research, development, and application within Switzerland."
+          "summary": "The Swiss AI Initiative (2023) is a national effort focused on advancing artificial intelligence research, innovation, and application within Switzerland."
+        },
+        {
+          "id": 47830071,
+          "title": "A cache-friendly IPv6 LPM with AVX-512 (linearized B+-tree, real BGP benchmarks)",
+          "url": "https://github.com/esutcu/planb-lpm",
+          "score": 52,
+          "created_at": "2026-04-20T03:24:21Z",
+          "comments_url": "https://news.ycombinator.com/item?id=47830071",
+          "summary": "This GitHub project presents a cache-friendly IPv6 Longest Prefix Match (LPM) implementation utilizing AVX-512 instructions and a linearized B+-tree structure, benchmarked against real BGP data."
         }
       ],
       "meta": {
-        "count": 4
+        "count": 5
       }
     },
     {
@@ -542,7 +551,7 @@
     "llm_model": "google/gemini-2.5-flash-lite-preview-09-2025",
     "scoring_model": "google/gemini-2.5-flash-lite-preview-09-2025",
     "summarization_model": "google/gemini-2.5-flash-lite-preview-09-2025",
-    "duration_seconds": 39
+    "duration_seconds": 47
   },
   "quote_of_day": [],
   "hitokoto": [],
@@ -560,7 +569,7 @@
         "cs.CV",
         "cs.AI"
       ],
-      "abstract": "This paper demonstrates that using Chain-of-Thought (CoT) prompting significantly degrades the visual spatial reasoning performance of Multimodal Large Language Models (MRMs) across numerous benchmarks. The authors reveal this degradation is linked to shortcut learning, where models hallucinate visual details from textual priors even without an image present. This challenges the reliance on text-only CoT for spatial tasks, advocating for vision-centric reasoning methods instead.",
+      "abstract": "This paper demonstrates that employing Chain-of-Thought (CoT) prompting significantly degrades the visual spatial reasoning capabilities of Multimodal Large Language Models (MRMs) across numerous benchmarks. The authors reveal that MRMs and CoT-prompted models exhibit severe shortcut learning, often hallucinating visual details from textual priors even without an image present. This suggests CoT is ineffective for spatial tasks and necessitates the development of vision-centric reasoning paradigms.",
       "url": "http://arxiv.org/abs/2604.16060v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16060v1",
       "score": 9.0,
@@ -584,7 +593,7 @@
         "cs.CV",
         "cs.CL"
       ],
-      "abstract": "This paper rigorously investigates whether Vision-Language Models (VLMs) perform genuine vision-grounded reasoning or rely on their textual components. The core method introduces **CrossMath**, a novel benchmark where problems are presented in text-only, image-only, and combined formats with strictly identical information across modalities. The contribution is the demonstration of a **substantial performance gap**, showing VLMs significantly excel at text-only reasoning compared to image-based reasoning, suggesting a weakness in true vision grounding.",
+      "abstract": "This paper rigorously investigates whether Vision-Language Models (VLMs) perform genuine vision-grounded reasoning or rely on their textual components. The authors introduce **CrossMath**, a novel benchmark where problems are presented in text-only, image-only, and combined formats with strictly identical information content. Their core finding is a consistent and substantial performance gap, indicating that VLMs significantly underperform when relying solely on visual input compared to text-only input.",
       "url": "http://arxiv.org/abs/2604.16256v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16256v1",
       "score": 9.0,
@@ -604,7 +613,7 @@
         "cs.AI",
         "eess.IV"
       ],
-      "abstract": "This paper introduces a dual-modal AI framework that fuses features extracted from lung CT scans and H\\&E histopathology, augmented with clinical data, for lung cancer diagnosis and subtype classification. The core method uses CNNs for feature extraction and a weighted decision-level fusion mechanism to improve diagnostic robustness. The contribution lies in creating a more comprehensive and interpretable AI system by integrating radiology and microscopy for better lung cancer characterization.",
+      "abstract": "This paper introduces a dual-modal AI framework that fuses features extracted from CT radiology and H\\&E histopathology, enhanced with clinical metadata, for lung cancer diagnosis and subtype classification. The core contribution is this integrated approach, which leverages both imaging modalities to improve diagnostic robustness and employs various Explainable AI techniques to provide interpretable insights into the predictions.",
       "url": "http://arxiv.org/abs/2604.16104v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16104v1",
       "score": 9.0,
@@ -627,7 +636,7 @@
         "cs.CV",
         "cs.AI"
       ],
-      "abstract": "MARCH is a multi-agent framework that mimics the hierarchical structure of radiology departments to improve CT report generation. It assigns specialized roles—Resident for drafting, Fellows for retrieval-augmented revision, and an Attending for orchestrating consensus discourse—to iteratively verify findings and reduce clinical hallucinations. This approach significantly enhances both the clinical fidelity and linguistic accuracy of the generated reports compared to monolithic models.",
+      "abstract": "MARCH is a multi-agent framework for CT report generation that mimics the hierarchical structure of radiology departments. It employs specialized agents (Resident, Fellows, Attending) to perform initial drafting, retrieval-augmented revision, and iterative, consensus-driven verification. This approach significantly improves clinical fidelity and linguistic accuracy compared to monolithic models by incorporating collaborative oversight.",
       "url": "http://arxiv.org/abs/2604.16175v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16175v1",
       "score": 9.0,
@@ -649,7 +658,7 @@
       "categories": [
         "cs.CV"
       ],
-      "abstract": "This paper introduces DINOv3 adapted with LoRA and a lightweight decoder as a simple yet powerful foundation model baseline for image forensics, specifically for manipulation localization. The core method leverages the frozen DINOv3 backbone's rich pre-trained representations, fine-tuned efficiently via LoRA, which consistently outperforms full fine-tuning. This approach significantly surpasses specialized detectors, achieving substantial F1 score improvements across multiple benchmarks with far fewer trainable parameters.",
+      "abstract": "This paper introduces DINOv3 adapted with LoRA and a lightweight decoder as a simple yet powerful foundation model baseline for image forensics, specifically for manipulation localization. The core method leverages the frozen DINOv3 backbone, fine-tuning only a small fraction of parameters via LoRA, which proves more stable and effective than full fine-tuning. This approach significantly outperforms specialized detectors, achieving substantial F1 score improvements across multiple benchmarks with far fewer trainable parameters.",
       "url": "http://arxiv.org/abs/2604.16083v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16083v1",
       "score": 8.0,
@@ -672,7 +681,7 @@
       "categories": [
         "cs.CV"
       ],
-      "abstract": "This paper identifies and analyzes the **SNR-t bias** in Diffusion Probabilistic Models, where the Signal-to-Noise Ratio of the denoised sample misaligns with its timestep during inference, degrading generation quality. The authors provide theoretical and empirical evidence for this issue. They propose a simple, effective **differential correction method** that leverages the frequency-dependent nature of the denoising process to mitigate this bias.",
+      "abstract": "This paper identifies and analyzes the Signal-to-Noise Ratio-timestep (SNR-t) bias in Diffusion Probabilistic Models, where the SNR of the denoised sample misaligns with its timestep during inference, degrading generation quality. The authors provide theoretical and empirical evidence for this issue. They propose a simple, effective differential correction method that leverages frequency decomposition to mitigate this bias by better aligning the denoising process with the expected SNR at each timestep.",
       "url": "http://arxiv.org/abs/2604.16044v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16044v1",
       "score": 8.0,
@@ -693,7 +702,7 @@
       "categories": [
         "cs.CV"
       ],
-      "abstract": "This paper introduces **IA-CLAHE**, an adaptive method for Contrast Limited Adaptive Histogram Equalization (CLAHE). It addresses the issue of fixed clip limits causing over-enhancement by adaptively estimating tile-wise clip limits directly from the input image. This is achieved by training a lightweight estimator using a differentiable version of CLAHE, allowing for end-to-end optimization without needing pre-searched ground-truth limits.",
+      "abstract": "This paper introduces IA-CLAHE, an image-adaptive method for Contrast Limited Adaptive Histogram Equalization. The core method adaptively estimates the tile-wise contrast limiting parameter (clip limit) based on the local histogram distribution, overcoming the over-enhancement issue of fixed-parameter CLAHE. This is achieved by training a lightweight estimator using a differentiable extension of CLAHE, allowing end-to-end optimization without requiring pre-searched ground-truth limits.",
       "url": "http://arxiv.org/abs/2604.16010v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16010v1",
       "score": 8.0,
@@ -715,7 +724,7 @@
         "cs.CV",
         "cs.LG"
       ],
-      "abstract": "This paper introduces the **Multi-modal Information Router ($\\text{MoIR}$)** to combat modality dominance in Vision-Language Models (VLMs) by addressing information disparity *before* fusion. $\\text{MoIR}$ explicitly identifies tokens from weaker modalities and routes complementary, informative signals from stronger modalities to them. This information-level routing mechanism ensures a more balanced contribution from both vision and language inputs, leading to more robust predictions than attention-based methods alone.",
+      "abstract": "This paper introduces the **Multi-modal Information Router ($\\text{MoIR}$)** to combat modality dominance in Vision-Language Models (VLMs). $\\text{MoIR}$ addresses the limitation of attention-based methods by employing an **information-level fusion** strategy that explicitly reduces information disparity *before* fusion. It achieves this by identifying less informative tokens and routing complementary information from a stronger modality, thereby ensuring a more balanced and robust multimodal representation.",
       "url": "http://arxiv.org/abs/2604.16264v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16264v1",
       "score": 8.0,
@@ -737,7 +746,7 @@
         "cs.CV",
         "cs.AI"
       ],
-      "abstract": "This paper introduces \"Mind's Eye,\" a novel benchmark designed to assess the visual cognitive and visuospatial reasoning capabilities of Multimodal Large Language Models (MLLMs) using eight tasks categorized by Abstraction, Relation, and Transformation. The benchmark reveals that top MLLMs significantly underperform humans (below 50% vs. 80% accuracy), highlighting critical limitations in their visual attention, internal perceptual manipulation, and abstraction of visual concepts.",
+      "abstract": "This paper introduces \"Mind's Eye,\" a novel benchmark designed to assess the visual cognitive and visuospatial reasoning capabilities of Multimodal Large Language Models (MLLMs) across tasks categorized by Abstraction, Relation, and Transformation. The core contribution is demonstrating a significant gap, where top MLLMs score below 50% accuracy compared to 80% for humans, highlighting limitations in their visual attention, perceptual manipulation, and concept abstraction.",
       "url": "http://arxiv.org/abs/2604.16054v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16054v1",
       "score": 8.0,
@@ -760,7 +769,7 @@
         "cs.CV",
         "physics.data-an"
       ],
-      "abstract": "This paper comprehensively evaluates and ranks 13 Explainable AI (XAI) methods for predicting Head and Neck Cancer outcomes using PET/CT data, addressing the critical clinical barrier of AI interpretability. The evaluation uses 24 metrics across faithfulness, robustness, complexity, and plausibility, finding significant performance variations among methods. Integrated Gradients (IG) and DeepLIFT (DL) consistently ranked highly across key aspects, highlighting the necessity of thorough XAI assessment.",
+      "abstract": "This paper comprehensively evaluates and ranks 13 Explainable AI (XAI) methods for predicting Head and Neck Cancer outcomes using PET/CT data, addressing the critical clinical barrier of AI interpretability. The evaluation uses 24 diverse metrics covering faithfulness, robustness, complexity, and plausibility, unlike previous empirical selections. The core contribution is demonstrating significant variation across methods, highlighting Integrated Gradients (IG) and DeepLIFT (DL) as top performers across key interpretability aspects.",
       "url": "http://arxiv.org/abs/2604.16034v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16034v1",
       "score": 8.0,
@@ -780,7 +789,7 @@
       "categories": [
         "cs.CV"
       ],
-      "abstract": "This paper systematically evaluates state-of-the-art Vision-Language Models (VLMs) for zero-shot, prompt-based country-level image geolocalization using only ground-view imagery. The core contribution is a world-scale analysis revealing significant performance variation across models. This highlights the potential of VLMs for coarse geographic inference while exposing their current limitations in capturing fine-grained spatial details.",
+      "abstract": "This paper systematically evaluates state-of-the-art Vision-Language Models (VLMs) for zero-shot, country-level image geolocalization using only ground-view imagery and prompt-based prediction. The core contribution is a world-scale analysis revealing significant performance variation across models, demonstrating the potential of VLM semantic reasoning for coarse localization while highlighting their current limitations in capturing fine-grained geographic details.",
       "url": "http://arxiv.org/abs/2604.16248v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16248v1",
       "score": 8.0,
@@ -800,7 +809,7 @@
       "categories": [
         "cs.CV"
       ],
-      "abstract": "This paper introduces **AnimalHaze3k**, a synthetic dataset of 3,477 hazy wildlife images created using a physics-based pipeline. The authors propose **IncepDehazeGan**, a novel GAN architecture utilizing inception blocks and residual connections, which achieves state-of-the-art dehazing performance. This method significantly improves downstream animal detection tasks, offering ecologists robust tools for wildlife monitoring.",
+      "abstract": "This paper introduces **AnimalHaze3k**, a synthetic dataset of 3,477 hazy wildlife images created using a physics-based pipeline. The core method is the novel **IncepDehazeGan** architecture, which uses inception blocks and residual connections within a GAN framework to achieve state-of-the-art image dehazing performance. This significantly improves downstream animal detection tasks, offering ecologists a robust tool for monitoring in hazy conditions.",
       "url": "http://arxiv.org/abs/2604.16284v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16284v1",
       "score": 7.0,
@@ -822,7 +831,7 @@
         "cs.CV",
         "cs.RO"
       ],
-      "abstract": "FineCog-Nav introduces a novel framework for zero-shot UAV navigation by integrating distinct, fine-grained cognitive modules (e.g., perception, memory, reasoning) inspired by human cognition. Each module, driven by a moderate foundation model with specific prompting, communicates via structured protocols to collaboratively execute complex, multi-step instructions. This approach enhances interpretability and performance over existing methods, supported by the creation of the AerialVLN-Fine benchmark for fine-grained evaluation.",
+      "abstract": "FineCog-Nav introduces a cognitive-inspired framework for zero-shot UAV navigation by integrating several fine-grained, specialized modules (e.g., perception, memory, reasoning) driven by moderate foundation models. This modular approach, featuring structured communication protocols, aims to overcome the limitations of generic large model reliance in existing methods, leading to improved performance and interpretability. The authors also release AerialVLN-Fine, a benchmark designed for fine-grained evaluation of these navigation capabilities.",
       "url": "http://arxiv.org/abs/2604.16298v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16298v1",
       "score": 7.0,
@@ -844,7 +853,7 @@
         "cs.CV",
         "cs.AI"
       ],
-      "abstract": "SWNet is a cross-spectral network designed to detect camouflaged weeds by fusing Visible and Near-Infrared (NIR) imagery. It employs a Pyramid Vision Transformer backbone and a Bimodal Gated Fusion Module to dynamically integrate spectral information, exploiting physiological differences invisible in the visible spectrum. This approach significantly improves discrimination accuracy for homochromatic weeds, further enhanced by an Edge-Aware Refinement module for sharper boundaries.",
+      "abstract": "SWNet is a cross-spectral network designed to detect camouflaged weeds by integrating Visible and Near-Infrared (NIR) data. It uses a Pyramid Vision Transformer backbone and a Bimodal Gated Fusion Module to dynamically combine spectral information, exploiting NIR differences in chlorophyll reflectance to distinguish targets invisible in the visible spectrum. The core contribution is an effective architecture that overcomes homochromatic camouflage challenges in dense agricultural settings.",
       "url": "http://arxiv.org/abs/2604.16147v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16147v1",
       "score": 7.0,
@@ -869,7 +878,7 @@
         "cs.CV",
         "cs.AI"
       ],
-      "abstract": "This paper demonstrates that using Chain-of-Thought (CoT) prompting significantly degrades the visual spatial reasoning performance of Multimodal Large Language Models (MRMs) across numerous benchmarks. The authors reveal this degradation is linked to shortcut learning, where models hallucinate visual details from textual priors even without an image present. This challenges the reliance on text-only CoT for spatial tasks, advocating for vision-centric reasoning methods instead.",
+      "abstract": "This paper demonstrates that employing Chain-of-Thought (CoT) prompting significantly degrades the visual spatial reasoning capabilities of Multimodal Large Language Models (MRMs) across numerous benchmarks. The authors reveal that MRMs and CoT-prompted models exhibit severe shortcut learning, often hallucinating visual details from textual priors even without an image present. This suggests CoT is ineffective for spatial tasks and necessitates the development of vision-centric reasoning paradigms.",
       "url": "http://arxiv.org/abs/2604.16060v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16060v1",
       "score": 9.0,
@@ -893,7 +902,7 @@
         "cs.CV",
         "cs.CL"
       ],
-      "abstract": "This paper rigorously investigates whether Vision-Language Models (VLMs) perform genuine vision-grounded reasoning or rely on their textual components. The core method introduces **CrossMath**, a novel benchmark where problems are presented in text-only, image-only, and combined formats with strictly identical information across modalities. The contribution is the demonstration of a **substantial performance gap**, showing VLMs significantly excel at text-only reasoning compared to image-based reasoning, suggesting a weakness in true vision grounding.",
+      "abstract": "This paper rigorously investigates whether Vision-Language Models (VLMs) perform genuine vision-grounded reasoning or rely on their textual components. The authors introduce **CrossMath**, a novel benchmark where problems are presented in text-only, image-only, and combined formats with strictly identical information content. Their core finding is a consistent and substantial performance gap, indicating that VLMs significantly underperform when relying solely on visual input compared to text-only input.",
       "url": "http://arxiv.org/abs/2604.16256v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16256v1",
       "score": 9.0,
@@ -913,7 +922,7 @@
         "cs.AI",
         "eess.IV"
       ],
-      "abstract": "This paper introduces a dual-modal AI framework that fuses features extracted from lung CT scans and H\\&E histopathology, augmented with clinical data, for lung cancer diagnosis and subtype classification. The core method uses CNNs for feature extraction and a weighted decision-level fusion mechanism to improve diagnostic robustness. The contribution lies in creating a more comprehensive and interpretable AI system by integrating radiology and microscopy for better lung cancer characterization.",
+      "abstract": "This paper introduces a dual-modal AI framework that fuses features extracted from CT radiology and H\\&E histopathology, enhanced with clinical metadata, for lung cancer diagnosis and subtype classification. The core contribution is this integrated approach, which leverages both imaging modalities to improve diagnostic robustness and employs various Explainable AI techniques to provide interpretable insights into the predictions.",
       "url": "http://arxiv.org/abs/2604.16104v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16104v1",
       "score": 9.0,
@@ -936,7 +945,7 @@
         "cs.CV",
         "cs.AI"
       ],
-      "abstract": "MARCH is a multi-agent framework that mimics the hierarchical structure of radiology departments to improve CT report generation. It assigns specialized roles—Resident for drafting, Fellows for retrieval-augmented revision, and an Attending for orchestrating consensus discourse—to iteratively verify findings and reduce clinical hallucinations. This approach significantly enhances both the clinical fidelity and linguistic accuracy of the generated reports compared to monolithic models.",
+      "abstract": "MARCH is a multi-agent framework for CT report generation that mimics the hierarchical structure of radiology departments. It employs specialized agents (Resident, Fellows, Attending) to perform initial drafting, retrieval-augmented revision, and iterative, consensus-driven verification. This approach significantly improves clinical fidelity and linguistic accuracy compared to monolithic models by incorporating collaborative oversight.",
       "url": "http://arxiv.org/abs/2604.16175v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16175v1",
       "score": 9.0,
@@ -958,7 +967,7 @@
       "categories": [
         "cs.CV"
       ],
-      "abstract": "This paper introduces DINOv3 adapted with LoRA and a lightweight decoder as a simple yet powerful foundation model baseline for image forensics, specifically for manipulation localization. The core method leverages the frozen DINOv3 backbone's rich pre-trained representations, fine-tuned efficiently via LoRA, which consistently outperforms full fine-tuning. This approach significantly surpasses specialized detectors, achieving substantial F1 score improvements across multiple benchmarks with far fewer trainable parameters.",
+      "abstract": "This paper introduces DINOv3 adapted with LoRA and a lightweight decoder as a simple yet powerful foundation model baseline for image forensics, specifically for manipulation localization. The core method leverages the frozen DINOv3 backbone, fine-tuning only a small fraction of parameters via LoRA, which proves more stable and effective than full fine-tuning. This approach significantly outperforms specialized detectors, achieving substantial F1 score improvements across multiple benchmarks with far fewer trainable parameters.",
       "url": "http://arxiv.org/abs/2604.16083v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16083v1",
       "score": 8.0,
@@ -981,7 +990,7 @@
       "categories": [
         "cs.CV"
       ],
-      "abstract": "This paper identifies and analyzes the **SNR-t bias** in Diffusion Probabilistic Models, where the Signal-to-Noise Ratio of the denoised sample misaligns with its timestep during inference, degrading generation quality. The authors provide theoretical and empirical evidence for this issue. They propose a simple, effective **differential correction method** that leverages the frequency-dependent nature of the denoising process to mitigate this bias.",
+      "abstract": "This paper identifies and analyzes the Signal-to-Noise Ratio-timestep (SNR-t) bias in Diffusion Probabilistic Models, where the SNR of the denoised sample misaligns with its timestep during inference, degrading generation quality. The authors provide theoretical and empirical evidence for this issue. They propose a simple, effective differential correction method that leverages frequency decomposition to mitigate this bias by better aligning the denoising process with the expected SNR at each timestep.",
       "url": "http://arxiv.org/abs/2604.16044v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16044v1",
       "score": 8.0,
@@ -1002,7 +1011,7 @@
       "categories": [
         "cs.CV"
       ],
-      "abstract": "This paper introduces **IA-CLAHE**, an adaptive method for Contrast Limited Adaptive Histogram Equalization (CLAHE). It addresses the issue of fixed clip limits causing over-enhancement by adaptively estimating tile-wise clip limits directly from the input image. This is achieved by training a lightweight estimator using a differentiable version of CLAHE, allowing for end-to-end optimization without needing pre-searched ground-truth limits.",
+      "abstract": "This paper introduces IA-CLAHE, an image-adaptive method for Contrast Limited Adaptive Histogram Equalization. The core method adaptively estimates the tile-wise contrast limiting parameter (clip limit) based on the local histogram distribution, overcoming the over-enhancement issue of fixed-parameter CLAHE. This is achieved by training a lightweight estimator using a differentiable extension of CLAHE, allowing end-to-end optimization without requiring pre-searched ground-truth limits.",
       "url": "http://arxiv.org/abs/2604.16010v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16010v1",
       "score": 8.0,
@@ -1024,7 +1033,7 @@
         "cs.CV",
         "cs.LG"
       ],
-      "abstract": "This paper introduces the **Multi-modal Information Router ($\\text{MoIR}$)** to combat modality dominance in Vision-Language Models (VLMs) by addressing information disparity *before* fusion. $\\text{MoIR}$ explicitly identifies tokens from weaker modalities and routes complementary, informative signals from stronger modalities to them. This information-level routing mechanism ensures a more balanced contribution from both vision and language inputs, leading to more robust predictions than attention-based methods alone.",
+      "abstract": "This paper introduces the **Multi-modal Information Router ($\\text{MoIR}$)** to combat modality dominance in Vision-Language Models (VLMs). $\\text{MoIR}$ addresses the limitation of attention-based methods by employing an **information-level fusion** strategy that explicitly reduces information disparity *before* fusion. It achieves this by identifying less informative tokens and routing complementary information from a stronger modality, thereby ensuring a more balanced and robust multimodal representation.",
       "url": "http://arxiv.org/abs/2604.16264v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16264v1",
       "score": 8.0,
@@ -1046,7 +1055,7 @@
         "cs.CV",
         "cs.AI"
       ],
-      "abstract": "This paper introduces \"Mind's Eye,\" a novel benchmark designed to assess the visual cognitive and visuospatial reasoning capabilities of Multimodal Large Language Models (MLLMs) using eight tasks categorized by Abstraction, Relation, and Transformation. The benchmark reveals that top MLLMs significantly underperform humans (below 50% vs. 80% accuracy), highlighting critical limitations in their visual attention, internal perceptual manipulation, and abstraction of visual concepts.",
+      "abstract": "This paper introduces \"Mind's Eye,\" a novel benchmark designed to assess the visual cognitive and visuospatial reasoning capabilities of Multimodal Large Language Models (MLLMs) across tasks categorized by Abstraction, Relation, and Transformation. The core contribution is demonstrating a significant gap, where top MLLMs score below 50% accuracy compared to 80% for humans, highlighting limitations in their visual attention, perceptual manipulation, and concept abstraction.",
       "url": "http://arxiv.org/abs/2604.16054v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16054v1",
       "score": 8.0,
@@ -1069,7 +1078,7 @@
         "cs.CV",
         "physics.data-an"
       ],
-      "abstract": "This paper comprehensively evaluates and ranks 13 Explainable AI (XAI) methods for predicting Head and Neck Cancer outcomes using PET/CT data, addressing the critical clinical barrier of AI interpretability. The evaluation uses 24 metrics across faithfulness, robustness, complexity, and plausibility, finding significant performance variations among methods. Integrated Gradients (IG) and DeepLIFT (DL) consistently ranked highly across key aspects, highlighting the necessity of thorough XAI assessment.",
+      "abstract": "This paper comprehensively evaluates and ranks 13 Explainable AI (XAI) methods for predicting Head and Neck Cancer outcomes using PET/CT data, addressing the critical clinical barrier of AI interpretability. The evaluation uses 24 diverse metrics covering faithfulness, robustness, complexity, and plausibility, unlike previous empirical selections. The core contribution is demonstrating significant variation across methods, highlighting Integrated Gradients (IG) and DeepLIFT (DL) as top performers across key interpretability aspects.",
       "url": "http://arxiv.org/abs/2604.16034v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16034v1",
       "score": 8.0,
@@ -1089,7 +1098,7 @@
       "categories": [
         "cs.CV"
       ],
-      "abstract": "This paper systematically evaluates state-of-the-art Vision-Language Models (VLMs) for zero-shot, prompt-based country-level image geolocalization using only ground-view imagery. The core contribution is a world-scale analysis revealing significant performance variation across models. This highlights the potential of VLMs for coarse geographic inference while exposing their current limitations in capturing fine-grained spatial details.",
+      "abstract": "This paper systematically evaluates state-of-the-art Vision-Language Models (VLMs) for zero-shot, country-level image geolocalization using only ground-view imagery and prompt-based prediction. The core contribution is a world-scale analysis revealing significant performance variation across models, demonstrating the potential of VLM semantic reasoning for coarse localization while highlighting their current limitations in capturing fine-grained geographic details.",
       "url": "http://arxiv.org/abs/2604.16248v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16248v1",
       "score": 8.0,
@@ -1109,7 +1118,7 @@
       "categories": [
         "cs.CV"
       ],
-      "abstract": "This paper introduces **AnimalHaze3k**, a synthetic dataset of 3,477 hazy wildlife images created using a physics-based pipeline. The authors propose **IncepDehazeGan**, a novel GAN architecture utilizing inception blocks and residual connections, which achieves state-of-the-art dehazing performance. This method significantly improves downstream animal detection tasks, offering ecologists robust tools for wildlife monitoring.",
+      "abstract": "This paper introduces **AnimalHaze3k**, a synthetic dataset of 3,477 hazy wildlife images created using a physics-based pipeline. The core method is the novel **IncepDehazeGan** architecture, which uses inception blocks and residual connections within a GAN framework to achieve state-of-the-art image dehazing performance. This significantly improves downstream animal detection tasks, offering ecologists a robust tool for monitoring in hazy conditions.",
       "url": "http://arxiv.org/abs/2604.16284v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16284v1",
       "score": 7.0,
@@ -1131,7 +1140,7 @@
         "cs.CV",
         "cs.RO"
       ],
-      "abstract": "FineCog-Nav introduces a novel framework for zero-shot UAV navigation by integrating distinct, fine-grained cognitive modules (e.g., perception, memory, reasoning) inspired by human cognition. Each module, driven by a moderate foundation model with specific prompting, communicates via structured protocols to collaboratively execute complex, multi-step instructions. This approach enhances interpretability and performance over existing methods, supported by the creation of the AerialVLN-Fine benchmark for fine-grained evaluation.",
+      "abstract": "FineCog-Nav introduces a cognitive-inspired framework for zero-shot UAV navigation by integrating several fine-grained, specialized modules (e.g., perception, memory, reasoning) driven by moderate foundation models. This modular approach, featuring structured communication protocols, aims to overcome the limitations of generic large model reliance in existing methods, leading to improved performance and interpretability. The authors also release AerialVLN-Fine, a benchmark designed for fine-grained evaluation of these navigation capabilities.",
       "url": "http://arxiv.org/abs/2604.16298v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16298v1",
       "score": 7.0,
@@ -1153,7 +1162,7 @@
         "cs.CV",
         "cs.AI"
       ],
-      "abstract": "SWNet is a cross-spectral network designed to detect camouflaged weeds by fusing Visible and Near-Infrared (NIR) imagery. It employs a Pyramid Vision Transformer backbone and a Bimodal Gated Fusion Module to dynamically integrate spectral information, exploiting physiological differences invisible in the visible spectrum. This approach significantly improves discrimination accuracy for homochromatic weeds, further enhanced by an Edge-Aware Refinement module for sharper boundaries.",
+      "abstract": "SWNet is a cross-spectral network designed to detect camouflaged weeds by integrating Visible and Near-Infrared (NIR) data. It uses a Pyramid Vision Transformer backbone and a Bimodal Gated Fusion Module to dynamically combine spectral information, exploiting NIR differences in chlorophyll reflectance to distinguish targets invisible in the visible spectrum. The core contribution is an effective architecture that overcomes homochromatic camouflage challenges in dense agricultural settings.",
       "url": "http://arxiv.org/abs/2604.16147v1",
       "pdf_url": "https://arxiv.org/pdf/2604.16147v1",
       "score": 7.0,
@@ -1166,40 +1175,49 @@
   ],
   "hacker_news": [
     {
-      "id": 47824068,
-      "title": "Airline worker arrested after sharing photos of bomb damage in WhatsApp group",
-      "url": "https://www.lbc.co.uk/article/dubai-police-spied-private-whatsapp-5HjdXwr_2/",
-      "score": 268,
-      "created_at": "2026-04-19T13:13:09Z",
-      "comments_url": "https://news.ycombinator.com/item?id=47824068",
-      "summary": "An airline worker was arrested in Dubai after sharing photos of bomb damage in a private WhatsApp group."
+      "id": 47833247,
+      "title": "Atlassian Enables Default Data Collection to Train AI",
+      "url": "https://letsdatascience.com/news/atlassian-enables-default-data-collection-to-train-ai-f71343d8",
+      "score": 94,
+      "created_at": "2026-04-20T12:23:39Z",
+      "comments_url": "https://news.ycombinator.com/item?id=47833247",
+      "summary": "Atlassian has enabled the default collection of customer data to train its artificial intelligence models."
     },
     {
       "id": 47826328,
       "title": "Uber’s Anthropic AI push hits a wall",
       "url": "https://finance.yahoo.com/sectors/technology/articles/ubers-anthropic-ai-push-hits-223109852.html",
-      "score": 91,
+      "score": 93,
       "created_at": "2026-04-19T18:13:32Z",
       "comments_url": "https://news.ycombinator.com/item?id=47826328",
-      "summary": "Uber's efforts to integrate Anthropic's AI technology have reportedly stalled due to internal disagreements and challenges in aligning the technology with the company's needs."
+      "summary": "Uber's strategic push to integrate Anthropic's AI technology has reportedly stalled due to internal disagreements and challenges in aligning the partnership with the company's core business strategy."
     },
     {
       "id": 47827985,
       "title": "CEOs admit AI had no impact on employment or productivity",
       "url": "https://fortune.com/article/why-do-thousands-of-ceos-believe-ai-not-having-impact-productivity-employment-study/",
-      "score": 80,
+      "score": 85,
       "created_at": "2026-04-19T21:56:22Z",
       "comments_url": "https://news.ycombinator.com/item?id=47827985",
-      "summary": "A recent study reveals that thousands of CEOs report that artificial intelligence has had no measurable impact on either their company's employment levels or overall productivity."
+      "summary": "A recent study reveals that thousands of CEOs acknowledge that artificial intelligence has not yet significantly impacted their companies' employment levels or overall productivity."
     },
     {
       "id": 47828444,
       "title": "Swiss AI Initiative (2023)",
       "url": "https://www.swiss-ai.org",
-      "score": 64,
+      "score": 85,
       "created_at": "2026-04-19T22:58:35Z",
       "comments_url": "https://news.ycombinator.com/item?id=47828444",
-      "summary": "The Swiss AI Initiative 2023 is a national effort focused on advancing artificial intelligence research, development, and application within Switzerland."
+      "summary": "The Swiss AI Initiative (2023) is a national effort focused on advancing artificial intelligence research, innovation, and application within Switzerland."
+    },
+    {
+      "id": 47830071,
+      "title": "A cache-friendly IPv6 LPM with AVX-512 (linearized B+-tree, real BGP benchmarks)",
+      "url": "https://github.com/esutcu/planb-lpm",
+      "score": 52,
+      "created_at": "2026-04-20T03:24:21Z",
+      "comments_url": "https://news.ycombinator.com/item?id=47830071",
+      "summary": "This GitHub project presents a cache-friendly IPv6 Longest Prefix Match (LPM) implementation utilizing AVX-512 instructions and a linearized B+-tree structure, benchmarked against real BGP data."
     }
   ],
   "github_trending": [
@@ -1207,101 +1225,101 @@
       "full_name": "Fincept-Corporation/FinceptTerminal",
       "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
       "description": "FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making in a user-friendly environment.",
-      "stars_today": 1254,
-      "total_stars": 7732,
+      "stars_today": 3129,
+      "total_stars": 8722,
       "language": "Python",
       "topics": [],
       "summary": "FinceptTerminal is a modern finance application providing advanced market analytics, investment research, and economic data tools for interactive exploration and data-driven decision-making."
     },
     {
-      "full_name": "thunderbird/thunderbolt",
-      "url": "https://github.com/thunderbird/thunderbolt",
-      "description": "AI You Control: Choose your models. Own your data. Eliminate vendor lock-in.",
-      "stars_today": 695,
-      "total_stars": 2458,
-      "language": "TypeScript",
-      "topics": [],
-      "summary": "Thunderbolt is an AI platform enabling users to control their models, own their data, and avoid vendor lock-in by offering model choice."
-    },
-    {
-      "full_name": "tractorjuice/arc-kit",
-      "url": "https://github.com/tractorjuice/arc-kit",
-      "description": "Enterprise Architecture Governance & Vendor Procurement Toolkit",
-      "stars_today": 263,
-      "total_stars": 1115,
-      "language": "HTML",
-      "topics": [],
-      "summary": "Arc-Kit is an enterprise architecture governance and vendor procurement toolkit providing structured processes and resources for managing architectural standards and acquiring necessary technologies."
-    },
-    {
-      "full_name": "openai/openai-agents-python",
-      "url": "https://github.com/openai/openai-agents-python",
-      "description": "A lightweight, powerful framework for multi-agent workflows",
-      "stars_today": 752,
-      "total_stars": 23548,
-      "language": "Python",
-      "topics": [],
-      "summary": "The `openai-agents-python` repository provides a lightweight, powerful Python framework designed to facilitate the creation and management of complex, multi-agent workflows powered by OpenAI models."
-    },
-    {
-      "full_name": "pingdotgg/t3code",
-      "url": "https://github.com/pingdotgg/t3code",
-      "description": "",
-      "stars_today": 109,
-      "total_stars": 10041,
-      "language": "TypeScript",
-      "topics": [],
-      "summary": "The `t3code` repository provides a comprehensive, opinionated starter kit for building full-stack web applications using the T3 Stack (Next.js, TypeScript, tRPC, Tailwind CSS) with integrated authentication and database setup."
-    },
-    {
-      "full_name": "paperless-ngx/paperless-ngx",
-      "url": "https://github.com/paperless-ngx/paperless-ngx",
-      "description": "A community-supported supercharged document management system: scan, index and archive all your documents",
-      "stars_today": 393,
-      "total_stars": 39098,
-      "language": "Python",
-      "topics": [],
-      "summary": "Paperless-ngx is a community-supported document management system that allows users to scan, index, and archive all their documents efficiently."
-    },
-    {
       "full_name": "ruvnet/RuView",
       "url": "https://github.com/ruvnet/RuView",
       "description": "π RuView: WiFi DensePose turns commodity WiFi signals into real-time human pose estimation, vital sign monitoring, and presence detection — all without a single pixel of video.",
-      "stars_today": 149,
-      "total_stars": 47732,
+      "stars_today": 716,
+      "total_stars": 47963,
       "language": "Rust",
       "topics": [],
       "summary": "RuView is a WiFi-based system that transforms commodity WiFi signals into real-time human pose estimation, vital sign monitoring, and presence detection without using any video."
     },
     {
-      "full_name": "EvoMap/evolver",
-      "url": "https://github.com/EvoMap/evolver",
-      "description": "The GEP-Powered Self-Evolution Engine for AI Agents. Genome Evolution Protocol. | evomap.ai",
-      "stars_today": 527,
-      "total_stars": 5782,
-      "language": "JavaScript",
+      "full_name": "thunderbird/thunderbolt",
+      "url": "https://github.com/thunderbird/thunderbolt",
+      "description": "AI You Control: Choose your models. Own your data. Eliminate vendor lock-in.",
+      "stars_today": 667,
+      "total_stars": 2621,
+      "language": "TypeScript",
       "topics": [],
-      "summary": "EvoMap/evolver is a GEP-powered self-evolution engine designed for AI agents, utilizing a Genome Evolution Protocol to drive continuous improvement and adaptation."
+      "summary": "Thunderbolt is an AI platform enabling users to control their models, own their data, and avoid vendor lock-in by offering model choice and data sovereignty."
     },
     {
-      "full_name": "BasedHardware/omi",
-      "url": "https://github.com/BasedHardware/omi",
-      "description": "AI that sees your screen, listens to your conversations and tells you what to do",
-      "stars_today": 685,
-      "total_stars": 11435,
-      "language": "Dart",
+      "full_name": "paperless-ngx/paperless-ngx",
+      "url": "https://github.com/paperless-ngx/paperless-ngx",
+      "description": "A community-supported supercharged document management system: scan, index and archive all your documents",
+      "stars_today": 611,
+      "total_stars": 39238,
+      "language": "Python",
       "topics": [],
-      "summary": "BasedHardware/omi is an AI system designed to actively observe a user's screen and listen to conversations to provide real-time guidance and instructions."
+      "summary": "Paperless-ngx is a community-supported document management system that allows users to scan, index, and archive all their documents efficiently."
     },
     {
-      "full_name": "Donchitos/Claude-Code-Game-Studios",
-      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
-      "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
-      "stars_today": 704,
-      "total_stars": 14004,
+      "full_name": "tractorjuice/arc-kit",
+      "url": "https://github.com/tractorjuice/arc-kit",
+      "description": "Enterprise Architecture Governance & Vendor Procurement Toolkit",
+      "stars_today": 334,
+      "total_stars": 1221,
+      "language": "HTML",
+      "topics": [],
+      "summary": "Arc-Kit is an enterprise architecture governance and vendor procurement toolkit designed to streamline and manage organizational technology strategy and purchasing processes."
+    },
+    {
+      "full_name": "koala73/worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "stars_today": 343,
+      "total_stars": 49642,
+      "language": "TypeScript",
+      "topics": [],
+      "summary": "WorldMonitor is a real-time global intelligence dashboard that uses AI to aggregate news, monitor geopolitics, and track infrastructure within a unified situational awareness interface."
+    },
+    {
+      "full_name": "openai/openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "description": "A lightweight, powerful framework for multi-agent workflows",
+      "stars_today": 909,
+      "total_stars": 23751,
+      "language": "Python",
+      "topics": [],
+      "summary": "The `openai-agents-python` repository provides a lightweight, powerful Python framework for orchestrating and managing complex multi-agent workflows powered by OpenAI models."
+    },
+    {
+      "full_name": "deepseek-ai/DeepGEMM",
+      "url": "https://github.com/deepseek-ai/DeepGEMM",
+      "description": "DeepGEMM: clean and efficient FP8 GEMM kernels with fine-grained scaling",
+      "stars_today": 155,
+      "total_stars": 6766,
+      "language": "Cuda",
+      "topics": [],
+      "summary": "DeepGEMM provides clean and efficient FP8 General Matrix Multiplication (GEMM) kernels featuring fine-grained scaling for optimized performance."
+    },
+    {
+      "full_name": "pi-hole/pi-hole",
+      "url": "https://github.com/pi-hole/pi-hole",
+      "description": "A black hole for Internet advertisements",
+      "stars_today": 154,
+      "total_stars": 56899,
       "language": "Shell",
       "topics": [],
-      "summary": "This repository transforms Claude AI into a comprehensive game development studio, featuring 49 specialized AI agents, 72 workflow skills, and a complete coordination system mirroring real industry hierarchy."
+      "summary": "Pi-hole functions as a DNS sinkhole, blocking internet advertisements and trackers across your entire network for improved performance and privacy."
+    },
+    {
+      "full_name": "XTLS/Xray-core",
+      "url": "https://github.com/XTLS/Xray-core",
+      "description": "Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.",
+      "stars_today": 52,
+      "total_stars": 37345,
+      "language": "Go",
+      "topics": [],
+      "summary": "XTLS/Xray-core is a versatile, high-performance proxy platform, functioning as an advanced v2ray-core replacement designed for robust network penetration across various use cases."
     }
   ],
   "postdoc_jobs": [],
@@ -1318,15 +1336,15 @@
       "longitude": -3.19648,
       "timezone": "Europe/London",
       "forecast_date": "2026-04-20",
-      "condition": "Clear sky",
-      "weather_code": 0,
-      "temperature_c": 7.9,
-      "apparent_temperature_c": 5.7,
-      "temp_max_c": 11.4,
+      "condition": "Overcast",
+      "weather_code": 3,
+      "temperature_c": 11.0,
+      "apparent_temperature_c": 7.1,
+      "temp_max_c": 11.0,
       "temp_min_c": 6.4,
-      "humidity_pct": 63,
-      "wind_speed_kmh": 1.4,
-      "precipitation_probability_pct": 52,
+      "humidity_pct": 51,
+      "wind_speed_kmh": 13.3,
+      "precipitation_probability_pct": 66,
       "is_day": true,
       "sunrise": "2026-04-20T05:54",
       "sunset": "2026-04-20T20:29",
