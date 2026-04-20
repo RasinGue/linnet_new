@@ -137,7 +137,11 @@ def run_daily(sources: dict, dry_run: bool = False) -> None:
     json_path = write_daily_json(payload)
     print(f"Written: {json_path}")
 
-    # ── Deliver to enabled sinks ─────────────────────────────────────
+    deliver_payload(payload, sources)
+
+
+def deliver_payload(payload: dict, sources: dict) -> None:
+    """Deliver the payload to all enabled sinks."""
     sinks_cfg = sources.get("sinks", {})
     for sink_class in SINK_REGISTRY:
         cfg = sinks_cfg.get(sink_class.key, {})
@@ -180,6 +184,7 @@ def run_weekly() -> None:
     payload = build_weekly_payload(dates, period, summary, data_dir)
     json_path = write_weekly_json(payload)
     print(f"Written: {json_path}")
+    deliver_payload(payload, sources)
 
 
 def run_monthly() -> None:
@@ -211,6 +216,7 @@ def run_monthly() -> None:
     payload = build_monthly_payload(dates, period, summary, data_dir)
     json_path = write_monthly_json(payload)
     print(f"Written: {json_path}")
+    deliver_payload(payload, sources)
 
 
 def check_today() -> None:

@@ -40,6 +40,9 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           API_NINJAS_KEY:     ${{ secrets.API_NINJAS_KEY }}
+          # ── Optional delivery sinks ──────────────────────────────────
+          SLACK_WEBHOOK_URL:    ${{ secrets.SLACK_WEBHOOK_URL }}
+          SERVERCHAN_SENDKEY:   ${{ secrets.SERVERCHAN_SENDKEY }}
 
       - name: Commit and push weekly report
         run: |
