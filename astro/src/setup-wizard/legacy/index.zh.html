@@ -976,22 +976,20 @@
   <div class="shell">
     <section class="hero">
       <div class="hero-main">
-        <div class="eyebrow">你的个人 AI 晨间简报</div>
-        <h1>把那份你希望咖啡前就收到的晨报先搭起来。</h1>
+        <div class="eyebrow">专属晨间简报</div>
+        <h1>用几分钟，把每天早上想看的内容都装进来。</h1>
         <p class="lead">
-          先从几个最容易回答的问题开始。Linnet 会帮你决定要追踪什么、
-          想把简报送到哪里，以及怎样把当前基于 GitHub 的部署流程变成一条清晰可走的路径，
-          而不是一上来就把你扔进配置文件里。
+          几个问题，选好你关心的内容，向导帮你把配置文件都准备好。
+          最后只需要把文件放进你的仓库里。
         </p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#wizard-root">先拿到第一次爽点</a>
+          <a class="button button-primary" href="#wizard-root">开始配置</a>
           <a class="button button-secondary" href="../../daily/">先看一份真实简报</a>
           <a class="button button-secondary" href="../manual-config.md">更想手动配置？</a>
           <a class="button button-secondary" href="../">English Setup</a>
         </div>
         <p class="hero-helper">
-          现在这条路径最后仍然会落到你自己的 GitHub 仓库、Secrets 和 Actions 上。
-          这个向导存在的意义，就是让那段交接过程变得更有引导、更明确，也没那么吓人。
+          最后还是需要把文件放进你自己的 GitHub 仓库，向导会把每一步提前说清楚。
         </p>
       </div>
 
@@ -1002,12 +1000,12 @@
 
         <div class="stat-grid">
           <div class="stat-card">
-            <strong>30 秒第一次爽点</strong>
-            <span>先决定什么值得你每天早上看，而不是一开始就陷进细节设置。</span>
+            <strong>先选内容，细节放后面</strong>
+            <span>先挑好每天早上想看什么，配置细节在后面几步再慢慢调。</span>
           </div>
           <div class="stat-card">
-            <strong>平静完成 GitHub 交接</strong>
-            <span>页面会提前说明接下来会发生什么，让仓库步骤更像基础设施而不是障碍。</span>
+            <strong>GitHub 那几步会一一说清楚</strong>
+            <span>每一步都有说明，不用猜接下来要做什么。</span>
           </div>
           <div class="stat-card">
             <strong>密钥不入库</strong>
@@ -1015,7 +1013,7 @@
           </div>
           <div class="stat-card">
             <strong>边配边看</strong>
-            <span>未来简报的结构、生成文件和提醒说明都会在右侧实时更新。</span>
+            <span>右边的预览会跟着你的选择实时更新。</span>
           </div>
         </div>
 
@@ -1028,18 +1026,18 @@
     <section class="onboarding-strip" aria-label="配置概览">
       <article class="onboarding-card">
         <strong>1</strong>
-        <h2>决定你要追什么</h2>
-        <p>先把真正值得进入晨间简报的信息源挑出来。</p>
+        <h2>挑好你的内容来源</h2>
+        <p>选好每天早上想看的内容，排好顺序。</p>
       </article>
       <article class="onboarding-card">
         <strong>2</strong>
-        <h2>让 Linnet 帮你起草配置</h2>
-        <p>向导会先把文件、顺序和提醒准备好，你不用从一张空白配置开始。</p>
+        <h2>向导帮你生成配置文件</h2>
+        <p>向导把文件和顺序都准备好，不用自己从空白写起。</p>
       </article>
       <article class="onboarding-card">
         <strong>3</strong>
-        <h2>做一次 GitHub 交接</h2>
-        <p>复制文件、补上必要 Secret、跑一次流程，然后回来收获一份成型的简报。</p>
+        <h2>把文件放进你的仓库</h2>
+        <p>复制文件、填上密钥、触发一次工作流，你的简报就好了。</p>
       </article>
     </section>
 
@@ -1097,24 +1095,24 @@
   <script>
     const STEP_META = [
       {
-        title: "决定追踪什么",
-        blurb: "先挑出值得进入晨间简报的信息源，并排出最初的阅读顺序。",
+        title: "挑好内容来源",
+        blurb: "选好每天早上想看的内容，排好初始顺序。",
       },
       {
-        title: "塑造你的简报",
-        blurb: "这里只显示你选中的来源，让你在没有杂音的情况下慢慢调顺它们。",
+        title: "调整每个来源的设置",
+        blurb: "只显示你选中的来源，逐个调整就好。",
       },
       {
-        title: "设定复盘节奏",
-        blurb: "决定哪些内容要进入周报和月报，方便慢一点的回顾节奏。",
+        title: "设置周报和月报",
+        blurb: "选哪些内容要进周报和月报，以及每次保留多少条。",
       },
       {
-        title: "选择送达方式",
-        blurb: "开启通知渠道，同时继续把密钥留在 Secret 里，而不是写进 YAML。",
+        title: "设置通知",
+        blurb: "要不要额外发推送通知，密钥放到 GitHub Secret，不会写进配置文件。",
       },
       {
         title: "复制并启动",
-        blurb: "检查生成结果、Secret 提醒和下一步动作，再完成最后的 GitHub 交接。",
+        blurb: "确认生成结果，把文件放进仓库，简报就好了。",
       },
     ];
 
@@ -2114,7 +2112,7 @@
         <div class="stack">
           <div class="config-card">
             <h3>全局语言</h3>
-            <p>这个语言会应用到摘要、周报月报，以及通知内容里。</p>
+            <p>摘要、周报月报、通知内容都会用这个语言。</p>
             <div class="field-grid">
               <div class="field">
                 <label for="language-select">摘要语言</label>
@@ -2130,7 +2128,7 @@
           ${keys.includes("arxiv") ? `
             <div class="config-card">
               <h3>arXiv</h3>
-              <p>先选一个或多个研究方向预设，再补上你自己关心的分类或关键词，这样会更贴近你的实际需求。</p>
+              <p>先勾选研究方向，再加上你自己的关键词。</p>
               <div class="preset-grid">
                 ${Object.entries(ARXIV_PROFILES).map(([key, preset]) => `
                   <div class="preset">
@@ -2211,7 +2209,7 @@
           ${keys.includes("weather") ? `
             <div class="config-card">
               <h3>天气</h3>
-              <p>当前后端只支持一个城市，所以这里先写入一个天气位置。</p>
+              <p>目前只支持填一个城市。</p>
               <div class="field-grid">
                 <div class="field">
                   <label for="weather-city">城市</label>
@@ -2248,7 +2246,7 @@
               </div>
               <div class="notice">
                 <strong>关键词策略</strong>
-                <div class="helper-text">HN 的关键词会参考你的 arXiv 方向，再叠加一组默认的技术新闻关键词。</div>
+                <div class="helper-text">会参考你的 arXiv 方向，再加上一批默认的技术关键词。</div>
               </div>
             </div>
           ` : ""}
@@ -2256,7 +2254,7 @@
           ${keys.includes("github_trending") ? `
             <div class="config-card">
               <h3>GitHub Trending</h3>
-              <p>如果你希望摘要更紧凑、读起来更快，这里的数量可以保持小一点。</p>
+              <p>条数少一点，早上读起来更快。</p>
               <div class="field-grid">
                 <div class="field">
                   <label for="github-max">最多仓库数</label>
@@ -2387,7 +2385,7 @@
             <div class="config-card">
               <h3>${period === "weekly" ? "周报" : "月报"}</h3>
               <p>
-                这里只会显示你在第一步选中的内容。即使后端还没完全用到这些字段，现在生成到 YAML 里也没有问题。
+                只显示你选中的来源。先把设置生成进 YAML 里没问题，后面可以再改。
               </p>
               <div class="stack">
                 ${keys.map((key) => `
@@ -2446,13 +2444,13 @@
           <div class="config-card">
             <h3>Server酱</h3>
             <p>
-              如果你更希望走一条对中文用户更顺手的通知路径，可以启用 Server酱。页面只会把显示相关的设置写进 YAML，SendKey 不会进入版本库。
+              对国内用户比较方便，开启后可以把简报推送到微信。SendKey 不会写进配置文件。
             </p>
 
             <div class="checkbox-row">
               <div>
                 <strong>启用 Server酱通知</strong>
-                <div class="helper-text">如果你想要一条更轻、更省配置的 GitHub Actions 通知路径，这是一个很合适的默认选择。</div>
+                <div class="helper-text">想收手机推送通知的话，Server酱配置很简单。</div>
               </div>
               <label>
                 <input type="checkbox" data-path="sinks.serverchan.enabled" ${state.sinks.serverchan.enabled ? "checked" : ""} />
@@ -2501,14 +2499,13 @@
           <div class="config-card">
             <h3>Slack</h3>
             <p>
-              如果你除了网站之外，也想额外收到一条更紧凑的通知，可以启用 Slack。
-              Webhook 不会写进 YAML，而是应该放在仓库 Secret 里。
+              除了网站，还想在 Slack 里收到简报摘要，在这里开启。Webhook 放到仓库 Secret，不会写进配置文件。
             </p>
 
             <div class="checkbox-row">
               <div>
                 <strong>启用 Slack 通知</strong>
-                <div class="helper-text">这里只会把不涉及密钥的 Slack 设置写进 <code>config/sources.yaml</code>。</div>
+                <div class="helper-text">只把不涉及密钥的设置写进 YAML。</div>
               </div>
               <label>
                 <input type="checkbox" data-path="sinks.slack.enabled" ${state.sinks.slack.enabled ? "checked" : ""} />
@@ -2554,14 +2551,14 @@
             <div class="mini-panel toggle-card is-disabled">
               <div>
                 <h3>Discord</h3>
-                <p>后续可能加入的 sink，会沿用和 Slack 类似的内容控制方式。</p>
+                <p>计划中，配置方式和 Slack 类似。</p>
               </div>
               <span class="pill">后续补充</span>
             </div>
             <div class="mini-panel toggle-card is-disabled">
               <div>
                 <h3>Email</h3>
-                <p>这里先作为预留位，后续可以接 SMTP 或 SendGrid。</p>
+                <p>计划中，支持 SMTP 或 SendGrid。</p>
               </div>
               <span class="pill">后续补充</span>
             </div>
@@ -2621,13 +2618,13 @@
           ` : ""}
 
           <div class="mini-panel">
-            <h3>一键部署（预留）</h3>
+            <h3>一键部署（计划中）</h3>
             <p>
-              roadmap 里已经规划了后续的一键部署能力：直接在浏览器里调用 GitHub Contents API 和 Secrets API。这里先把位置留出来，下一阶段再接上。
+              计划中的功能：直接在浏览器里把配置写进你的仓库。还在开发中，先留个位置。
             </p>
             <div class="notice">
               <strong>计划包含</strong>
-              <div class="helper-text">把生成好的配置直接提交到 <code>main</code>，安全写入 Secret，然后提醒用户及时撤销 PAT。</div>
+              <div class="helper-text">把生成好的配置直接提交到 <code>main</code>，安全写入 Secret，然后提醒你及时撤销 PAT。</div>
             </div>
           </div>
 
