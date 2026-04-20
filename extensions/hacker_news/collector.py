@@ -18,7 +18,7 @@ def filter_stories(
         if s.get("points", 0) < min_score:
             continue
         title = (s.get("title") or "").lower()
-        if not any(kw.lower() in title for kw in keywords):
+        if keywords and not any(kw.lower() in title for kw in keywords):
             continue
         result.append(s)
     return result

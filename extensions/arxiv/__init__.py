@@ -41,8 +41,8 @@ def _prepare_papers(papers: list[dict], preferred_categories: list[str]) -> list
     return sorted(
         papers,
         key=lambda p: (
-            p.get("primary_category_rank", default_rank),
             -float(p.get("score", 0.0)),
+            p.get("primary_category_rank", default_rank),
             p.get("title", "").lower(),
         ),
     )
