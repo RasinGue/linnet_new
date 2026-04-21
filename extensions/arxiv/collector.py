@@ -1,3 +1,4 @@
+import os
 import re
 from html import unescape
 from typing import Any
@@ -5,6 +6,9 @@ from urllib.parse import urljoin
 
 import arxiv
 import httpx
+
+_REPO = os.environ.get("GITHUB_REPOSITORY", "YuyangXueEd/Linnet")
+_ARXIV_USER_AGENT = f"Linnet/1.0 (https://github.com/{_REPO})"
 
 
 def keyword_match(text: str, keywords: list[str]) -> bool:
@@ -101,7 +105,7 @@ def enrich_paper_with_figure(
     if not paper_id:
         return paper
 
-    headers = {"User-Agent": "Linnet/1.0 (yuyang.xue@ed.ac.uk)"}
+    headers = {"User-Agent": _ARXIV_USER_AGENT}
 
     html_url = f"https://arxiv.org/html/{paper_id}"
     try:
@@ -150,7 +154,7 @@ def fetch_papers(
         return []
 
     query = " OR ".join(f"cat:{cat}" for cat in categories)
-    _http = httpx.Client(headers={"User-Agent": "Linnet/1.0 (yuyang.xue@ed.ac.uk)"})
+    _http = httpx.Client(headers={"User-Agent": _ARXIV_USER_AGENT})
     client = arxiv.Client(num_retries=api_retries, delay_seconds=api_delay, httpx_client=_http)
     search = arxiv.Search(
         query=query,
