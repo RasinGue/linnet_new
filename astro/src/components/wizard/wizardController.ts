@@ -825,6 +825,8 @@ export function initWizard(): void {
   const deployPreviewEl = qs<HTMLElement>('[data-deploy-preview]', shell);
   const deployStatusEl = qs<HTMLElement>('[data-deploy-status]', shell);
   const deploySuccessEl = qs<HTMLElement>('[data-deploy-success]', shell);
+  const deployWorkflowTipEl = qs<HTMLElement>('[data-deploy-workflow-tip]', shell);
+  const deployWorkflowUrlEl = qs<HTMLAnchorElement>('[data-deploy-workflow-url]', shell);
   const deploySiteTipEl = qs<HTMLElement>('[data-deploy-site-tip]', shell);
   const deploySiteUrlEl = qs<HTMLAnchorElement>('[data-deploy-site-url]', shell);
   const deployRepoHomeEl = qs<HTMLAnchorElement>('[data-deploy-repo-home]', shell);
@@ -893,8 +895,18 @@ export function initWizard(): void {
     return `https://${owner}.github.io${isUserSiteRepo ? '/' : `/${repo}/`}`;
   }
 
-  function renderDeploySuccessLinks(owner: string, repo: string, repoHtmlUrl: string, pagesUrl?: string | null): void {
+  function renderDeploySuccessLinks(
+    owner: string,
+    repo: string,
+    repoHtmlUrl: string,
+    pagesUrl?: string | null,
+    workflowUrl?: string | null,
+  ): void {
     const resolvedPagesUrl = pagesUrl || buildDefaultPagesUrl(owner, repo);
+    if (deployWorkflowUrlEl && workflowUrl) {
+      deployWorkflowUrlEl.href = workflowUrl;
+    }
+    if (deployWorkflowTipEl) deployWorkflowTipEl.hidden = !workflowUrl;
     if (deploySiteUrlEl) {
       deploySiteUrlEl.href = resolvedPagesUrl;
       deploySiteUrlEl.textContent = resolvedPagesUrl;
@@ -917,6 +929,8 @@ export function initWizard(): void {
       deployStatusEl.className = 'wz-notice wz-notice--info';
     }
     if (deploySuccessEl) deploySuccessEl.hidden = true;
+    if (deployWorkflowTipEl) deployWorkflowTipEl.hidden = true;
+    if (deployWorkflowUrlEl) deployWorkflowUrlEl.removeAttribute('href');
     if (deploySiteTipEl) deploySiteTipEl.hidden = true;
     if (deploySiteUrlEl) {
       deploySiteUrlEl.removeAttribute('href');
@@ -1932,17 +1946,29 @@ export function initWizard(): void {
         writtenSecrets: string[];
         actions: { enabled: boolean };
         pages: { attempted: boolean; htmlUrl: string | null; status: string };
-        workflowDispatch: { triggered: boolean };
+        workflowDispatch: {
+          triggered: boolean;
+          errorMessage?: string | null;
+          workflowUrl?: string | null;
+        };
       };
       const autoEnableRequested = shouldAutoEnableActions();
       const pagesConfigured = result.pages.attempted && result.pages.status !== 'skipped';
       const actionsConfigured = autoEnableRequested && result.actions.enabled;
       const triggerSummary = result.workflowDispatch.triggered
         ? (locale === 'zh' ? 'Daily Digest 也已经触发。' : 'Daily Digest has also been triggered.')
-        : (locale === 'zh' ? '请稍后在 Actions 页面手动运行 Daily Digest。' : 'Please run Daily Digest manually from the Actions page.');
+        : (locale === 'zh'
+          ? `自动触发 Daily Digest 失败${result.workflowDispatch.errorMessage ? `（${result.workflowDispatch.errorMessage}）` : ''}；请打开 workflow 页面手动运行一次。`
+          : `Automatic Daily Digest trigger failed${result.workflowDispatch.errorMessage ? ` (${result.workflowDispatch.errorMessage})` : ''}; open the workflow page and run it manually once.`);
 
       if (deploySuccessEl) deploySuccessEl.hidden = false;
-      renderDeploySuccessLinks(repo.owner, repo.repo, result.repo.htmlUrl, result.pages.htmlUrl);
+      renderDeploySuccessLinks(
+        repo.owner,
+        repo.repo,
+        result.repo.htmlUrl,
+        result.pages.htmlUrl,
+        result.workflowDispatch.workflowUrl,
+      );
       setDeployStatus(
         'success',
         autoEnableRequested

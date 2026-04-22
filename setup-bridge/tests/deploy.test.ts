@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { generateKeyPairSync } from 'node:crypto';
 import test from 'node:test';
-import { buildDefaultPagesUrl, deployWithInstallation, utf8ToBase64 } from '../src/deploy';
+import { buildDefaultPagesUrl, buildWorkflowUrl, deployWithInstallation, utf8ToBase64 } from '../src/deploy';
 import type { GitHubAppConfig } from '../src/github';
 
 function jsonResponse(status: number, body: unknown) {
@@ -40,6 +40,13 @@ const repositoryPublicKey = Buffer.alloc(32, 7).toString('base64');
 test('buildDefaultPagesUrl handles project and user pages', () => {
   assert.equal(buildDefaultPagesUrl('octocat', 'briefing'), 'https://octocat.github.io/briefing/');
   assert.equal(buildDefaultPagesUrl('octocat', 'octocat.github.io'), 'https://octocat.github.io/');
+});
+
+test('buildWorkflowUrl points to the workflow page', () => {
+  assert.equal(
+    buildWorkflowUrl('https://github.com/octocat/briefing', 'daily.yml'),
+    'https://github.com/octocat/briefing/actions/workflows/daily.yml',
+  );
 });
 
 test('utf8ToBase64 encodes utf8 text', () => {
@@ -115,6 +122,9 @@ test('deployWithInstallation scopes token and performs repo writes, secrets, act
   assert.equal(result.pages.status, 'created');
   assert.equal(result.workflowDispatch.workflowId, 'daily.yml');
   assert.equal(result.workflowDispatch.ref, 'main');
+  assert.equal(result.workflowDispatch.triggered, true);
+  assert.equal(result.workflowDispatch.errorMessage, null);
+  assert.equal(result.workflowDispatch.workflowUrl, 'https://github.com/octocat/briefing/actions/workflows/daily.yml');
 
   assert.equal(calls.length, 18);
   assert.match(calls[0].url, /\/app\/installations\/77\/access_tokens$/);
@@ -188,4 +198,73 @@ test('deployWithInstallation scopes token and performs repo writes, secrets, act
 
   const dispatchBody = JSON.parse(String(calls[17].init?.body));
   assert.deepEqual(dispatchBody, { ref: 'main' });
+});
+
+test('deployWithInstallation keeps repo setup changes even if workflow dispatch fails', async () => {
+  const calls: Array<{ url: string; init?: RequestInit }> = [];
+  const responses = [
+    jsonResponse(201, { token: 'installation-token', expires_at: '2026-04-22T10:00:00Z' }),
+    jsonResponse(200, {
+      id: 1,
+      name: 'briefing',
+      full_name: 'octocat/briefing',
+      default_branch: 'main',
+      html_url: 'https://github.com/octocat/briefing',
+    }),
+    new Response(null, { status: 204 }),
+    new Response(null, { status: 204 }),
+    new Response(null, { status: 204 }),
+    new Response(null, { status: 204 }),
+    new Response(null, { status: 204 }),
+    jsonResponse(404, { message: 'Not Found' }),
+    jsonResponse(201, {
+      html_url: 'https://octocat.github.io/briefing/',
+      build_type: 'workflow',
+      source: { branch: 'main', path: '/' },
+    }),
+    jsonResponse(200, {
+      object: {
+        sha: 'head-commit-sha',
+        type: 'commit',
+      },
+    }),
+    jsonResponse(200, {
+      sha: 'head-commit-sha',
+      tree: {
+        sha: 'base-tree-sha',
+      },
+    }),
+    jsonResponse(201, { sha: 'blob-sha-1' }),
+    jsonResponse(201, { sha: 'next-tree-sha' }),
+    jsonResponse(201, { sha: 'next-commit-sha' }),
+    jsonResponse(200, {}),
+    jsonResponse(200, { key: repositoryPublicKey, key_id: 'KEY_ID' }),
+    jsonResponse(201, {}),
+    jsonResponse(403, { message: 'Actions are disabled for this repository.' }),
+  ];
+
+  const fetchImpl: typeof fetch = async (url, init) => {
+    calls.push({ url: String(url), init });
+    const response = responses.shift();
+    assert.ok(response, `Unexpected extra fetch call for ${url}`);
+    return response;
+  };
+
+  const result = await deployWithInstallation(
+    config,
+    {
+      installationId: 77,
+      repo: { owner: 'octocat', repo: 'briefing' },
+      files: [{ path: 'config/sources.yaml', body: 'language: "en"\n' }],
+      secrets: [{ name: 'OPENROUTER_API_KEY', value: 'sk-or-123' }],
+    },
+    fetchImpl,
+  );
+
+  assert.deepEqual(result.committedPaths, ['config/sources.yaml']);
+  assert.deepEqual(result.writtenSecrets, ['OPENROUTER_API_KEY']);
+  assert.equal(result.workflowDispatch.triggered, false);
+  assert.equal(result.workflowDispatch.errorMessage, 'Actions are disabled for this repository.');
+  assert.equal(result.workflowDispatch.workflowUrl, 'https://github.com/octocat/briefing/actions/workflows/daily.yml');
+  assert.equal(calls.length, 18);
 });

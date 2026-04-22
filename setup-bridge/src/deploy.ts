@@ -61,6 +61,8 @@ export type DeployResult = {
     workflowId: string | null;
     ref: string | null;
     triggered: boolean;
+    errorMessage: string | null;
+    workflowUrl: string | null;
   };
 };
 
@@ -174,6 +176,10 @@ export function utf8ToBase64(input: string): string {
 export function buildDefaultPagesUrl(owner: string, repo: string): string {
   const isUserSiteRepo = repo.toLowerCase() === `${owner.toLowerCase()}.github.io`;
   return `https://${owner}.github.io${isUserSiteRepo ? '/' : `/${repo}/`}`;
+}
+
+export function buildWorkflowUrl(repoHtmlUrl: string, workflowId: string): string {
+  return `${repoHtmlUrl.replace(/\/+$/, '')}/actions/workflows/${encodeURIComponent(workflowId)}`;
 }
 
 function decodeBase64(value: string): Uint8Array {
@@ -519,6 +525,7 @@ export async function deployWithInstallation(
   const autoEnableActions = request.autoEnableActions !== false;
   const triggerWorkflowId = request.triggerWorkflowId ?? 'daily.yml';
   const triggerWorkflowRef = request.triggerWorkflowRef ?? defaultBranch;
+  const repoHtmlUrl = repoInfo.html_url ?? `https://github.com/${request.repo.owner}/${request.repo.repo}`;
 
   const actionsResult: DeployResult['actions'] = {
     attempted: autoEnableActions,
@@ -563,30 +570,43 @@ export async function deployWithInstallation(
     fetchImpl,
   );
 
-  await triggerWorkflowDispatch(
-    installationToken.token,
-    request.repo,
-    triggerWorkflowId,
-    triggerWorkflowRef,
-    fetchImpl,
-  );
+  const workflowDispatchResult: DeployResult['workflowDispatch'] = {
+    attempted: true,
+    workflowId: triggerWorkflowId,
+    ref: triggerWorkflowRef,
+    triggered: false,
+    errorMessage: null,
+    workflowUrl: buildWorkflowUrl(repoHtmlUrl, triggerWorkflowId),
+  };
+
+  try {
+    await triggerWorkflowDispatch(
+      installationToken.token,
+      request.repo,
+      triggerWorkflowId,
+      triggerWorkflowRef,
+      fetchImpl,
+    );
+    workflowDispatchResult.triggered = true;
+  } catch (error) {
+    if (error instanceof GitHubApiError) {
+      workflowDispatchResult.errorMessage = error.message;
+    } else {
+      throw error;
+    }
+  }
 
   return {
     repo: {
       owner: request.repo.owner,
       repo: request.repo.repo,
       defaultBranch,
-      htmlUrl: repoInfo.html_url ?? `https://github.com/${request.repo.owner}/${request.repo.repo}`,
+      htmlUrl: repoHtmlUrl,
     },
     committedPaths,
     writtenSecrets,
     actions: actionsResult,
     pages: pagesResult,
-    workflowDispatch: {
-      attempted: true,
-      workflowId: triggerWorkflowId,
-      ref: triggerWorkflowRef,
-      triggered: true,
-    },
+    workflowDispatch: workflowDispatchResult,
   };
 }
