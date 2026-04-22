@@ -20,6 +20,14 @@ function unique<T>(arr: T[]): T[] {
 }
 
 type QueryRoot = Element | Document | null | undefined;
+type TagWidgetElement = HTMLElement & { __renderTags?: (tags: string[]) => void };
+type BriefMode = WizardState['briefing']['mode'];
+
+const DEFAULT_ACADEMIC_PROFILE = 'ai_ml';
+const BRIEF_MODE_DEFAULTS: Record<BriefMode, string[]> = {
+  academic: ['arxiv', 'hacker_news', 'github_trending'],
+  personal: ['weather', 'hacker_news', 'github_trending'],
+};
 
 function qs<T extends Element>(sel: string, root: QueryRoot = document): T | null {
   if (!root) return null;
@@ -569,6 +577,33 @@ function getListVal(container: Element | null): string[] {
   try { return JSON.parse(raw) as string[]; } catch { return []; }
 }
 
+function writeListVal(container: TagWidgetElement, values: string[]): void {
+  if (container.classList.contains('wz-urls')) container.dataset['urls'] = JSON.stringify(values);
+  else container.dataset['tags'] = JSON.stringify(values);
+}
+
+function setTagWidgetValues(container: Element | null, values: string[]): void {
+  const widget = container as TagWidgetElement | null;
+  if (!widget) return;
+  writeListVal(widget, values);
+  widget.__renderTags?.(values);
+}
+
+function syncTagWidgetGroup(source: Element, values: string[]): void {
+  const syncKey = (source as HTMLElement).dataset['syncKey'];
+  if (!syncKey) return;
+  qsa<HTMLElement>(`[data-sync-key="${syncKey}"]`).forEach((peer) => {
+    if (peer === source) return;
+    setTagWidgetValues(peer, values);
+  });
+}
+
+function currentArxivProfileValue(root: QueryRoot = document): string {
+  return qsa<HTMLInputElement>('[data-arxiv-profile-input]:checked', root)
+    .map((input) => input.value)[0]
+    ?? DEFAULT_ACADEMIC_PROFILE;
+}
+
 function readFieldValue(extKey: string, field: SetupField): unknown {
   if (field.type === 'tags' || field.type === 'urls') {
     return getListVal(qs(`[data-config-for="${extKey}"][data-field="${field.key}"]`));
@@ -599,6 +634,11 @@ function readRegistryConfig(state: WizardState): void {
 }
 
 function readState(state: WizardState): void {
+  const briefModeEl = qs<HTMLButtonElement>('[data-brief-mode-btn][aria-pressed="true"]');
+  if (briefModeEl) {
+    state.briefing.mode = (briefModeEl.dataset['briefModeBtn'] ?? 'academic') as BriefMode;
+  }
+
   // Language
   const langEl = qs<HTMLSelectElement>('[data-global-language]');
   if (langEl) state.global.language = langEl.value;
@@ -617,8 +657,10 @@ function readState(state: WizardState): void {
 
   // arXiv
   const arxivPanel = qs('[data-config-for="arxiv"]');
+  const selectedArxivProfile = currentArxivProfileValue(document);
+  state.briefing.academicProfile = selectedArxivProfile;
+  state.arxiv.presets = selectedArxivProfile === 'custom_only' ? [] : [selectedArxivProfile];
   if (arxivPanel) {
-    state.arxiv.presets = qsa<HTMLInputElement>('[name="arxiv_preset"]:checked', arxivPanel).map(el => el.value);
     const threshEl = qs<HTMLInputElement>('[data-arxiv-threshold]');
     if (threshEl) state.arxiv.threshold = Number(threshEl.value);
     const maxEl = qs<HTMLInputElement>('[data-arxiv-max-papers]');
@@ -694,9 +736,8 @@ function initTagsWidget(container: Element): void {
   }
 
   function saveTags(tags: string[]): void {
-    const isUrls = container.classList.contains('wz-urls');
-    if (isUrls) (container as HTMLElement).dataset['urls'] = JSON.stringify(tags);
-    else        (container as HTMLElement).dataset['tags']  = JSON.stringify(tags);
+    writeListVal(container as TagWidgetElement, tags);
+    syncTagWidgetGroup(container, tags);
   }
 
   function renderTags(tags: string[]): void {
@@ -720,6 +761,8 @@ function initTagsWidget(container: Element): void {
       listEl.insertBefore(el, emptyEl ?? null);
     }
   }
+
+  (container as TagWidgetElement).__renderTags = renderTags;
 
   function addTag(): void {
     const val = inputEl.value.trim();
@@ -808,6 +851,9 @@ export function initWizard(): void {
   const fillEl   = qs<HTMLElement>('[data-progress-fill]', shell);
   const progressAnchorEl = qs<HTMLElement>('[data-progress-anchor]', shell);
   const orderList = qs<HTMLElement>('[data-order-list]', shell);
+  const briefModeButtons = qsa<HTMLButtonElement>('[data-brief-mode-btn]', shell);
+  const briefModePanels = qsa<HTMLElement>('[data-brief-mode-panel]', shell);
+  const briefSelectionSummaryEl = qs<HTMLElement>('[data-brief-selection-summary]', shell);
   const llmProviderSelect = qs<HTMLSelectElement>('[data-llm-provider]', shell);
   const llmBaseUrlInput = qs<HTMLInputElement>('[data-llm-base-url]', shell);
   const llmSecretNameInput = qs<HTMLInputElement>('[data-llm-secret-name]', shell);
@@ -1389,6 +1435,77 @@ export function initWizard(): void {
     deployPreviewEl.textContent = preview.join('\n');
   }
 
+  function syncBriefModePanels(): void {
+    briefModeButtons.forEach((button) => {
+      const mode = (button.dataset['briefModeBtn'] ?? 'academic') as BriefMode;
+      button.setAttribute('aria-pressed', String(mode === state.briefing.mode));
+    });
+
+    briefModePanels.forEach((panel) => {
+      const mode = (panel.dataset['briefModePanel'] ?? 'academic') as BriefMode;
+      panel.hidden = mode !== state.briefing.mode;
+    });
+  }
+
+  function syncArxivProfileInputs(): void {
+    const selectedValue = state.arxiv.presets[0] ?? state.briefing.academicProfile ?? DEFAULT_ACADEMIC_PROFILE;
+    qsa<HTMLInputElement>('[data-arxiv-profile-input]', shell).forEach((input) => {
+      input.checked = input.value === selectedValue;
+    });
+  }
+
+  function renderBriefSelectionSummary(): void {
+    if (!briefSelectionSummaryEl) return;
+    briefSelectionSummaryEl.innerHTML = '';
+    for (const key of state.selectedKeys) {
+      const ext = REGISTRY[key];
+      const label = locale === 'zh'
+        ? (ext?.displayNameZh ?? ext?.displayName ?? key)
+        : (ext?.displayName ?? key);
+      const pill = document.createElement('span');
+      pill.className = 'wz-label';
+      pill.textContent = label;
+      briefSelectionSummaryEl.appendChild(pill);
+    }
+  }
+
+  function applyBriefModeDefaults(mode: BriefMode): void {
+    state.briefing.mode = mode;
+    state.selectedKeys = [...BRIEF_MODE_DEFAULTS[mode]];
+    if (mode === 'academic' && !state.arxiv.presets.length) {
+      const selectedProfile = state.briefing.academicProfile || DEFAULT_ACADEMIC_PROFILE;
+      state.arxiv.presets = selectedProfile === 'custom_only' ? [] : [selectedProfile];
+    }
+    syncBriefModePanels();
+    syncArxivProfileInputs();
+    ensureScheduleState();
+    syncCards();
+    renderOrderList();
+    renderBriefSelectionSummary();
+    syncConfigPanels();
+    syncScheduleRows();
+    syncSinkSourceFields();
+    syncDeploySecretRows();
+    renderDeployPreview();
+  }
+
+  briefModeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const nextMode = (button.dataset['briefModeBtn'] ?? 'academic') as BriefMode;
+      applyBriefModeDefaults(nextMode);
+    });
+  });
+
+  qsa<HTMLInputElement>('[data-arxiv-profile-input]', shell).forEach((input) => {
+    input.addEventListener('change', () => {
+      if (!input.checked) return;
+      state.briefing.academicProfile = input.value;
+      state.arxiv.presets = input.value === 'custom_only' ? [] : [input.value];
+      syncArxivProfileInputs();
+      renderDeployPreview();
+    });
+  });
+
   modeButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const nextMode = (button.dataset['setupModeBtn'] ?? 'manual') as SetupMode;
@@ -1535,9 +1652,12 @@ export function initWizard(): void {
       }
       syncCards();
       renderOrderList();
+      renderBriefSelectionSummary();
       syncConfigPanels();
       syncScheduleRows();
       syncSinkSourceFields();
+      syncDeploySecretRows();
+      renderDeployPreview();
     });
   });
 
@@ -1576,9 +1696,11 @@ export function initWizard(): void {
     initDragReorder(orderList, (keys) => {
       state.selectedKeys = keys;
       renderOrderList();
+      renderBriefSelectionSummary();
       syncConfigPanels();
       syncScheduleRows();
       syncSinkSourceFields();
+      renderDeployPreview();
     });
   }
 
@@ -1991,8 +2113,11 @@ export function initWizard(): void {
   });
 
   // Sync initial state to DOM
+  syncBriefModePanels();
+  syncArxivProfileInputs();
   syncCards();
   renderOrderList();
+  renderBriefSelectionSummary();
   ensureScheduleState();
   renderSetupMode();
   syncConfigPanels();
