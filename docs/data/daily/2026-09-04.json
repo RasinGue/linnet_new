@@ -1,0 +1,2713 @@
+{
+  "date": "2026-09-04",
+  "generated_at": "2026-09-04T13:50:20.352106+00:00",
+  "sections_ordered": [
+    {
+      "key": "hitokoto",
+      "payload_key": "hitokoto",
+      "title": "一言",
+      "icon": "✦",
+      "items": [
+        {
+          "quote": "神即道，道即法，道法自然，如来。",
+          "author": "豆豆",
+          "source": "遥远的救世主",
+          "category": "l"
+        }
+      ],
+      "meta": {
+        "count": 1
+      }
+    },
+    {
+      "key": "weather",
+      "payload_key": "weather",
+      "title": "Weather",
+      "icon": "🌦️",
+      "items": [
+        {
+          "query": "London",
+          "label": "London, England, United Kingdom",
+          "resolved_name": "London",
+          "region": "England",
+          "country": "United Kingdom",
+          "latitude": 51.50853,
+          "longitude": -0.12574,
+          "timezone": "Europe/London",
+          "forecast_date": "2026-09-04",
+          "condition": "Overcast",
+          "weather_code": 3,
+          "temperature_c": 22.3,
+          "apparent_temperature_c": 18.8,
+          "temp_max_c": 22.2,
+          "temp_min_c": 17.4,
+          "humidity_pct": 40,
+          "wind_speed_kmh": 20.5,
+          "precipitation_probability_pct": 94,
+          "is_day": true,
+          "sunrise": "2026-09-04T06:18",
+          "sunset": "2026-09-04T19:40",
+          "source": "Open-Meteo",
+          "source_url": "https://open-meteo.com/"
+        }
+      ],
+      "meta": {
+        "count": 1,
+        "city": "London"
+      }
+    },
+    {
+      "key": "us_stocks",
+      "payload_key": "us_stocks",
+      "title": "US Stocks",
+      "icon": "📈",
+      "items": [
+        {
+          "symbol": "CIFR",
+          "name": "Cipher Mining",
+          "sector": "Compute Mining",
+          "sector_key": "compute_mining",
+          "benchmark_etfs": [
+            "WGMI",
+            "BTC-USD"
+          ],
+          "signal": "neutral",
+          "score": 64,
+          "confidence": "low",
+          "setup_type": "gap_up_news",
+          "price": 17.79,
+          "previous_close": 17.37,
+          "premarket_change_pct": 2.42,
+          "change_5d_pct": 3.58,
+          "change_20d_pct": -4.61,
+          "volume_ratio": 1.09,
+          "relative_strength_pct": 4.5,
+          "sector_trend": "flat",
+          "news_sentiment": "positive",
+          "news_count": 3,
+          "earnings_status": "10-Q, 8-K",
+          "summary": "Watchlist item from +2.4% vs previous close, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +2.4%.",
+            "5-day relative strength: +4.5 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Cipher Mining's (CIFR) \"Buy\" Rating Reiterated at Rosenblatt Securities - MarketBeat",
+              "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQOXl3cEFTRzhOdmJkdXdMckFqTmFFR290MGN4S0UxZnJXWi0xbTgxTmN1UUFVUDBXVHBEY2FOckxaWlcwN1RZZ3h1ZHNLdGJydzhiekFiVlJiNUg4UUU5TElvd2liRjl4Ti1hM19taGpxckhoaHRtQWlmTEVMUGhCeUdKbV9vZVhoSnFSMzVFOTJVNEdlWW5ySHR3NnFxS1NsdjFheE9ESlBIN0NMakpuQWRNQnhmbmxDNmJIYmxHMlRTR1JldElB?oc=5",
+              "domain": "https://www.marketbeat.com",
+              "published_at": "2026-09-04T12:09:51+00:00",
+              "provider": "google_news_rss",
+              "source": "MarketBeat"
+            },
+            {
+              "title": "Data Center Stocks Rally With Bitcoin: Cipher Mining Jumps 12%, TeraWulf Surges 8%, IREN Rises 4% - 24/7 Wall St.",
+              "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQcVVoN2JaTVJyUGtwVFM5SC1RQ05zWWM5Wm5LcDlVT1FaeENHeEo5Ul9TQXE2RGdhVDVLOThtamVEZFlRODJnX3ZjVjVxcndsb2xzYmlJeDVDeFJ1RHAzeGdxdVhhb1drMUc1TUZfbU13VmRZMlROUi1WZTVDWFVuNUFLWmpRMXhrc1hyaXRwQWoyRGF0eWh5NFdiVUpadUxNbkpsV3JEdlF5bU9pUU5PbjhIMjF1dGdaLXJBREpKU2FSTFdIZ1hOOUdrQURYaVU4?oc=5",
+              "domain": "https://247wallst.com",
+              "published_at": "2026-09-03T18:43:00+00:00",
+              "provider": "google_news_rss",
+              "source": "24/7 Wall St."
+            },
+            {
+              "title": "Cipher Mining (NASDAQ:CIFR) Stock Price Up 7.7% - Here's Why - MarketBeat",
+              "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPSFRScG1PbmFUM1N5SVhYNVZ4dTc3RXJHbTB0MEZZazQxY0pwLVhyRHY2RXY2a2ZFVWNsR0RRWDhyZWRMV3h3cGJNWFJfMjg4bWowUFhHZUZuQmRTMkxJWHZpODFoLXJTbXdBWE9EVG84YnowaWxSSXdybk55QVdCdlptU212T2MtVDI0ZGV6S3A5MnR4RDNPNXBVdngtam1IS2VEQnJHMXQzRmVqdW1udGM0dw?oc=5",
+              "domain": "https://www.marketbeat.com",
+              "published_at": "2026-09-03T17:23:44+00:00",
+              "provider": "google_news_rss",
+              "source": "MarketBeat"
+            }
+          ],
+          "filings": [
+            {
+              "form": "SCHEDULE 13G",
+              "filed_at": "2026-08-13",
+              "accession_number": "0000895421-26-000259",
+              "provider": "sec"
+            },
+            {
+              "form": "10-Q",
+              "filed_at": "2026-08-04",
+              "accession_number": "0001819989-26-000041",
+              "provider": "sec"
+            },
+            {
+              "form": "8-K",
+              "filed_at": "2026-08-04",
+              "accession_number": "0001819989-26-000038",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/cifr",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=CIFR&owner=exclude"
+        },
+        {
+          "symbol": "DELL",
+          "name": "Dell Technologies",
+          "sector": "Servers and Thermal Management",
+          "sector_key": "servers_thermal",
+          "benchmark_etfs": [
+            "SMH",
+            "XLK"
+          ],
+          "signal": "neutral",
+          "score": 62,
+          "confidence": "low",
+          "setup_type": "gap_up_news",
+          "price": 525.77,
+          "previous_close": 516.39,
+          "premarket_change_pct": 1.82,
+          "change_5d_pct": 9.34,
+          "change_20d_pct": 17.99,
+          "volume_ratio": 2.78,
+          "relative_strength_pct": 11.82,
+          "sector_trend": "negative",
+          "news_sentiment": "positive",
+          "news_count": 3,
+          "earnings_status": "144",
+          "summary": "Watchlist item from +1.8% vs previous close, negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +1.8%.",
+            "5-day relative strength: +11.8 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Dell Technologies Inc. (DELL) Hit a 52 Week High, Can the Run Continue? - Yahoo Finance",
+              "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOUnh4dWY1alZRQmlfZEVaRTM5UWQ4QjRoYTRFakVHYVd4UFIwNUROUE13eDdnaWoxQXRseDl2QmdEQy1fS2xZT1lqZDhRdnRCVjJoYzBDdVM2UC02OE45S1dtUzYwUjRUMGpLeXZnbFdrOHYxbE1LWGZqYmFGTEdqd1AxbE96UXBpcUZ6MkhYNHV3V29ZX3NjeFpucw?oc=5",
+              "domain": "https://finance.yahoo.com",
+              "published_at": "2026-09-04T13:15:03+00:00",
+              "provider": "google_news_rss",
+              "source": "Yahoo Finance"
+            },
+            {
+              "title": "Why Did SPCE, F, DELL Stocks Surge To 52-Week Highs On Friday? - Stocktwits",
+              "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPWU1Wa1dpWS1sTjhRVGM4d2puNTNxM1VEUng3eXZNbkdxQXNDdkRkTXNRWmxuei1Ucmt3a0I4M21SRGxVVzQ0ekhkZ2VSekJzWWlvVTNjeUk3RXBaUm9DY1VrWkFRVWNfdWZONnZnZ0RBTmRsb190UEt0SUdZRGNVdUVZQnFhZFJqWTY0MkJrLXdfcWZzZS04anY1LUd3VktjX0VWWFRQbjF2TGlQd2JGQjBoU0FkUjVfMkFZZmNpa1k?oc=5",
+              "domain": "https://stocktwits.com",
+              "published_at": "2026-09-04T00:02:34+00:00",
+              "provider": "google_news_rss",
+              "source": "Stocktwits"
+            },
+            {
+              "title": "Dell Is Now Up 20% in a Month: Take Profits, or Buy More? - 24/7 Wall St.",
+              "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNcWtmWm0tZFQ0MkVza1FqdFN6NnRoenBwdjVwVTAxOEE1ZVNWTlBqNzVTem1CQzNPN3BuZGJDV3BBSlBONmxVWnd1UGFkUzJ0V29jY1d2dW1aamNMVTVnR25aV1FJX3dtRjhEX1YxT19FNUJxTG5mcmdIMk92cWZxSkVCd1VvMlFFSmREdTRoTHRQdlFVRkU2QTNFakg3QQ?oc=5",
+              "domain": "https://247wallst.com",
+              "published_at": "2026-09-03T19:26:00+00:00",
+              "provider": "google_news_rss",
+              "source": "24/7 Wall St."
+            }
+          ],
+          "filings": [
+            {
+              "form": "144",
+              "filed_at": "2026-09-03",
+              "accession_number": "0001193125-26-382300",
+              "provider": "sec"
+            },
+            {
+              "form": "144",
+              "filed_at": "2026-09-03",
+              "accession_number": "0001193125-26-382287",
+              "provider": "sec"
+            },
+            {
+              "form": "144",
+              "filed_at": "2026-09-03",
+              "accession_number": "0001193125-26-382286",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/dell",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=DELL&owner=exclude"
+        },
+        {
+          "symbol": "FLNC",
+          "name": "Fluence Energy",
+          "sector": "Battery and Energy Storage",
+          "sector_key": "battery_storage",
+          "benchmark_etfs": [
+            "ICLN",
+            "XLU"
+          ],
+          "signal": "neutral",
+          "score": 38,
+          "confidence": "low",
+          "setup_type": "news_watch",
+          "price": 10.27,
+          "previous_close": 10.2,
+          "premarket_change_pct": 0.64,
+          "change_5d_pct": -10.76,
+          "change_20d_pct": -22.79,
+          "volume_ratio": 1.27,
+          "relative_strength_pct": -10.03,
+          "sector_trend": "flat",
+          "news_sentiment": "negative",
+          "news_count": 3,
+          "earnings_status": "10-Q, 8-K",
+          "summary": "Watchlist item from 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +0.6%.",
+            "5-day relative strength: -10.0 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [
+            "negative headline: Fluence Energy cut to Sell equivalent at Barclays on downside risk to FY 2027 consensus - Seeking Alpha"
+          ],
+          "sources": [
+            {
+              "title": "Fluence Energy (FLNC) Stock Trades Down, Here Is Why - Yahoo Finance",
+              "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNR183TDRibXBXOTdYWkVnQmN6b0YzaWxVbVpSazVaSUtUVkZlc3R5V2VmbFhPbk5vajRBcHFEQmRpYjcwZEdCWWh0U1lub0I4QkhJUkpRQ01jdWlhSEtfMnJFOHZKWE9XNTItcUFSdjROdFhDOGpmZGxrdWdhbVNpanF2ZkNXMHAxSmFLUWVHVnl5ajdOb2dqRmR1MV9OZw?oc=5",
+              "domain": "https://finance.yahoo.com",
+              "published_at": "2026-09-03T20:47:18+00:00",
+              "provider": "google_news_rss",
+              "source": "Yahoo Finance"
+            },
+            {
+              "title": "Fluence Energy (FLNC) Reshapes Its Board And Offices, Is It A Bargain? - simplywall.st",
+              "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZzhVT3V6MHpPWkRaUzByRXR2TDdyR0l5UXQ3d2dNcUpsUnA0Vm9UdDZ1N3I5NnBYdFh4RzltZFBFWEQ0ZkFYenZkdmd6djZmNEhNZEVXWm1MZm1wZEl2Vmh4VXNXUUs4cVMtNlE5MFBRTmhBa2FIS1RRZTVfVmtNR2VWcXR6YVFDYlVUeTJ2a20xYU1fX1Y1QWc2a1NSclZQRy1VUEUyOGYzYmhwblRXMy1tSDZBbHpMQm1UQWM2Wkk5QnI5VTJyTVZuNlpBdlZUUWtrOWNNb1NwQdIB2gFBVV95cUxQZzhVT3V6MHpPWkRaUzByRXR2TDdyR0l5UXQ3d2dNcUpsUnA0Vm9UdDZ1N3I5NnBYdFh4RzltZFBFWEQ0ZkFYenZkdmd6djZmNEhNZEVXWm1MZm1wZEl2Vmh4VXNXUUs4cVMtNlE5MFBRTmhBa2FIS1RRZTVfVmtNR2VWcXR6YVFDYlVUeTJ2a20xYU1fX1Y1QWc2a1NSclZQRy1VUEUyOGYzYmhwblRXMy1tSDZBbHpMQm1UQWM2Wkk5QnI5VTJyTVZuNlpBdlZUUWtrOWNNb1NwQQ?oc=5",
+              "domain": "https://simplywall.st",
+              "published_at": "2026-09-03T20:35:26+00:00",
+              "provider": "google_news_rss",
+              "source": "simplywall.st"
+            },
+            {
+              "title": "Fluence Energy cut to Sell equivalent at Barclays on downside risk to FY 2027 consensus - Seeking Alpha",
+              "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQLVV2bjRxZzhORVpBTGxzRmZEUFJCQUlyYkVoU2VYeDJENXNvYjYxczc4dzdGcnlXUmlYeUlpMDFmSVJob0hNRzhLd2Z3YWhOWEpJbGR3WlZoSUZGMmctcEVFOGtsNlJCX3BQc3dhdUw2MUh2MnpQTVczOWk2Z3M4aEFsb2ZqelNIaW5yR2dSc0FrMzNwV3JZZ2dOd09PUkx2eXJpTzBCbDdROGNiLTQ5Rm1tU0xIWGltTTg0ek9maTZpLXc?oc=5",
+              "domain": "https://seekingalpha.com",
+              "published_at": "2026-09-03T18:32:17+00:00",
+              "provider": "google_news_rss",
+              "source": "Seeking Alpha"
+            }
+          ],
+          "filings": [
+            {
+              "form": "8-K",
+              "filed_at": "2026-09-01",
+              "accession_number": "0001868941-26-000037",
+              "provider": "sec"
+            },
+            {
+              "form": "SCHEDULE 13G/A",
+              "filed_at": "2026-08-10",
+              "accession_number": "0001193125-26-342486",
+              "provider": "sec"
+            },
+            {
+              "form": "10-Q",
+              "filed_at": "2026-08-05",
+              "accession_number": "0001868941-26-000029",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/flnc",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=FLNC&owner=exclude"
+        },
+        {
+          "symbol": "IREN",
+          "name": "IREN Ltd",
+          "sector": "Compute Mining",
+          "sector_key": "compute_mining",
+          "benchmark_etfs": [
+            "WGMI",
+            "BTC-USD"
+          ],
+          "signal": "neutral",
+          "score": 61,
+          "confidence": "low",
+          "setup_type": "gap_up_news",
+          "price": 42.38,
+          "previous_close": 41.65,
+          "premarket_change_pct": 1.75,
+          "change_5d_pct": 2.76,
+          "change_20d_pct": 9.81,
+          "volume_ratio": 1.0,
+          "relative_strength_pct": 3.69,
+          "sector_trend": "flat",
+          "news_sentiment": "positive",
+          "news_count": 3,
+          "earnings_status": "10-K, 8-K",
+          "summary": "Watchlist item from +1.8% vs previous close, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +1.8%.",
+            "5-day relative strength: +3.7 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "IREN Ltd (IREN) Shares Surge 5.2% -- What GF Score of 65 Tells I - GuruFocus",
+              "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQd054b0JXUkhXRDdlZ256WjFscmNWQm8xVlRrNHhDcThfOEZuWV90cC02VWFyM0pPSnNmdTJybjlUZlVTLXRjU2taNlpsQ19NQzlGNGhlWl82NmtzQmlLeDVlYm9kYng4Nm8xZTFRQ1BTc2o2SXU3OE83Z1NFc3hPem90bzJXaVVadmRCMGdQbUVSa0U3bWYzRlZrdGp2QWVOSDdUQXlnUQ?oc=5",
+              "domain": "https://www.gurufocus.com",
+              "published_at": "2026-09-03T22:18:59+00:00",
+              "provider": "google_news_rss",
+              "source": "GuruFocus"
+            },
+            {
+              "title": "Wall Street sets IREN stock price for the next 12 months - Finbold",
+              "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxONm1QQXJfRmgzTVZoalk4dEw1R2dUNjJzemVwOG1PdVZqQk9Fd3NCWGRCSm4xTFI4a0NraGxIU1R2QXlqOGlMMklHdG1BMjlpazNWYkJSUG9pUGJSUUkwOTMxYXlGLUN0anV3dlVlajF2T3IxQS1RbVk5UVBHNFl2aDZySQ?oc=5",
+              "domain": "https://finbold.com",
+              "published_at": "2026-09-03T17:09:32+00:00",
+              "provider": "google_news_rss",
+              "source": "Finbold"
+            },
+            {
+              "title": "IREN stock jumps 14% on AI cloud demand, with a $100 price target signaling 143% upside potential. - Pluang",
+              "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQ2VjMnVmMVJhd0otWUdvZDdGVkVESHB0VEdaX3NtSzM4aG5KNGw5V3ptQWxWd2RNN0hUeS1LYVlNRU1yb0lfbU5tcUVGWE9iRkxDRjdJeGtuTG5qVm5oaXNBaWNfUzRjbHNDeTNSMUtCT0tJS3BvQVRxazZCdERCNw?oc=5",
+              "domain": "https://pluang.com",
+              "published_at": "2026-09-03T17:31:59+00:00",
+              "provider": "google_news_rss",
+              "source": "Pluang"
+            }
+          ],
+          "filings": [
+            {
+              "form": "10-K",
+              "filed_at": "2026-08-27",
+              "accession_number": "0001878848-26-000052",
+              "provider": "sec"
+            },
+            {
+              "form": "8-K",
+              "filed_at": "2026-08-27",
+              "accession_number": "0001878848-26-000051",
+              "provider": "sec"
+            },
+            {
+              "form": "D",
+              "filed_at": "2026-08-18",
+              "accession_number": "0001140361-26-033473",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/iren",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=IREN&owner=exclude"
+        },
+        {
+          "symbol": "ANET",
+          "name": "Arista Networks",
+          "sector": "Networking Equipment",
+          "sector_key": "networking_equipment",
+          "benchmark_etfs": [
+            "IGN",
+            "XLK"
+          ],
+          "signal": "neutral",
+          "score": 58,
+          "confidence": "low",
+          "setup_type": "gap_up_news",
+          "price": 196.05,
+          "previous_close": 191.44,
+          "premarket_change_pct": 2.41,
+          "change_5d_pct": -4.8,
+          "change_20d_pct": -0.46,
+          "volume_ratio": 0.68,
+          "relative_strength_pct": -3.4,
+          "sector_trend": "negative",
+          "news_sentiment": "positive",
+          "news_count": 3,
+          "earnings_status": "144, 4",
+          "summary": "Watchlist item from +2.4% vs previous close, negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +2.4%.",
+            "5-day relative strength: -3.4 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Arista Networks Offers Entry After 42% Gain Amid Earnings Beat; Data Center Demand Surging - Investor's Business Daily",
+              "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPLVFlV3A1bWI1WlJWa1hLNWRmYzRUTDBEeEJZNUoyczhrX05mNTlqbmRMYmFCUG1FdUVrYzh4b01PQXh1ZXFVVzlZUExyeXh4YUp4Wk5vT2xnNUdiSDRxVms1LXVDak5EbFVfcDZwLUY1ZjFldnQ5Y0J3ckoxc3hRVzRKNjhCeWZrTk1MYjlYal9USkphZFJHZFp1eVUtUTNwM25TSlNjTFBhM0c1UHc?oc=5",
+              "domain": "https://www.investors.com",
+              "published_at": "2026-09-04T12:30:00+00:00",
+              "provider": "google_news_rss",
+              "source": "Investor's Business Daily"
+            },
+            {
+              "title": "Arista Networks (ANET) Following Its Q2 Beat, Is The AI Networking Story Still Undervalued? - simplywall.st",
+              "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPaTUzZ0diYU91OTRGSnFBQ3hBSlJacDdVVG5iTGYycEc0NFVLZmlvLUpUMWRldDZRcTRnc1RXUnNUSnFHMm8zanhqZm5jdThxS2VnVjhHTnlGSWwxdmFLNVBGS2VNS3NVNXdjeWxKMk13NWJZbkZUemc2aUNLWC1vcDdwQ1lfTjZOMjd4NGZYZmFOblJmLWU5dXY4aENoU2VvVEwyWW5BdExGVWo3WnBQSXM3WFB0WXJrZXR1Y1BIYkp6YnRnblVz0gHMAUFVX3lxTFBGSndNTExkc09CVFowcmxDT1Q2OS1scUZCUFJyRVBtdDBTdjBPV0hSaEJGdTd5V3I2bzRtYm9kMDhtTjN4UUk5cmlrdjZ6X3k4NFRKTHRibXZ0SVBOY2ExWjRfOXBrbnJMOGkzbUhFdkViSVpWRVZYbnFHOVpNOUR4ODVNSlN2WU90eGhxUERka0c5UkhRTnF2UjJPZWxQTEpfNWswTUNqYjRyYmhpWjlWMVZGWlhGSWtJTGVReFdYYVhhN0YxX2ZTbXl6WA?oc=5",
+              "domain": "https://simplywall.st",
+              "published_at": "2026-09-04T05:32:53+00:00",
+              "provider": "google_news_rss",
+              "source": "simplywall.st"
+            },
+            {
+              "title": "Why Is Arista Networks (ANET) Down 5.7% Since Last Earnings Report? - Yahoo Finance",
+              "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNSjNqbHVmVTNfRXVnazBTSExJZHNKMy00TXpTbVptY2ppcmxCbnpNR1dYS2VIOXdQZFdKbEpGVGlsQ2stN2NsdEU2c0oxbW9lcnEyaWM1RkdpNGZnaGFHb0FTaExMZjJ2bDNtekpQam14Wl9nU3NQaW5tT2NkOVdEOWNiZlJTcjF3YV9vSG9xaXlRcktQcE1ZWGFR?oc=5",
+              "domain": "https://finance.yahoo.com",
+              "published_at": "2026-09-03T15:30:07+00:00",
+              "provider": "google_news_rss",
+              "source": "Yahoo Finance"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-09-03",
+              "accession_number": "0001596532-26-000222",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-09-01",
+              "accession_number": "0001596532-26-000220",
+              "provider": "sec"
+            },
+            {
+              "form": "144",
+              "filed_at": "2026-09-01",
+              "accession_number": "0001950047-26-008952",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/anet",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=ANET&owner=exclude"
+        },
+        {
+          "symbol": "ORCL",
+          "name": "Oracle",
+          "sector": "Hyperscale Cloud",
+          "sector_key": "hyperscale_cloud",
+          "benchmark_etfs": [
+            "QQQ",
+            "IGV",
+            "XLK"
+          ],
+          "signal": "neutral",
+          "score": 57,
+          "confidence": "low",
+          "setup_type": "gap_up_news",
+          "price": 157.91,
+          "previous_close": 154.04,
+          "premarket_change_pct": 2.52,
+          "change_5d_pct": 1.38,
+          "change_20d_pct": 7.37,
+          "volume_ratio": 1.12,
+          "relative_strength_pct": 3.03,
+          "sector_trend": "negative",
+          "news_sentiment": "positive",
+          "news_count": 3,
+          "earnings_status": "144, 4",
+          "summary": "Watchlist item from +2.5% vs previous close, negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +2.5%.",
+            "5-day relative strength: +3.0 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Oracle (ORCL) Stock Gets Fair Value Trim As Analysts Split On AI And Capex - Yahoo Finance",
+              "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUWtYSEJtRTJoNVZSUFNtaHozNTcyeUJBNU9Vc1kwWlpmZEhDU25tTDFwSEN5ci1ieGtSUnhGbU5mbG5WYnNaNFhuZmlYa3pBcF9YYmJNRjczb2t1RUZSNUVoRDVrSTZUb21aX0szcktTamZiX011Q0I3eWpyanE3NG13Tl8tZnN2bVhHOFJrd1hxN2Jua2Vv?oc=5",
+              "domain": "https://finance.yahoo.com",
+              "published_at": "2026-09-04T03:08:00+00:00",
+              "provider": "google_news_rss",
+              "source": "Yahoo Finance"
+            },
+            {
+              "title": "Oracle Stock Could Be Software’s Next Big Winner - barrons.com",
+              "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaWxsSUExYVpSOWQ0Ym82SXowazBWNHZmZS1EQ0hnTDdNVWFUNHhnTG15akRKN0w1NUpPMDdwcTQ0RFlnTGQzRjdTeXhtZjZrUWdxREdFU1BiSTNYeGZENFZaTUZ1ZlBVYnYwdUZfZEszTXNVdDFpWHpBNVNJaUxXUDVWdnBmTWNFVWZBUmJnRGd4VERNLWd3?oc=5",
+              "domain": "https://www.barrons.com",
+              "published_at": "2026-09-03T18:23:00+00:00",
+              "provider": "google_news_rss",
+              "source": "barrons.com"
+            },
+            {
+              "title": "ORCL Stock Tumbles 10% Despite Earnings Beat, But Wall Street Recommends 'Aggressive' Buying On Selloff - Stocktwits",
+              "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQM3VwLWExN0N3cHpwVVlucHZYU0pQd0lPdzl4M2J0cEllWElXdy13bTZRR1doa1VsX1NFTEktRVVfa05PNF8wNnY3Vmd1MGxzemR6X2ppVG84TWk4X0VDY0xJX1BOdTFOMGV4WTJfQ1ZsYzdDa05tMDZvNUxEWTYxaTdjcnpjZnFINkxRZHd1YXp4QTFFQmtRdEVQSGwweWZoQWlNTVNkVXRKaW8tVmd5d3JtU1RFVGh5RzJUWjZSSnVITnBrTVM0RzBRb1R3RkJGUTJ6NXdR?oc=5",
+              "domain": "https://stocktwits.com",
+              "published_at": "2026-09-04T00:57:52+00:00",
+              "provider": "google_news_rss",
+              "source": "Stocktwits"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-07-28",
+              "accession_number": "0001341439-26-000066",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-06-26",
+              "accession_number": "0001341439-26-000064",
+              "provider": "sec"
+            },
+            {
+              "form": "144",
+              "filed_at": "2026-06-24",
+              "accession_number": "0001950047-26-006460",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/orcl",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=ORCL&owner=exclude"
+        },
+        {
+          "symbol": "HUT",
+          "name": "Hut 8",
+          "sector": "Compute Mining",
+          "sector_key": "compute_mining",
+          "benchmark_etfs": [
+            "WGMI",
+            "BTC-USD"
+          ],
+          "signal": "neutral",
+          "score": 56,
+          "confidence": "low",
+          "setup_type": "gap_up_news",
+          "price": 89.36,
+          "previous_close": 88.09,
+          "premarket_change_pct": 1.44,
+          "change_5d_pct": 1.1,
+          "change_20d_pct": -2.82,
+          "volume_ratio": 1.14,
+          "relative_strength_pct": 2.03,
+          "sector_trend": "flat",
+          "news_sentiment": "positive",
+          "news_count": 3,
+          "earnings_status": "8-K",
+          "summary": "Watchlist item from +1.4% vs previous close, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +1.4%.",
+            "5-day relative strength: +2.0 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Hut 8 (NASDAQ:HUT) Stock Price Up 9.2% - Should You Buy? - MarketBeat",
+              "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNQ2pSM25SVDVMMVI5dURHckNuNEVleFJaMUw2RmJSU3d1dUNzNzdKUm0ydkEtamllWXJtUkVvRXYxYktabnhqVWZCenhFd19vRDhlUnBTV0c0S1lqc1dQV0kzbWxUZEp5QWxzdlA0ODNDUUc5cTZCZlpabG5mZkNZN0pXdXg0ZTV5R3RlQktPQmVvV3NfSEw0RmMwa3pscWpfaDBTQU8zMHNEb2x6TWc?oc=5",
+              "domain": "https://www.marketbeat.com",
+              "published_at": "2026-09-03T21:22:05+00:00",
+              "provider": "google_news_rss",
+              "source": "MarketBeat"
+            },
+            {
+              "title": "This Week In Cloud AI - Opti9 Expands Canadian Reach with Strategic Hut 8 Acquisition - simplywall.st",
+              "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPdnUwZlA3a0o3ZElVTFV4UDdmZlBNUWFCUjRhSC12ZTZ5SWg1Tk94TGNEN0I2X2Joc1E4cndSNkFuMUNtLU5DWUZ3a2YwTzBsRG5Oakd0NWU0NzU1Q3hpbWRyOWdDcTZoLUFqWS1pSXh3ajJQUk9SX2QzUC1VeG9ueEZhU1dEQWVGVHRmR2lHRWl3dWxVWExXck5VQ0ctVWtSMC1zTE55NkJiTnpJeUlmVFJPNEZzS1N2eTJTTll6dXRVMkMyVy1B0gHMAUFVX3lxTFBPTVZXVlFZSHZ1UE1SR1d6NHhhbjhxZUJib1pWazZySnNPbUVCbWZPWjE1blRLY3NfaFhuLTNlbWZabnZhTlZwdWNoM191aThvQnV5d3BoZjdsUEFnRllqeWo5akV0V2xIZ0FrcWFvWUJHam1hbmYxYVYzUHBkUGxmZ3FkN1A0S05NSkFqdXlsTk80dVlKU2YtUlBUTmlMak43aHNWN0xQTnJkM3JWdW9WUnFzc3VkTjltOW5tWjZJYmkxeWV3QVBNQjR5UA?oc=5",
+              "domain": "https://simplywall.st",
+              "published_at": "2026-09-04T12:18:10+00:00",
+              "provider": "google_news_rss",
+              "source": "simplywall.st"
+            },
+            {
+              "title": "Hut 8 sells its Canadian managed cloud business to Opti9 (HUT:NASDAQ) - Seeking Alpha",
+              "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPR3VET1FLcElKZzBBR0NXM0lzU214YkRSUTVJV09UWnNZTHR1OG9BanB5YkxzN3FwaDlsVVBXdWxfamhIbDhoTGtaRWtTdTlKcUt6ZWg5U0NQZW54ZmxmS0xrRzRaUmhveTdBX19kc0E2X0pqeGZNTGt2eE5BTjJsemNYX3pyWGtxZmhNV1hFR001RXpwTXowQnpn?oc=5",
+              "domain": "https://seekingalpha.com",
+              "published_at": "2026-09-03T16:26:39+00:00",
+              "provider": "google_news_rss",
+              "source": "Seeking Alpha"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-08-25",
+              "accession_number": "0001964789-26-000038",
+              "provider": "sec"
+            },
+            {
+              "form": "144",
+              "filed_at": "2026-08-24",
+              "accession_number": "0001959173-26-006382",
+              "provider": "sec"
+            },
+            {
+              "form": "8-K",
+              "filed_at": "2026-08-04",
+              "accession_number": "0001104659-26-090041",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/hut",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=HUT&owner=exclude"
+        },
+        {
+          "symbol": "FN",
+          "name": "Fabrinet",
+          "sector": "Manufacturing",
+          "sector_key": "manufacturing",
+          "benchmark_etfs": [
+            "XLI",
+            "SMH"
+          ],
+          "signal": "neutral",
+          "score": 45,
+          "confidence": "low",
+          "setup_type": "gap_up_news",
+          "price": 409.73,
+          "previous_close": 395.0,
+          "premarket_change_pct": 3.73,
+          "change_5d_pct": -8.71,
+          "change_20d_pct": -27.38,
+          "volume_ratio": 1.02,
+          "relative_strength_pct": -5.75,
+          "sector_trend": "negative",
+          "news_sentiment": "mixed",
+          "news_count": 3,
+          "earnings_status": "144, 4",
+          "summary": "Watchlist item from +3.7% vs previous close, negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +3.7%.",
+            "5-day relative strength: -5.8 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Fabrinet (FN) Is Back In Focus, So What Are Investors Weighing Now? - simplywall.st",
+              "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxObG1oNXo1cllYNlo4OWNEMmRTV0R0bUY4RW53c0I0SDVZUzhRNVp4NUNoVkp6ZmhDb19Mc3FOb2Rlam5JUnUwSlpRQkZHWXNPdF83MzFDWnVQcFp6ZHFYRWxiaEl0UUF6Q0djSmljOHozUlRqWWoyTHJhSDBFYVBWaDNVRjZ5czNUNmpZQWZBdXhxTEtRMmV1dGVKcktBQW1LT2xTVEhKMkdKUzQyZGJoWm5EZXo4aTRZX0HSAb8BQVVfeXFMTkhxM1lIYkpERjRpSWNPQ0hRdkFIa2V4ZHpVSXk1dDBpa2ozVjNqdXVHd2dLVDZRNDktVmptcDlXcmxRUnpfY0txejhXeVNycWxhQ0xZeWxwQjBPdVBqbW0tSG9GTDZYQ0dpV3dGYlBNV3l5MkJaandGcnlmbW9NajZ4RVEyYWVHUWZHZkdDc25KTTJSX3BtcUljaWRJQzZEVWRybkRoLWhibmRWc2dWYndQamE5WFVOS1pJbUNwQ0U?oc=5",
+              "domain": "https://simplywall.st",
+              "published_at": "2026-09-03T20:35:25+00:00",
+              "provider": "google_news_rss",
+              "source": "simplywall.st"
+            },
+            {
+              "title": "Fabrinet (FN) EVP, Sales & Marketing Edward Archer Sells 2,500 S - GuruFocus",
+              "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRTJCZDd5Uml6aWtaOEg0VGRqZzZvaGN5amZCbGs2ZUhrWU0yNUdUWGlsY0pfWE8xTC1oTkthdTBKdHROUGx3YmxvenZwZVctMEZzN05MUk5zUW9BeWNOUEdEbzZkSmxTb3ZRS1JCcXM3YTVJMEJ5R1hNV2ZBOTQyWk5pMm5uNWRpWDdleEtlMnpSYkduRWRVNERCdUlXbC0xampBSA?oc=5",
+              "domain": "https://www.gurufocus.com",
+              "published_at": "2026-09-04T06:39:09+00:00",
+              "provider": "google_news_rss",
+              "source": "GuruFocus"
+            },
+            {
+              "title": "$Fabrinet (FN.US)$ WOW[Grimace][Grimace] - Moomoo",
+              "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE96ajRaS3dURUpaenZQOVQ5eEhFaVhyeXpuckswQjBuclZBSWljcE93cVhIdW9ud3pnSGRVRkxmd1l1aGxMY3p5YWhtS1d0ekJuTWRxU25kNW5kdk9zMGYzOEtZSHp5V21XTnRHMlhrWHYwbC1SRF9XbVhZS3o?oc=5",
+              "domain": "https://www.moomoo.com",
+              "published_at": "2026-09-03T13:57:17+00:00",
+              "provider": "google_news_rss",
+              "source": "Moomoo"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-09-03",
+              "accession_number": "0001785907-26-000010",
+              "provider": "sec"
+            },
+            {
+              "form": "144",
+              "filed_at": "2026-09-03",
+              "accession_number": "0001973379-26-000334",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-08-26",
+              "accession_number": "0001494794-26-000008",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/fn",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=FN&owner=exclude"
+        },
+        {
+          "symbol": "VRT",
+          "name": "Vertiv Holdings",
+          "sector": "Servers and Thermal Management",
+          "sector_key": "servers_thermal",
+          "benchmark_etfs": [
+            "SMH",
+            "XLK"
+          ],
+          "signal": "neutral",
+          "score": 55,
+          "confidence": "low",
+          "setup_type": "gap_up_news",
+          "price": 276.46,
+          "previous_close": 268.83,
+          "premarket_change_pct": 2.84,
+          "change_5d_pct": -0.17,
+          "change_20d_pct": -2.3,
+          "volume_ratio": 1.04,
+          "relative_strength_pct": 2.31,
+          "sector_trend": "negative",
+          "news_sentiment": "positive",
+          "news_count": 3,
+          "earnings_status": "8-K",
+          "summary": "Watchlist item from +2.8% vs previous close, negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +2.8%.",
+            "5-day relative strength: +2.3 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Why Vertiv Holdings (VRT) Stock Is Up Today - Quiver Quantitative",
+              "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSUVnLXVzX2NUeVY4ZW51YXdIVk1wYmhCRWRWRGhLcGUxNnpGTmcwcVpzbGRFLWY2a0ZoaDlMby16V0FVOUVDOUpGTWFYeGFEZDZjeGdCLWxWTk9ka2VBdWJoSnAxSnlSdjUzRXc0eXVDWngwTzlmcks2cGtzWHNpMnlCdG9oWlk?oc=5",
+              "domain": "https://www.quiverquant.com",
+              "published_at": "2026-09-03T15:35:00+00:00",
+              "provider": "google_news_rss",
+              "source": "Quiver Quantitative"
+            },
+            {
+              "title": "Vertiv: AI Infrastructure Growth Impressive, Valuation Reflects High-Growth Expectations - Seeking Alpha",
+              "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdGhfUk53R295b1VpV0hGc3hWVlE3QlBFWl9QSlEtd1dDak5LZXpOaEVPQWl0TjJRTDNOanR0dXRScU42WGEya2J3N0hXLTVhSEsySGNZU3BXTXVUWDRRX1Z2UlRIaXRnSm5KLXZ4RDNSekw5RldOQ2t0NmkxS1dyM3psSnM1WjhVdmk0NlJkLUVFaWdmdldCT0x3RUdkcUlkMXNZcFEtRV9rRjNBMXFZN2JCQ2xLRlVLQUtuZzVLUHh6WDJLSzVGYUVXMzRMUQ?oc=5",
+              "domain": "https://seekingalpha.com",
+              "published_at": "2026-09-04T11:46:24+00:00",
+              "provider": "google_news_rss",
+              "source": "Seeking Alpha"
+            },
+            {
+              "title": "Vertiv Holdings Co (VRT) Stock Up 4.7% but GF Value Says Overvalued -- GF Score: 88/100 - GuruFocus",
+              "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSGNUUjBQaHFzWGMyLWMyOGNFbGVxUWhuRWhBN3pacElqWGpLMmxrc2pTcTREU1BzaUZ5WGdGdFdTM0owaUV3bXBrNlNaa0htSVlnVEluUGRoYjlwdERZVDEwR25JX3J2Rno5RURoQVpzN0RLeHZJRVpvV1VhMXpseUJRdk9DZG9scHJsOEFyTDlVa1hQUnpLMUpySHZfMzRoWW94cWZDSEtub1JpTmJjNk9laWNSeEVW?oc=5",
+              "domain": "https://www.gurufocus.com",
+              "published_at": "2026-09-03T21:33:14+00:00",
+              "provider": "google_news_rss",
+              "source": "GuruFocus"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-09-02",
+              "accession_number": "0000950142-26-002483",
+              "provider": "sec"
+            },
+            {
+              "form": "8-K",
+              "filed_at": "2026-09-02",
+              "accession_number": "0001193125-26-379306",
+              "provider": "sec"
+            },
+            {
+              "form": "8-K",
+              "filed_at": "2026-09-02",
+              "accession_number": "0001628280-26-059961",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/vrt",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=VRT&owner=exclude"
+        },
+        {
+          "symbol": "VST",
+          "name": "Vistra Energy",
+          "sector": "Energy Infrastructure",
+          "sector_key": "energy_infrastructure",
+          "benchmark_etfs": [
+            "XLU",
+            "XLE"
+          ],
+          "signal": "neutral",
+          "score": 55,
+          "confidence": "low",
+          "setup_type": "sector_tailwind",
+          "price": 146.11,
+          "previous_close": 144.22,
+          "premarket_change_pct": 1.31,
+          "change_5d_pct": 3.15,
+          "change_20d_pct": 2.01,
+          "volume_ratio": 1.04,
+          "relative_strength_pct": 1.46,
+          "sector_trend": "positive",
+          "news_sentiment": "sparse",
+          "news_count": 0,
+          "earnings_status": "10-Q",
+          "summary": "Watchlist item from +1.3% vs previous close, positive sector tape.",
+          "drivers": [
+            "Move vs previous close: +1.3%.",
+            "5-day relative strength: +1.5 pts.",
+            "Recent filing/event forms: 10-Q."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-09-02",
+              "accession_number": "0001268406-26-000009",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-08-24",
+              "accession_number": "0001268406-26-000007",
+              "provider": "sec"
+            },
+            {
+              "form": "10-Q",
+              "filed_at": "2026-08-10",
+              "accession_number": "0001692819-26-000019",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "sparse",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/vst",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=VST&owner=exclude"
+        },
+        {
+          "symbol": "FLEX",
+          "name": "Flex Ltd",
+          "sector": "Manufacturing",
+          "sector_key": "manufacturing",
+          "benchmark_etfs": [
+            "XLI",
+            "SMH"
+          ],
+          "signal": "neutral",
+          "score": 46,
+          "confidence": "low",
+          "setup_type": "gap_up_news",
+          "price": 110.48,
+          "previous_close": 107.89,
+          "premarket_change_pct": 2.41,
+          "change_5d_pct": -6.43,
+          "change_20d_pct": -12.03,
+          "volume_ratio": 1.3,
+          "relative_strength_pct": -3.46,
+          "sector_trend": "negative",
+          "news_sentiment": "mixed",
+          "news_count": 3,
+          "earnings_status": "DEFA14A",
+          "summary": "Watchlist item from +2.4% vs previous close, negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +2.4%.",
+            "5-day relative strength: -3.5 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "FLEX: Flex Ltd Latest Stock Price, Analysis, News and Trading Ideas - Stocktwits",
+              "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1Jb2xCd1hJOWtNMnNSRXY2VU9kNGRjb3ZZVkkySi1aQnhDblVjQ25QNXM0TWpzeEpPMXppZDFEcGVRYW03TUs5NExR?oc=5",
+              "domain": "https://stocktwits.com",
+              "published_at": "2026-09-04T00:36:27+00:00",
+              "provider": "google_news_rss",
+              "source": "Stocktwits"
+            },
+            {
+              "title": "Flex Expands Data Center Power Portfolio With $4.4 Billion Epc Power Deal - benzinga.com",
+              "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPM055QVEwSksxS2ZORTFMVFFMRVZNbUdFdTZTemVIS1FzWVZrdVQxUTJBVmMyanpnRFJYT1o3RkN2bEFacUdjbE9YdFRVVG9aSzhhU08yT0lYdHh4SVBfMWF0VzBNRlo0QmpMN3lFNDBka1I0WkFzMDNiSzJoNDl0RjNXcUw4ZGlRazhCRmZKa0VDWHJjNmFERjdlc3U4TllIbGt5d25SenJ2SXFvWURxZUU2bDF3NEk?oc=5",
+              "domain": "https://www.benzinga.com",
+              "published_at": "2026-09-04T13:04:19+00:00",
+              "provider": "google_news_rss",
+              "source": "benzinga.com"
+            },
+            {
+              "title": "Goldman Sachs’ tech conference features Flex Sept. 9 - Stock Titan",
+              "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUlZXa3pnLUYxb0dWaGtZNXhrdU9KTnRDNVpiQWNVZ2plYm1Ba1FNOWtZcjVmYzVXdGQtdkJVc3lRYVU0YzNoVk96a19lb1pvVUtTY3RHd0FVOVhrYWsyMjVzOFEwS0E3NmNmdlY0bEZfZ1VvYVd3LXhEX0FRSjBTQm8tYTJjNWdoeV9EbHVCRnNUaG5sWklZSlFyWQ?oc=5",
+              "domain": "https://www.stocktitan.net",
+              "published_at": "2026-09-03T20:06:00+00:00",
+              "provider": "google_news_rss",
+              "source": "Stock Titan"
+            }
+          ],
+          "filings": [
+            {
+              "form": "DEFA14A",
+              "filed_at": "2026-09-04",
+              "accession_number": "0001193125-26-382691",
+              "provider": "sec"
+            },
+            {
+              "form": "DEFA14A",
+              "filed_at": "2026-09-04",
+              "accession_number": "0001193125-26-382685",
+              "provider": "sec"
+            },
+            {
+              "form": "DEFA14A",
+              "filed_at": "2026-09-04",
+              "accession_number": "0001193125-26-382496",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/flex",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=FLEX&owner=exclude"
+        },
+        {
+          "symbol": "CLS",
+          "name": "Celestica",
+          "sector": "Manufacturing",
+          "sector_key": "manufacturing",
+          "benchmark_etfs": [
+            "XLI",
+            "SMH"
+          ],
+          "signal": "neutral",
+          "score": 53,
+          "confidence": "low",
+          "setup_type": "gap_up_news",
+          "price": 314.92,
+          "previous_close": 309.84,
+          "premarket_change_pct": 1.64,
+          "change_5d_pct": -2.38,
+          "change_20d_pct": -1.49,
+          "volume_ratio": 1.5,
+          "relative_strength_pct": 0.59,
+          "sector_trend": "negative",
+          "news_sentiment": "positive",
+          "news_count": 3,
+          "earnings_status": "4",
+          "summary": "Watchlist item from +1.6% vs previous close, negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +1.6%.",
+            "5-day relative strength: +0.6 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Celestica (TSX:CLS) Stock Jumped, What Is Driving Attention Now? - simplywall.st",
+              "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPc19mZVdHQ0VlSmJWWjlLOVJEMUJTWUZQNlppajg0dF9nVkdWa0J6bUl3Q05EM3g1TFpkU1FadzlPODRQbmRrLWdBNWd1emYyc0hTYW5yblNwQ1J5RkV1WDZ6LXJMeUd6LVlqVEtUX1NQbnRGd2FvYjhYenF0Tmd5Z3ZiaGlNUWpubW10UmxZODM2MWFPUTJSWlF6MHY0N0UtZjI1SXEwWjBrM21BcDVFNnlkRi1qUU9VeG5TNDBtVVN0OFNo0gHKAUFVX3lxTE1lR3VLWlMxT0hhUV9wMmhRWWtSSWxydWxLcDFkNGtLSXhWRW5VblBPWWM1alVIRFlpeHNKbU5aQWlIUWI1YnJBcmJVOE1qeTJqOFEyVG1fNjBGZ0RpMXBwZDBUNldJSG1HNHlDLWg1dTFVZjNiNXRzTk1KLWRyX2ppd3FIcGZVc0p3NlVBeXhJMFRFTHAteUFpTFd6S1ZGVmwxNzJTY2duTXowbWx6cWVpZmZtLVYwRy1sUG92UnpIN1puM1FvRm9jMXc?oc=5",
+              "domain": "https://simplywall.st",
+              "published_at": "2026-09-04T00:40:33+00:00",
+              "provider": "google_news_rss",
+              "source": "simplywall.st"
+            },
+            {
+              "title": "Celestica Shares Jump as Investors Refocus on AI Infrastructure Growth - Quiver Quantitative",
+              "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPam9rbHg1Z05vT29OZnNVbzVCTy1fVWdReWV1czVpOXgxTFptMDVMV0hUc0Q0d1U5aU5QYWdrM2puXzdsamphYmc2aFItYTBBWmlUZ3RYT1ViVEttN2s5RzV4OUdZaWZaSVUzSnIwQldES0s4QUxKMWNIWnRjQjduYkZpSkZOYkJQczNrdEdDS0FmNEVZT0I2UE93UFdTZTJuc3Z3VTlR?oc=5",
+              "domain": "https://www.quiverquant.com",
+              "published_at": "2026-09-03T16:18:00+00:00",
+              "provider": "google_news_rss",
+              "source": "Quiver Quantitative"
+            },
+            {
+              "title": "CLS Stock Jumps 12% As Broadcom AI Call Sparks Switch Rally - Stocktwits",
+              "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVDBoYU55OGpqcWpSR25ReG9SaG9YSk56dzVLWV9hXzVRQVVsTUdOMkJFMzdmeV9Vb3JTR1V3WG1rQWZNN3pSeUFuVWdZTWVUTTcwOVByWHM1dWpzQ0ZfVWxyRzdwM3NiUDRMSDFJeUpSbm5LV28ycXFYZ0N3TllyYm0wM1h2cTJtdkp3WXVkaktTV2ZsQlZZdlliWHRiRDVRTEFKSFFVSWotc01vaEFSNWh5S3JXTE1UVFExMkJJMA?oc=5",
+              "domain": "https://stocktwits.com",
+              "published_at": "2026-09-03T20:22:00+00:00",
+              "provider": "google_news_rss",
+              "source": "Stocktwits"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-08-14",
+              "accession_number": "0001193125-26-352263",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-08-12",
+              "accession_number": "0001193125-26-347045",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-08-12",
+              "accession_number": "0001193125-26-347044",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/cls",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=CLS&owner=exclude"
+        }
+      ],
+      "meta": {
+        "count": 12,
+        "market_date": "2026-09-04",
+        "market_status": "premarket",
+        "skip_reason": "",
+        "provider_coverage": {
+          "quotes": {
+            "provider": "yahoo",
+            "order": [
+              "yahoo",
+              "nasdaq"
+            ],
+            "providers": {
+              "nasdaq": 24
+            },
+            "ok": 24,
+            "total": 24
+          },
+          "news": {
+            "provider": "gdelt",
+            "order": [
+              "gdelt",
+              "google_news_rss"
+            ],
+            "providers": {
+              "google_news_rss": 22
+            },
+            "ok": 22,
+            "total": 24
+          },
+          "filings": {
+            "provider": "sec",
+            "order": [
+              "sec",
+              "sec_company_page"
+            ],
+            "providers": {
+              "sec": 24
+            },
+            "ok": 24,
+            "fallback_ok": 24,
+            "total": 24,
+            "requires_env": "SEC_USER_AGENT or LINNET_SEC_USER_AGENT"
+          }
+        },
+        "invalid_symbols": [],
+        "sector_overview": [
+          {
+            "sector_key": "compute_mining",
+            "sector": "Compute Mining",
+            "signal": "neutral",
+            "avg_score": 58,
+            "avg_change_5d_pct": 1.46,
+            "avg_relative_strength_pct": 2.39,
+            "sector_trend": "flat",
+            "counts": {
+              "bullish": 0,
+              "bearish": 0,
+              "neutral": 4
+            },
+            "top_symbol": "CIFR",
+            "top_signal": "neutral",
+            "top_score": 64,
+            "stock_count": 4
+          },
+          {
+            "sector_key": "servers_thermal",
+            "sector": "Servers and Thermal Management",
+            "signal": "neutral",
+            "avg_score": 58,
+            "avg_change_5d_pct": 4.58,
+            "avg_relative_strength_pct": 7.07,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 0,
+              "neutral": 2
+            },
+            "top_symbol": "DELL",
+            "top_signal": "neutral",
+            "top_score": 62,
+            "stock_count": 2
+          },
+          {
+            "sector_key": "energy_infrastructure",
+            "sector": "Energy Infrastructure",
+            "signal": "neutral",
+            "avg_score": 55,
+            "avg_change_5d_pct": 3.15,
+            "avg_relative_strength_pct": 1.46,
+            "sector_trend": "positive",
+            "counts": {
+              "bullish": 0,
+              "bearish": 0,
+              "neutral": 1
+            },
+            "top_symbol": "VST",
+            "top_signal": "neutral",
+            "top_score": 55,
+            "stock_count": 1
+          },
+          {
+            "sector_key": "battery_storage",
+            "sector": "Battery and Energy Storage",
+            "signal": "neutral",
+            "avg_score": 47,
+            "avg_change_5d_pct": -1.33,
+            "avg_relative_strength_pct": -0.6,
+            "sector_trend": "flat",
+            "counts": {
+              "bullish": 0,
+              "bearish": 0,
+              "neutral": 3
+            },
+            "top_symbol": "FLNC",
+            "top_signal": "neutral",
+            "top_score": 38,
+            "stock_count": 3
+          },
+          {
+            "sector_key": "foundry",
+            "sector": "Foundry",
+            "signal": "neutral",
+            "avg_score": 48,
+            "avg_change_5d_pct": -1.44,
+            "avg_relative_strength_pct": 2.55,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 0,
+              "neutral": 2
+            },
+            "top_symbol": "INTC",
+            "top_signal": "neutral",
+            "top_score": 47,
+            "stock_count": 2
+          },
+          {
+            "sector_key": "hyperscale_cloud",
+            "sector": "Hyperscale Cloud",
+            "signal": "neutral",
+            "avg_score": 52,
+            "avg_change_5d_pct": 0.99,
+            "avg_relative_strength_pct": 2.63,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 0,
+              "neutral": 4
+            },
+            "top_symbol": "ORCL",
+            "top_signal": "neutral",
+            "top_score": 57,
+            "stock_count": 4
+          },
+          {
+            "sector_key": "networking_equipment",
+            "sector": "Networking Equipment",
+            "signal": "neutral",
+            "avg_score": 52,
+            "avg_change_5d_pct": -13.84,
+            "avg_relative_strength_pct": -12.44,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 0,
+              "neutral": 4
+            },
+            "top_symbol": "ANET",
+            "top_signal": "neutral",
+            "top_score": 58,
+            "stock_count": 4
+          },
+          {
+            "sector_key": "manufacturing",
+            "sector": "Manufacturing",
+            "signal": "neutral",
+            "avg_score": 49,
+            "avg_change_5d_pct": -5.32,
+            "avg_relative_strength_pct": -2.35,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 0,
+              "neutral": 4
+            },
+            "top_symbol": "FN",
+            "top_signal": "neutral",
+            "top_score": 45,
+            "stock_count": 4
+          }
+        ],
+        "mode": "premarket",
+        "language": "en",
+        "llm_synthesis_used": false,
+        "llm_synthesis_model": "google/gemini-2.5-flash-lite-preview-09-2025",
+        "disclaimer": "Generated from public market data and news for research and education. Not financial advice; data may be delayed, incomplete, or wrong."
+      }
+    },
+    {
+      "key": "arxiv",
+      "payload_key": "papers",
+      "title": "arXiv Papers",
+      "icon": "📄",
+      "items": [],
+      "meta": {
+        "papers_fetched": 100,
+        "papers_after_keyword_filter": 51,
+        "papers_after_llm_filter": 0,
+        "count": 0
+      }
+    },
+    {
+      "key": "hacker_news",
+      "payload_key": "hacker_news",
+      "title": "Hacker News",
+      "icon": "🔥",
+      "items": [
+        {
+          "id": 49554520,
+          "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
+          "url": "https://inference-docs.cerebras.ai/models/overview",
+          "score": 611,
+          "created_at": "2026-09-03T18:32:13Z",
+          "comments_url": "https://news.ycombinator.com/item?id=49554520",
+          "summary": "Story: summary generation failed."
+        },
+        {
+          "id": 49551096,
+          "title": "Ask HN: Why were OpenAI, Claude, and Grok simultaneously down?",
+          "url": "",
+          "score": 378,
+          "created_at": "2026-09-03T15:07:01Z",
+          "comments_url": "https://news.ycombinator.com/item?id=49551096",
+          "summary": "Story: summary generation failed."
+        },
+        {
+          "id": 49550375,
+          "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
+          "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
+          "score": 324,
+          "created_at": "2026-09-03T14:28:18Z",
+          "comments_url": "https://news.ycombinator.com/item?id=49550375",
+          "summary": "Story: summary generation failed."
+        },
+        {
+          "id": 49551760,
+          "title": "K2 Horizon: A connected fleet of six open models",
+          "url": "https://ifm.ai/blog/k2/",
+          "score": 313,
+          "created_at": "2026-09-03T15:36:43Z",
+          "comments_url": "https://news.ycombinator.com/item?id=49551760",
+          "summary": "Story: summary generation failed."
+        },
+        {
+          "id": 49554273,
+          "title": "OpenAI begins rolling out GPT-6 Astra",
+          "url": "https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html",
+          "score": 269,
+          "created_at": "2026-09-03T18:18:22Z",
+          "comments_url": "https://news.ycombinator.com/item?id=49554273",
+          "summary": "Story: summary generation failed."
+        },
+        {
+          "id": 49551589,
+          "title": "Grok outage",
+          "url": "https://status.x.ai/",
+          "score": 158,
+          "created_at": "2026-09-03T15:26:01Z",
+          "comments_url": "https://news.ycombinator.com/item?id=49551589",
+          "summary": "Story: summary generation failed."
+        }
+      ],
+      "meta": {
+        "count": 6
+      }
+    },
+    {
+      "key": "github_trending",
+      "payload_key": "github_trending",
+      "title": "GitHub Trending",
+      "icon": "⭐",
+      "items": [
+        {
+          "full_name": "mattpocock/skills",
+          "url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "stars_today": 2757,
+          "total_stars": 249097,
+          "language": "Shell",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "DietrichGebert/ponytail",
+          "url": "https://github.com/DietrichGebert/ponytail",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "stars_today": 1683,
+          "total_stars": 124586,
+          "language": "JavaScript",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "fmtlib/fmt",
+          "url": "https://github.com/fmtlib/fmt",
+          "description": "A modern formatting library",
+          "stars_today": 681,
+          "total_stars": 25410,
+          "language": "C++",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "affaan-m/ECC",
+          "url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "stars_today": 1139,
+          "total_stars": 247895,
+          "language": "JavaScript",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "anthropics/skills",
+          "url": "https://github.com/anthropics/skills",
+          "description": "Public repository for Agent Skills",
+          "stars_today": 512,
+          "total_stars": 173940,
+          "language": "Python",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "blader/humanizer",
+          "url": "https://github.com/blader/humanizer",
+          "description": "Agent skill that removes signs of AI-generated writing from text",
+          "stars_today": 1132,
+          "total_stars": 42206,
+          "language": "Python",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "NousResearch/hermes-agent",
+          "url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "stars_today": 721,
+          "total_stars": 241245,
+          "language": "Python",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "JuliusBrussee/caveman",
+          "url": "https://github.com/JuliusBrussee/caveman",
+          "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+          "stars_today": 503,
+          "total_stars": 103392,
+          "language": "Go",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "magnitudedev/magnitude",
+          "url": "https://github.com/magnitudedev/magnitude",
+          "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+          "stars_today": 395,
+          "total_stars": 2184,
+          "language": "TypeScript",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        }
+      ],
+      "meta": {
+        "count": 9
+      }
+    }
+  ],
+  "meta": {
+    "papers_fetched": 100,
+    "papers_after_keyword_filter": 51,
+    "papers_after_llm_filter": 0,
+    "llm_model": "google/gemini-2.5-flash-lite-preview-09-2025",
+    "scoring_model": "google/gemini-2.5-flash-lite-preview-09-2025",
+    "summarization_model": "google/gemini-2.5-flash-lite-preview-09-2025",
+    "duration_seconds": 483
+  },
+  "quote_of_day": [],
+  "hitokoto": [
+    {
+      "quote": "神即道，道即法，道法自然，如来。",
+      "author": "豆豆",
+      "source": "遥远的救世主",
+      "category": "l"
+    }
+  ],
+  "arxiv": [],
+  "papers": [],
+  "hacker_news": [
+    {
+      "id": 49554520,
+      "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
+      "url": "https://inference-docs.cerebras.ai/models/overview",
+      "score": 611,
+      "created_at": "2026-09-03T18:32:13Z",
+      "comments_url": "https://news.ycombinator.com/item?id=49554520",
+      "summary": "Story: summary generation failed."
+    },
+    {
+      "id": 49551096,
+      "title": "Ask HN: Why were OpenAI, Claude, and Grok simultaneously down?",
+      "url": "",
+      "score": 378,
+      "created_at": "2026-09-03T15:07:01Z",
+      "comments_url": "https://news.ycombinator.com/item?id=49551096",
+      "summary": "Story: summary generation failed."
+    },
+    {
+      "id": 49550375,
+      "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
+      "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
+      "score": 324,
+      "created_at": "2026-09-03T14:28:18Z",
+      "comments_url": "https://news.ycombinator.com/item?id=49550375",
+      "summary": "Story: summary generation failed."
+    },
+    {
+      "id": 49551760,
+      "title": "K2 Horizon: A connected fleet of six open models",
+      "url": "https://ifm.ai/blog/k2/",
+      "score": 313,
+      "created_at": "2026-09-03T15:36:43Z",
+      "comments_url": "https://news.ycombinator.com/item?id=49551760",
+      "summary": "Story: summary generation failed."
+    },
+    {
+      "id": 49554273,
+      "title": "OpenAI begins rolling out GPT-6 Astra",
+      "url": "https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html",
+      "score": 269,
+      "created_at": "2026-09-03T18:18:22Z",
+      "comments_url": "https://news.ycombinator.com/item?id=49554273",
+      "summary": "Story: summary generation failed."
+    },
+    {
+      "id": 49551589,
+      "title": "Grok outage",
+      "url": "https://status.x.ai/",
+      "score": 158,
+      "created_at": "2026-09-03T15:26:01Z",
+      "comments_url": "https://news.ycombinator.com/item?id=49551589",
+      "summary": "Story: summary generation failed."
+    }
+  ],
+  "github_trending": [
+    {
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "stars_today": 2757,
+      "total_stars": 249097,
+      "language": "Shell",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "stars_today": 1683,
+      "total_stars": 124586,
+      "language": "JavaScript",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "fmtlib/fmt",
+      "url": "https://github.com/fmtlib/fmt",
+      "description": "A modern formatting library",
+      "stars_today": 681,
+      "total_stars": 25410,
+      "language": "C++",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "stars_today": 1139,
+      "total_stars": 247895,
+      "language": "JavaScript",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "stars_today": 512,
+      "total_stars": 173940,
+      "language": "Python",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "blader/humanizer",
+      "url": "https://github.com/blader/humanizer",
+      "description": "Agent skill that removes signs of AI-generated writing from text",
+      "stars_today": 1132,
+      "total_stars": 42206,
+      "language": "Python",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "stars_today": 721,
+      "total_stars": 241245,
+      "language": "Python",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "JuliusBrussee/caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+      "stars_today": 503,
+      "total_stars": 103392,
+      "language": "Go",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "magnitudedev/magnitude",
+      "url": "https://github.com/magnitudedev/magnitude",
+      "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+      "stars_today": 395,
+      "total_stars": 2184,
+      "language": "TypeScript",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    }
+  ],
+  "us_stocks": [
+    {
+      "symbol": "CIFR",
+      "name": "Cipher Mining",
+      "sector": "Compute Mining",
+      "sector_key": "compute_mining",
+      "benchmark_etfs": [
+        "WGMI",
+        "BTC-USD"
+      ],
+      "signal": "neutral",
+      "score": 64,
+      "confidence": "low",
+      "setup_type": "gap_up_news",
+      "price": 17.79,
+      "previous_close": 17.37,
+      "premarket_change_pct": 2.42,
+      "change_5d_pct": 3.58,
+      "change_20d_pct": -4.61,
+      "volume_ratio": 1.09,
+      "relative_strength_pct": 4.5,
+      "sector_trend": "flat",
+      "news_sentiment": "positive",
+      "news_count": 3,
+      "earnings_status": "10-Q, 8-K",
+      "summary": "Watchlist item from +2.4% vs previous close, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +2.4%.",
+        "5-day relative strength: +4.5 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Cipher Mining's (CIFR) \"Buy\" Rating Reiterated at Rosenblatt Securities - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQOXl3cEFTRzhOdmJkdXdMckFqTmFFR290MGN4S0UxZnJXWi0xbTgxTmN1UUFVUDBXVHBEY2FOckxaWlcwN1RZZ3h1ZHNLdGJydzhiekFiVlJiNUg4UUU5TElvd2liRjl4Ti1hM19taGpxckhoaHRtQWlmTEVMUGhCeUdKbV9vZVhoSnFSMzVFOTJVNEdlWW5ySHR3NnFxS1NsdjFheE9ESlBIN0NMakpuQWRNQnhmbmxDNmJIYmxHMlRTR1JldElB?oc=5",
+          "domain": "https://www.marketbeat.com",
+          "published_at": "2026-09-04T12:09:51+00:00",
+          "provider": "google_news_rss",
+          "source": "MarketBeat"
+        },
+        {
+          "title": "Data Center Stocks Rally With Bitcoin: Cipher Mining Jumps 12%, TeraWulf Surges 8%, IREN Rises 4% - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQcVVoN2JaTVJyUGtwVFM5SC1RQ05zWWM5Wm5LcDlVT1FaeENHeEo5Ul9TQXE2RGdhVDVLOThtamVEZFlRODJnX3ZjVjVxcndsb2xzYmlJeDVDeFJ1RHAzeGdxdVhhb1drMUc1TUZfbU13VmRZMlROUi1WZTVDWFVuNUFLWmpRMXhrc1hyaXRwQWoyRGF0eWh5NFdiVUpadUxNbkpsV3JEdlF5bU9pUU5PbjhIMjF1dGdaLXJBREpKU2FSTFdIZ1hOOUdrQURYaVU4?oc=5",
+          "domain": "https://247wallst.com",
+          "published_at": "2026-09-03T18:43:00+00:00",
+          "provider": "google_news_rss",
+          "source": "24/7 Wall St."
+        },
+        {
+          "title": "Cipher Mining (NASDAQ:CIFR) Stock Price Up 7.7% - Here's Why - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPSFRScG1PbmFUM1N5SVhYNVZ4dTc3RXJHbTB0MEZZazQxY0pwLVhyRHY2RXY2a2ZFVWNsR0RRWDhyZWRMV3h3cGJNWFJfMjg4bWowUFhHZUZuQmRTMkxJWHZpODFoLXJTbXdBWE9EVG84YnowaWxSSXdybk55QVdCdlptU212T2MtVDI0ZGV6S3A5MnR4RDNPNXBVdngtam1IS2VEQnJHMXQzRmVqdW1udGM0dw?oc=5",
+          "domain": "https://www.marketbeat.com",
+          "published_at": "2026-09-03T17:23:44+00:00",
+          "provider": "google_news_rss",
+          "source": "MarketBeat"
+        }
+      ],
+      "filings": [
+        {
+          "form": "SCHEDULE 13G",
+          "filed_at": "2026-08-13",
+          "accession_number": "0000895421-26-000259",
+          "provider": "sec"
+        },
+        {
+          "form": "10-Q",
+          "filed_at": "2026-08-04",
+          "accession_number": "0001819989-26-000041",
+          "provider": "sec"
+        },
+        {
+          "form": "8-K",
+          "filed_at": "2026-08-04",
+          "accession_number": "0001819989-26-000038",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/cifr",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=CIFR&owner=exclude"
+    },
+    {
+      "symbol": "DELL",
+      "name": "Dell Technologies",
+      "sector": "Servers and Thermal Management",
+      "sector_key": "servers_thermal",
+      "benchmark_etfs": [
+        "SMH",
+        "XLK"
+      ],
+      "signal": "neutral",
+      "score": 62,
+      "confidence": "low",
+      "setup_type": "gap_up_news",
+      "price": 525.77,
+      "previous_close": 516.39,
+      "premarket_change_pct": 1.82,
+      "change_5d_pct": 9.34,
+      "change_20d_pct": 17.99,
+      "volume_ratio": 2.78,
+      "relative_strength_pct": 11.82,
+      "sector_trend": "negative",
+      "news_sentiment": "positive",
+      "news_count": 3,
+      "earnings_status": "144",
+      "summary": "Watchlist item from +1.8% vs previous close, negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +1.8%.",
+        "5-day relative strength: +11.8 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Dell Technologies Inc. (DELL) Hit a 52 Week High, Can the Run Continue? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOUnh4dWY1alZRQmlfZEVaRTM5UWQ4QjRoYTRFakVHYVd4UFIwNUROUE13eDdnaWoxQXRseDl2QmdEQy1fS2xZT1lqZDhRdnRCVjJoYzBDdVM2UC02OE45S1dtUzYwUjRUMGpLeXZnbFdrOHYxbE1LWGZqYmFGTEdqd1AxbE96UXBpcUZ6MkhYNHV3V29ZX3NjeFpucw?oc=5",
+          "domain": "https://finance.yahoo.com",
+          "published_at": "2026-09-04T13:15:03+00:00",
+          "provider": "google_news_rss",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Why Did SPCE, F, DELL Stocks Surge To 52-Week Highs On Friday? - Stocktwits",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPWU1Wa1dpWS1sTjhRVGM4d2puNTNxM1VEUng3eXZNbkdxQXNDdkRkTXNRWmxuei1Ucmt3a0I4M21SRGxVVzQ0ekhkZ2VSekJzWWlvVTNjeUk3RXBaUm9DY1VrWkFRVWNfdWZONnZnZ0RBTmRsb190UEt0SUdZRGNVdUVZQnFhZFJqWTY0MkJrLXdfcWZzZS04anY1LUd3VktjX0VWWFRQbjF2TGlQd2JGQjBoU0FkUjVfMkFZZmNpa1k?oc=5",
+          "domain": "https://stocktwits.com",
+          "published_at": "2026-09-04T00:02:34+00:00",
+          "provider": "google_news_rss",
+          "source": "Stocktwits"
+        },
+        {
+          "title": "Dell Is Now Up 20% in a Month: Take Profits, or Buy More? - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNcWtmWm0tZFQ0MkVza1FqdFN6NnRoenBwdjVwVTAxOEE1ZVNWTlBqNzVTem1CQzNPN3BuZGJDV3BBSlBONmxVWnd1UGFkUzJ0V29jY1d2dW1aamNMVTVnR25aV1FJX3dtRjhEX1YxT19FNUJxTG5mcmdIMk92cWZxSkVCd1VvMlFFSmREdTRoTHRQdlFVRkU2QTNFakg3QQ?oc=5",
+          "domain": "https://247wallst.com",
+          "published_at": "2026-09-03T19:26:00+00:00",
+          "provider": "google_news_rss",
+          "source": "24/7 Wall St."
+        }
+      ],
+      "filings": [
+        {
+          "form": "144",
+          "filed_at": "2026-09-03",
+          "accession_number": "0001193125-26-382300",
+          "provider": "sec"
+        },
+        {
+          "form": "144",
+          "filed_at": "2026-09-03",
+          "accession_number": "0001193125-26-382287",
+          "provider": "sec"
+        },
+        {
+          "form": "144",
+          "filed_at": "2026-09-03",
+          "accession_number": "0001193125-26-382286",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/dell",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=DELL&owner=exclude"
+    },
+    {
+      "symbol": "FLNC",
+      "name": "Fluence Energy",
+      "sector": "Battery and Energy Storage",
+      "sector_key": "battery_storage",
+      "benchmark_etfs": [
+        "ICLN",
+        "XLU"
+      ],
+      "signal": "neutral",
+      "score": 38,
+      "confidence": "low",
+      "setup_type": "news_watch",
+      "price": 10.27,
+      "previous_close": 10.2,
+      "premarket_change_pct": 0.64,
+      "change_5d_pct": -10.76,
+      "change_20d_pct": -22.79,
+      "volume_ratio": 1.27,
+      "relative_strength_pct": -10.03,
+      "sector_trend": "flat",
+      "news_sentiment": "negative",
+      "news_count": 3,
+      "earnings_status": "10-Q, 8-K",
+      "summary": "Watchlist item from 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +0.6%.",
+        "5-day relative strength: -10.0 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [
+        "negative headline: Fluence Energy cut to Sell equivalent at Barclays on downside risk to FY 2027 consensus - Seeking Alpha"
+      ],
+      "sources": [
+        {
+          "title": "Fluence Energy (FLNC) Stock Trades Down, Here Is Why - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNR183TDRibXBXOTdYWkVnQmN6b0YzaWxVbVpSazVaSUtUVkZlc3R5V2VmbFhPbk5vajRBcHFEQmRpYjcwZEdCWWh0U1lub0I4QkhJUkpRQ01jdWlhSEtfMnJFOHZKWE9XNTItcUFSdjROdFhDOGpmZGxrdWdhbVNpanF2ZkNXMHAxSmFLUWVHVnl5ajdOb2dqRmR1MV9OZw?oc=5",
+          "domain": "https://finance.yahoo.com",
+          "published_at": "2026-09-03T20:47:18+00:00",
+          "provider": "google_news_rss",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Fluence Energy (FLNC) Reshapes Its Board And Offices, Is It A Bargain? - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZzhVT3V6MHpPWkRaUzByRXR2TDdyR0l5UXQ3d2dNcUpsUnA0Vm9UdDZ1N3I5NnBYdFh4RzltZFBFWEQ0ZkFYenZkdmd6djZmNEhNZEVXWm1MZm1wZEl2Vmh4VXNXUUs4cVMtNlE5MFBRTmhBa2FIS1RRZTVfVmtNR2VWcXR6YVFDYlVUeTJ2a20xYU1fX1Y1QWc2a1NSclZQRy1VUEUyOGYzYmhwblRXMy1tSDZBbHpMQm1UQWM2Wkk5QnI5VTJyTVZuNlpBdlZUUWtrOWNNb1NwQdIB2gFBVV95cUxQZzhVT3V6MHpPWkRaUzByRXR2TDdyR0l5UXQ3d2dNcUpsUnA0Vm9UdDZ1N3I5NnBYdFh4RzltZFBFWEQ0ZkFYenZkdmd6djZmNEhNZEVXWm1MZm1wZEl2Vmh4VXNXUUs4cVMtNlE5MFBRTmhBa2FIS1RRZTVfVmtNR2VWcXR6YVFDYlVUeTJ2a20xYU1fX1Y1QWc2a1NSclZQRy1VUEUyOGYzYmhwblRXMy1tSDZBbHpMQm1UQWM2Wkk5QnI5VTJyTVZuNlpBdlZUUWtrOWNNb1NwQQ?oc=5",
+          "domain": "https://simplywall.st",
+          "published_at": "2026-09-03T20:35:26+00:00",
+          "provider": "google_news_rss",
+          "source": "simplywall.st"
+        },
+        {
+          "title": "Fluence Energy cut to Sell equivalent at Barclays on downside risk to FY 2027 consensus - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQLVV2bjRxZzhORVpBTGxzRmZEUFJCQUlyYkVoU2VYeDJENXNvYjYxczc4dzdGcnlXUmlYeUlpMDFmSVJob0hNRzhLd2Z3YWhOWEpJbGR3WlZoSUZGMmctcEVFOGtsNlJCX3BQc3dhdUw2MUh2MnpQTVczOWk2Z3M4aEFsb2ZqelNIaW5yR2dSc0FrMzNwV3JZZ2dOd09PUkx2eXJpTzBCbDdROGNiLTQ5Rm1tU0xIWGltTTg0ek9maTZpLXc?oc=5",
+          "domain": "https://seekingalpha.com",
+          "published_at": "2026-09-03T18:32:17+00:00",
+          "provider": "google_news_rss",
+          "source": "Seeking Alpha"
+        }
+      ],
+      "filings": [
+        {
+          "form": "8-K",
+          "filed_at": "2026-09-01",
+          "accession_number": "0001868941-26-000037",
+          "provider": "sec"
+        },
+        {
+          "form": "SCHEDULE 13G/A",
+          "filed_at": "2026-08-10",
+          "accession_number": "0001193125-26-342486",
+          "provider": "sec"
+        },
+        {
+          "form": "10-Q",
+          "filed_at": "2026-08-05",
+          "accession_number": "0001868941-26-000029",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/flnc",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=FLNC&owner=exclude"
+    },
+    {
+      "symbol": "IREN",
+      "name": "IREN Ltd",
+      "sector": "Compute Mining",
+      "sector_key": "compute_mining",
+      "benchmark_etfs": [
+        "WGMI",
+        "BTC-USD"
+      ],
+      "signal": "neutral",
+      "score": 61,
+      "confidence": "low",
+      "setup_type": "gap_up_news",
+      "price": 42.38,
+      "previous_close": 41.65,
+      "premarket_change_pct": 1.75,
+      "change_5d_pct": 2.76,
+      "change_20d_pct": 9.81,
+      "volume_ratio": 1.0,
+      "relative_strength_pct": 3.69,
+      "sector_trend": "flat",
+      "news_sentiment": "positive",
+      "news_count": 3,
+      "earnings_status": "10-K, 8-K",
+      "summary": "Watchlist item from +1.8% vs previous close, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +1.8%.",
+        "5-day relative strength: +3.7 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "IREN Ltd (IREN) Shares Surge 5.2% -- What GF Score of 65 Tells I - GuruFocus",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQd054b0JXUkhXRDdlZ256WjFscmNWQm8xVlRrNHhDcThfOEZuWV90cC02VWFyM0pPSnNmdTJybjlUZlVTLXRjU2taNlpsQ19NQzlGNGhlWl82NmtzQmlLeDVlYm9kYng4Nm8xZTFRQ1BTc2o2SXU3OE83Z1NFc3hPem90bzJXaVVadmRCMGdQbUVSa0U3bWYzRlZrdGp2QWVOSDdUQXlnUQ?oc=5",
+          "domain": "https://www.gurufocus.com",
+          "published_at": "2026-09-03T22:18:59+00:00",
+          "provider": "google_news_rss",
+          "source": "GuruFocus"
+        },
+        {
+          "title": "Wall Street sets IREN stock price for the next 12 months - Finbold",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxONm1QQXJfRmgzTVZoalk4dEw1R2dUNjJzemVwOG1PdVZqQk9Fd3NCWGRCSm4xTFI4a0NraGxIU1R2QXlqOGlMMklHdG1BMjlpazNWYkJSUG9pUGJSUUkwOTMxYXlGLUN0anV3dlVlajF2T3IxQS1RbVk5UVBHNFl2aDZySQ?oc=5",
+          "domain": "https://finbold.com",
+          "published_at": "2026-09-03T17:09:32+00:00",
+          "provider": "google_news_rss",
+          "source": "Finbold"
+        },
+        {
+          "title": "IREN stock jumps 14% on AI cloud demand, with a $100 price target signaling 143% upside potential. - Pluang",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQ2VjMnVmMVJhd0otWUdvZDdGVkVESHB0VEdaX3NtSzM4aG5KNGw5V3ptQWxWd2RNN0hUeS1LYVlNRU1yb0lfbU5tcUVGWE9iRkxDRjdJeGtuTG5qVm5oaXNBaWNfUzRjbHNDeTNSMUtCT0tJS3BvQVRxazZCdERCNw?oc=5",
+          "domain": "https://pluang.com",
+          "published_at": "2026-09-03T17:31:59+00:00",
+          "provider": "google_news_rss",
+          "source": "Pluang"
+        }
+      ],
+      "filings": [
+        {
+          "form": "10-K",
+          "filed_at": "2026-08-27",
+          "accession_number": "0001878848-26-000052",
+          "provider": "sec"
+        },
+        {
+          "form": "8-K",
+          "filed_at": "2026-08-27",
+          "accession_number": "0001878848-26-000051",
+          "provider": "sec"
+        },
+        {
+          "form": "D",
+          "filed_at": "2026-08-18",
+          "accession_number": "0001140361-26-033473",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/iren",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=IREN&owner=exclude"
+    },
+    {
+      "symbol": "ANET",
+      "name": "Arista Networks",
+      "sector": "Networking Equipment",
+      "sector_key": "networking_equipment",
+      "benchmark_etfs": [
+        "IGN",
+        "XLK"
+      ],
+      "signal": "neutral",
+      "score": 58,
+      "confidence": "low",
+      "setup_type": "gap_up_news",
+      "price": 196.05,
+      "previous_close": 191.44,
+      "premarket_change_pct": 2.41,
+      "change_5d_pct": -4.8,
+      "change_20d_pct": -0.46,
+      "volume_ratio": 0.68,
+      "relative_strength_pct": -3.4,
+      "sector_trend": "negative",
+      "news_sentiment": "positive",
+      "news_count": 3,
+      "earnings_status": "144, 4",
+      "summary": "Watchlist item from +2.4% vs previous close, negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +2.4%.",
+        "5-day relative strength: -3.4 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Arista Networks Offers Entry After 42% Gain Amid Earnings Beat; Data Center Demand Surging - Investor's Business Daily",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPLVFlV3A1bWI1WlJWa1hLNWRmYzRUTDBEeEJZNUoyczhrX05mNTlqbmRMYmFCUG1FdUVrYzh4b01PQXh1ZXFVVzlZUExyeXh4YUp4Wk5vT2xnNUdiSDRxVms1LXVDak5EbFVfcDZwLUY1ZjFldnQ5Y0J3ckoxc3hRVzRKNjhCeWZrTk1MYjlYal9USkphZFJHZFp1eVUtUTNwM25TSlNjTFBhM0c1UHc?oc=5",
+          "domain": "https://www.investors.com",
+          "published_at": "2026-09-04T12:30:00+00:00",
+          "provider": "google_news_rss",
+          "source": "Investor's Business Daily"
+        },
+        {
+          "title": "Arista Networks (ANET) Following Its Q2 Beat, Is The AI Networking Story Still Undervalued? - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPaTUzZ0diYU91OTRGSnFBQ3hBSlJacDdVVG5iTGYycEc0NFVLZmlvLUpUMWRldDZRcTRnc1RXUnNUSnFHMm8zanhqZm5jdThxS2VnVjhHTnlGSWwxdmFLNVBGS2VNS3NVNXdjeWxKMk13NWJZbkZUemc2aUNLWC1vcDdwQ1lfTjZOMjd4NGZYZmFOblJmLWU5dXY4aENoU2VvVEwyWW5BdExGVWo3WnBQSXM3WFB0WXJrZXR1Y1BIYkp6YnRnblVz0gHMAUFVX3lxTFBGSndNTExkc09CVFowcmxDT1Q2OS1scUZCUFJyRVBtdDBTdjBPV0hSaEJGdTd5V3I2bzRtYm9kMDhtTjN4UUk5cmlrdjZ6X3k4NFRKTHRibXZ0SVBOY2ExWjRfOXBrbnJMOGkzbUhFdkViSVpWRVZYbnFHOVpNOUR4ODVNSlN2WU90eGhxUERka0c5UkhRTnF2UjJPZWxQTEpfNWswTUNqYjRyYmhpWjlWMVZGWlhGSWtJTGVReFdYYVhhN0YxX2ZTbXl6WA?oc=5",
+          "domain": "https://simplywall.st",
+          "published_at": "2026-09-04T05:32:53+00:00",
+          "provider": "google_news_rss",
+          "source": "simplywall.st"
+        },
+        {
+          "title": "Why Is Arista Networks (ANET) Down 5.7% Since Last Earnings Report? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNSjNqbHVmVTNfRXVnazBTSExJZHNKMy00TXpTbVptY2ppcmxCbnpNR1dYS2VIOXdQZFdKbEpGVGlsQ2stN2NsdEU2c0oxbW9lcnEyaWM1RkdpNGZnaGFHb0FTaExMZjJ2bDNtekpQam14Wl9nU3NQaW5tT2NkOVdEOWNiZlJTcjF3YV9vSG9xaXlRcktQcE1ZWGFR?oc=5",
+          "domain": "https://finance.yahoo.com",
+          "published_at": "2026-09-03T15:30:07+00:00",
+          "provider": "google_news_rss",
+          "source": "Yahoo Finance"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-09-03",
+          "accession_number": "0001596532-26-000222",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-09-01",
+          "accession_number": "0001596532-26-000220",
+          "provider": "sec"
+        },
+        {
+          "form": "144",
+          "filed_at": "2026-09-01",
+          "accession_number": "0001950047-26-008952",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/anet",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=ANET&owner=exclude"
+    },
+    {
+      "symbol": "ORCL",
+      "name": "Oracle",
+      "sector": "Hyperscale Cloud",
+      "sector_key": "hyperscale_cloud",
+      "benchmark_etfs": [
+        "QQQ",
+        "IGV",
+        "XLK"
+      ],
+      "signal": "neutral",
+      "score": 57,
+      "confidence": "low",
+      "setup_type": "gap_up_news",
+      "price": 157.91,
+      "previous_close": 154.04,
+      "premarket_change_pct": 2.52,
+      "change_5d_pct": 1.38,
+      "change_20d_pct": 7.37,
+      "volume_ratio": 1.12,
+      "relative_strength_pct": 3.03,
+      "sector_trend": "negative",
+      "news_sentiment": "positive",
+      "news_count": 3,
+      "earnings_status": "144, 4",
+      "summary": "Watchlist item from +2.5% vs previous close, negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +2.5%.",
+        "5-day relative strength: +3.0 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Oracle (ORCL) Stock Gets Fair Value Trim As Analysts Split On AI And Capex - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUWtYSEJtRTJoNVZSUFNtaHozNTcyeUJBNU9Vc1kwWlpmZEhDU25tTDFwSEN5ci1ieGtSUnhGbU5mbG5WYnNaNFhuZmlYa3pBcF9YYmJNRjczb2t1RUZSNUVoRDVrSTZUb21aX0szcktTamZiX011Q0I3eWpyanE3NG13Tl8tZnN2bVhHOFJrd1hxN2Jua2Vv?oc=5",
+          "domain": "https://finance.yahoo.com",
+          "published_at": "2026-09-04T03:08:00+00:00",
+          "provider": "google_news_rss",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Oracle Stock Could Be Software’s Next Big Winner - barrons.com",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaWxsSUExYVpSOWQ0Ym82SXowazBWNHZmZS1EQ0hnTDdNVWFUNHhnTG15akRKN0w1NUpPMDdwcTQ0RFlnTGQzRjdTeXhtZjZrUWdxREdFU1BiSTNYeGZENFZaTUZ1ZlBVYnYwdUZfZEszTXNVdDFpWHpBNVNJaUxXUDVWdnBmTWNFVWZBUmJnRGd4VERNLWd3?oc=5",
+          "domain": "https://www.barrons.com",
+          "published_at": "2026-09-03T18:23:00+00:00",
+          "provider": "google_news_rss",
+          "source": "barrons.com"
+        },
+        {
+          "title": "ORCL Stock Tumbles 10% Despite Earnings Beat, But Wall Street Recommends 'Aggressive' Buying On Selloff - Stocktwits",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQM3VwLWExN0N3cHpwVVlucHZYU0pQd0lPdzl4M2J0cEllWElXdy13bTZRR1doa1VsX1NFTEktRVVfa05PNF8wNnY3Vmd1MGxzemR6X2ppVG84TWk4X0VDY0xJX1BOdTFOMGV4WTJfQ1ZsYzdDa05tMDZvNUxEWTYxaTdjcnpjZnFINkxRZHd1YXp4QTFFQmtRdEVQSGwweWZoQWlNTVNkVXRKaW8tVmd5d3JtU1RFVGh5RzJUWjZSSnVITnBrTVM0RzBRb1R3RkJGUTJ6NXdR?oc=5",
+          "domain": "https://stocktwits.com",
+          "published_at": "2026-09-04T00:57:52+00:00",
+          "provider": "google_news_rss",
+          "source": "Stocktwits"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-07-28",
+          "accession_number": "0001341439-26-000066",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-06-26",
+          "accession_number": "0001341439-26-000064",
+          "provider": "sec"
+        },
+        {
+          "form": "144",
+          "filed_at": "2026-06-24",
+          "accession_number": "0001950047-26-006460",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/orcl",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=ORCL&owner=exclude"
+    },
+    {
+      "symbol": "HUT",
+      "name": "Hut 8",
+      "sector": "Compute Mining",
+      "sector_key": "compute_mining",
+      "benchmark_etfs": [
+        "WGMI",
+        "BTC-USD"
+      ],
+      "signal": "neutral",
+      "score": 56,
+      "confidence": "low",
+      "setup_type": "gap_up_news",
+      "price": 89.36,
+      "previous_close": 88.09,
+      "premarket_change_pct": 1.44,
+      "change_5d_pct": 1.1,
+      "change_20d_pct": -2.82,
+      "volume_ratio": 1.14,
+      "relative_strength_pct": 2.03,
+      "sector_trend": "flat",
+      "news_sentiment": "positive",
+      "news_count": 3,
+      "earnings_status": "8-K",
+      "summary": "Watchlist item from +1.4% vs previous close, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +1.4%.",
+        "5-day relative strength: +2.0 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Hut 8 (NASDAQ:HUT) Stock Price Up 9.2% - Should You Buy? - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNQ2pSM25SVDVMMVI5dURHckNuNEVleFJaMUw2RmJSU3d1dUNzNzdKUm0ydkEtamllWXJtUkVvRXYxYktabnhqVWZCenhFd19vRDhlUnBTV0c0S1lqc1dQV0kzbWxUZEp5QWxzdlA0ODNDUUc5cTZCZlpabG5mZkNZN0pXdXg0ZTV5R3RlQktPQmVvV3NfSEw0RmMwa3pscWpfaDBTQU8zMHNEb2x6TWc?oc=5",
+          "domain": "https://www.marketbeat.com",
+          "published_at": "2026-09-03T21:22:05+00:00",
+          "provider": "google_news_rss",
+          "source": "MarketBeat"
+        },
+        {
+          "title": "This Week In Cloud AI - Opti9 Expands Canadian Reach with Strategic Hut 8 Acquisition - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPdnUwZlA3a0o3ZElVTFV4UDdmZlBNUWFCUjRhSC12ZTZ5SWg1Tk94TGNEN0I2X2Joc1E4cndSNkFuMUNtLU5DWUZ3a2YwTzBsRG5Oakd0NWU0NzU1Q3hpbWRyOWdDcTZoLUFqWS1pSXh3ajJQUk9SX2QzUC1VeG9ueEZhU1dEQWVGVHRmR2lHRWl3dWxVWExXck5VQ0ctVWtSMC1zTE55NkJiTnpJeUlmVFJPNEZzS1N2eTJTTll6dXRVMkMyVy1B0gHMAUFVX3lxTFBPTVZXVlFZSHZ1UE1SR1d6NHhhbjhxZUJib1pWazZySnNPbUVCbWZPWjE1blRLY3NfaFhuLTNlbWZabnZhTlZwdWNoM191aThvQnV5d3BoZjdsUEFnRllqeWo5akV0V2xIZ0FrcWFvWUJHam1hbmYxYVYzUHBkUGxmZ3FkN1A0S05NSkFqdXlsTk80dVlKU2YtUlBUTmlMak43aHNWN0xQTnJkM3JWdW9WUnFzc3VkTjltOW5tWjZJYmkxeWV3QVBNQjR5UA?oc=5",
+          "domain": "https://simplywall.st",
+          "published_at": "2026-09-04T12:18:10+00:00",
+          "provider": "google_news_rss",
+          "source": "simplywall.st"
+        },
+        {
+          "title": "Hut 8 sells its Canadian managed cloud business to Opti9 (HUT:NASDAQ) - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPR3VET1FLcElKZzBBR0NXM0lzU214YkRSUTVJV09UWnNZTHR1OG9BanB5YkxzN3FwaDlsVVBXdWxfamhIbDhoTGtaRWtTdTlKcUt6ZWg5U0NQZW54ZmxmS0xrRzRaUmhveTdBX19kc0E2X0pqeGZNTGt2eE5BTjJsemNYX3pyWGtxZmhNV1hFR001RXpwTXowQnpn?oc=5",
+          "domain": "https://seekingalpha.com",
+          "published_at": "2026-09-03T16:26:39+00:00",
+          "provider": "google_news_rss",
+          "source": "Seeking Alpha"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-08-25",
+          "accession_number": "0001964789-26-000038",
+          "provider": "sec"
+        },
+        {
+          "form": "144",
+          "filed_at": "2026-08-24",
+          "accession_number": "0001959173-26-006382",
+          "provider": "sec"
+        },
+        {
+          "form": "8-K",
+          "filed_at": "2026-08-04",
+          "accession_number": "0001104659-26-090041",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/hut",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=HUT&owner=exclude"
+    },
+    {
+      "symbol": "FN",
+      "name": "Fabrinet",
+      "sector": "Manufacturing",
+      "sector_key": "manufacturing",
+      "benchmark_etfs": [
+        "XLI",
+        "SMH"
+      ],
+      "signal": "neutral",
+      "score": 45,
+      "confidence": "low",
+      "setup_type": "gap_up_news",
+      "price": 409.73,
+      "previous_close": 395.0,
+      "premarket_change_pct": 3.73,
+      "change_5d_pct": -8.71,
+      "change_20d_pct": -27.38,
+      "volume_ratio": 1.02,
+      "relative_strength_pct": -5.75,
+      "sector_trend": "negative",
+      "news_sentiment": "mixed",
+      "news_count": 3,
+      "earnings_status": "144, 4",
+      "summary": "Watchlist item from +3.7% vs previous close, negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +3.7%.",
+        "5-day relative strength: -5.8 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Fabrinet (FN) Is Back In Focus, So What Are Investors Weighing Now? - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxObG1oNXo1cllYNlo4OWNEMmRTV0R0bUY4RW53c0I0SDVZUzhRNVp4NUNoVkp6ZmhDb19Mc3FOb2Rlam5JUnUwSlpRQkZHWXNPdF83MzFDWnVQcFp6ZHFYRWxiaEl0UUF6Q0djSmljOHozUlRqWWoyTHJhSDBFYVBWaDNVRjZ5czNUNmpZQWZBdXhxTEtRMmV1dGVKcktBQW1LT2xTVEhKMkdKUzQyZGJoWm5EZXo4aTRZX0HSAb8BQVVfeXFMTkhxM1lIYkpERjRpSWNPQ0hRdkFIa2V4ZHpVSXk1dDBpa2ozVjNqdXVHd2dLVDZRNDktVmptcDlXcmxRUnpfY0txejhXeVNycWxhQ0xZeWxwQjBPdVBqbW0tSG9GTDZYQ0dpV3dGYlBNV3l5MkJaandGcnlmbW9NajZ4RVEyYWVHUWZHZkdDc25KTTJSX3BtcUljaWRJQzZEVWRybkRoLWhibmRWc2dWYndQamE5WFVOS1pJbUNwQ0U?oc=5",
+          "domain": "https://simplywall.st",
+          "published_at": "2026-09-03T20:35:25+00:00",
+          "provider": "google_news_rss",
+          "source": "simplywall.st"
+        },
+        {
+          "title": "Fabrinet (FN) EVP, Sales & Marketing Edward Archer Sells 2,500 S - GuruFocus",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRTJCZDd5Uml6aWtaOEg0VGRqZzZvaGN5amZCbGs2ZUhrWU0yNUdUWGlsY0pfWE8xTC1oTkthdTBKdHROUGx3YmxvenZwZVctMEZzN05MUk5zUW9BeWNOUEdEbzZkSmxTb3ZRS1JCcXM3YTVJMEJ5R1hNV2ZBOTQyWk5pMm5uNWRpWDdleEtlMnpSYkduRWRVNERCdUlXbC0xampBSA?oc=5",
+          "domain": "https://www.gurufocus.com",
+          "published_at": "2026-09-04T06:39:09+00:00",
+          "provider": "google_news_rss",
+          "source": "GuruFocus"
+        },
+        {
+          "title": "$Fabrinet (FN.US)$ WOW[Grimace][Grimace] - Moomoo",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE96ajRaS3dURUpaenZQOVQ5eEhFaVhyeXpuckswQjBuclZBSWljcE93cVhIdW9ud3pnSGRVRkxmd1l1aGxMY3p5YWhtS1d0ekJuTWRxU25kNW5kdk9zMGYzOEtZSHp5V21XTnRHMlhrWHYwbC1SRF9XbVhZS3o?oc=5",
+          "domain": "https://www.moomoo.com",
+          "published_at": "2026-09-03T13:57:17+00:00",
+          "provider": "google_news_rss",
+          "source": "Moomoo"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-09-03",
+          "accession_number": "0001785907-26-000010",
+          "provider": "sec"
+        },
+        {
+          "form": "144",
+          "filed_at": "2026-09-03",
+          "accession_number": "0001973379-26-000334",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-08-26",
+          "accession_number": "0001494794-26-000008",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/fn",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=FN&owner=exclude"
+    },
+    {
+      "symbol": "VRT",
+      "name": "Vertiv Holdings",
+      "sector": "Servers and Thermal Management",
+      "sector_key": "servers_thermal",
+      "benchmark_etfs": [
+        "SMH",
+        "XLK"
+      ],
+      "signal": "neutral",
+      "score": 55,
+      "confidence": "low",
+      "setup_type": "gap_up_news",
+      "price": 276.46,
+      "previous_close": 268.83,
+      "premarket_change_pct": 2.84,
+      "change_5d_pct": -0.17,
+      "change_20d_pct": -2.3,
+      "volume_ratio": 1.04,
+      "relative_strength_pct": 2.31,
+      "sector_trend": "negative",
+      "news_sentiment": "positive",
+      "news_count": 3,
+      "earnings_status": "8-K",
+      "summary": "Watchlist item from +2.8% vs previous close, negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +2.8%.",
+        "5-day relative strength: +2.3 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Why Vertiv Holdings (VRT) Stock Is Up Today - Quiver Quantitative",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSUVnLXVzX2NUeVY4ZW51YXdIVk1wYmhCRWRWRGhLcGUxNnpGTmcwcVpzbGRFLWY2a0ZoaDlMby16V0FVOUVDOUpGTWFYeGFEZDZjeGdCLWxWTk9ka2VBdWJoSnAxSnlSdjUzRXc0eXVDWngwTzlmcks2cGtzWHNpMnlCdG9oWlk?oc=5",
+          "domain": "https://www.quiverquant.com",
+          "published_at": "2026-09-03T15:35:00+00:00",
+          "provider": "google_news_rss",
+          "source": "Quiver Quantitative"
+        },
+        {
+          "title": "Vertiv: AI Infrastructure Growth Impressive, Valuation Reflects High-Growth Expectations - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdGhfUk53R295b1VpV0hGc3hWVlE3QlBFWl9QSlEtd1dDak5LZXpOaEVPQWl0TjJRTDNOanR0dXRScU42WGEya2J3N0hXLTVhSEsySGNZU3BXTXVUWDRRX1Z2UlRIaXRnSm5KLXZ4RDNSekw5RldOQ2t0NmkxS1dyM3psSnM1WjhVdmk0NlJkLUVFaWdmdldCT0x3RUdkcUlkMXNZcFEtRV9rRjNBMXFZN2JCQ2xLRlVLQUtuZzVLUHh6WDJLSzVGYUVXMzRMUQ?oc=5",
+          "domain": "https://seekingalpha.com",
+          "published_at": "2026-09-04T11:46:24+00:00",
+          "provider": "google_news_rss",
+          "source": "Seeking Alpha"
+        },
+        {
+          "title": "Vertiv Holdings Co (VRT) Stock Up 4.7% but GF Value Says Overvalued -- GF Score: 88/100 - GuruFocus",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSGNUUjBQaHFzWGMyLWMyOGNFbGVxUWhuRWhBN3pacElqWGpLMmxrc2pTcTREU1BzaUZ5WGdGdFdTM0owaUV3bXBrNlNaa0htSVlnVEluUGRoYjlwdERZVDEwR25JX3J2Rno5RURoQVpzN0RLeHZJRVpvV1VhMXpseUJRdk9DZG9scHJsOEFyTDlVa1hQUnpLMUpySHZfMzRoWW94cWZDSEtub1JpTmJjNk9laWNSeEVW?oc=5",
+          "domain": "https://www.gurufocus.com",
+          "published_at": "2026-09-03T21:33:14+00:00",
+          "provider": "google_news_rss",
+          "source": "GuruFocus"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-09-02",
+          "accession_number": "0000950142-26-002483",
+          "provider": "sec"
+        },
+        {
+          "form": "8-K",
+          "filed_at": "2026-09-02",
+          "accession_number": "0001193125-26-379306",
+          "provider": "sec"
+        },
+        {
+          "form": "8-K",
+          "filed_at": "2026-09-02",
+          "accession_number": "0001628280-26-059961",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/vrt",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=VRT&owner=exclude"
+    },
+    {
+      "symbol": "VST",
+      "name": "Vistra Energy",
+      "sector": "Energy Infrastructure",
+      "sector_key": "energy_infrastructure",
+      "benchmark_etfs": [
+        "XLU",
+        "XLE"
+      ],
+      "signal": "neutral",
+      "score": 55,
+      "confidence": "low",
+      "setup_type": "sector_tailwind",
+      "price": 146.11,
+      "previous_close": 144.22,
+      "premarket_change_pct": 1.31,
+      "change_5d_pct": 3.15,
+      "change_20d_pct": 2.01,
+      "volume_ratio": 1.04,
+      "relative_strength_pct": 1.46,
+      "sector_trend": "positive",
+      "news_sentiment": "sparse",
+      "news_count": 0,
+      "earnings_status": "10-Q",
+      "summary": "Watchlist item from +1.3% vs previous close, positive sector tape.",
+      "drivers": [
+        "Move vs previous close: +1.3%.",
+        "5-day relative strength: +1.5 pts.",
+        "Recent filing/event forms: 10-Q."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-09-02",
+          "accession_number": "0001268406-26-000009",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-08-24",
+          "accession_number": "0001268406-26-000007",
+          "provider": "sec"
+        },
+        {
+          "form": "10-Q",
+          "filed_at": "2026-08-10",
+          "accession_number": "0001692819-26-000019",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "sparse",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/vst",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=VST&owner=exclude"
+    },
+    {
+      "symbol": "FLEX",
+      "name": "Flex Ltd",
+      "sector": "Manufacturing",
+      "sector_key": "manufacturing",
+      "benchmark_etfs": [
+        "XLI",
+        "SMH"
+      ],
+      "signal": "neutral",
+      "score": 46,
+      "confidence": "low",
+      "setup_type": "gap_up_news",
+      "price": 110.48,
+      "previous_close": 107.89,
+      "premarket_change_pct": 2.41,
+      "change_5d_pct": -6.43,
+      "change_20d_pct": -12.03,
+      "volume_ratio": 1.3,
+      "relative_strength_pct": -3.46,
+      "sector_trend": "negative",
+      "news_sentiment": "mixed",
+      "news_count": 3,
+      "earnings_status": "DEFA14A",
+      "summary": "Watchlist item from +2.4% vs previous close, negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +2.4%.",
+        "5-day relative strength: -3.5 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "FLEX: Flex Ltd Latest Stock Price, Analysis, News and Trading Ideas - Stocktwits",
+          "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1Jb2xCd1hJOWtNMnNSRXY2VU9kNGRjb3ZZVkkySi1aQnhDblVjQ25QNXM0TWpzeEpPMXppZDFEcGVRYW03TUs5NExR?oc=5",
+          "domain": "https://stocktwits.com",
+          "published_at": "2026-09-04T00:36:27+00:00",
+          "provider": "google_news_rss",
+          "source": "Stocktwits"
+        },
+        {
+          "title": "Flex Expands Data Center Power Portfolio With $4.4 Billion Epc Power Deal - benzinga.com",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPM055QVEwSksxS2ZORTFMVFFMRVZNbUdFdTZTemVIS1FzWVZrdVQxUTJBVmMyanpnRFJYT1o3RkN2bEFacUdjbE9YdFRVVG9aSzhhU08yT0lYdHh4SVBfMWF0VzBNRlo0QmpMN3lFNDBka1I0WkFzMDNiSzJoNDl0RjNXcUw4ZGlRazhCRmZKa0VDWHJjNmFERjdlc3U4TllIbGt5d25SenJ2SXFvWURxZUU2bDF3NEk?oc=5",
+          "domain": "https://www.benzinga.com",
+          "published_at": "2026-09-04T13:04:19+00:00",
+          "provider": "google_news_rss",
+          "source": "benzinga.com"
+        },
+        {
+          "title": "Goldman Sachs’ tech conference features Flex Sept. 9 - Stock Titan",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUlZXa3pnLUYxb0dWaGtZNXhrdU9KTnRDNVpiQWNVZ2plYm1Ba1FNOWtZcjVmYzVXdGQtdkJVc3lRYVU0YzNoVk96a19lb1pvVUtTY3RHd0FVOVhrYWsyMjVzOFEwS0E3NmNmdlY0bEZfZ1VvYVd3LXhEX0FRSjBTQm8tYTJjNWdoeV9EbHVCRnNUaG5sWklZSlFyWQ?oc=5",
+          "domain": "https://www.stocktitan.net",
+          "published_at": "2026-09-03T20:06:00+00:00",
+          "provider": "google_news_rss",
+          "source": "Stock Titan"
+        }
+      ],
+      "filings": [
+        {
+          "form": "DEFA14A",
+          "filed_at": "2026-09-04",
+          "accession_number": "0001193125-26-382691",
+          "provider": "sec"
+        },
+        {
+          "form": "DEFA14A",
+          "filed_at": "2026-09-04",
+          "accession_number": "0001193125-26-382685",
+          "provider": "sec"
+        },
+        {
+          "form": "DEFA14A",
+          "filed_at": "2026-09-04",
+          "accession_number": "0001193125-26-382496",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/flex",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=FLEX&owner=exclude"
+    },
+    {
+      "symbol": "CLS",
+      "name": "Celestica",
+      "sector": "Manufacturing",
+      "sector_key": "manufacturing",
+      "benchmark_etfs": [
+        "XLI",
+        "SMH"
+      ],
+      "signal": "neutral",
+      "score": 53,
+      "confidence": "low",
+      "setup_type": "gap_up_news",
+      "price": 314.92,
+      "previous_close": 309.84,
+      "premarket_change_pct": 1.64,
+      "change_5d_pct": -2.38,
+      "change_20d_pct": -1.49,
+      "volume_ratio": 1.5,
+      "relative_strength_pct": 0.59,
+      "sector_trend": "negative",
+      "news_sentiment": "positive",
+      "news_count": 3,
+      "earnings_status": "4",
+      "summary": "Watchlist item from +1.6% vs previous close, negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +1.6%.",
+        "5-day relative strength: +0.6 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Celestica (TSX:CLS) Stock Jumped, What Is Driving Attention Now? - simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPc19mZVdHQ0VlSmJWWjlLOVJEMUJTWUZQNlppajg0dF9nVkdWa0J6bUl3Q05EM3g1TFpkU1FadzlPODRQbmRrLWdBNWd1emYyc0hTYW5yblNwQ1J5RkV1WDZ6LXJMeUd6LVlqVEtUX1NQbnRGd2FvYjhYenF0Tmd5Z3ZiaGlNUWpubW10UmxZODM2MWFPUTJSWlF6MHY0N0UtZjI1SXEwWjBrM21BcDVFNnlkRi1qUU9VeG5TNDBtVVN0OFNo0gHKAUFVX3lxTE1lR3VLWlMxT0hhUV9wMmhRWWtSSWxydWxLcDFkNGtLSXhWRW5VblBPWWM1alVIRFlpeHNKbU5aQWlIUWI1YnJBcmJVOE1qeTJqOFEyVG1fNjBGZ0RpMXBwZDBUNldJSG1HNHlDLWg1dTFVZjNiNXRzTk1KLWRyX2ppd3FIcGZVc0p3NlVBeXhJMFRFTHAteUFpTFd6S1ZGVmwxNzJTY2duTXowbWx6cWVpZmZtLVYwRy1sUG92UnpIN1puM1FvRm9jMXc?oc=5",
+          "domain": "https://simplywall.st",
+          "published_at": "2026-09-04T00:40:33+00:00",
+          "provider": "google_news_rss",
+          "source": "simplywall.st"
+        },
+        {
+          "title": "Celestica Shares Jump as Investors Refocus on AI Infrastructure Growth - Quiver Quantitative",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPam9rbHg1Z05vT29OZnNVbzVCTy1fVWdReWV1czVpOXgxTFptMDVMV0hUc0Q0d1U5aU5QYWdrM2puXzdsamphYmc2aFItYTBBWmlUZ3RYT1ViVEttN2s5RzV4OUdZaWZaSVUzSnIwQldES0s4QUxKMWNIWnRjQjduYkZpSkZOYkJQczNrdEdDS0FmNEVZT0I2UE93UFdTZTJuc3Z3VTlR?oc=5",
+          "domain": "https://www.quiverquant.com",
+          "published_at": "2026-09-03T16:18:00+00:00",
+          "provider": "google_news_rss",
+          "source": "Quiver Quantitative"
+        },
+        {
+          "title": "CLS Stock Jumps 12% As Broadcom AI Call Sparks Switch Rally - Stocktwits",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVDBoYU55OGpqcWpSR25ReG9SaG9YSk56dzVLWV9hXzVRQVVsTUdOMkJFMzdmeV9Vb3JTR1V3WG1rQWZNN3pSeUFuVWdZTWVUTTcwOVByWHM1dWpzQ0ZfVWxyRzdwM3NiUDRMSDFJeUpSbm5LV28ycXFYZ0N3TllyYm0wM1h2cTJtdkp3WXVkaktTV2ZsQlZZdlliWHRiRDVRTEFKSFFVSWotc01vaEFSNWh5S3JXTE1UVFExMkJJMA?oc=5",
+          "domain": "https://stocktwits.com",
+          "published_at": "2026-09-03T20:22:00+00:00",
+          "provider": "google_news_rss",
+          "source": "Stocktwits"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-08-14",
+          "accession_number": "0001193125-26-352263",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-08-12",
+          "accession_number": "0001193125-26-347045",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-08-12",
+          "accession_number": "0001193125-26-347044",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/cls",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=CLS&owner=exclude"
+    }
+  ],
+  "postdoc_jobs": [],
+  "jobs": [],
+  "supervisor_updates": [],
+  "weather": [
+    {
+      "query": "London",
+      "label": "London, England, United Kingdom",
+      "resolved_name": "London",
+      "region": "England",
+      "country": "United Kingdom",
+      "latitude": 51.50853,
+      "longitude": -0.12574,
+      "timezone": "Europe/London",
+      "forecast_date": "2026-09-04",
+      "condition": "Overcast",
+      "weather_code": 3,
+      "temperature_c": 22.3,
+      "apparent_temperature_c": 18.8,
+      "temp_max_c": 22.2,
+      "temp_min_c": 17.4,
+      "humidity_pct": 40,
+      "wind_speed_kmh": 20.5,
+      "precipitation_probability_pct": 94,
+      "is_day": true,
+      "sunrise": "2026-09-04T06:18",
+      "sunset": "2026-09-04T19:40",
+      "source": "Open-Meteo",
+      "source_url": "https://open-meteo.com/"
+    }
+  ]
+}
