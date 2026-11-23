@@ -1,0 +1,2607 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T21:48:29.095409+00:00",
+  "sections_ordered": [
+    {
+      "key": "hitokoto",
+      "payload_key": "hitokoto",
+      "title": "一言",
+      "icon": "✦",
+      "items": [
+        {
+          "quote": "仙路尽头谁为峰，一见无始道成空。",
+          "author": "无始大帝",
+          "source": "遮天",
+          "category": "d"
+        }
+      ],
+      "meta": {
+        "count": 1
+      }
+    },
+    {
+      "key": "weather",
+      "payload_key": "weather",
+      "title": "Weather",
+      "icon": "🌦️",
+      "items": [
+        {
+          "query": "London",
+          "label": "London, England, United Kingdom",
+          "resolved_name": "London",
+          "region": "England",
+          "country": "United Kingdom",
+          "latitude": 51.50853,
+          "longitude": -0.12574,
+          "timezone": "Europe/London",
+          "forecast_date": "2026-11-23",
+          "condition": "Clear sky",
+          "weather_code": 0,
+          "temperature_c": 3.6,
+          "apparent_temperature_c": -0.1,
+          "temp_max_c": 7.7,
+          "temp_min_c": 3.0,
+          "humidity_pct": 77,
+          "wind_speed_kmh": 10.4,
+          "precipitation_probability_pct": 0,
+          "is_day": false,
+          "sunrise": "2026-11-23T07:31",
+          "sunset": "2026-11-23T16:01",
+          "source": "Open-Meteo",
+          "source_url": "https://open-meteo.com/"
+        }
+      ],
+      "meta": {
+        "count": 1,
+        "city": "London"
+      }
+    },
+    {
+      "key": "us_stocks",
+      "payload_key": "us_stocks",
+      "title": "US Stocks",
+      "icon": "📈",
+      "items": [
+        {
+          "symbol": "CRDO",
+          "name": "Credo Technology",
+          "sector": "Networking Equipment",
+          "sector_key": "networking_equipment",
+          "benchmark_etfs": [
+            "IGN",
+            "XLK"
+          ],
+          "signal": "bearish",
+          "score": 30,
+          "confidence": "medium",
+          "setup_type": "risk_watch",
+          "price": 122.38,
+          "previous_close": 122.46,
+          "premarket_change_pct": -0.06,
+          "change_5d_pct": -24.07,
+          "change_20d_pct": -32.2,
+          "volume_ratio": 1.6,
+          "relative_strength_pct": -11.58,
+          "sector_trend": "negative",
+          "news_sentiment": "mixed",
+          "news_count": 3,
+          "earnings_status": "4",
+          "summary": "Bearish/risk setup from negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: -0.1%.",
+            "5-day relative strength: -11.6 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Improves if price reclaims previous close and negative headlines are not confirmed."
+          ],
+          "risk_flags": [
+            "negative headline: Among Five November 23 Gainers With Upcoming Reports, Which Carries the Greatest Downside Risk: Ciena (NYSE:CIEN), Semtech (NASDAQ:SMTC), Dell Technologies (NYSE:DELL), CleanSpark (NASDAQ:CLSK) or Credo Technology (NASDAQ:CRDO) - kalkine.ca"
+          ],
+          "sources": [
+            {
+              "title": "Credo Technology Group Stock And 2 Undervalued Stocks To Watch - Yahoo Finance",
+              "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXFTeU8xU1RKNFlrMGloR3RfNHZjNGw5aFFGb3Z5NVFNYThkaTR1NEdOd0xWVk80aF9BQmdrU3loaFdrRUtld1lFRHlKWGx5NWo2a2Z2ckVFdUdpcnJzcDZtRDljeU92bWR2cTFHUmJYMXV2ZDlWdm1tVjJDam5ZdG9CeV9XYTdsVVBFbTg2d1VVQXpoTlFXZlUtYw?oc=5",
+              "domain": "https://finance.yahoo.com",
+              "published_at": "2026-11-23T11:12:51+00:00",
+              "provider": "google_news_rss",
+              "source": "Yahoo Finance"
+            },
+            {
+              "title": "Tech rebound sends Credo Technology higher by 24% (CRDO:NASDAQ) - Seeking Alpha",
+              "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMU9WbzctM2NiNERQTkdnX19YanBHZkZoTTNRTkptYWNGNi1WQTdJZkJ1a3A5endkWGZScjBialdWMmwtMjVjb2xLYVRvbDVmamtpMFJoR1YzVG1fd29yN2dyT2NweWtkNDdnbjFtellxeEpXM1hSV2ZoWW5VNkVPVjkxS1pjem5yT21MUDJjSQ?oc=5",
+              "domain": "https://seekingalpha.com",
+              "published_at": "2026-11-23T15:17:34+00:00",
+              "provider": "google_news_rss",
+              "source": "Seeking Alpha"
+            },
+            {
+              "title": "Among Five November 23 Gainers With Upcoming Reports, Which Carries the Greatest Downside Risk: Ciena (NYSE:CIEN), Semtech (NASDAQ:SMTC), Dell Technologies (NYSE:DELL), CleanSpark (NASDAQ:CLSK) or Credo Technology (NASDAQ:CRDO) - kalkine.ca",
+              "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxObGZhUVUtcXBwRGdTQ0xjZmN4V3lZeTVzb2RjQVNKWl92dHc4dUNXRENEYkxKNDdFRjhjWG5FX2FibHNhX29MS1BkZ0tjVUZzbDVoM0htY0o3aGs4aEFwZzREdTZFYUJ2WTY3a2tvMk4zYU5OSHMxbkZvWlo3Z1llclpMMFpSSXhpanFBMElwaHZ4ak1FQjIyQ3hfOWM4VnotY3d0Tkt4VnBoUVo1R2kxZTNOTVZJcGs2Nmd4Qnpfdl9zZlV3eHRkMGtLbTdBVi13dWQ2akdOcXJEcHJVYkwwanlUMFpNSjczR2dhNEg2Z2kxTmhvaHVHbXZLam13VFk2WGRCQXlGbmVZaXhmWnNZZWRwa2VKOWxHWl9OMzdsaGo2MXh5b216MDVYRDdhcGhndzFrUlAtTHFhVEFkNF9obURrY0lDV1ZNUzNzN3pqYXYwRl9NZXR2LV9Uc1ppWC1EY1E?oc=5",
+              "domain": "https://kalkine.ca",
+              "published_at": "2026-11-23T17:39:00+00:00",
+              "provider": "google_news_rss",
+              "source": "kalkine.ca"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-11-23",
+              "accession_number": "0001628280-26-075508",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-10-29",
+              "accession_number": "0001628280-26-068203",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-10-22",
+              "accession_number": "0001628280-26-066888",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/crdo",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=CRDO&owner=exclude"
+        },
+        {
+          "symbol": "VRT",
+          "name": "Vertiv Holdings",
+          "sector": "Servers and Thermal Management",
+          "sector_key": "servers_thermal",
+          "benchmark_etfs": [
+            "SMH",
+            "XLK"
+          ],
+          "signal": "bearish",
+          "score": 31,
+          "confidence": "medium",
+          "setup_type": "risk_watch",
+          "price": 187.1,
+          "previous_close": 186.43,
+          "premarket_change_pct": 0.36,
+          "change_5d_pct": -17.73,
+          "change_20d_pct": -14.45,
+          "volume_ratio": 1.42,
+          "relative_strength_pct": -2.58,
+          "sector_trend": "negative",
+          "news_sentiment": "negative",
+          "news_count": 3,
+          "earnings_status": "10-Q, 8-K",
+          "summary": "Bearish/risk setup from negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +0.4%.",
+            "5-day relative strength: -2.6 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Improves if price reclaims previous close and negative headlines are not confirmed."
+          ],
+          "risk_flags": [
+            "negative headline: Vertiv downgraded by Robert W. Baird with a new price target - Quantisnow"
+          ],
+          "sources": [
+            {
+              "title": "Vertiv (VRT) Stock Looks Like A Bargain On Cash Flow - Yahoo Finance",
+              "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNT1RkQzVwOUgxcGRCa1RsTW56Y255TVQ0NjJZYzhhQWp3ZHdubE5HWU8tSkFFV1FGNzkxZ2ZEWGE2b2QwWnY1UzUyTGlYQmphbWZ5MzF4MmozN1loN2RrWGFBa2VpTEo3S3B6X1N3cU1XdENfTXQ3THhJdXpweGh4VVJ5cEtWWmk2dWw2b2UySVI4Vm9CVThoMnZndw?oc=5",
+              "domain": "https://finance.yahoo.com",
+              "published_at": "2026-11-23T15:08:12+00:00",
+              "provider": "google_news_rss",
+              "source": "Yahoo Finance"
+            },
+            {
+              "title": "Vertiv downgraded by Robert W. Baird with a new price target - Quantisnow",
+              "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSGpWWkxaU0dhUXA1ZFJoUjJMMWNHSFhZWGl2QTVGQTluVGR2b29mdUNSNTFVXy1kS3lVaGdjczhWaE8tZGp6azJSSkxtc3pSSnF5dTZKZlJWdzJxSlV5VEZLekQ4eWpWUHQ5UVZVTjlvNlJKdHBzaXptNzRaOHB6VnVQQkNyRlZkUVdBdE1tVFZYcHRWc0w0UHN4WQ?oc=5",
+              "domain": "https://www.quantisnow.com",
+              "published_at": "2026-11-23T12:50:42+00:00",
+              "provider": "google_news_rss",
+              "source": "Quantisnow"
+            },
+            {
+              "title": "What Vertiv Stock Says About AI Data Center Sentiment - Simply Wall St",
+              "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNcnVuZFhzaUkxR3JDTTVyRGdNY2pEaU1PbkhFdEFScWFLcW50MFIwTHRJWmRfUzJtS0pXdWJHX2hlblZFWUdwN0RVelVJdHk0V0tyT2RCWUtJUGlRY0RQNS13ZFFjRG1XWmpkLW92V1h6dlNNeWx0X2xYVGNDbDc5S25NZGEtcnhESHB4QVBNNGhCLTcwNFUtLTZla19CVG5feC1CX25nNVhwTEdNY2wwTXlTc0NxVXdyaThsMXlQQkJMWEZpRGhfOHEzd19kaGplTGfSAdIBQVVfeXFMTXJ1bmRYc2lJMUdyQ001ckRnTWNqRGlNT25IRXRBUnFhS3FudDBSMEx0SVpkX1MybUtKV3ViR19oZW5WRVlHcDdEVXpVSXR5NFdLck9kQllLSVBpUWNEUDUtd2RRY0RtV1pqZC1vdldYenZTTXlsdF9sWFRjQ2w3OUtuTWRhLXJ4REhweEFQTTRoQi03MDRVLS02ZWtfQlRuX3gtQl9uZzVYcExHTWNsME15U3NDcVV3cmk4bDF5UEJCTFhGaURoXzhxM3dfZGhqZUxn?oc=5",
+              "domain": "https://simplywall.st",
+              "published_at": "2026-11-23T14:08:44+00:00",
+              "provider": "google_news_rss",
+              "source": "Simply Wall St"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-11-17",
+              "accession_number": "0001628280-26-074512",
+              "provider": "sec"
+            },
+            {
+              "form": "8-K",
+              "filed_at": "2026-11-13",
+              "accession_number": "0001628280-26-073564",
+              "provider": "sec"
+            },
+            {
+              "form": "10-Q",
+              "filed_at": "2026-10-28",
+              "accession_number": "0001628280-26-067893",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/vrt",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=VRT&owner=exclude"
+        },
+        {
+          "symbol": "DELL",
+          "name": "Dell Technologies",
+          "sector": "Servers and Thermal Management",
+          "sector_key": "servers_thermal",
+          "benchmark_etfs": [
+            "SMH",
+            "XLK"
+          ],
+          "signal": "bearish",
+          "score": 32,
+          "confidence": "medium",
+          "setup_type": "risk_watch",
+          "price": 328.93,
+          "previous_close": 335.89,
+          "premarket_change_pct": -2.07,
+          "change_5d_pct": -19.3,
+          "change_20d_pct": -39.09,
+          "volume_ratio": 1.69,
+          "relative_strength_pct": -4.15,
+          "sector_trend": "negative",
+          "news_sentiment": "mixed",
+          "news_count": 3,
+          "earnings_status": "144, 4",
+          "summary": "Bearish/risk setup from -2.1% vs previous close, negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: -2.1%.",
+            "5-day relative strength: -4.2 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Improves if price reclaims previous close and negative headlines are not confirmed."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Dell Stock Rallies 20% Ahead of Earnings: What's Happening? - Benzinga",
+              "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONHBtcFVFUDZPWS1Ub001U3ZJczQ1dmc1d2U3SUFpNVFZMldxeTdmc0pHdmVQMV9mSkJ3SGxKQ1hCOXdOb0ZlTzdkX3B1QTMtRUFsMzRZZ1pZTk44WkdvNHRpeHdzYnpUUGpKbHdzZmdjTTg5N3pITFVaVWhsY0xWTUpPbFctNVlYZ1I1bVU3QnhSM0lvTWVLck5lUGlxZ2t6VjNBcGZZVEFDOFhDcldUTWJWcDJ5WkU?oc=5",
+              "domain": "https://www.benzinga.com",
+              "published_at": "2026-11-23T16:51:17+00:00",
+              "provider": "google_news_rss",
+              "source": "Benzinga"
+            },
+            {
+              "title": "Dear Dell Stock Fans, Mark Your Calendars for November 24 - Barchart.com",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOYmIydTRSb3NJS3RmTEI1VnA3U3lKNG4tNmFodFR1UEZXMHA2aFRFT3RkZ0ZqQjd2MER1Y3lpenVJeEh0TWVUMzlCNzhfcEFvNEtFRFc0Z0lZWWlRWVQ5aG5nSzk4cmd5WjA0aWFLSGZCNEs4RGhGTUFzQVJyeTdVT3k5UVFTdlVzczdIalVpWGVYQlA3NGpvMVU4ZnRwakEwUGc?oc=5",
+              "domain": "https://www.barchart.com",
+              "published_at": "2026-11-23T20:43:38+00:00",
+              "provider": "google_news_rss",
+              "source": "Barchart.com"
+            },
+            {
+              "title": "Dell Stock Pops Ahead of Earnings as Nvidia Rebounds - Schaeffer's Investment Research",
+              "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRmx6SjBZWEFJY3VRY1c2bEMwcnlGdk84SDFwdTlmQldIUVV6YzU1V0U0ME94WmFmNHpHTzhkeEU2VThIdDBHcDR2cUk0dTVrUHZvMU1yZnhMNzVKWjNpTDN4dF9uQURobFVjdy1ZV2RXVG9vUWF5QmJ6Y3BsYkE0ei1kY2lZN3lQcjZ6WkJDV1lkejFkeGt0N3BJVFB0QzRXVkh3c181VlQtMzFTOUFXTg?oc=5",
+              "domain": "https://www.schaeffersresearch.com",
+              "published_at": "2026-11-23T15:51:47+00:00",
+              "provider": "google_news_rss",
+              "source": "Schaeffer's Investment Research"
+            }
+          ],
+          "filings": [
+            {
+              "form": "144",
+              "filed_at": "2026-11-23",
+              "accession_number": "0001959173-26-008202",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-10-26",
+              "accession_number": "0001662205-26-000021",
+              "provider": "sec"
+            },
+            {
+              "form": "144",
+              "filed_at": "2026-10-22",
+              "accession_number": "0001959173-26-007448",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/dell",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=DELL&owner=exclude"
+        },
+        {
+          "symbol": "SANM",
+          "name": "Sanmina",
+          "sector": "Manufacturing",
+          "sector_key": "manufacturing",
+          "benchmark_etfs": [
+            "XLI",
+            "SMH"
+          ],
+          "signal": "bearish",
+          "score": 32,
+          "confidence": "medium",
+          "setup_type": "risk_watch",
+          "price": 152.53,
+          "previous_close": 153.88,
+          "premarket_change_pct": -0.88,
+          "change_5d_pct": -11.72,
+          "change_20d_pct": -10.24,
+          "volume_ratio": 1.12,
+          "relative_strength_pct": 0.86,
+          "sector_trend": "negative",
+          "news_sentiment": "negative",
+          "news_count": 1,
+          "earnings_status": "10-K, 8-K",
+          "summary": "Bearish/risk setup from -0.9% vs previous close, negative sector tape, 1 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: -0.9%.",
+            "5-day relative strength: +0.9 pts.",
+            "1 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Improves if price reclaims previous close and negative headlines are not confirmed."
+          ],
+          "risk_flags": [
+            "negative headline: (SANM) Price Dynamics and Execution-Aware Positioning - Stock Traders Daily"
+          ],
+          "sources": [
+            {
+              "title": "(SANM) Price Dynamics and Execution-Aware Positioning - Stock Traders Daily",
+              "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxObG81WW8xUm1vWHUzTzBXS1QzdDhFYUt6cHJneXlreWkxMFpWUVlpWVhmQlNScFNOZzZLRTI1VEdSZnItLVhaTXp1YTg1ZUtTSEpSamFTejh4QTROM2UtMWR0MlVRamp4SUJLSnVxMk1TTm9kR3oxMHdmd3JXbEtHeHJuS0Z6eHgyUjFLTXROcnZjb0FaMHlBTDVHUDdLbE1kMEJaNWxpcnZCQnoyMEtiSVE0aDdEeEEza3RrRW1EMWxScF9ET21WSUszUQ?oc=5",
+              "domain": "https://news.stocktradersdaily.com",
+              "published_at": "2026-11-23T09:18:02+00:00",
+              "provider": "google_news_rss",
+              "source": "Stock Traders Daily"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-11-17",
+              "accession_number": "0001104659-26-129042",
+              "provider": "sec"
+            },
+            {
+              "form": "10-K",
+              "filed_at": "2026-11-17",
+              "accession_number": "0000897723-26-000048",
+              "provider": "sec"
+            },
+            {
+              "form": "8-K",
+              "filed_at": "2026-11-09",
+              "accession_number": "0000897723-26-000044",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/sanm",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=SANM&owner=exclude"
+        },
+        {
+          "symbol": "CLS",
+          "name": "Celestica",
+          "sector": "Manufacturing",
+          "sector_key": "manufacturing",
+          "benchmark_etfs": [
+            "XLI",
+            "SMH"
+          ],
+          "signal": "bearish",
+          "score": 33,
+          "confidence": "low",
+          "setup_type": "risk_watch",
+          "price": 214.37,
+          "previous_close": 213.24,
+          "premarket_change_pct": 0.53,
+          "change_5d_pct": -16.04,
+          "change_20d_pct": -22.39,
+          "volume_ratio": 1.33,
+          "relative_strength_pct": -3.45,
+          "sector_trend": "negative",
+          "news_sentiment": "mixed",
+          "news_count": 3,
+          "earnings_status": "4",
+          "summary": "Bearish/risk setup from negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +0.5%.",
+            "5-day relative strength: -3.5 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Improves if price reclaims previous close and negative headlines are not confirmed."
+          ],
+          "risk_flags": [
+            "negative headline: Why Celestica (TSX:CLS) was the S&P/TSX Composite's worst performer: a report of an SEC probe into Nvidia's accounting hit AI hardware stocks hard - kalkine.ca"
+          ],
+          "sources": [
+            {
+              "title": "What Explains The Move In Celestica Stock? - Yahoo Finance",
+              "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQN2pPVzU2MnQxdHVJQjVEblp0NmxZdWFuS0llc2R4S0hpWUdQRXZESGUwTnljaDhHdk1SeHd1dWd1aERneV9yOXNSb1V1VF8zbjBVTXMwQWVYektCczRBbVVDQkEyVUU1LVhzem9adUg3TWhEdTNLTjVpTG1nOTJEd2IxUUxHWTk4Sk8xdlpYRHdfUTZ3ZDdPMER3?oc=5",
+              "domain": "https://finance.yahoo.com",
+              "published_at": "2026-11-23T14:49:26+00:00",
+              "provider": "google_news_rss",
+              "source": "Yahoo Finance"
+            },
+            {
+              "title": "Celestica Inc. (CLS.TO) Interactive Stock Chart - Yahoo Finance - Yahoo! Finance Canada",
+              "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1sZGVVeHVhalNmTWJHakV6ajFoLWtJVHllSkxhVjI1eURMMUczYms1Wk9SNV9wMzY4MndvMkJpdDdGMVp1VHFmRXhWTEczcGpZbV9fMVlLRkR5NV9r?oc=5",
+              "domain": "https://ca.finance.yahoo.com",
+              "published_at": "2026-11-23T12:30:49+00:00",
+              "provider": "google_news_rss",
+              "source": "Yahoo! Finance Canada"
+            },
+            {
+              "title": "Why Celestica (TSX:CLS) was the S&P/TSX Composite's worst performer: a report of an SEC probe into Nvidia's accounting hit AI hardware stocks hard - kalkine.ca",
+              "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPQkN1ZnhYcVVmRTMzQlBDejFpckM2WkRGVThGNERnQkYydk03dUY1RThabUstcEJ4dGo1djJCNHhJQ05NQVVmZF9UUmYyWC1rWHAzc0w4VU9ncC1KanVoREFBVmU0VnRFeUwyMUZ2ZU1WRlZSTnBXVWc0ZjFMTGpYYkFVNFQwNXVjaS1DZW5QaE54a2hvTXFYSkZvVDhDVXU5VDZmME1WelBWM0NabmxKeWhCR19UbGJJZmwtZENGU0p1ajNnRE9WUDZGZGZPSWpfOTJUTzAyM04ydDJOZHB1RmhYam1QU19XOGR6ZWZhSjJuVkNZQlpjWkNuNHEyUV9IUlJF?oc=5",
+              "domain": "https://kalkine.ca",
+              "published_at": "2026-11-23T12:21:00+00:00",
+              "provider": "google_news_rss",
+              "source": "kalkine.ca"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-11-05",
+              "accession_number": "0001193125-26-449857",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-11-05",
+              "accession_number": "0001193125-26-449854",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-11-05",
+              "accession_number": "0001193125-26-449851",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/cls",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=CLS&owner=exclude"
+        },
+        {
+          "symbol": "HUT",
+          "name": "Hut 8",
+          "sector": "Compute Mining",
+          "sector_key": "compute_mining",
+          "benchmark_etfs": [
+            "WGMI",
+            "BTC-USD"
+          ],
+          "signal": "bearish",
+          "score": 33,
+          "confidence": "low",
+          "setup_type": "risk_watch",
+          "price": 51.03,
+          "previous_close": 51.37,
+          "premarket_change_pct": -0.66,
+          "change_5d_pct": -20.18,
+          "change_20d_pct": -24.96,
+          "volume_ratio": 1.6,
+          "relative_strength_pct": 3.63,
+          "sector_trend": "negative",
+          "news_sentiment": "mixed",
+          "news_count": 3,
+          "earnings_status": "4, SCHEDULE 13D/A, SCHEDULE 13G/A",
+          "summary": "Bearish/risk setup from negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: -0.7%.",
+            "5-day relative strength: +3.6 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Improves if price reclaims previous close and negative headlines are not confirmed."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Hut 8 Corp. (HUT) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+              "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5NSHFpdUpaZXdPbEtKQmlYRW1xc1BfODFmSG9raHJzZWVBUGN4bm1pbFdxUmZsMWE5eWNrYkowT3JYcVV3UnlydWZNaUtFNGxQ?oc=5",
+              "domain": "https://ca.finance.yahoo.com",
+              "published_at": "2026-11-23T16:03:34+00:00",
+              "provider": "google_news_rss",
+              "source": "Yahoo! Finance Canada"
+            },
+            {
+              "title": "Hut 8 stock outlook: Consolidation expected with $53.67 resistance in focus - Traders Union",
+              "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUjh5Q0M1REhOQ2tZczJyVVE0WXRRRWFhUE80dF9rcFRtbjNSZzJXNnNubmlfUGVHaEVrVEZoQVlvVjRWZHJtVjEtMExzcTZrSUpDcDVIWXJqTV80a1d6TFlWNWhFQTFCWVRzUmM1X0FIUHIycXZPaWRsVTZKUy0xcVM0cXg?oc=5",
+              "domain": "https://tradersunion.com",
+              "published_at": "2026-11-23T18:27:34+00:00",
+              "provider": "google_news_rss",
+              "source": "Traders Union"
+            },
+            {
+              "title": "(HUT) Investment Report (HUT:CA) - Stock Traders Daily",
+              "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYXZCQV9NczNTb3FyWHNMdDh6V1dMakF1YWV5S3NRa25sNmFNNUVVd1llVE1sSGxCSjlIOVFEdUl3S0JXZENIazduM2lvU2FxbnZndkNyVzNXUW9Zc3ZOOU9yX1R5VmJjUFBNdFExZkVMeGFHOGhWYnBKTUg2b3hkMXlrUTA1QQ?oc=5",
+              "domain": "https://news.stocktradersdaily.com",
+              "published_at": "2026-11-23T21:21:48+00:00",
+              "provider": "google_news_rss",
+              "source": "Stock Traders Daily"
+            }
+          ],
+          "filings": [
+            {
+              "form": "SCHEDULE 13G/A",
+              "filed_at": "2026-11-16",
+              "accession_number": "0000919574-26-008120",
+              "provider": "sec"
+            },
+            {
+              "form": "SCHEDULE 13D/A",
+              "filed_at": "2026-11-13",
+              "accession_number": "0001104659-26-127278",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-11-13",
+              "accession_number": "0001104659-26-127277",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/hut",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=HUT&owner=exclude"
+        },
+        {
+          "symbol": "SLDP",
+          "name": "Solid Power",
+          "sector": "Battery and Energy Storage",
+          "sector_key": "battery_storage",
+          "benchmark_etfs": [
+            "ICLN",
+            "XLU"
+          ],
+          "signal": "bearish",
+          "score": 33,
+          "confidence": "low",
+          "setup_type": "risk_watch",
+          "price": 1.43,
+          "previous_close": 1.42,
+          "premarket_change_pct": 1.06,
+          "change_5d_pct": -23.3,
+          "change_20d_pct": -31.82,
+          "volume_ratio": 2.15,
+          "relative_strength_pct": -15.53,
+          "sector_trend": "negative",
+          "news_sentiment": "sparse",
+          "news_count": 0,
+          "earnings_status": "10-Q, 8-K",
+          "summary": "Bearish/risk setup from +1.1% vs previous close, negative sector tape.",
+          "drivers": [
+            "Move vs previous close: +1.1%.",
+            "5-day relative strength: -15.5 pts.",
+            "Recent filing/event forms: 10-Q, 8-K."
+          ],
+          "invalidation": [
+            "Improves if price reclaims previous close and negative headlines are not confirmed."
+          ],
+          "risk_flags": [],
+          "sources": [],
+          "filings": [
+            {
+              "form": "10-Q",
+              "filed_at": "2026-11-04",
+              "accession_number": "0001104659-26-122310",
+              "provider": "sec"
+            },
+            {
+              "form": "8-K",
+              "filed_at": "2026-11-03",
+              "accession_number": "0001104659-26-122107",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-10-01",
+              "accession_number": "0001844862-26-000026",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "sparse",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/sldp",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=SLDP&owner=exclude"
+        },
+        {
+          "symbol": "INTC",
+          "name": "Intel",
+          "sector": "Foundry",
+          "sector_key": "foundry",
+          "benchmark_etfs": [
+            "SMH",
+            "SOXX"
+          ],
+          "signal": "bearish",
+          "score": 35,
+          "confidence": "low",
+          "setup_type": "risk_watch",
+          "price": 59.3,
+          "previous_close": 59.66,
+          "premarket_change_pct": -0.6,
+          "change_5d_pct": -14.05,
+          "change_20d_pct": -41.03,
+          "volume_ratio": 1.42,
+          "relative_strength_pct": 3.53,
+          "sector_trend": "negative",
+          "news_sentiment": "mixed",
+          "news_count": 3,
+          "earnings_status": "13F-HR, 4",
+          "summary": "Bearish/risk setup from negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: -0.6%.",
+            "5-day relative strength: +3.5 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Improves if price reclaims previous close and negative headlines are not confirmed."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Intel CEO Lip-Bu Tan Has Incredible News for Investors. Is This the Much-Needed Catalyst for the Stock? - Yahoo Finance",
+              "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQN3RQOGppb244SmpVZk16Q0JJZFE1dUNtQldZVE9yV2thTHB4c0Y1Qi14cGI0NGVFanBlWTNnTG1WQ0ltYTlST2Q4SWJRQUZyN255d3dRaHVPRmZLQTFTQ2tfVDJKb0ozbE1Hci1xZVV4NndKS1g2TVZJSjh5d19zR3MwZHhkTkZubUdINVl3?oc=5",
+              "domain": "https://finance.yahoo.com",
+              "published_at": "2026-11-23T12:47:02+00:00",
+              "provider": "google_news_rss",
+              "source": "Yahoo Finance"
+            },
+            {
+              "title": "Intel CEO Lip-Bu Tan Has Incredible News for Investors. Is This the Much-Needed Catalyst for the Stock? - The Motley Fool",
+              "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPTVllNVNCOTBTcUJtZURpZGZSVDE0STAwb3VQZHMyaDJVU1YyaXNWVGNQX1lJZUdMY2c2TlU0M2ZnbU9MblBNeTcwRjFHT24zalVPLXRVN1ctNjZvd2VhMGJyZmQ1eGhDMExFT2xETjRzbXlETzMzWlJKa0lWN1FtRXdNaDdsRDFUUkdLaEM2Z2pPSGRNVHhqSjVHR0R1TmJISnM4N3hiVU1NUWJ4MjVIMWZnX3NZNGlzd2RiakVpV0lvaThhdDU1bExkUV8tV2YtVXdiME82aXBfQ25s?oc=5",
+              "domain": "https://www.fool.com",
+              "published_at": "2026-11-23T12:27:02+00:00",
+              "provider": "google_news_rss",
+              "source": "The Motley Fool"
+            },
+            {
+              "title": "Did You Lose Money Investing in Intel Corporation? Robbins LLP Urges Investors with Significant Losses to Contact the Firm About Their Rights Against INTC - Finviz",
+              "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPOHdJM3ZEVFdwbExJVXJQTVdCLW1kQkJ2WTlfd3laVjZWM1lNT3hsbDZzQXlaUHlXYUYzbnBfbDhWLU1hTjFhZVotTzhhX3VvY3VRUm9pT2RhRTZNNzZ5Tm1oLTBkTzBzY09xQVk4RUl4U1hwa2szUk1yLXFNWHJkZWJoSnM5VlJUXzFSeFN4NjUtUHVKa2VkdEhNa1V0SFV4QUpXcjZ3Z3h2bkRJY0wxa3I0NGFRLU5BMEgzR3ZIMEFtOC1ZV083d0V1eEFCTFpEdjlFam51a0dnZmVGLXBDdjZfblhaRjBhMmFTX0w3clRXT1VuRzc0VHlfaVdqR211WHFIaFYzcnR6R2RXSWU3U0x3?oc=5",
+              "domain": "https://finviz.com",
+              "published_at": "2026-11-23T15:18:14+00:00",
+              "provider": "google_news_rss",
+              "source": "Finviz"
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "filed_at": "2026-11-16",
+              "accession_number": "0000050863-26-000197",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-11-04",
+              "accession_number": "0000050863-26-000195",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-11-02",
+              "accession_number": "0000050863-26-000194",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/intc",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=INTC&owner=exclude"
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Microsoft",
+          "sector": "Hyperscale Cloud",
+          "sector_key": "hyperscale_cloud",
+          "benchmark_etfs": [
+            "QQQ",
+            "IGV",
+            "XLK"
+          ],
+          "signal": "bearish",
+          "score": 35,
+          "confidence": "low",
+          "setup_type": "risk_watch",
+          "price": 481.5,
+          "previous_close": 492.5,
+          "premarket_change_pct": -2.23,
+          "change_5d_pct": -7.51,
+          "change_20d_pct": -7.62,
+          "volume_ratio": 1.67,
+          "relative_strength_pct": 3.29,
+          "sector_trend": "negative",
+          "news_sentiment": "mixed",
+          "news_count": 3,
+          "earnings_status": "4",
+          "summary": "Bearish/risk setup from -2.2% vs previous close, negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: -2.2%.",
+            "5-day relative strength: +3.3 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Improves if price reclaims previous close and negative headlines are not confirmed."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Is Microsoft Stock Stronger Than It Looks? - Trefis",
+              "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSTN0N1hHMGNON3J1ZFRlaGhhZXA4WnZWWlBRRXU2cG9Sd2J5TmVYMGlWSnJ4TWExU0JJaWN3d3RhM0Rja0RkbmhmQkhLMkhkTlFka3p1TFNUUUhQdTRBNWhJMmhYTmY2QU9PZDJybmtoZWEwVDYzY3BDMWMwRUM3Uy1YQ3Rjck10M1dzaWxzRVNQZ05VQ014V2JiTkJqTWZMSURocA?oc=5",
+              "domain": "https://www.trefis.com",
+              "published_at": "2026-11-23T09:00:22+00:00",
+              "provider": "google_news_rss",
+              "source": "Trefis"
+            },
+            {
+              "title": "Microsoft Corp Stock (MSFT) Opened Up by 3.39% on Nov 23: A Full Analysis - TradingKey",
+              "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWUd0X3I1bVJ2SDRzRDBLajlQcXRUTWFMbjg1RS1YR1BhWlR1UVM0dEgtS2VWc2lySFpXYkppSC1XMnFaZkdXa0cxMjBqbjZBRkxYLUd3Y3RhTmdUUVlLTzREdmJEWEhJVWhXTjZucWZoOFYtNXJmdU0tWVJVWXM1S1Y1QkFlY0RVQ0Nz?oc=5",
+              "domain": "https://www.tradingkey.com",
+              "published_at": "2026-11-23T14:47:57+00:00",
+              "provider": "google_news_rss",
+              "source": "TradingKey"
+            },
+            {
+              "title": "Microsoft shares technical analysis: Downward price move persists under seller pressure - Traders Union",
+              "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPcTcwaDgyNFM3bDBOTlk2dGtMSEZVSUgzZXlIU3lIOHN5cHItTGVISEk0cHBaeVRURVpHbTEtNFRPYmlZeXdoQlhOcXRILUcxM2FpT0ZuVmgxYVZDaXRnZ1NGdGo0RTU3UElGY2o5SGE5YjRXTWU3U0dkWWRUYjZCU0VpRFpPcmlGeUVwLXBOTlVscFJod0E?oc=5",
+              "domain": "https://tradersunion.com",
+              "published_at": "2026-11-23T14:13:36+00:00",
+              "provider": "google_news_rss",
+              "source": "Traders Union"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-11-16",
+              "accession_number": "0000789019-26-000236",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-11-12",
+              "accession_number": "0000789019-26-000234",
+              "provider": "sec"
+            },
+            {
+              "form": "4",
+              "filed_at": "2026-11-10",
+              "accession_number": "0000789019-26-000232",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/msft",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=MSFT&owner=exclude"
+        },
+        {
+          "symbol": "IREN",
+          "name": "IREN Ltd",
+          "sector": "Compute Mining",
+          "sector_key": "compute_mining",
+          "benchmark_etfs": [
+            "WGMI",
+            "BTC-USD"
+          ],
+          "signal": "neutral",
+          "score": 36,
+          "confidence": "low",
+          "setup_type": "gap_up_news",
+          "price": 14.81,
+          "previous_close": 14.64,
+          "premarket_change_pct": 1.16,
+          "change_5d_pct": -34.95,
+          "change_20d_pct": -52.54,
+          "volume_ratio": 1.77,
+          "relative_strength_pct": -11.14,
+          "sector_trend": "negative",
+          "news_sentiment": "mixed",
+          "news_count": 3,
+          "earnings_status": "SCHEDULE 13G",
+          "summary": "Watchlist item from +1.2% vs previous close, negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +1.2%.",
+            "5-day relative strength: -11.1 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "IREN Stock Rebounds 30% From 52-Week Low: What's Happening? - Benzinga",
+              "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUmxYUlpQa0x6Z3JCSm11QVN6eEQ3YXlkaGE0X1g5cTk0QW1TZ1V1SWRYMzc5TF82dm8xWnpSZEd2Q2JmVnUxdVN5SU50R29yaF84Z1V0LXl4U1c0N19zVTk3VWNYNGZmZGlCMmMwU01NN2EwLXVweXFSNE5YMlNYNEoyMllRVlJIWGtLSFI0SUFEMDJsVmhzSkoxcjFacWdCdGJoSnZQX2FtMVduaUpiLV9XVUdDYTA?oc=5",
+              "domain": "https://www.benzinga.com",
+              "published_at": "2026-11-23T16:12:46+00:00",
+              "provider": "google_news_rss",
+              "source": "Benzinga"
+            },
+            {
+              "title": "Why is IREN stock surging today? - Investing.com",
+              "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRG1OaEZSUGQzWDBwMldHejFKN3o4LV9hYklIWS1RNnlxdzlvcDhyTC1iWmk4ek9aNU9BRmN4SWhpbHJabnJEQXp5VGFnWVo2R3dhVzlaRU9nazR1X3d5YzUwOTBsLU9hTGVWVC1UNTBzak1yck9BS3RJcF9OWm9Ua1FBU0k5R2poZTJSSWE0dWh1Tk40RzZZaA?oc=5",
+              "domain": "https://www.investing.com",
+              "published_at": "2026-11-23T12:27:11+00:00",
+              "provider": "google_news_rss",
+              "source": "Investing.com"
+            },
+            {
+              "title": "Trending Industry Today: IREN Ltd Leads Gains In Crypto Stocks - Moomoo",
+              "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNUNtNzZ1LU81a0czcmxENnY0NF9KQjNRcG5tR0FGRW9kVjJuQ1lTNHV6VElEQjhGUXY2UDNYM3FzTE9LWXNWYkk2OGxZbl9UYzhVZll4cUJwaGZoV3AzLW0yVjBVMmhLRmxLQWY3bDVjTy1scnRfVVBIbVJlM1FZcjRlT1hScDBKUnNNMWZQOVUwVDNMSU5Cc0VrM2lsWjRmQ3oxcDMwdFo?oc=5",
+              "domain": "https://www.moomoo.com",
+              "published_at": "2026-11-23T14:50:01+00:00",
+              "provider": "google_news_rss",
+              "source": "Moomoo"
+            }
+          ],
+          "filings": [
+            {
+              "form": "SCHEDULE 13G",
+              "filed_at": "2026-11-19",
+              "accession_number": "0001104659-26-130230",
+              "provider": "sec"
+            },
+            {
+              "form": "SCHEDULE 13G",
+              "filed_at": "2026-11-18",
+              "accession_number": "0001595888-26-000170",
+              "provider": "sec"
+            },
+            {
+              "form": "SCHEDULE 13G",
+              "filed_at": "2026-11-16",
+              "accession_number": "0001446580-26-000110",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/iren",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=IREN&owner=exclude"
+        },
+        {
+          "symbol": "EOSE",
+          "name": "Eos Energy",
+          "sector": "Battery and Energy Storage",
+          "sector_key": "battery_storage",
+          "benchmark_etfs": [
+            "ICLN",
+            "XLU"
+          ],
+          "signal": "neutral",
+          "score": 36,
+          "confidence": "low",
+          "setup_type": "news_watch",
+          "price": 1.28,
+          "previous_close": 1.27,
+          "premarket_change_pct": 0.79,
+          "change_5d_pct": -37.7,
+          "change_20d_pct": -31.21,
+          "volume_ratio": 1.49,
+          "relative_strength_pct": -29.93,
+          "sector_trend": "negative",
+          "news_sentiment": "mixed",
+          "news_count": 2,
+          "earnings_status": "10-Q",
+          "summary": "Watchlist item from negative sector tape, 2 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +0.8%.",
+            "5-day relative strength: -29.9 pts.",
+            "2 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "CEPL: Capstone Energy Plus Inc. filed SEC Form 8-K: Leadership... - Quantisnow",
+              "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQ1RzbXhwblgxWTJhWVdqcFdmSktOSGtoQTBFQ3NJSmctQTF6MTc5Vl9oQVo3RXh5aFc2S0VQR1dRb1ByeDVBQ0IzSGJWR3JnQzlCNTFaZFJnOFU2engtSWl2UXZPUE9HRDVXcGotLTlrVWpwVThBUTVZcnhuMUpmclEydlU1cWxvQlBVejZVYmhOYTR2bHM3M3ozRTlnUW9IVk05TkMtRQ?oc=5",
+              "domain": "https://www.quantisnow.com",
+              "published_at": "2026-11-23T13:50:42+00:00",
+              "provider": "google_news_rss",
+              "source": "Quantisnow"
+            },
+            {
+              "title": "Capstone Energy+ Appoints Sagar Kurada as CFO, Effective December 14, 2026 - Kalkine Media",
+              "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQbW5VeThXbTI2WGtpbUdCeUppeTdpeXJLelVfd3l2Rl9vZVhLU0JtYW45eXg3UkxrZDRINEo1SW1pc1REbWdfbGwwT19MY01CazA2Ni1pTFZpbnhsbFlUdjFPNWdGNmJIaTdqSDlON2ZxNHAzYmZWX2ZEVDFOWVJPbU1SZjhPOHpoN1hscGUzTFdPQ3AxdnhUVHlVSWt6MG1mWGRHUlR3WlVJUFB5TE0zX1hIZFZCNERwQUE?oc=5",
+              "domain": "https://kalkinemedia.com",
+              "published_at": "2026-11-23T17:39:16+00:00",
+              "provider": "google_news_rss",
+              "source": "Kalkine Media"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-11-13",
+              "accession_number": "0001628280-26-073597",
+              "provider": "sec"
+            },
+            {
+              "form": "SCHEDULE 13G",
+              "filed_at": "2026-11-06",
+              "accession_number": "0001393825-26-000069",
+              "provider": "sec"
+            },
+            {
+              "form": "10-Q",
+              "filed_at": "2026-11-05",
+              "accession_number": "0001628280-26-070529",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/eose",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=EOSE&owner=exclude"
+        },
+        {
+          "symbol": "ORCL",
+          "name": "Oracle",
+          "sector": "Hyperscale Cloud",
+          "sector_key": "hyperscale_cloud",
+          "benchmark_etfs": [
+            "QQQ",
+            "IGV",
+            "XLK"
+          ],
+          "signal": "neutral",
+          "score": 37,
+          "confidence": "low",
+          "setup_type": "news_watch",
+          "price": 114.12,
+          "previous_close": 113.77,
+          "premarket_change_pct": 0.31,
+          "change_5d_pct": -19.27,
+          "change_20d_pct": -19.79,
+          "volume_ratio": 1.17,
+          "relative_strength_pct": -8.47,
+          "sector_trend": "negative",
+          "news_sentiment": "mixed",
+          "news_count": 3,
+          "earnings_status": "8-K",
+          "summary": "Watchlist item from negative sector tape, 3 recent headline(s).",
+          "drivers": [
+            "Move vs previous close: +0.3%.",
+            "5-day relative strength: -8.5 pts.",
+            "3 recent headline(s) in the news window."
+          ],
+          "invalidation": [
+            "Needs fresh price/news confirmation before becoming an actionable setup."
+          ],
+          "risk_flags": [],
+          "sources": [
+            {
+              "title": "Why Oracle Stock Is Rising Today - The Motley Fool",
+              "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE56cFlyWTlCZmdLdlVKRW4ydjlVWjg4aDNYM09OMVdCVVo4emJXR0FUaWx5WER1ZHc0dEZlTjlXX0hxUkNnQ0JfZlNkbElFQmZwX3lieXNDMU9MRV9CX3Bmd3gtRHJnVTJJbk9WVGpENTUwNTNacmFyNQ?oc=5",
+              "domain": "https://www.fool.com",
+              "published_at": "2026-11-23T18:10:02+00:00",
+              "provider": "google_news_rss",
+              "source": "The Motley Fool"
+            },
+            {
+              "title": "Why Oracle Stock Is Rising Today - The Globe and Mail",
+              "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQTmE3SWtfa0lqWUNsU3psR0lyeGViM3p2OU93bXF6N1RJb1VkRkRVTm9ydzdpSkZEN3NOM1FQTGY3TXhaZTV3MmU5a1RKT3Z5TVBDWVR2TjQzY1ZOQkRael9IaEJOTDRmVy1aZmZrZVFHOHdoQTRrT3ZMYkZ6S1NtLWhScGkzSWJxTjFrS1ZXSTBSQTVKbzV1SVhNakJWZmVIcEN4blhSSVNWN0xmUXlWNldUT09waGJkbFZN?oc=5",
+              "domain": "https://www.theglobeandmail.com",
+              "published_at": "2026-11-23T18:05:00+00:00",
+              "provider": "google_news_rss",
+              "source": "The Globe and Mail"
+            },
+            {
+              "title": "Why Oracle shares are up 13% on Monday? - TradingView",
+              "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOTGlnTlVFc2FiZnQxdldXTEN1X2lmS043aWtlbXU3a0RXR2RuZUxXejlGeGt2NzlCWVI4Q0ltM29oR0RKOXFJcnFwYWp0ZVBfLUE0Skt3OUlpMGhLT0lhczBTMFl1TWZJdWNpSDgtQ2FtUlg3bjBieWU4S2J0OFNZbDVjSmdpNzZkMER6SEZRWXkzaUQ3SERWbklR?oc=5",
+              "domain": "https://www.tradingview.com",
+              "published_at": "2026-11-23T16:34:55+00:00",
+              "provider": "google_news_rss",
+              "source": "TradingView"
+            }
+          ],
+          "filings": [
+            {
+              "form": "4",
+              "filed_at": "2026-11-20",
+              "accession_number": "0001341439-26-000127",
+              "provider": "sec"
+            },
+            {
+              "form": "8-K",
+              "filed_at": "2026-11-20",
+              "accession_number": "0001193125-26-470351",
+              "provider": "sec"
+            },
+            {
+              "form": "8-K",
+              "filed_at": "2026-11-04",
+              "accession_number": "0001193125-26-447507",
+              "provider": "sec"
+            }
+          ],
+          "data_quality": {
+            "quote": "delayed_fallback",
+            "news": "fresh",
+            "financials": "fresh"
+          },
+          "source_url": "https://www.nasdaq.com/market-activity/stocks/orcl",
+          "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=ORCL&owner=exclude"
+        }
+      ],
+      "meta": {
+        "count": 12,
+        "market_date": "2026-11-23",
+        "market_status": "premarket",
+        "skip_reason": "",
+        "provider_coverage": {
+          "quotes": {
+            "provider": "yahoo",
+            "order": [
+              "yahoo",
+              "nasdaq"
+            ],
+            "providers": {
+              "nasdaq": 24
+            },
+            "ok": 24,
+            "total": 24
+          },
+          "news": {
+            "provider": "gdelt",
+            "order": [
+              "gdelt",
+              "google_news_rss"
+            ],
+            "providers": {
+              "google_news_rss": 23
+            },
+            "ok": 23,
+            "total": 24
+          },
+          "filings": {
+            "provider": "sec",
+            "order": [
+              "sec",
+              "sec_company_page"
+            ],
+            "providers": {
+              "sec": 24
+            },
+            "ok": 24,
+            "fallback_ok": 24,
+            "total": 24,
+            "requires_env": "SEC_USER_AGENT or LINNET_SEC_USER_AGENT"
+          }
+        },
+        "invalid_symbols": [],
+        "sector_overview": [
+          {
+            "sector_key": "servers_thermal",
+            "sector": "Servers and Thermal Management",
+            "signal": "bearish",
+            "avg_score": 32,
+            "avg_change_5d_pct": -18.52,
+            "avg_relative_strength_pct": -3.37,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 2,
+              "neutral": 0
+            },
+            "top_symbol": "VRT",
+            "top_signal": "bearish",
+            "top_score": 31,
+            "stock_count": 2
+          },
+          {
+            "sector_key": "manufacturing",
+            "sector": "Manufacturing",
+            "signal": "neutral",
+            "avg_score": 36,
+            "avg_change_5d_pct": -13.13,
+            "avg_relative_strength_pct": -0.55,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 2,
+              "neutral": 2
+            },
+            "top_symbol": "SANM",
+            "top_signal": "bearish",
+            "top_score": 32,
+            "stock_count": 4
+          },
+          {
+            "sector_key": "compute_mining",
+            "sector": "Compute Mining",
+            "signal": "neutral",
+            "avg_score": 37,
+            "avg_change_5d_pct": -24.46,
+            "avg_relative_strength_pct": -0.65,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 1,
+              "neutral": 3
+            },
+            "top_symbol": "HUT",
+            "top_signal": "bearish",
+            "top_score": 33,
+            "stock_count": 4
+          },
+          {
+            "sector_key": "foundry",
+            "sector": "Foundry",
+            "signal": "neutral",
+            "avg_score": 37,
+            "avg_change_5d_pct": -17.06,
+            "avg_relative_strength_pct": 0.52,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 1,
+              "neutral": 1
+            },
+            "top_symbol": "INTC",
+            "top_signal": "bearish",
+            "top_score": 35,
+            "stock_count": 2
+          },
+          {
+            "sector_key": "networking_equipment",
+            "sector": "Networking Equipment",
+            "signal": "neutral",
+            "avg_score": 37,
+            "avg_change_5d_pct": -16.61,
+            "avg_relative_strength_pct": -4.12,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 1,
+              "neutral": 3
+            },
+            "top_symbol": "CRDO",
+            "top_signal": "bearish",
+            "top_score": 30,
+            "stock_count": 4
+          },
+          {
+            "sector_key": "battery_storage",
+            "sector": "Battery and Energy Storage",
+            "signal": "neutral",
+            "avg_score": 38,
+            "avg_change_5d_pct": -29.02,
+            "avg_relative_strength_pct": -21.26,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 1,
+              "neutral": 2
+            },
+            "top_symbol": "SLDP",
+            "top_signal": "bearish",
+            "top_score": 33,
+            "stock_count": 3
+          },
+          {
+            "sector_key": "hyperscale_cloud",
+            "sector": "Hyperscale Cloud",
+            "signal": "neutral",
+            "avg_score": 38,
+            "avg_change_5d_pct": -11.13,
+            "avg_relative_strength_pct": -0.33,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 1,
+              "neutral": 3
+            },
+            "top_symbol": "MSFT",
+            "top_signal": "bearish",
+            "top_score": 35,
+            "stock_count": 4
+          },
+          {
+            "sector_key": "energy_infrastructure",
+            "sector": "Energy Infrastructure",
+            "signal": "neutral",
+            "avg_score": 38,
+            "avg_change_5d_pct": -13.35,
+            "avg_relative_strength_pct": -8.39,
+            "sector_trend": "negative",
+            "counts": {
+              "bullish": 0,
+              "bearish": 0,
+              "neutral": 1
+            },
+            "top_symbol": "VST",
+            "top_signal": "neutral",
+            "top_score": 38,
+            "stock_count": 1
+          }
+        ],
+        "mode": "premarket",
+        "language": "en",
+        "llm_synthesis_used": false,
+        "llm_synthesis_model": "google/gemini-2.5-flash-lite-preview-09-2025",
+        "disclaimer": "Generated from public market data and news for research and education. Not financial advice; data may be delayed, incomplete, or wrong."
+      }
+    },
+    {
+      "key": "arxiv",
+      "payload_key": "papers",
+      "title": "arXiv Papers",
+      "icon": "📄",
+      "items": [],
+      "meta": {
+        "papers_fetched": 100,
+        "papers_after_keyword_filter": 41,
+        "papers_after_llm_filter": 0,
+        "count": 0
+      }
+    },
+    {
+      "key": "hacker_news",
+      "payload_key": "hacker_news",
+      "title": "Hacker News",
+      "icon": "🔥",
+      "items": [
+        {
+          "id": 50609685,
+          "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
+          "url": "https://z.ai/blog/glm-5.4",
+          "score": 965,
+          "created_at": "2026-11-23T10:06:43Z",
+          "comments_url": "https://news.ycombinator.com/item?id=50609685",
+          "summary": "Story: summary generation failed."
+        },
+        {
+          "id": 50605045,
+          "title": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
+          "url": "https://claude.ai/artifact/CtQyX8qfYAF822bgHJHHE3",
+          "score": 256,
+          "created_at": "2026-11-22T23:12:10Z",
+          "comments_url": "https://news.ycombinator.com/item?id=50605045",
+          "summary": "Story: summary generation failed."
+        }
+      ],
+      "meta": {
+        "count": 2
+      }
+    },
+    {
+      "key": "github_trending",
+      "payload_key": "github_trending",
+      "title": "GitHub Trending",
+      "icon": "⭐",
+      "items": [
+        {
+          "full_name": "elementalsouls/Claude-BugHunter",
+          "url": "https://github.com/elementalsouls/Claude-BugHunter",
+          "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+          "stars_today": 2037,
+          "total_stars": 19582,
+          "language": "Python",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "obra/superpowers",
+          "url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "stars_today": 838,
+          "total_stars": 324971,
+          "language": "Shell",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "HKUDS/CLI-Anything",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+          "stars_today": 783,
+          "total_stars": 63521,
+          "language": "Python",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "jingyaogong/minimind",
+          "url": "https://github.com/jingyaogong/minimind",
+          "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+          "stars_today": 828,
+          "total_stars": 69401,
+          "language": "Python",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "cursor/plugins",
+          "url": "https://github.com/cursor/plugins",
+          "description": "Cursor plugin specification and official plugins",
+          "stars_today": 395,
+          "total_stars": 18771,
+          "language": "TypeScript",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "firecrawl/firecrawl",
+          "url": "https://github.com/firecrawl/firecrawl",
+          "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+          "stars_today": 920,
+          "total_stars": 207814,
+          "language": "TypeScript",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "nginx/nginx",
+          "url": "https://github.com/nginx/nginx",
+          "description": "The official NGINX Open Source repository.",
+          "stars_today": 174,
+          "total_stars": 33036,
+          "language": "C",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "openvinotoolkit/openvino",
+          "url": "https://github.com/openvinotoolkit/openvino",
+          "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+          "stars_today": 183,
+          "total_stars": 12265,
+          "language": "C++",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        },
+        {
+          "full_name": "cathrynlavery/diagram-design",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+          "stars_today": 624,
+          "total_stars": 70895,
+          "language": "HTML",
+          "topics": [],
+          "summary": "Repo: summary generation failed."
+        }
+      ],
+      "meta": {
+        "count": 9
+      }
+    }
+  ],
+  "meta": {
+    "papers_fetched": 100,
+    "papers_after_keyword_filter": 41,
+    "papers_after_llm_filter": 0,
+    "llm_model": "google/gemini-2.5-flash-lite-preview-09-2025",
+    "scoring_model": "google/gemini-2.5-flash-lite-preview-09-2025",
+    "summarization_model": "google/gemini-2.5-flash-lite-preview-09-2025",
+    "duration_seconds": 663
+  },
+  "quote_of_day": [],
+  "hitokoto": [
+    {
+      "quote": "仙路尽头谁为峰，一见无始道成空。",
+      "author": "无始大帝",
+      "source": "遮天",
+      "category": "d"
+    }
+  ],
+  "arxiv": [],
+  "papers": [],
+  "hacker_news": [
+    {
+      "id": 50609685,
+      "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
+      "url": "https://z.ai/blog/glm-5.4",
+      "score": 965,
+      "created_at": "2026-11-23T10:06:43Z",
+      "comments_url": "https://news.ycombinator.com/item?id=50609685",
+      "summary": "Story: summary generation failed."
+    },
+    {
+      "id": 50605045,
+      "title": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
+      "url": "https://claude.ai/artifact/CtQyX8qfYAF822bgHJHHE3",
+      "score": 256,
+      "created_at": "2026-11-22T23:12:10Z",
+      "comments_url": "https://news.ycombinator.com/item?id=50605045",
+      "summary": "Story: summary generation failed."
+    }
+  ],
+  "github_trending": [
+    {
+      "full_name": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "stars_today": 2037,
+      "total_stars": 19582,
+      "language": "Python",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "stars_today": 838,
+      "total_stars": 324971,
+      "language": "Shell",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "stars_today": 783,
+      "total_stars": 63521,
+      "language": "Python",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "jingyaogong/minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "stars_today": 828,
+      "total_stars": 69401,
+      "language": "Python",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "stars_today": 395,
+      "total_stars": 18771,
+      "language": "TypeScript",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "stars_today": 920,
+      "total_stars": 207814,
+      "language": "TypeScript",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "nginx/nginx",
+      "url": "https://github.com/nginx/nginx",
+      "description": "The official NGINX Open Source repository.",
+      "stars_today": 174,
+      "total_stars": 33036,
+      "language": "C",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "openvinotoolkit/openvino",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+      "stars_today": 183,
+      "total_stars": 12265,
+      "language": "C++",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    },
+    {
+      "full_name": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "stars_today": 624,
+      "total_stars": 70895,
+      "language": "HTML",
+      "topics": [],
+      "summary": "Repo: summary generation failed."
+    }
+  ],
+  "us_stocks": [
+    {
+      "symbol": "CRDO",
+      "name": "Credo Technology",
+      "sector": "Networking Equipment",
+      "sector_key": "networking_equipment",
+      "benchmark_etfs": [
+        "IGN",
+        "XLK"
+      ],
+      "signal": "bearish",
+      "score": 30,
+      "confidence": "medium",
+      "setup_type": "risk_watch",
+      "price": 122.38,
+      "previous_close": 122.46,
+      "premarket_change_pct": -0.06,
+      "change_5d_pct": -24.07,
+      "change_20d_pct": -32.2,
+      "volume_ratio": 1.6,
+      "relative_strength_pct": -11.58,
+      "sector_trend": "negative",
+      "news_sentiment": "mixed",
+      "news_count": 3,
+      "earnings_status": "4",
+      "summary": "Bearish/risk setup from negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: -0.1%.",
+        "5-day relative strength: -11.6 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Improves if price reclaims previous close and negative headlines are not confirmed."
+      ],
+      "risk_flags": [
+        "negative headline: Among Five November 23 Gainers With Upcoming Reports, Which Carries the Greatest Downside Risk: Ciena (NYSE:CIEN), Semtech (NASDAQ:SMTC), Dell Technologies (NYSE:DELL), CleanSpark (NASDAQ:CLSK) or Credo Technology (NASDAQ:CRDO) - kalkine.ca"
+      ],
+      "sources": [
+        {
+          "title": "Credo Technology Group Stock And 2 Undervalued Stocks To Watch - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXFTeU8xU1RKNFlrMGloR3RfNHZjNGw5aFFGb3Z5NVFNYThkaTR1NEdOd0xWVk80aF9BQmdrU3loaFdrRUtld1lFRHlKWGx5NWo2a2Z2ckVFdUdpcnJzcDZtRDljeU92bWR2cTFHUmJYMXV2ZDlWdm1tVjJDam5ZdG9CeV9XYTdsVVBFbTg2d1VVQXpoTlFXZlUtYw?oc=5",
+          "domain": "https://finance.yahoo.com",
+          "published_at": "2026-11-23T11:12:51+00:00",
+          "provider": "google_news_rss",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Tech rebound sends Credo Technology higher by 24% (CRDO:NASDAQ) - Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMU9WbzctM2NiNERQTkdnX19YanBHZkZoTTNRTkptYWNGNi1WQTdJZkJ1a3A5endkWGZScjBialdWMmwtMjVjb2xLYVRvbDVmamtpMFJoR1YzVG1fd29yN2dyT2NweWtkNDdnbjFtellxeEpXM1hSV2ZoWW5VNkVPVjkxS1pjem5yT21MUDJjSQ?oc=5",
+          "domain": "https://seekingalpha.com",
+          "published_at": "2026-11-23T15:17:34+00:00",
+          "provider": "google_news_rss",
+          "source": "Seeking Alpha"
+        },
+        {
+          "title": "Among Five November 23 Gainers With Upcoming Reports, Which Carries the Greatest Downside Risk: Ciena (NYSE:CIEN), Semtech (NASDAQ:SMTC), Dell Technologies (NYSE:DELL), CleanSpark (NASDAQ:CLSK) or Credo Technology (NASDAQ:CRDO) - kalkine.ca",
+          "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxObGZhUVUtcXBwRGdTQ0xjZmN4V3lZeTVzb2RjQVNKWl92dHc4dUNXRENEYkxKNDdFRjhjWG5FX2FibHNhX29MS1BkZ0tjVUZzbDVoM0htY0o3aGs4aEFwZzREdTZFYUJ2WTY3a2tvMk4zYU5OSHMxbkZvWlo3Z1llclpMMFpSSXhpanFBMElwaHZ4ak1FQjIyQ3hfOWM4VnotY3d0Tkt4VnBoUVo1R2kxZTNOTVZJcGs2Nmd4Qnpfdl9zZlV3eHRkMGtLbTdBVi13dWQ2akdOcXJEcHJVYkwwanlUMFpNSjczR2dhNEg2Z2kxTmhvaHVHbXZLam13VFk2WGRCQXlGbmVZaXhmWnNZZWRwa2VKOWxHWl9OMzdsaGo2MXh5b216MDVYRDdhcGhndzFrUlAtTHFhVEFkNF9obURrY0lDV1ZNUzNzN3pqYXYwRl9NZXR2LV9Uc1ppWC1EY1E?oc=5",
+          "domain": "https://kalkine.ca",
+          "published_at": "2026-11-23T17:39:00+00:00",
+          "provider": "google_news_rss",
+          "source": "kalkine.ca"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-11-23",
+          "accession_number": "0001628280-26-075508",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-10-29",
+          "accession_number": "0001628280-26-068203",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-10-22",
+          "accession_number": "0001628280-26-066888",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/crdo",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=CRDO&owner=exclude"
+    },
+    {
+      "symbol": "VRT",
+      "name": "Vertiv Holdings",
+      "sector": "Servers and Thermal Management",
+      "sector_key": "servers_thermal",
+      "benchmark_etfs": [
+        "SMH",
+        "XLK"
+      ],
+      "signal": "bearish",
+      "score": 31,
+      "confidence": "medium",
+      "setup_type": "risk_watch",
+      "price": 187.1,
+      "previous_close": 186.43,
+      "premarket_change_pct": 0.36,
+      "change_5d_pct": -17.73,
+      "change_20d_pct": -14.45,
+      "volume_ratio": 1.42,
+      "relative_strength_pct": -2.58,
+      "sector_trend": "negative",
+      "news_sentiment": "negative",
+      "news_count": 3,
+      "earnings_status": "10-Q, 8-K",
+      "summary": "Bearish/risk setup from negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +0.4%.",
+        "5-day relative strength: -2.6 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Improves if price reclaims previous close and negative headlines are not confirmed."
+      ],
+      "risk_flags": [
+        "negative headline: Vertiv downgraded by Robert W. Baird with a new price target - Quantisnow"
+      ],
+      "sources": [
+        {
+          "title": "Vertiv (VRT) Stock Looks Like A Bargain On Cash Flow - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNT1RkQzVwOUgxcGRCa1RsTW56Y255TVQ0NjJZYzhhQWp3ZHdubE5HWU8tSkFFV1FGNzkxZ2ZEWGE2b2QwWnY1UzUyTGlYQmphbWZ5MzF4MmozN1loN2RrWGFBa2VpTEo3S3B6X1N3cU1XdENfTXQ3THhJdXpweGh4VVJ5cEtWWmk2dWw2b2UySVI4Vm9CVThoMnZndw?oc=5",
+          "domain": "https://finance.yahoo.com",
+          "published_at": "2026-11-23T15:08:12+00:00",
+          "provider": "google_news_rss",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Vertiv downgraded by Robert W. Baird with a new price target - Quantisnow",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSGpWWkxaU0dhUXA1ZFJoUjJMMWNHSFhZWGl2QTVGQTluVGR2b29mdUNSNTFVXy1kS3lVaGdjczhWaE8tZGp6azJSSkxtc3pSSnF5dTZKZlJWdzJxSlV5VEZLekQ4eWpWUHQ5UVZVTjlvNlJKdHBzaXptNzRaOHB6VnVQQkNyRlZkUVdBdE1tVFZYcHRWc0w0UHN4WQ?oc=5",
+          "domain": "https://www.quantisnow.com",
+          "published_at": "2026-11-23T12:50:42+00:00",
+          "provider": "google_news_rss",
+          "source": "Quantisnow"
+        },
+        {
+          "title": "What Vertiv Stock Says About AI Data Center Sentiment - Simply Wall St",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNcnVuZFhzaUkxR3JDTTVyRGdNY2pEaU1PbkhFdEFScWFLcW50MFIwTHRJWmRfUzJtS0pXdWJHX2hlblZFWUdwN0RVelVJdHk0V0tyT2RCWUtJUGlRY0RQNS13ZFFjRG1XWmpkLW92V1h6dlNNeWx0X2xYVGNDbDc5S25NZGEtcnhESHB4QVBNNGhCLTcwNFUtLTZla19CVG5feC1CX25nNVhwTEdNY2wwTXlTc0NxVXdyaThsMXlQQkJMWEZpRGhfOHEzd19kaGplTGfSAdIBQVVfeXFMTXJ1bmRYc2lJMUdyQ001ckRnTWNqRGlNT25IRXRBUnFhS3FudDBSMEx0SVpkX1MybUtKV3ViR19oZW5WRVlHcDdEVXpVSXR5NFdLck9kQllLSVBpUWNEUDUtd2RRY0RtV1pqZC1vdldYenZTTXlsdF9sWFRjQ2w3OUtuTWRhLXJ4REhweEFQTTRoQi03MDRVLS02ZWtfQlRuX3gtQl9uZzVYcExHTWNsME15U3NDcVV3cmk4bDF5UEJCTFhGaURoXzhxM3dfZGhqZUxn?oc=5",
+          "domain": "https://simplywall.st",
+          "published_at": "2026-11-23T14:08:44+00:00",
+          "provider": "google_news_rss",
+          "source": "Simply Wall St"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-11-17",
+          "accession_number": "0001628280-26-074512",
+          "provider": "sec"
+        },
+        {
+          "form": "8-K",
+          "filed_at": "2026-11-13",
+          "accession_number": "0001628280-26-073564",
+          "provider": "sec"
+        },
+        {
+          "form": "10-Q",
+          "filed_at": "2026-10-28",
+          "accession_number": "0001628280-26-067893",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/vrt",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=VRT&owner=exclude"
+    },
+    {
+      "symbol": "DELL",
+      "name": "Dell Technologies",
+      "sector": "Servers and Thermal Management",
+      "sector_key": "servers_thermal",
+      "benchmark_etfs": [
+        "SMH",
+        "XLK"
+      ],
+      "signal": "bearish",
+      "score": 32,
+      "confidence": "medium",
+      "setup_type": "risk_watch",
+      "price": 328.93,
+      "previous_close": 335.89,
+      "premarket_change_pct": -2.07,
+      "change_5d_pct": -19.3,
+      "change_20d_pct": -39.09,
+      "volume_ratio": 1.69,
+      "relative_strength_pct": -4.15,
+      "sector_trend": "negative",
+      "news_sentiment": "mixed",
+      "news_count": 3,
+      "earnings_status": "144, 4",
+      "summary": "Bearish/risk setup from -2.1% vs previous close, negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: -2.1%.",
+        "5-day relative strength: -4.2 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Improves if price reclaims previous close and negative headlines are not confirmed."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Dell Stock Rallies 20% Ahead of Earnings: What's Happening? - Benzinga",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONHBtcFVFUDZPWS1Ub001U3ZJczQ1dmc1d2U3SUFpNVFZMldxeTdmc0pHdmVQMV9mSkJ3SGxKQ1hCOXdOb0ZlTzdkX3B1QTMtRUFsMzRZZ1pZTk44WkdvNHRpeHdzYnpUUGpKbHdzZmdjTTg5N3pITFVaVWhsY0xWTUpPbFctNVlYZ1I1bVU3QnhSM0lvTWVLck5lUGlxZ2t6VjNBcGZZVEFDOFhDcldUTWJWcDJ5WkU?oc=5",
+          "domain": "https://www.benzinga.com",
+          "published_at": "2026-11-23T16:51:17+00:00",
+          "provider": "google_news_rss",
+          "source": "Benzinga"
+        },
+        {
+          "title": "Dear Dell Stock Fans, Mark Your Calendars for November 24 - Barchart.com",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOYmIydTRSb3NJS3RmTEI1VnA3U3lKNG4tNmFodFR1UEZXMHA2aFRFT3RkZ0ZqQjd2MER1Y3lpenVJeEh0TWVUMzlCNzhfcEFvNEtFRFc0Z0lZWWlRWVQ5aG5nSzk4cmd5WjA0aWFLSGZCNEs4RGhGTUFzQVJyeTdVT3k5UVFTdlVzczdIalVpWGVYQlA3NGpvMVU4ZnRwakEwUGc?oc=5",
+          "domain": "https://www.barchart.com",
+          "published_at": "2026-11-23T20:43:38+00:00",
+          "provider": "google_news_rss",
+          "source": "Barchart.com"
+        },
+        {
+          "title": "Dell Stock Pops Ahead of Earnings as Nvidia Rebounds - Schaeffer's Investment Research",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRmx6SjBZWEFJY3VRY1c2bEMwcnlGdk84SDFwdTlmQldIUVV6YzU1V0U0ME94WmFmNHpHTzhkeEU2VThIdDBHcDR2cUk0dTVrUHZvMU1yZnhMNzVKWjNpTDN4dF9uQURobFVjdy1ZV2RXVG9vUWF5QmJ6Y3BsYkE0ei1kY2lZN3lQcjZ6WkJDV1lkejFkeGt0N3BJVFB0QzRXVkh3c181VlQtMzFTOUFXTg?oc=5",
+          "domain": "https://www.schaeffersresearch.com",
+          "published_at": "2026-11-23T15:51:47+00:00",
+          "provider": "google_news_rss",
+          "source": "Schaeffer's Investment Research"
+        }
+      ],
+      "filings": [
+        {
+          "form": "144",
+          "filed_at": "2026-11-23",
+          "accession_number": "0001959173-26-008202",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-10-26",
+          "accession_number": "0001662205-26-000021",
+          "provider": "sec"
+        },
+        {
+          "form": "144",
+          "filed_at": "2026-10-22",
+          "accession_number": "0001959173-26-007448",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/dell",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=DELL&owner=exclude"
+    },
+    {
+      "symbol": "SANM",
+      "name": "Sanmina",
+      "sector": "Manufacturing",
+      "sector_key": "manufacturing",
+      "benchmark_etfs": [
+        "XLI",
+        "SMH"
+      ],
+      "signal": "bearish",
+      "score": 32,
+      "confidence": "medium",
+      "setup_type": "risk_watch",
+      "price": 152.53,
+      "previous_close": 153.88,
+      "premarket_change_pct": -0.88,
+      "change_5d_pct": -11.72,
+      "change_20d_pct": -10.24,
+      "volume_ratio": 1.12,
+      "relative_strength_pct": 0.86,
+      "sector_trend": "negative",
+      "news_sentiment": "negative",
+      "news_count": 1,
+      "earnings_status": "10-K, 8-K",
+      "summary": "Bearish/risk setup from -0.9% vs previous close, negative sector tape, 1 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: -0.9%.",
+        "5-day relative strength: +0.9 pts.",
+        "1 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Improves if price reclaims previous close and negative headlines are not confirmed."
+      ],
+      "risk_flags": [
+        "negative headline: (SANM) Price Dynamics and Execution-Aware Positioning - Stock Traders Daily"
+      ],
+      "sources": [
+        {
+          "title": "(SANM) Price Dynamics and Execution-Aware Positioning - Stock Traders Daily",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxObG81WW8xUm1vWHUzTzBXS1QzdDhFYUt6cHJneXlreWkxMFpWUVlpWVhmQlNScFNOZzZLRTI1VEdSZnItLVhaTXp1YTg1ZUtTSEpSamFTejh4QTROM2UtMWR0MlVRamp4SUJLSnVxMk1TTm9kR3oxMHdmd3JXbEtHeHJuS0Z6eHgyUjFLTXROcnZjb0FaMHlBTDVHUDdLbE1kMEJaNWxpcnZCQnoyMEtiSVE0aDdEeEEza3RrRW1EMWxScF9ET21WSUszUQ?oc=5",
+          "domain": "https://news.stocktradersdaily.com",
+          "published_at": "2026-11-23T09:18:02+00:00",
+          "provider": "google_news_rss",
+          "source": "Stock Traders Daily"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-11-17",
+          "accession_number": "0001104659-26-129042",
+          "provider": "sec"
+        },
+        {
+          "form": "10-K",
+          "filed_at": "2026-11-17",
+          "accession_number": "0000897723-26-000048",
+          "provider": "sec"
+        },
+        {
+          "form": "8-K",
+          "filed_at": "2026-11-09",
+          "accession_number": "0000897723-26-000044",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/sanm",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=SANM&owner=exclude"
+    },
+    {
+      "symbol": "CLS",
+      "name": "Celestica",
+      "sector": "Manufacturing",
+      "sector_key": "manufacturing",
+      "benchmark_etfs": [
+        "XLI",
+        "SMH"
+      ],
+      "signal": "bearish",
+      "score": 33,
+      "confidence": "low",
+      "setup_type": "risk_watch",
+      "price": 214.37,
+      "previous_close": 213.24,
+      "premarket_change_pct": 0.53,
+      "change_5d_pct": -16.04,
+      "change_20d_pct": -22.39,
+      "volume_ratio": 1.33,
+      "relative_strength_pct": -3.45,
+      "sector_trend": "negative",
+      "news_sentiment": "mixed",
+      "news_count": 3,
+      "earnings_status": "4",
+      "summary": "Bearish/risk setup from negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +0.5%.",
+        "5-day relative strength: -3.5 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Improves if price reclaims previous close and negative headlines are not confirmed."
+      ],
+      "risk_flags": [
+        "negative headline: Why Celestica (TSX:CLS) was the S&P/TSX Composite's worst performer: a report of an SEC probe into Nvidia's accounting hit AI hardware stocks hard - kalkine.ca"
+      ],
+      "sources": [
+        {
+          "title": "What Explains The Move In Celestica Stock? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQN2pPVzU2MnQxdHVJQjVEblp0NmxZdWFuS0llc2R4S0hpWUdQRXZESGUwTnljaDhHdk1SeHd1dWd1aERneV9yOXNSb1V1VF8zbjBVTXMwQWVYektCczRBbVVDQkEyVUU1LVhzem9adUg3TWhEdTNLTjVpTG1nOTJEd2IxUUxHWTk4Sk8xdlpYRHdfUTZ3ZDdPMER3?oc=5",
+          "domain": "https://finance.yahoo.com",
+          "published_at": "2026-11-23T14:49:26+00:00",
+          "provider": "google_news_rss",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Celestica Inc. (CLS.TO) Interactive Stock Chart - Yahoo Finance - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1sZGVVeHVhalNmTWJHakV6ajFoLWtJVHllSkxhVjI1eURMMUczYms1Wk9SNV9wMzY4MndvMkJpdDdGMVp1VHFmRXhWTEczcGpZbV9fMVlLRkR5NV9r?oc=5",
+          "domain": "https://ca.finance.yahoo.com",
+          "published_at": "2026-11-23T12:30:49+00:00",
+          "provider": "google_news_rss",
+          "source": "Yahoo! Finance Canada"
+        },
+        {
+          "title": "Why Celestica (TSX:CLS) was the S&P/TSX Composite's worst performer: a report of an SEC probe into Nvidia's accounting hit AI hardware stocks hard - kalkine.ca",
+          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPQkN1ZnhYcVVmRTMzQlBDejFpckM2WkRGVThGNERnQkYydk03dUY1RThabUstcEJ4dGo1djJCNHhJQ05NQVVmZF9UUmYyWC1rWHAzc0w4VU9ncC1KanVoREFBVmU0VnRFeUwyMUZ2ZU1WRlZSTnBXVWc0ZjFMTGpYYkFVNFQwNXVjaS1DZW5QaE54a2hvTXFYSkZvVDhDVXU5VDZmME1WelBWM0NabmxKeWhCR19UbGJJZmwtZENGU0p1ajNnRE9WUDZGZGZPSWpfOTJUTzAyM04ydDJOZHB1RmhYam1QU19XOGR6ZWZhSjJuVkNZQlpjWkNuNHEyUV9IUlJF?oc=5",
+          "domain": "https://kalkine.ca",
+          "published_at": "2026-11-23T12:21:00+00:00",
+          "provider": "google_news_rss",
+          "source": "kalkine.ca"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-11-05",
+          "accession_number": "0001193125-26-449857",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-11-05",
+          "accession_number": "0001193125-26-449854",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-11-05",
+          "accession_number": "0001193125-26-449851",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/cls",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=CLS&owner=exclude"
+    },
+    {
+      "symbol": "HUT",
+      "name": "Hut 8",
+      "sector": "Compute Mining",
+      "sector_key": "compute_mining",
+      "benchmark_etfs": [
+        "WGMI",
+        "BTC-USD"
+      ],
+      "signal": "bearish",
+      "score": 33,
+      "confidence": "low",
+      "setup_type": "risk_watch",
+      "price": 51.03,
+      "previous_close": 51.37,
+      "premarket_change_pct": -0.66,
+      "change_5d_pct": -20.18,
+      "change_20d_pct": -24.96,
+      "volume_ratio": 1.6,
+      "relative_strength_pct": 3.63,
+      "sector_trend": "negative",
+      "news_sentiment": "mixed",
+      "news_count": 3,
+      "earnings_status": "4, SCHEDULE 13D/A, SCHEDULE 13G/A",
+      "summary": "Bearish/risk setup from negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: -0.7%.",
+        "5-day relative strength: +3.6 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Improves if price reclaims previous close and negative headlines are not confirmed."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Hut 8 Corp. (HUT) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5NSHFpdUpaZXdPbEtKQmlYRW1xc1BfODFmSG9raHJzZWVBUGN4bm1pbFdxUmZsMWE5eWNrYkowT3JYcVV3UnlydWZNaUtFNGxQ?oc=5",
+          "domain": "https://ca.finance.yahoo.com",
+          "published_at": "2026-11-23T16:03:34+00:00",
+          "provider": "google_news_rss",
+          "source": "Yahoo! Finance Canada"
+        },
+        {
+          "title": "Hut 8 stock outlook: Consolidation expected with $53.67 resistance in focus - Traders Union",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUjh5Q0M1REhOQ2tZczJyVVE0WXRRRWFhUE80dF9rcFRtbjNSZzJXNnNubmlfUGVHaEVrVEZoQVlvVjRWZHJtVjEtMExzcTZrSUpDcDVIWXJqTV80a1d6TFlWNWhFQTFCWVRzUmM1X0FIUHIycXZPaWRsVTZKUy0xcVM0cXg?oc=5",
+          "domain": "https://tradersunion.com",
+          "published_at": "2026-11-23T18:27:34+00:00",
+          "provider": "google_news_rss",
+          "source": "Traders Union"
+        },
+        {
+          "title": "(HUT) Investment Report (HUT:CA) - Stock Traders Daily",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYXZCQV9NczNTb3FyWHNMdDh6V1dMakF1YWV5S3NRa25sNmFNNUVVd1llVE1sSGxCSjlIOVFEdUl3S0JXZENIazduM2lvU2FxbnZndkNyVzNXUW9Zc3ZOOU9yX1R5VmJjUFBNdFExZkVMeGFHOGhWYnBKTUg2b3hkMXlrUTA1QQ?oc=5",
+          "domain": "https://news.stocktradersdaily.com",
+          "published_at": "2026-11-23T21:21:48+00:00",
+          "provider": "google_news_rss",
+          "source": "Stock Traders Daily"
+        }
+      ],
+      "filings": [
+        {
+          "form": "SCHEDULE 13G/A",
+          "filed_at": "2026-11-16",
+          "accession_number": "0000919574-26-008120",
+          "provider": "sec"
+        },
+        {
+          "form": "SCHEDULE 13D/A",
+          "filed_at": "2026-11-13",
+          "accession_number": "0001104659-26-127278",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-11-13",
+          "accession_number": "0001104659-26-127277",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/hut",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=HUT&owner=exclude"
+    },
+    {
+      "symbol": "SLDP",
+      "name": "Solid Power",
+      "sector": "Battery and Energy Storage",
+      "sector_key": "battery_storage",
+      "benchmark_etfs": [
+        "ICLN",
+        "XLU"
+      ],
+      "signal": "bearish",
+      "score": 33,
+      "confidence": "low",
+      "setup_type": "risk_watch",
+      "price": 1.43,
+      "previous_close": 1.42,
+      "premarket_change_pct": 1.06,
+      "change_5d_pct": -23.3,
+      "change_20d_pct": -31.82,
+      "volume_ratio": 2.15,
+      "relative_strength_pct": -15.53,
+      "sector_trend": "negative",
+      "news_sentiment": "sparse",
+      "news_count": 0,
+      "earnings_status": "10-Q, 8-K",
+      "summary": "Bearish/risk setup from +1.1% vs previous close, negative sector tape.",
+      "drivers": [
+        "Move vs previous close: +1.1%.",
+        "5-day relative strength: -15.5 pts.",
+        "Recent filing/event forms: 10-Q, 8-K."
+      ],
+      "invalidation": [
+        "Improves if price reclaims previous close and negative headlines are not confirmed."
+      ],
+      "risk_flags": [],
+      "sources": [],
+      "filings": [
+        {
+          "form": "10-Q",
+          "filed_at": "2026-11-04",
+          "accession_number": "0001104659-26-122310",
+          "provider": "sec"
+        },
+        {
+          "form": "8-K",
+          "filed_at": "2026-11-03",
+          "accession_number": "0001104659-26-122107",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-10-01",
+          "accession_number": "0001844862-26-000026",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "sparse",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/sldp",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=SLDP&owner=exclude"
+    },
+    {
+      "symbol": "INTC",
+      "name": "Intel",
+      "sector": "Foundry",
+      "sector_key": "foundry",
+      "benchmark_etfs": [
+        "SMH",
+        "SOXX"
+      ],
+      "signal": "bearish",
+      "score": 35,
+      "confidence": "low",
+      "setup_type": "risk_watch",
+      "price": 59.3,
+      "previous_close": 59.66,
+      "premarket_change_pct": -0.6,
+      "change_5d_pct": -14.05,
+      "change_20d_pct": -41.03,
+      "volume_ratio": 1.42,
+      "relative_strength_pct": 3.53,
+      "sector_trend": "negative",
+      "news_sentiment": "mixed",
+      "news_count": 3,
+      "earnings_status": "13F-HR, 4",
+      "summary": "Bearish/risk setup from negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: -0.6%.",
+        "5-day relative strength: +3.5 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Improves if price reclaims previous close and negative headlines are not confirmed."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Intel CEO Lip-Bu Tan Has Incredible News for Investors. Is This the Much-Needed Catalyst for the Stock? - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQN3RQOGppb244SmpVZk16Q0JJZFE1dUNtQldZVE9yV2thTHB4c0Y1Qi14cGI0NGVFanBlWTNnTG1WQ0ltYTlST2Q4SWJRQUZyN255d3dRaHVPRmZLQTFTQ2tfVDJKb0ozbE1Hci1xZVV4NndKS1g2TVZJSjh5d19zR3MwZHhkTkZubUdINVl3?oc=5",
+          "domain": "https://finance.yahoo.com",
+          "published_at": "2026-11-23T12:47:02+00:00",
+          "provider": "google_news_rss",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Intel CEO Lip-Bu Tan Has Incredible News for Investors. Is This the Much-Needed Catalyst for the Stock? - The Motley Fool",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPTVllNVNCOTBTcUJtZURpZGZSVDE0STAwb3VQZHMyaDJVU1YyaXNWVGNQX1lJZUdMY2c2TlU0M2ZnbU9MblBNeTcwRjFHT24zalVPLXRVN1ctNjZvd2VhMGJyZmQ1eGhDMExFT2xETjRzbXlETzMzWlJKa0lWN1FtRXdNaDdsRDFUUkdLaEM2Z2pPSGRNVHhqSjVHR0R1TmJISnM4N3hiVU1NUWJ4MjVIMWZnX3NZNGlzd2RiakVpV0lvaThhdDU1bExkUV8tV2YtVXdiME82aXBfQ25s?oc=5",
+          "domain": "https://www.fool.com",
+          "published_at": "2026-11-23T12:27:02+00:00",
+          "provider": "google_news_rss",
+          "source": "The Motley Fool"
+        },
+        {
+          "title": "Did You Lose Money Investing in Intel Corporation? Robbins LLP Urges Investors with Significant Losses to Contact the Firm About Their Rights Against INTC - Finviz",
+          "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPOHdJM3ZEVFdwbExJVXJQTVdCLW1kQkJ2WTlfd3laVjZWM1lNT3hsbDZzQXlaUHlXYUYzbnBfbDhWLU1hTjFhZVotTzhhX3VvY3VRUm9pT2RhRTZNNzZ5Tm1oLTBkTzBzY09xQVk4RUl4U1hwa2szUk1yLXFNWHJkZWJoSnM5VlJUXzFSeFN4NjUtUHVKa2VkdEhNa1V0SFV4QUpXcjZ3Z3h2bkRJY0wxa3I0NGFRLU5BMEgzR3ZIMEFtOC1ZV083d0V1eEFCTFpEdjlFam51a0dnZmVGLXBDdjZfblhaRjBhMmFTX0w3clRXT1VuRzc0VHlfaVdqR211WHFIaFYzcnR6R2RXSWU3U0x3?oc=5",
+          "domain": "https://finviz.com",
+          "published_at": "2026-11-23T15:18:14+00:00",
+          "provider": "google_news_rss",
+          "source": "Finviz"
+        }
+      ],
+      "filings": [
+        {
+          "form": "13F-HR",
+          "filed_at": "2026-11-16",
+          "accession_number": "0000050863-26-000197",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-11-04",
+          "accession_number": "0000050863-26-000195",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-11-02",
+          "accession_number": "0000050863-26-000194",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/intc",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=INTC&owner=exclude"
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "sector": "Hyperscale Cloud",
+      "sector_key": "hyperscale_cloud",
+      "benchmark_etfs": [
+        "QQQ",
+        "IGV",
+        "XLK"
+      ],
+      "signal": "bearish",
+      "score": 35,
+      "confidence": "low",
+      "setup_type": "risk_watch",
+      "price": 481.5,
+      "previous_close": 492.5,
+      "premarket_change_pct": -2.23,
+      "change_5d_pct": -7.51,
+      "change_20d_pct": -7.62,
+      "volume_ratio": 1.67,
+      "relative_strength_pct": 3.29,
+      "sector_trend": "negative",
+      "news_sentiment": "mixed",
+      "news_count": 3,
+      "earnings_status": "4",
+      "summary": "Bearish/risk setup from -2.2% vs previous close, negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: -2.2%.",
+        "5-day relative strength: +3.3 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Improves if price reclaims previous close and negative headlines are not confirmed."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Is Microsoft Stock Stronger Than It Looks? - Trefis",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSTN0N1hHMGNON3J1ZFRlaGhhZXA4WnZWWlBRRXU2cG9Sd2J5TmVYMGlWSnJ4TWExU0JJaWN3d3RhM0Rja0RkbmhmQkhLMkhkTlFka3p1TFNUUUhQdTRBNWhJMmhYTmY2QU9PZDJybmtoZWEwVDYzY3BDMWMwRUM3Uy1YQ3Rjck10M1dzaWxzRVNQZ05VQ014V2JiTkJqTWZMSURocA?oc=5",
+          "domain": "https://www.trefis.com",
+          "published_at": "2026-11-23T09:00:22+00:00",
+          "provider": "google_news_rss",
+          "source": "Trefis"
+        },
+        {
+          "title": "Microsoft Corp Stock (MSFT) Opened Up by 3.39% on Nov 23: A Full Analysis - TradingKey",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWUd0X3I1bVJ2SDRzRDBLajlQcXRUTWFMbjg1RS1YR1BhWlR1UVM0dEgtS2VWc2lySFpXYkppSC1XMnFaZkdXa0cxMjBqbjZBRkxYLUd3Y3RhTmdUUVlLTzREdmJEWEhJVWhXTjZucWZoOFYtNXJmdU0tWVJVWXM1S1Y1QkFlY0RVQ0Nz?oc=5",
+          "domain": "https://www.tradingkey.com",
+          "published_at": "2026-11-23T14:47:57+00:00",
+          "provider": "google_news_rss",
+          "source": "TradingKey"
+        },
+        {
+          "title": "Microsoft shares technical analysis: Downward price move persists under seller pressure - Traders Union",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPcTcwaDgyNFM3bDBOTlk2dGtMSEZVSUgzZXlIU3lIOHN5cHItTGVISEk0cHBaeVRURVpHbTEtNFRPYmlZeXdoQlhOcXRILUcxM2FpT0ZuVmgxYVZDaXRnZ1NGdGo0RTU3UElGY2o5SGE5YjRXTWU3U0dkWWRUYjZCU0VpRFpPcmlGeUVwLXBOTlVscFJod0E?oc=5",
+          "domain": "https://tradersunion.com",
+          "published_at": "2026-11-23T14:13:36+00:00",
+          "provider": "google_news_rss",
+          "source": "Traders Union"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-11-16",
+          "accession_number": "0000789019-26-000236",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-11-12",
+          "accession_number": "0000789019-26-000234",
+          "provider": "sec"
+        },
+        {
+          "form": "4",
+          "filed_at": "2026-11-10",
+          "accession_number": "0000789019-26-000232",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/msft",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=MSFT&owner=exclude"
+    },
+    {
+      "symbol": "IREN",
+      "name": "IREN Ltd",
+      "sector": "Compute Mining",
+      "sector_key": "compute_mining",
+      "benchmark_etfs": [
+        "WGMI",
+        "BTC-USD"
+      ],
+      "signal": "neutral",
+      "score": 36,
+      "confidence": "low",
+      "setup_type": "gap_up_news",
+      "price": 14.81,
+      "previous_close": 14.64,
+      "premarket_change_pct": 1.16,
+      "change_5d_pct": -34.95,
+      "change_20d_pct": -52.54,
+      "volume_ratio": 1.77,
+      "relative_strength_pct": -11.14,
+      "sector_trend": "negative",
+      "news_sentiment": "mixed",
+      "news_count": 3,
+      "earnings_status": "SCHEDULE 13G",
+      "summary": "Watchlist item from +1.2% vs previous close, negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +1.2%.",
+        "5-day relative strength: -11.1 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "IREN Stock Rebounds 30% From 52-Week Low: What's Happening? - Benzinga",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUmxYUlpQa0x6Z3JCSm11QVN6eEQ3YXlkaGE0X1g5cTk0QW1TZ1V1SWRYMzc5TF82dm8xWnpSZEd2Q2JmVnUxdVN5SU50R29yaF84Z1V0LXl4U1c0N19zVTk3VWNYNGZmZGlCMmMwU01NN2EwLXVweXFSNE5YMlNYNEoyMllRVlJIWGtLSFI0SUFEMDJsVmhzSkoxcjFacWdCdGJoSnZQX2FtMVduaUpiLV9XVUdDYTA?oc=5",
+          "domain": "https://www.benzinga.com",
+          "published_at": "2026-11-23T16:12:46+00:00",
+          "provider": "google_news_rss",
+          "source": "Benzinga"
+        },
+        {
+          "title": "Why is IREN stock surging today? - Investing.com",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRG1OaEZSUGQzWDBwMldHejFKN3o4LV9hYklIWS1RNnlxdzlvcDhyTC1iWmk4ek9aNU9BRmN4SWhpbHJabnJEQXp5VGFnWVo2R3dhVzlaRU9nazR1X3d5YzUwOTBsLU9hTGVWVC1UNTBzak1yck9BS3RJcF9OWm9Ua1FBU0k5R2poZTJSSWE0dWh1Tk40RzZZaA?oc=5",
+          "domain": "https://www.investing.com",
+          "published_at": "2026-11-23T12:27:11+00:00",
+          "provider": "google_news_rss",
+          "source": "Investing.com"
+        },
+        {
+          "title": "Trending Industry Today: IREN Ltd Leads Gains In Crypto Stocks - Moomoo",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNUNtNzZ1LU81a0czcmxENnY0NF9KQjNRcG5tR0FGRW9kVjJuQ1lTNHV6VElEQjhGUXY2UDNYM3FzTE9LWXNWYkk2OGxZbl9UYzhVZll4cUJwaGZoV3AzLW0yVjBVMmhLRmxLQWY3bDVjTy1scnRfVVBIbVJlM1FZcjRlT1hScDBKUnNNMWZQOVUwVDNMSU5Cc0VrM2lsWjRmQ3oxcDMwdFo?oc=5",
+          "domain": "https://www.moomoo.com",
+          "published_at": "2026-11-23T14:50:01+00:00",
+          "provider": "google_news_rss",
+          "source": "Moomoo"
+        }
+      ],
+      "filings": [
+        {
+          "form": "SCHEDULE 13G",
+          "filed_at": "2026-11-19",
+          "accession_number": "0001104659-26-130230",
+          "provider": "sec"
+        },
+        {
+          "form": "SCHEDULE 13G",
+          "filed_at": "2026-11-18",
+          "accession_number": "0001595888-26-000170",
+          "provider": "sec"
+        },
+        {
+          "form": "SCHEDULE 13G",
+          "filed_at": "2026-11-16",
+          "accession_number": "0001446580-26-000110",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/iren",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=IREN&owner=exclude"
+    },
+    {
+      "symbol": "EOSE",
+      "name": "Eos Energy",
+      "sector": "Battery and Energy Storage",
+      "sector_key": "battery_storage",
+      "benchmark_etfs": [
+        "ICLN",
+        "XLU"
+      ],
+      "signal": "neutral",
+      "score": 36,
+      "confidence": "low",
+      "setup_type": "news_watch",
+      "price": 1.28,
+      "previous_close": 1.27,
+      "premarket_change_pct": 0.79,
+      "change_5d_pct": -37.7,
+      "change_20d_pct": -31.21,
+      "volume_ratio": 1.49,
+      "relative_strength_pct": -29.93,
+      "sector_trend": "negative",
+      "news_sentiment": "mixed",
+      "news_count": 2,
+      "earnings_status": "10-Q",
+      "summary": "Watchlist item from negative sector tape, 2 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +0.8%.",
+        "5-day relative strength: -29.9 pts.",
+        "2 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "CEPL: Capstone Energy Plus Inc. filed SEC Form 8-K: Leadership... - Quantisnow",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQ1RzbXhwblgxWTJhWVdqcFdmSktOSGtoQTBFQ3NJSmctQTF6MTc5Vl9oQVo3RXh5aFc2S0VQR1dRb1ByeDVBQ0IzSGJWR3JnQzlCNTFaZFJnOFU2engtSWl2UXZPUE9HRDVXcGotLTlrVWpwVThBUTVZcnhuMUpmclEydlU1cWxvQlBVejZVYmhOYTR2bHM3M3ozRTlnUW9IVk05TkMtRQ?oc=5",
+          "domain": "https://www.quantisnow.com",
+          "published_at": "2026-11-23T13:50:42+00:00",
+          "provider": "google_news_rss",
+          "source": "Quantisnow"
+        },
+        {
+          "title": "Capstone Energy+ Appoints Sagar Kurada as CFO, Effective December 14, 2026 - Kalkine Media",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQbW5VeThXbTI2WGtpbUdCeUppeTdpeXJLelVfd3l2Rl9vZVhLU0JtYW45eXg3UkxrZDRINEo1SW1pc1REbWdfbGwwT19MY01CazA2Ni1pTFZpbnhsbFlUdjFPNWdGNmJIaTdqSDlON2ZxNHAzYmZWX2ZEVDFOWVJPbU1SZjhPOHpoN1hscGUzTFdPQ3AxdnhUVHlVSWt6MG1mWGRHUlR3WlVJUFB5TE0zX1hIZFZCNERwQUE?oc=5",
+          "domain": "https://kalkinemedia.com",
+          "published_at": "2026-11-23T17:39:16+00:00",
+          "provider": "google_news_rss",
+          "source": "Kalkine Media"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-11-13",
+          "accession_number": "0001628280-26-073597",
+          "provider": "sec"
+        },
+        {
+          "form": "SCHEDULE 13G",
+          "filed_at": "2026-11-06",
+          "accession_number": "0001393825-26-000069",
+          "provider": "sec"
+        },
+        {
+          "form": "10-Q",
+          "filed_at": "2026-11-05",
+          "accession_number": "0001628280-26-070529",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/eose",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=EOSE&owner=exclude"
+    },
+    {
+      "symbol": "ORCL",
+      "name": "Oracle",
+      "sector": "Hyperscale Cloud",
+      "sector_key": "hyperscale_cloud",
+      "benchmark_etfs": [
+        "QQQ",
+        "IGV",
+        "XLK"
+      ],
+      "signal": "neutral",
+      "score": 37,
+      "confidence": "low",
+      "setup_type": "news_watch",
+      "price": 114.12,
+      "previous_close": 113.77,
+      "premarket_change_pct": 0.31,
+      "change_5d_pct": -19.27,
+      "change_20d_pct": -19.79,
+      "volume_ratio": 1.17,
+      "relative_strength_pct": -8.47,
+      "sector_trend": "negative",
+      "news_sentiment": "mixed",
+      "news_count": 3,
+      "earnings_status": "8-K",
+      "summary": "Watchlist item from negative sector tape, 3 recent headline(s).",
+      "drivers": [
+        "Move vs previous close: +0.3%.",
+        "5-day relative strength: -8.5 pts.",
+        "3 recent headline(s) in the news window."
+      ],
+      "invalidation": [
+        "Needs fresh price/news confirmation before becoming an actionable setup."
+      ],
+      "risk_flags": [],
+      "sources": [
+        {
+          "title": "Why Oracle Stock Is Rising Today - The Motley Fool",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE56cFlyWTlCZmdLdlVKRW4ydjlVWjg4aDNYM09OMVdCVVo4emJXR0FUaWx5WER1ZHc0dEZlTjlXX0hxUkNnQ0JfZlNkbElFQmZwX3lieXNDMU9MRV9CX3Bmd3gtRHJnVTJJbk9WVGpENTUwNTNacmFyNQ?oc=5",
+          "domain": "https://www.fool.com",
+          "published_at": "2026-11-23T18:10:02+00:00",
+          "provider": "google_news_rss",
+          "source": "The Motley Fool"
+        },
+        {
+          "title": "Why Oracle Stock Is Rising Today - The Globe and Mail",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQTmE3SWtfa0lqWUNsU3psR0lyeGViM3p2OU93bXF6N1RJb1VkRkRVTm9ydzdpSkZEN3NOM1FQTGY3TXhaZTV3MmU5a1RKT3Z5TVBDWVR2TjQzY1ZOQkRael9IaEJOTDRmVy1aZmZrZVFHOHdoQTRrT3ZMYkZ6S1NtLWhScGkzSWJxTjFrS1ZXSTBSQTVKbzV1SVhNakJWZmVIcEN4blhSSVNWN0xmUXlWNldUT09waGJkbFZN?oc=5",
+          "domain": "https://www.theglobeandmail.com",
+          "published_at": "2026-11-23T18:05:00+00:00",
+          "provider": "google_news_rss",
+          "source": "The Globe and Mail"
+        },
+        {
+          "title": "Why Oracle shares are up 13% on Monday? - TradingView",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOTGlnTlVFc2FiZnQxdldXTEN1X2lmS043aWtlbXU3a0RXR2RuZUxXejlGeGt2NzlCWVI4Q0ltM29oR0RKOXFJcnFwYWp0ZVBfLUE0Skt3OUlpMGhLT0lhczBTMFl1TWZJdWNpSDgtQ2FtUlg3bjBieWU4S2J0OFNZbDVjSmdpNzZkMER6SEZRWXkzaUQ3SERWbklR?oc=5",
+          "domain": "https://www.tradingview.com",
+          "published_at": "2026-11-23T16:34:55+00:00",
+          "provider": "google_news_rss",
+          "source": "TradingView"
+        }
+      ],
+      "filings": [
+        {
+          "form": "4",
+          "filed_at": "2026-11-20",
+          "accession_number": "0001341439-26-000127",
+          "provider": "sec"
+        },
+        {
+          "form": "8-K",
+          "filed_at": "2026-11-20",
+          "accession_number": "0001193125-26-470351",
+          "provider": "sec"
+        },
+        {
+          "form": "8-K",
+          "filed_at": "2026-11-04",
+          "accession_number": "0001193125-26-447507",
+          "provider": "sec"
+        }
+      ],
+      "data_quality": {
+        "quote": "delayed_fallback",
+        "news": "fresh",
+        "financials": "fresh"
+      },
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/orcl",
+      "financial_source_url": "https://www.sec.gov/edgar/browse/?CIK=ORCL&owner=exclude"
+    }
+  ],
+  "postdoc_jobs": [],
+  "jobs": [],
+  "supervisor_updates": [],
+  "weather": [
+    {
+      "query": "London",
+      "label": "London, England, United Kingdom",
+      "resolved_name": "London",
+      "region": "England",
+      "country": "United Kingdom",
+      "latitude": 51.50853,
+      "longitude": -0.12574,
+      "timezone": "Europe/London",
+      "forecast_date": "2026-11-23",
+      "condition": "Clear sky",
+      "weather_code": 0,
+      "temperature_c": 3.6,
+      "apparent_temperature_c": -0.1,
+      "temp_max_c": 7.7,
+      "temp_min_c": 3.0,
+      "humidity_pct": 77,
+      "wind_speed_kmh": 10.4,
+      "precipitation_probability_pct": 0,
+      "is_day": false,
+      "sunrise": "2026-11-23T07:31",
+      "sunset": "2026-11-23T16:01",
+      "source": "Open-Meteo",
+      "source_url": "https://open-meteo.com/"
+    }
+  ]
+}
